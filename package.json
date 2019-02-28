@@ -1,0 +1,24 @@
+{
+  "name": "RGX-Innovation",
+  "version": "0.2.0",
+  "description": "RGX Innovation is a website with content about Realogy's RGX 2019 conference.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulshryock/RGX-Innovation.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Paul Shryock",
+    "email": "paul@pshry.com",
+    "url": "https://pshry.com/"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/paulshryock/RGX-Innovation/issues"
+  },
+  "homepage": "https://github.com/paulshryock/RGX-Innovation#readme"
+}
