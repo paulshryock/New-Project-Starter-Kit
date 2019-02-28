@@ -15,6 +15,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.5.0 - 2019-02-28 - PostCSS
+
+### Added
+- Install PostCSS
+- Install PostCSS plugins
+	- precss
+	- postcss-preset-env
+	- autoprefixer
+
 ## 0.4.0 - 2019-02-28 - Configure webpack
 
 ### Added

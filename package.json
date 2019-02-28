@@ -25,6 +25,10 @@
   },
   "homepage": "https://github.com/paulshryock/RGX-Innovation#readme",
   "devDependencies": {
+    "autoprefixer": "^9.4.9",
+    "postcss": "^7.0.14",
+    "postcss-preset-env": "^6.6.0",
+    "precss": "^4.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   }
