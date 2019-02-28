@@ -18,7 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.4.0 - 2019-02-28 - Configure webpack
 
 ### Added
-- Add `"private": true` to `package.json`
+- Add npm private attribute and build script
+- Add `webpack.config.js`
 
 ## 0.3.0 - 2019-02-28 - webpack
 
