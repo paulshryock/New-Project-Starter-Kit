@@ -7,6 +7,8 @@ RGX Innovation is a website with content about Realogy's RGX 2019 conference.
 ```shell
 $ git clone https://github.com/paulshryock/RGX-Innovation
 $ cd RGX-Innovation
+$ npm install
+$ npm run build
 ```
 
 ## Contributing
@@ -25,6 +27,7 @@ Working on your first Pull Request? You can learn how from this *free* series, [
   - In case of sensitive bugs like security vulnerabilities, please contact [paul.shryock@realogy.com](mailto:paul.shryock@realogy.com) directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
 - Releases:
 	- v0
+		- [v0.4.0 - Configure webpack](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.4.0)
 		- [v0.3.0 - webpack](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.3.0)
 		- [v0.2.0 - npm](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.2.0)
 		- [v0.1.0 - Setup](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.1.0)
