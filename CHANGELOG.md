@@ -20,9 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Install PostCSS
 - Install PostCSS plugins
-	- precss
-	- postcss-preset-env
-	- autoprefixer
+	- [x] autoprefixer
+	- [ ] postcss-preset-env
+	- [ ] precss
 - Add `app.css`
 
 ## 0.4.0 - 2019-02-28 - Configure webpack
