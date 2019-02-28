@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 	- precss
 	- postcss-preset-env
 	- autoprefixer
+- Add `app.css`
 
 ## 0.4.0 - 2019-02-28 - Configure webpack
 
