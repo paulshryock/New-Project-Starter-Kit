@@ -21,7 +21,7 @@ Working on your first Pull Request? You can learn how from this *free* series, [
 ## Links
 
 - Repository: [https://github.com/paulshryock/RGX-Innovation](https://github.com/paulshryock/RGX-Innovation)
-- Releases:
-	- [v0.1.0 - Setup](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.1.0)
 - Issue tracker: [https://github.com/paulshryock/RGX-Innovation/issues](https://github.com/paulshryock/RGX-Innovation/issues)
   - In case of sensitive bugs like security vulnerabilities, please contact [paul.shryock@realogy.com](mailto:paul.shryock@realogy.com) directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
+- Releases:
+	- [v0.1.0 - Setup](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.1.0)
