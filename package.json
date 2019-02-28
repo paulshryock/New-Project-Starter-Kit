@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/paulshryock/RGX-Innovation/issues"
   },
-  "homepage": "https://github.com/paulshryock/RGX-Innovation#readme"
+  "homepage": "https://github.com/paulshryock/RGX-Innovation#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
 }
