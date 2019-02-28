@@ -23,3 +23,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `CHANGELOG.md`
 - Add `CODE_OF_CONDUCT.md`
 - Add `README.md`
+- Add Issue and Pull Request templates
