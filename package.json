@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "clean": "if [ -e dist ]; then rm -R dist; fi",
+    "build": "npm run clean; npx webpack"
   },
   "repository": {
     "type": "git",
