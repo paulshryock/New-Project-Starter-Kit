@@ -7,6 +7,8 @@ RGX Innovation is a website with content about Realogy's RGX 2019 conference.
 ```shell
 $ git clone https://github.com/paulshryock/RGX-Innovation
 $ cd RGX-Innovation
+$ npm install
+$ npm run build
 ```
 
 ## Contributing

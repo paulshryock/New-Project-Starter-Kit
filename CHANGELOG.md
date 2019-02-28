@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add npm private attribute and build script
 - Add `webpack.config.js`
+- Add `app.js`
 
 ## 0.3.0 - 2019-02-28 - webpack
 
