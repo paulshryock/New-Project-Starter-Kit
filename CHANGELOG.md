@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Install webpack plugins
 	- [x] style-loader
 	- [x] css-loader
+	- [x] mini-css-extract-plugin
 - Add `app.css`
 
 ### Changed
