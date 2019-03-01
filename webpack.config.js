@@ -8,7 +8,8 @@ module.exports = {
   mode: process.env.NODE_ENV == 'production' ? 'production' : 'development',
 
   entry: {
-    'app': './src/_assets/js/app.js'
+    'app': './src/_assets/js/app.js',
+    'development': './src/_assets/js/development.js'
   },
 
   output: {
@@ -27,9 +28,6 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'style-loader',
-          },
           {
             loader: MiniCssExtractPlugin.loader,
           },

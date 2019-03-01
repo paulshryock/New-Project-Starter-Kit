@@ -1,0 +1,20 @@
+{
+  "short_name": "RGX Innovation",
+  "name": "RGX Innovation",
+  "icons": [
+    {
+      "src":"img/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src":"img/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#f2f2f2",
+  "theme_color": "#1a1aff",
+  "display": "standalone"
+}

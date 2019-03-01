@@ -1,0 +1,18 @@
+# humanstxt.org/
+
+The humans responsible & technology colophon
+
+## Contributors
+
+- [Paul Shryock](https://github.com/paulshryock)
+
+## Technology Colophon
+
+- HTML
+- CSS
+	- SASS
+	- PostCSS
+- JavaScript
+	- Babel
+- webpack
+- Eleventy
