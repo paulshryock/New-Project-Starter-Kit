@@ -1,1 +1,6 @@
 /* Hello CSS */
+body {
+	background: blue;
+	color: red;
+	font-family: sans-serif;
+}
