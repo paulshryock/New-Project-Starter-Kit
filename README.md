@@ -15,6 +15,10 @@ $ npm run build
 
 ## npm Scripts
 
+- [`clean`](#clean)
+- [`build`](#build)
+- [`watch`](#watch)
+
 ### `clean`
 
 Runs during `build`, before executing webpack. Removes the following folders, if they exist:
@@ -45,8 +49,7 @@ $ npm run watch
 
 ## Contributing
 
-If you'd like to contribute, please read the [Code of Conduct](https://github.com/paulshryock/Eustace/blob/master/CODE_OF_CONDUCT.md), then fork the repository and use a feature
-branch. Pull requests are welcome.
+If you'd like to contribute, please read the [Code of Conduct](https://github.com/paulshryock/Eustace/blob/master/CODE_OF_CONDUCT.md), then fork the repository and use a feature branch. Pull requests are welcome.
 
 ### Your First Contribution
 
@@ -55,7 +58,8 @@ Working on your first Pull Request? You can learn how from this *free* series, [
 ## Links
 
 - Repository: [https://github.com/paulshryock/RGX-Innovation](https://github.com/paulshryock/RGX-Innovation)
-- Issue tracker: [https://github.com/paulshryock/RGX-Innovation/issues](https://github.com/paulshryock/RGX-Innovation/issues)
+- Pull Requests: [https://github.com/paulshryock/RGX-Innovation/pulls](https://github.com/paulshryock/RGX-Innovation/pulls)
+- Issues: [https://github.com/paulshryock/RGX-Innovation/issues](https://github.com/paulshryock/RGX-Innovation/issues)
   - In case of sensitive bugs like security vulnerabilities, please contact [paul.shryock@realogy.com](mailto:paul.shryock@realogy.com) directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
 - Releases:
 	- v0
