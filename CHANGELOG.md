@@ -15,10 +15,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.5.0 - 2019-02-28 - PostCSS
+
+### Added
+- Install PostCSS
+- Install PostCSS plugins
+	- [x] autoprefixer
+	- [x] cssnano
+	- [x] postcss-node-sass
+	- [x] postcss-preset-env
+	- [x] precss
+- Install webpack plugins
+	- [x] style-loader
+	- [x] css-loader
+	- [x] mini-css-extract-plugin
+- Add `app.css`
+- Add `.browserslistrc`
+
+### Changed
+- Swap postcss for postcss-loader
+- Update npm script
+- Update webpack configuration
+
 ## 0.4.0 - 2019-02-28 - Configure webpack
 
 ### Added
-- Add npm private attribute and build script
+- Add npm private attribute and scripts
 - Add `webpack.config.js`
 - Add `app.js`
 

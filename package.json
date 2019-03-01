@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "clean": "if [ -e dist ]; then rm -R dist; fi; if [ -e src/js ]; then rm -R src/js; fi; if [ -e src/css ]; then rm -R src/css; fi",
+    "build": "npm run clean; npx webpack"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,15 @@
   },
   "homepage": "https://github.com/paulshryock/RGX-Innovation#readme",
   "devDependencies": {
+    "autoprefixer": "^9.4.9",
+    "css-loader": "^2.1.0",
+    "cssnano": "^4.1.10",
+    "mini-css-extract-plugin": "^0.5.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-node-sass": "^2.1.8",
+    "postcss-preset-env": "^6.6.0",
+    "precss": "^4.0.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   }
