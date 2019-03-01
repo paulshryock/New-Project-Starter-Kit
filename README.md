@@ -30,6 +30,7 @@ Working on your first Pull Request? You can learn how from this *free* series, [
 ## Links
 
 - Repository: [https://github.com/paulshryock/RGX-Innovation](https://github.com/paulshryock/RGX-Innovation)
+- Changelog: [https://github.com/paulshryock/RGX-Innovation/blob/master/CHANGELOG.md](CHANGELOG.md)
 - Pull Requests: [https://github.com/paulshryock/RGX-Innovation/pulls](https://github.com/paulshryock/RGX-Innovation/pulls)
 - Issues: [https://github.com/paulshryock/RGX-Innovation/issues](https://github.com/paulshryock/RGX-Innovation/issues)
   - In case of sensitive bugs like security vulnerabilities, please contact [paul.shryock@realogy.com](mailto:paul.shryock@realogy.com) directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
