@@ -1,6 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-require('babel-register');
+require('@babel/register');
 
 module.exports = {
   
@@ -54,5 +54,9 @@ module.exports = {
         chunkFilename: "./css/[id].css"
       }
     )
-  ]
+  ],
+
+  watch: true,
+  devtool: 'source-map'
+
 };
