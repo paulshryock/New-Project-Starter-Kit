@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/paulshryock/RGX-Innovation#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^0.7.1",
     "@babel/core": "^7.3.4",
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.4",
