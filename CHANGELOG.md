@@ -15,6 +15,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.8.0 - 2019-03-01 - Boilerplate, PWA, Service Worker
+
+### Added
+- Add boilerplate HTML files:
+	- `boilerplate.html`
+	- `form.html`
+	- `index.html`
+	- `kitchen-sink.html`
+	- `offline.html`
+- Add humans and robots txt files:
+	- `humans.txt`
+	- `robots.txt`
+- Add pwa and service worker files:
+	- `browserconfig.xml`
+	- `manifest.json`
+	- `serviceworker.js`
+- Add CSS and JavaScript files
+
 ## 0.7.0 - 2019-03-01 - Eleventy
 
 ### Added
