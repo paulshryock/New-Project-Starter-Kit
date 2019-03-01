@@ -1,7 +1,10 @@
 module.exports = {
   plugins: [
-    // require('precss'),
-    // require('postcss-preset-env'),
-    require('autoprefixer')
+    require('precss'), // Use Sass-like markup in your CSS
+    require('postcss-preset-env'), // Convert modern CSS into something browsers understand
+    require('autoprefixer'), // Add vendor prefixes
+    require('cssnano')({ // Modern CSS compression
+        preset: 'default',
+    }),
   ]
 }
