@@ -23,7 +23,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 	- [x] autoprefixer
 	- [ ] postcss-preset-env
 	- [ ] precss
+- Install webpack plugins
+	- style-loader
+	- css-loader
 - Add `app.css`
+
+### Changed
+- Swap postcss for postcss-loader
 
 ## 0.4.0 - 2019-02-28 - Configure webpack
 
