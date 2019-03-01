@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - [x] @babel/preset-env
   - [x] babel-loader
 - Let git ignore generated files
+- Add `browser.js`
 
 ## 0.5.0 - 2019-03-01 - PostCSS
 
