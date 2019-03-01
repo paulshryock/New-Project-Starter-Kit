@@ -5,12 +5,26 @@ module.exports = function(eleventyConfig) {
 	/**
 		* Add custom filters/transforms
 		*/
-		
+
   // addFilter is deprecated and renamed, use the Configuration API instead
   // eleventyConfig.addFilter( "myFilter", function() {});
 
   // eleventyConfig.addTransform("transform-name", function(content, outputPath) {});
   // eleventyConfig.addTransform("async-transform-name", async function(content, outputPath) {});
+
+	// Minify HTML output
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if( outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+
+    return content;
+  });
 	
 	/**
 		* Add layout aliases
