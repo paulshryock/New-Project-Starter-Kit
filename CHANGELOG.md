@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 	- [x] css-loader
 	- [x] mini-css-extract-plugin
 - Add `app.css`
+- Add `.browserslistrc`
 
 ### Changed
 - Swap postcss for postcss-loader
