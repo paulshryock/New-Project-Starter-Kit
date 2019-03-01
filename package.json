@@ -13,8 +13,8 @@
     "eleventy:watch": "npx eleventy --watch",
     "eleventy:serve": "npx eleventy --serve --port=8081",
     "build": "npm run clean; npm run webpack; npm run eleventy",
-    "watch": "npm run clean; npm run webpack:watch; npm run eleventy:watch",
-    "serve": "npm run clean; npm run webpack:watch; npm run eleventy:serve"
+    "watch": "npm run clean; npm run webpack; npm run eleventy:watch",
+    "serve": "npm run clean; npm run webpack; npm run eleventy:serve"
   },
   "repository": {
     "type": "git",
