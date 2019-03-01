@@ -19,11 +19,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Install and configure Babel
-  - [x] @babel/cli
   - [x] @babel/core
+  - [x] @babel-polyfill
   - [x] @babel/preset-env
+  - [x] @babel/register
   - [x] babel-loader
-  - [x] babel-polyfill
 - Let git ignore generated files
 - Add `browser.js`
 

@@ -1,4 +1,4 @@
-node_modules
-dist
-src/js
-src/css
+node_modules/
+dist/
+src/js/
+src/css/
