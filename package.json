@@ -3,7 +3,6 @@
   "version": "0.9.0",
   "description": "RGX Innovation is a website with content about Realogy's RGX 2019 conference.",
   "private": true,
-  "main": "index.js",
   "scripts": {
     "start": "npm run build",
     "clean": "if [ -e dist ]; then rm -R dist; fi; if [ -e src/js ]; then rm -R src/js; fi; if [ -e src/css ]; then rm -R src/css; fi",

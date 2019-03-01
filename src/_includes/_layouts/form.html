@@ -1,0 +1,11 @@
+---
+layout: single
+---
+
+<form method="{{ method }}" action="{{ action }}" class="{% if form_class[0] -%}
+  	{{ form_class | join: ' ' -}}
+  {% else -%}
+  	{{ form_class -}}
+  {% endif -%}">
+{{ content }}
+</form>
