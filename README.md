@@ -4,6 +4,8 @@ RGX Innovation is a website with content about Realogy's RGX 2019 conference.
 
 ## Quick Start
 
+Fork or clone this repo, install dev dependencies, and run `build`:
+
 ```shell
 $ git clone https://github.com/paulshryock/RGX-Innovation
 $ cd RGX-Innovation
