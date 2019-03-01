@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Install and configure Eleventy
 
+### Changed
+- Update npm scripts
+
 ## 0.6.0 - 2019-03-01 - Babel
 
 ### Added
