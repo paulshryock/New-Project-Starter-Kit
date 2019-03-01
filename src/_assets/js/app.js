@@ -1,3 +1,5 @@
-import './../css/app.css';
+// JS
+const browser = require( './browser' );
 
-console.log( 'Hello world' );
+// SCSS
+import './../css/app.css';

@@ -15,6 +15,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.6.0 - 2019-03-01 - Babel
+
+### Added
+- Install and configure Babel
+  - [x] @babel/cli
+  - [x] @babel/core
+  - [x] @babel/preset-env
+  - [x] babel-loader
+  - [x] babel-polyfill
+- Let git ignore generated files
+- Add `browser.js`
+
 ## 0.5.0 - 2019-03-01 - PostCSS
 
 ### Added

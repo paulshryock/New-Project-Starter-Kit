@@ -1,6 +1,6 @@
 {
   "name": "RGX-Innovation",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "RGX Innovation is a website with content about Realogy's RGX 2019 conference.",
   "private": true,
   "main": "index.js",
@@ -25,7 +25,12 @@
   },
   "homepage": "https://github.com/paulshryock/RGX-Innovation#readme",
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
     "autoprefixer": "^9.4.9",
+    "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
     "cssnano": "^4.1.10",
     "mini-css-extract-plugin": "^0.5.0",

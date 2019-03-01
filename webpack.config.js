@@ -1,5 +1,6 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+require('@babel/register');
 
 module.exports = {
   
@@ -17,6 +18,11 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
       {
         test: /\.css$/,
         exclude: /node_modules/,
@@ -48,5 +54,9 @@ module.exports = {
         chunkFilename: "./css/[id].css"
       }
     )
-  ]
+  ],
+
+  watch: true,
+  devtool: 'source-map'
+
 };
