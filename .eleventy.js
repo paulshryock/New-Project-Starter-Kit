@@ -1,4 +1,5 @@
 const fs = require('fs');
+const htmlmin = require('html-minifier');
 
 module.exports = function(eleventyConfig) {
 	
