@@ -35,6 +35,14 @@ Runs `clean`, then executes webpack.
 $ npm run build
 ```
 
+### `watch`
+
+Runs `clean`, then executes webpack and watches for file updates.
+
+```shell
+$ npm run watch
+```
+
 ## Contributing
 
 If you'd like to contribute, please read the [Code of Conduct](https://github.com/paulshryock/Eustace/blob/master/CODE_OF_CONDUCT.md), then fork the repository and use a feature
