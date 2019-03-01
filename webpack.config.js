@@ -54,8 +54,6 @@ module.exports = {
         chunkFilename: "./css/[id].css"
       }
     )
-  ],
-
-  devtool: 'source-map'
+  ]
 
 };
