@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.9.0 - 2019-03-01 - Favicon
+
+### Added
+- Add favicon images
+
 ## 0.8.0 - 2019-03-01 - Boilerplate, PWA, Service Worker
 
 ### Added
