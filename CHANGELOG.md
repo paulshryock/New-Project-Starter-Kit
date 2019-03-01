@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.6.0 - 2019-03-01 - Babel
+
+### Added
+- Install and configure Babel
+
 ## 0.5.0 - 2019-03-01 - PostCSS
 
 ### Added

@@ -35,6 +35,7 @@ Working on your first Pull Request? You can learn how from this *free* series, [
   - In case of sensitive bugs like security vulnerabilities, please contact [paul.shryock@realogy.com](mailto:paul.shryock@realogy.com) directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
 - Releases:
 	- v0
+		- [v0.6.0 - Babel](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.6.0)
 		- [v0.5.0 - PostCSS](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.5.0)
 		- [v0.4.0 - Configure webpack](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.4.0)
 		- [v0.3.0 - webpack](https://github.com/paulshryock/RGX-Innovation/releases/tag/v0.3.0)
