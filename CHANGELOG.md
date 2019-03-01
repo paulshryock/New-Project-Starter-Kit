@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Install and configure Babel
+  - [x] @babel/cli
+  - [x] @babel/core
+  - [x] @babel/preset-env
+  - [x] babel-loader
 - Let git ignore generated files
 
 ## 0.5.0 - 2019-03-01 - PostCSS

@@ -138,7 +138,7 @@ eval("\nvar content = __webpack_require__(/*! !../../../node_modules/mini-css-ex
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../css/app.css */ \"./src/_assets/css/app.css\");\n/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_app_css__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log('Hello world');\n\n//# sourceURL=webpack:///./src/_assets/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../css/app.css */ \"./src/_assets/css/app.css\");\n/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_app_css__WEBPACK_IMPORTED_MODULE_0__);\n\nvar str = 'Hello world';\nconsole.log(str);\n\n//# sourceURL=webpack:///./src/_assets/js/app.js?");
 
 /***/ })
 

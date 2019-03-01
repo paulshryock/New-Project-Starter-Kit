@@ -1,3 +1,5 @@
 import './../css/app.css';
 
-console.log( 'Hello world' );
+const str = 'Hello world';
+
+console.log( str );
