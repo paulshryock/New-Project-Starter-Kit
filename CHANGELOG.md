@@ -33,6 +33,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 	- `serviceworker.js`
 - Add CSS and JavaScript files
 
+### Removed
+- Remove `style-loader`
+
 ## 0.7.0 - 2019-03-01 - Eleventy
 
 ### Added
