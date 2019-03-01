@@ -15,10 +15,10 @@ module.exports = {
             options: {
               importLoaders: 1,
             }
-          },
+          }/*,
           {
             loader: 'postcss-loader'
-          }
+          }*/
         ]
       }
     ]
@@ -26,6 +26,6 @@ module.exports = {
   entry: './src/_assets/js/app.js',
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'dist/js')
+    path: path.resolve(__dirname, 'src/js')
   }
 };

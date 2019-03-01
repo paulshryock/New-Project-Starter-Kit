@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "if [ -e dist ]; then rm -R dist; fi",
+    "clean": "if [ -e dist ]; then rm -R dist; fi; if [ -e src/js ]; then rm -R src/js; fi; if [ -e src/css ]; then rm -R src/css; fi",
     "build": "npm run clean; npx webpack"
   },
   "repository": {
