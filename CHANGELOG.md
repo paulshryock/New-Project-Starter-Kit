@@ -21,8 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Install PostCSS
 - Install PostCSS plugins
 	- [x] autoprefixer
-	- [ ] postcss-preset-env
-	- [ ] precss
+	- [x] postcss-preset-env
+	- [x] precss
 - Install webpack plugins
 	- style-loader
 	- css-loader

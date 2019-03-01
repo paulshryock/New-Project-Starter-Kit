@@ -22,7 +22,7 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
   entry: './src/_assets/js/app.js',
   output: {
     filename: 'app.js',
