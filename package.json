@@ -1,13 +1,20 @@
 {
   "name": "RGX-Innovation",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "RGX Innovation is a website with content about Realogy's RGX 2019 conference.",
   "private": true,
   "main": "index.js",
   "scripts": {
+    "start": "npm run build",
     "clean": "if [ -e dist ]; then rm -R dist; fi; if [ -e src/js ]; then rm -R src/js; fi; if [ -e src/css ]; then rm -R src/css; fi",
-    "build": "npm run clean; npx webpack",
-    "watch": "npm run clean; npx webpack --watch"
+    "webpack": "npx webpack",
+    "webpack:watch": "npx webpack --watch",
+    "eleventy": "npx eleventy",
+    "eleventy:watch": "npx eleventy --watch",
+    "eleventy:serve": "npx eleventy --serve --port=8081",
+    "build": "npm run clean; npm run webpack; npm run eleventy",
+    "watch": "npm run clean; npm run webpack:watch; npm run eleventy:watch",
+    "serve": "npm run clean; npm run webpack:watch; npm run eleventy:serve"
   },
   "repository": {
     "type": "git",
@@ -25,6 +32,7 @@
   },
   "homepage": "https://github.com/paulshryock/RGX-Innovation#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^0.7.1",
     "@babel/core": "^7.3.4",
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.4",
