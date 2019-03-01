@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 	- `manifest.json`
 	- `serviceworker.js`
 - Add CSS and JavaScript files
+- Add Assets documentation in `_docs` directory
 
 ### Removed
 - Remove `style-loader`
@@ -41,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Install and configure Eleventy
 - Add `.eleventy.js`
-- Add documentation in `_docs` directory
+- Add npm Scripts documentation in `_docs` directory
 
 ### Changed
 - Update npm scripts

@@ -8,8 +8,8 @@ addEventListener('install', installEvent => {
     .then( OfflineCache => {
       OfflineCache.addAll([
        '/offline.html',
-       '/css/style.css',
-       '/js/script.js'
+       '/css/app.css',
+       '/js/app.js'
       ]); // end addAll
     }) // end open.then
   ); // end waitUntil
