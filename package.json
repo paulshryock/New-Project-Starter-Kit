@@ -1,6 +1,6 @@
 {
   "name": "RGX-Innovation",
-  "version": "0.2.0",
+  "version": "0.5.0",
   "description": "RGX Innovation is a website with content about Realogy's RGX 2019 conference.",
   "private": true,
   "main": "index.js",
