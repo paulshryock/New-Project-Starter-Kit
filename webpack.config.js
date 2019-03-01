@@ -7,7 +7,6 @@ module.exports = {
   mode: process.env.NODE_ENV == 'production' ? 'production' : 'development',
 
   entry: {
-    'babel-polyfill',
     'app': './src/_assets/js/app.js'
   },
 
