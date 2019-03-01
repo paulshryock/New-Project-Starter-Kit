@@ -27,6 +27,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Let git ignore generated files
 - Add `browser.js`
 
+### Changed
+- Update npm scripts
+- Update webpack configuration
+
 ## 0.5.0 - 2019-03-01 - PostCSS
 
 ### Added
