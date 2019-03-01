@@ -1,0 +1,23 @@
+---
+title:
+excerpt:
+slug:
+date: // example: 2019-01-01T00:00:00-5, optional, doesn't display
+cover_image: '' // optional, doesn't display
+cover_image_alt: // optional, doesn't display
+topics: [ ] // array, optional, doesn't display, no default
+
+seo_title: // defaults to title
+seo_description: // defaults to excerpt
+
+display_title: // defaults to title
+
+nav_title: // defaults to title
+navigation: // number, optional
+
+permalink: // defaults to ./{{ slug }}/index.html
+content_type: // defaults to page
+layout: // defaults to page
+body_class: [ ] // array, defaults to page
+tags: [ ] // array, doesn't display, no default
+---

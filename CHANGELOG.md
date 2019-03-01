@@ -15,6 +15,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.9.0 - 2019-03-01 - Favicon, Data, Includes
+
+### Added
+- [x] Add generic `src/favicon.ico` and favicon images to `src/_assets/img` to be replaced later
+- [x] Add data files
+	- `server.11tydata.js`
+	- `site.11tydata.js`
+- Add includes
+	- [x] `_globals`
+	- [x] `_layouts`
+	- [ ] `_modules`
+	- [ ] `_components`
+
 ## 0.8.0 - 2019-03-01 - Boilerplate, PWA, Service Worker
 
 ### Added
