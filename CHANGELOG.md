@@ -15,7 +15,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.10.0 - 2019-03-04 - Images, New Title
+## 0.11.0 - 2019-03-05 - Titles, Meta
+
+### Added
+- Add document head meta for PWA, icons, colors
+
+### Changed
+- Update site data
+- Update page titles
+- Reorder document head meta
+
+## 0.10.0 - 2019-03-05 - Images, New Title
 
 ### Added
 - Install `image-webpack-loader`
