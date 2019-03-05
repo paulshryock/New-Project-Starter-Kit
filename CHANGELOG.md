@@ -15,10 +15,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.10.0 - 2019-03-04 - Images
+## 0.10.0 - 2019-03-04 - Images, New Title
 
 ### Added
 - Install `image-webpack-loader`
+
+### Changed
+- Give the project a new title
 
 ## 0.9.0 - 2019-03-01 - Favicon, Data, Includes
 
