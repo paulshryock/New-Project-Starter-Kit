@@ -1,7 +1,7 @@
 {
-  "name": "RGX-Innovation",
+  "name": "New-Project-Starter-Kit",
   "version": "0.9.0",
-  "description": "RGX Innovation is a website with content about Realogy's RGX 2019 conference.",
+  "description": "Start from scratch without reinventing the wheel: webpack, Babel, PostCSS, Eleventy",
   "private": true,
   "scripts": {
     "start": "npm run build",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulshryock/RGX-Innovation.git"
+    "url": "git+https://github.com/paulshryock/New-Project-Starter-Kit.git"
   },
   "keywords": [],
   "author": {
@@ -27,9 +27,9 @@
   },
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/paulshryock/RGX-Innovation/issues"
+    "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
   },
-  "homepage": "https://github.com/paulshryock/RGX-Innovation#readme",
+  "homepage": "https://github.com/paulshryock/New-Project-Starter-Kit#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.7.1",
     "@babel/core": "^7.3.4",
