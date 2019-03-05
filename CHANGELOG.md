@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.12.0 - 2019-03-05 - Netlify
+
+### Added
+- Configure Netlify
+
 ## 0.11.0 - 2019-03-05 - Titles, Meta
 
 ### Added
