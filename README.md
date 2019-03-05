@@ -1,6 +1,6 @@
 # New Project Starter Kit
 
-Start from scratch without reinventing the wheel: webpack, Babel, PostCSS, Eleventy
+Start from scratch without reinventing the wheel: webpack, Babel, Sass, PostCSS, Eleventy, PWA, service worker
 
 ## Quick Start
 

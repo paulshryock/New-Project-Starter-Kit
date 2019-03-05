@@ -1,11 +1,11 @@
 {
-  "title": "RGX Innovation",
-  "description": "RGX Innovation is a website with content about Realogy's RGX 2019 conference.",
+  "title": "Site Title",
+  "description": "This is the site description",
   "version": "{{ pkg.version }}",
 
-  "url": "https://rgxinnovation.com/",
+  "url": "https://example.com/",
   "feed": {
-    "subtitle": "RGX Innovation",
+    "subtitle": "Site Title",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "url": "https://pshry.com/feed/feed.xml",
@@ -21,5 +21,5 @@
   "layout": "page",
   "body_class": "site",
 
-  "copyright": "&copy {{ 'now' | date: '%Y' }} Realogy Holdings Corp. All rights reserved."
+  "copyright": "&copy {{ 'now' | date: '%Y' }} Site Title. All rights reserved."
 }
