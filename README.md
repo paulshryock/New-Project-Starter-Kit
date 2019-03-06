@@ -40,6 +40,8 @@ Working on your first Pull Request? You can learn how from this *free* series, [
   - In case of sensitive bugs like security vulnerabilities, please contact [paul.shryock@realogy.com](mailto:paul.shryock@realogy.com) directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
 - Releases:
 	- v0 - Development
+		- [v0.14.0 - Default Styles](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.14.0)
+		- [v0.13.0 - Zeit Now](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.13.0)
 		- [v0.12.0 - Netlify](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.12.0)
 		- [v0.11.0 - Titles, Meta](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.11.0)
 		- [v0.10.0 - Images, New Title](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.10.0)
