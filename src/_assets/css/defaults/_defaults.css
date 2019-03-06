@@ -1,80 +1,22 @@
-/****************************************************
-	* Format
-****************************************************/
-
-/**
-	* Viewport
-	*/
-
 @viewport {
 	width: device-width;
 }
 
-/**
-	* Typography
-	*/
-
-/* Font Face */
-
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,700,700i|IBM+Plex+Sans:400,400i,700,700i|IBM+Plex+Serif:400,400i,700,700i');
-
-/* Font Family */
-
-body {
-	font-family: "IBM Plex Sans", /* Ideal */
-		Lato, Roboto, Helvetica, Arial, /* Fit */
-		"San Francisco", "Helvetica Neue", /* Common */
-		sans-serif; /* Generic */
-}
-
-blockquote p,
-q {
-	font-family: "IBM Plex Serif", /* Ideal */
-		Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, /* Fit */ /* Common */
-		serif; /* Generic */
-}
-
-pre,
-code,
-kbd,
-tt,
-samp,
-var,
-article header p,
-footer p,
-.breadcrumb,
-.card footer {
-	font-family: "IBM Plex Mono", /* Ideal */
-		Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, /* Fit */ /* Common */
-		monospace; /* Generic */
-}
-
-::-webkit-file-upload-button {
-  font: inherit;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-}
-
-/* Font Size */
-
-/* 0 */
-
-nav ul,
-nav ol {
-	font-size: 0;
-}
-
-/* % */
-
 :root {
+	font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
 	font-size: calc( 1 * 100% ); /* 1 * 16px = 16px base rem unit */
 	font-size-adjust: 0.516; /* Set x-height */
+}
+
+@supports (font-kerning: normal) and (font-variant-ligatures: common-ligatures contextual) and (font-variant-numeric: oldstyle-nums proportional-nums) {
+
+	:root {
+		font-kerning: normal;
+		font-variant-ligatures: common-ligatures contextual;
+		font-variant-numeric: oldstyle-nums proportional-nums;
+		font-feature-settings: normal;
+	}
+	
 }
 
 @media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
@@ -109,174 +51,215 @@ nav ol {
 
 }
 
-sup,
-sub { 
-	font-size: 75%;
+html {
+	line-height: 1;
 }
 
-small,
-.card footer,
-.post-meta,
-.post-footer {
-	font-size: 85%;
+body {
+	background: hsl( 0, 0%, 95% );
+	color: hsl( 0, 0%, 10% );
+	font-family: sans-serif;
+	font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+	overflow-y: scroll;
 }
 
-button,
+p {
+	hyphens: auto;
+	hyphenate-limit-chars: 8 3 3;
+	line-height: 1.4;
+	margin: 0 0 0.7em;
+}
+
+blockquote p {
+	line-height: 1.3;
+	margin-bottom: 0.5em;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 1.1;
+	margin: 1em 0 0.5em;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 1.1;
+	margin: 2em 0 0.5em;
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 2em 0 0.6em;
+}
+
+h4 {
+	font-size: 1.125rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 2em 0 0.6em;
+}
+
+h5 {
+	font-size: 1rem;
+	font-weight: bold;
+  line-height: 1.4;
+}
+
+h6 {
+	font-size: 1rem;
+	font-weight: normal;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 75rem) { /* Desktop / 75rem / 1200px */
+
+	h1 {
+		font-size: 3rem;
+		font-weight: bold;
+	}
+
+	h2 {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+		font-weight: bold;
+	}
+
+}
+
+ul,
+ol,
+dl {
+  line-height: 1.4;
+}
+
+nav ul,
+nav ol {
+	font-size: 0;
+}
+
+nav li {
+	font-size: 1rem;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+	text-decoration: underline;
+}
+
+pre {
+	font-family: monospace;
+	font-size: 1rem;
+}
+
+pre code {
+	line-height: 1.2;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: monospace;
+	font-size: 0.85rem;
+}
+
+samp {
+	font-family: monospace;
+	font-size: 0.85rem;
+	font-weight: bolder;
+}
+
 input,
 optgroup,
-select,
 textarea {
+  font-family: inherit;
   font-size: 100%;
+  line-height: 1.4;
+}
+
+select {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+	line-height: 1;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
 }
 
 big {
 	font-size: 112.5%;
 }
 
-.lead {
-	font-size: 125%;
-}
-
-/* rem */
-
-code,
-kbd,
-tt,
-samp,
-var,
-article header p,
-footer p,
-.breadcrumb {
-	font-size: 0.85rem;
-}
-
-body,
-pre,
-h5,
-h6,
-nav li {
-	font-size: 1rem;
-}
-
-h4 {
-	font-size: 1.125rem;
-}
-
-h3,
-blockquote p,
-caption,
-.archive h2 {
-	font-size: 1.25rem;
-}
-
-h2,
-.site-title {
-	font-size: 1.5rem;
-}
-
-h1,
-.post-title {
-	font-size: 2rem;
-}
-
 @media screen and (min-width: 75rem) { /* Desktop / 75rem / 1200px */
 
-	h4,
 	big {
 		font-size: 1.25rem;
 	}
 
-	h3,
-	blockquote p,
-	caption,
-	.archive h2 {
-		font-size: 1.5rem;
-	}
-
-	h2,
-	.site-title {
-		font-size: 2rem;
-	}
-
-	h1,
-	.post-title {
-		font-size: 3rem;
-	}
-
 }
 
-/* Line Height */
+small {
+	font-size: 85%;
+}
 
-sub,
-sup {
+sup,
+sub { 
+	font-size: 75%;
   line-height: 0;
 }
 
-html,
-button {
-	line-height: 1;
-}
-
-h1,
-h2,
-.site-title {
-	line-height: 1.1;
-}
-
-h3,
-h4,
-pre code {
-	line-height: 1.2;
-}
-
-blockquote p,
-caption,
-th,
-td,
-.lead {
+caption {
 	line-height: 1.3;
 }
 
-body,
-p,
-h5,
-h6,
-ul,
-ol,
-dl,
-input,
-optgroup,
-select,
-textarea,
-.button {
-  line-height: 1.4;
+th {
+	font-weight: bold;
+	line-height: 1.3;
 }
 
-/* Font Weight */
+td {
+	line-height: 1.3;
+}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-th,
 dt,
 cite,
-legend,
-footer p,
-.site-title,
-.breadcrumb [aria-current="page"] {
+legend {
 	font-weight: bold;
 }
 
 strong,
-b,
-samp {
+b {
 	font-weight: bolder;
 }
-
-/* Font Style */
 
 em,
 i,
@@ -284,55 +267,10 @@ q {
 	font-style: italic;
 }
 
-/* Text Decoration */
-
-nav a,
-nav a:link,
-nav a:visited,
-header h1 a,
-.button,
-.site-title a,
-.card a {
-	text-decoration: none;
-}
-
-/* This selector fails in some browsers; keep it isolated */
-.card:focus-within a:focus {
-	text-decoration: none;
-}
-
-nav a:hover,
-nav a:focus,
-abbr[title],
-.card a:focus {
-	text-decoration: underline;
-}
-
-abbr,
-acronym,
-abbr[title] {
-	text-decoration: underline dotted;
-}
-
-/* Open Type Features */
-
-:root {
-	font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
-}
-
-@supports (font-kerning: normal) and (font-variant-ligatures: common-ligatures contextual) and (font-variant-numeric: oldstyle-nums proportional-nums) {
-
-	:root {
-		font-kerning: normal;
-		font-variant-ligatures: common-ligatures contextual;
-		font-variant-numeric: oldstyle-nums proportional-nums;
-		font-feature-settings: normal;
-	}
-	
-}
-
 abbr {
 	font-feature-settings: "kern", "liga", "clig", "calt", "c2sc", "smcp";
+	text-decoration: underline;
+	text-decoration: underline dotted;
 }
 
 @supports (font-variant-caps: all-small-caps) {
@@ -344,10 +282,14 @@ abbr {
 	
 }
 
-/* Text Transform */
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
 
-select {
-  text-transform: none;
+acronym {
+	text-decoration: underline dotted;
 }
 
 caption,
@@ -403,11 +345,6 @@ blockquote {
 }
 
 /* Hypens */
-
-main p {
-	hyphens: auto;
-	hyphenate-limit-chars: 8 3 3;
-}
 
 /* List Styles */
 
@@ -491,7 +428,6 @@ q:after {
 
 /* Darkest Gray / hsl( 0, 0%, 10% ) / rgb( 26, 26, 26 ) / #1a1a1a */
 
-body,
 button,
 .post-header,
 .post-footer,
@@ -620,7 +556,6 @@ table {
 
 /* White Gray / hsl( 0, 0%, 95% ) / rgb( 242, 242, 242 ) / #f2f2f2 */
 
-body,
 tr:nth-of-type(even) {
 	background: #f2f2f2;
 	background: rgb( 242, 242, 242 );
@@ -794,26 +729,14 @@ button::-moz-focus-inner,
 }
 
 tfoot th,
-tfoot td,
-abbr[title] {
+tfoot td {
 	border-bottom: none;
-}
-
-/* rem */
-
-.pagination a {
-	border: 0.0625rem solid;
 }
 
 /* Outline */
 
 /* This selector fails in some browsers; keep it isolated */
 :focus:not(:focus-visible) {
-	outline: none;
-}
-
-/* This selector fails in some browsers; keep it isolated */
-.card:focus-within a:focus {
 	outline: none;
 }
 
@@ -1391,7 +1314,6 @@ dd,
 
 /* 0 */
 
-body,
 ul ul,
 ol ol,
 dd,
@@ -1400,10 +1322,7 @@ button,
 input,
 optgroup,
 select,
-textarea,
-article header p:first-of-type,
-.site-title,
-.cards p {
+textarea {
   margin: 0;
 }
 
@@ -1467,7 +1386,6 @@ form div {
 
 /* em */
 
-p,
 h5,
 h6,
 ul,
@@ -1481,11 +1399,6 @@ dd + dt {
 	margin: 1em 0 0;
 }
 
-h1,
-.post-title {
-	margin: 1em 0 0.5em;
-}
-
 blockquote {
 	margin: 2em;
 }
@@ -1494,15 +1407,6 @@ details,
 form,
 table {
 	margin: 2em 0;
-}
-
-h3,
-h4 {
-	margin: 2em 0 0.6em;
-}
-
-h2 {
-	margin: 2em 0 0.5em;
 }
 
 .pagination {
@@ -1549,10 +1453,6 @@ fieldset + fieldset {
 }
 
 /* em */
-
-blockquote p {
-	margin-bottom: 0.5em;
-}
 
 /**
 	* Float
@@ -1634,14 +1534,6 @@ textarea {
 		overflow: auto;
 	}
 
-}
-
-/* Overflow X */
-
-/* Overflow Y */
-
-body {
-	overflow-y: scroll;
 }
 
 /* Vertical Align */

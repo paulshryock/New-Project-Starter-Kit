@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.13.0 - 2019-03-06 - Zeit Now
 
-### Changed
+### Added
 - Configure Zeit Now
 
 ## 0.12.0 - 2019-03-05 - Netlify
