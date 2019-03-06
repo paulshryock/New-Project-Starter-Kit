@@ -1,0 +1,12 @@
+/*
+
+<div>
+	<label for="firstName"><abbr title="First Name">F</abbr>irst Name</label>
+	<input type="text" id="firstName" name="firstName" value="" placeholder="John Smith" accesskey="f" autofocus="false" autocomplete="firstName">
+</div>
+
+*/
+
+label {
+	text-transform: capitalize;
+}

@@ -1,0 +1,84 @@
+/*
+
+<div>
+	<label for="firstName"><abbr title="First Name">F</abbr>irst Name</label>
+	<input type="text" id="firstName" name="firstName" value="" placeholder="John Smith" accesskey="f" autofocus="false" autocomplete="firstName">
+</div>
+
+*/
+
+input {
+	border: none;
+	cursor: pointer;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.4;
+  margin: 0;
+	overflow: visible;
+}
+
+input[disabled] {
+	cursor: auto;
+}
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="week"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"] {
+	border-radius: 0.25em;
+	box-shadow: inset 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 50% );
+	display: block;
+	padding: 0.25rem;
+}
+
+@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="week"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"] {
+		display: inline-block;
+	}
+
+}
+
+[type="checkbox"] {
+  padding: 0;
+}
+
+/* Isolate this selector */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="radio"] {
+  padding: 0;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}

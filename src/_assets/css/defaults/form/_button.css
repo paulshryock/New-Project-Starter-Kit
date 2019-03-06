@@ -1,0 +1,67 @@
+
+
+button {
+  background-color: transparent;
+	border: none;
+	color: hsl( 0, 0%, 10% );
+	cursor: pointer;
+  font-family: inherit;
+  font-size: 100%;
+	line-height: 1;
+  margin: 0;
+	overflow: visible;
+	padding: 0.25rem;
+	text-transform: capitalize;
+  -webkit-appearance: button;
+}
+
+/* Isolate this selector */
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Isolate this selector */
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+input[type="button"] {
+  border: none;
+  border-radius: 0.25em;
+  box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 80% );
+  padding: 0.25rem;
+  text-transform: capitalize;
+  transition: box-shadow 200ms ease;
+  -webkit-appearance: button;
+}
+
+input[type="button"]:hover,
+input[type="button"]:focus {
+  box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 50% );
+}
+
+[type="reset"],
+[type="submit"] {
+  border-radius: 0.25em;
+  -webkit-appearance: button;
+}
+
+/* Isolate this selector */
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  border-style: none;
+  outline: 1px dotted ButtonText;
+  padding: 0;
+}
+
+input[type="file"] {
+  border-radius: 0.25em;
+}
+
+/* Isolate this selector */
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
