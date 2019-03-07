@@ -1,25 +1,25 @@
 {
-  "title": "Site Title",
-  "description": "This is the site description",
+  "title": "{{ pkg.title }}",
+  "description": "{{ pkg.description }}",
+  "url": "{{ pkg.url }}",
   "version": "{{ pkg.version }}",
 
-  "url": "https://example.com/",
   "feed": {
-    "subtitle": "Site Title",
+    "subtitle": "{{ pkg.title }}",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "url": "https://pshry.com/feed/feed.xml",
-    "id": "https://pshry.com/"
+    "url": "{{ pkg.url }}/feed/feed.xml",
+    "id": "{{ pkg.url }}/"
   },
 
   "author": {
-    "name": "Paul Shryock",
-    "email": "paul@pshry.com",
-    "url": "https://pshry.com/"
+    "name": "{{ pkg.author.name }}",
+    "email": "{{ pkg.author.email }}",
+    "url": "{{ pkg.author.url }}"
   },
 
   "layout": "page",
-  "body_class": "site",
+  "content_type": "page",
 
-  "copyright": "&copy {{ 'now' | date: '%Y' }} Site Title. All rights reserved."
+  "copyright": "&copy {{ 'now' | date: '%Y' }} {{ pkg.title }}. All rights reserved."
 }

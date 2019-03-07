@@ -15,14 +15,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.14.0 - 2019-03-06 - Default Styles
+## 0.14.0 - 2019-03-06 - Styles, Data, Body Classes
+
+### Added
+- Add Pull Request template checklist items
 
 ### Changed
-- Update styles
+- Update default styles
+- Update body classes
+- Update package and site data
 
 ## 0.13.0 - 2019-03-06 - Zeit Now
 
-### Changed
+### Added
 - Configure Zeit Now
 
 ## 0.12.0 - 2019-03-05 - Netlify

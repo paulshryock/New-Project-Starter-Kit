@@ -7,10 +7,10 @@ module.exports = function(eleventyConfig) {
 		* Add custom filters
 		*/
 
-	// Add prependSiteClass filter
-	eleventyConfig.addFilter("prependSiteClass", function(value) {
-		if (value) return 'site ' + value;
-	});
+	// Add custom filter
+	// eleventyConfig.addFilter("myFilter", function(value) {
+	// 	return value;
+	// });
 
 	// Add timePosted filter
 	eleventyConfig.addLiquidFilter("timePosted", date => {
