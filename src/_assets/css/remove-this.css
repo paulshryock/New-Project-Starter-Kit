@@ -11,10 +11,6 @@
 	font-size: 1.25rem;
 }
 
-.site-title {
-	font-size: 1.5rem;
-}
-
 .post-title {
 	font-size: 2rem;
 }
@@ -25,18 +21,10 @@
 		font-size: 1.5rem;
 	}
 
-	.site-title {
-		font-size: 2rem;
-	}
-
 	.post-title {
 		font-size: 3rem;
 	}
 
-}
-
-.site-title {
-	line-height: 1.1;
 }
 
 .lead {
@@ -47,12 +35,7 @@
   line-height: 1.4;
 }
 
-.site-title {
-	font-weight: bold;
-}
-
-.button,
-.site-title a {
+.button {
 	text-decoration: none;
 }
 
@@ -351,10 +334,6 @@
 .list_ordered,
 .list_numbered {
 	padding: 0 0 0 2em;
-}
-
-.site-title {
-  margin: 0;
 }
 
 .pagination ul {
