@@ -1,9 +1,9 @@
 ---
-title: Form
-slug: form
+title: Form Ipsum
+slug: form-ipsum
 date: 2019-01-01T00:00:00-5
 
-seo_title: Form | Site Title
+seo_title: Form Ipsum | Site Title
 
 navigation: 3
 ---
