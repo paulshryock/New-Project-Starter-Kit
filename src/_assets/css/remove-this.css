@@ -31,21 +31,8 @@
 	line-height: 1.3;
 }
 
-.button {
-  line-height: 1.4;
-}
-
-.button {
-	text-decoration: none;
-}
-
-.button,
 .post-meta {
 	text-transform: capitalize;
-}
-
-.screen-reader-text {
-	word-wrap: normal !important;
 }
 
 .post-content ul,
@@ -85,12 +72,7 @@
 }
 
 .post-header,
-.post-footer,
-.button:link,
-.button:visited,
-.button:hover,
-.button:focus,
-.button:active {
+.post-footer {
 	color: hsl( 0, 0%, 10% );
 }
 
@@ -99,107 +81,12 @@
 	color: hsl( 0, 0%, 30% );
 }
 
-.button:hover,
-.button:focus {
-	box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 50% );
-}
-
-.button {
-	box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 80% );
-}
-
-.button_cta:link,
-.button_cta:visited,
-.button_cta:hover,
-.button_cta:focus {
-	color: hsl( 0, 0%, 100% );
-}
-
-.button {
-	background: hsl( 0, 0%, 100% );
-}
-
-.button_cta:link,
-.button_cta:visited,
-.hamburger {
-	background: hsl( 240, 100%, 55% );
-}
-
-.navigation button:hover .hamburger,
-.navigation button:focus .hamburger,
-.button_cta:hover,
-.button_cta:focus {
-	background: #7e00bd;
-	background: rgb( 126, 0, 189 );
-	background: hsl( 280, 100%, 37% );
-}
-
-.button_cta:active {
-	background: red;
-	background: #f00;
-	background: rgb( 255, 0, 0 );
-	background: hsl( 0, 100%, 50% );
-}
-
 .pagination a[aria-current="true"] {
 	border: none;
 }
 
-.screen-reader-text {
-	border: 0;
-}
-
 .pagination a {
 	border: 0.0625rem solid;
-}
-
-.js .navigation ul,
-[aria-expanded="true"] .hamburger__2 {
-	opacity: 0;
-}
-
-.js .navigation .is-active {
-	opacity: 1;
-}
-
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
-
-	.js .navigation ul {
-		opacity: 1;
-	}
-
-}
-
-[aria-expanded="true"] .hamburger__1 {
-	-webkit-transform: rotate(-45deg) translate( -0.25rem, 0.4375rem );
-	transform: rotate(-45deg) translate( -0.25rem, 0.4375rem );
-}
-
-[aria-expanded="true"] .hamburger__2 {
-	-webkit-transform: rotate(80deg);
-	transform: rotate(180deg);
-}
-
-[aria-expanded="true"] .hamburger__3 {
-	-webkit-transform: rotate(45deg) translate( -0.25rem, -0.4375rem );
-	transform: rotate(45deg) translate( -0.25rem, -0.4375rem );
-}
-
-.button {
-	transition: box-shadow 200ms ease;
-}
-
-.hamburger {
-	transition: all 200ms;
-}
-
-.js .navigation ul {
-	transition: all 500ms;
-}
-
-.hamburger__1,
-.hamburger__3 {
-	content: '';
 }
 
 .post-meta li + li::before {
@@ -210,26 +97,13 @@
 	border-radius: 50%;
 }
 
-.button,
-.hamburger {
-	border-radius: 0.25em;
-}
-
 .post-meta ul,
 .post-meta ol {
 	display: inline;
 }
 
-.post-meta li,
-.navigation button,
-.button {
+.post-meta li {
 	display: inline-block;
-}
-
-.navigation li,
-.navigation a,
-.hamburger {
-	display: block;
 }
 
 .post-content li,
@@ -240,31 +114,6 @@
 	display: list-item;
 }
 
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
-
-	.navigation li {
-		display: inline-block;
-	}
-
-}
-
-[aria-expanded="true"] .hamburger__2 {
-	width: 0;
-}
-
-.hamburger {
-	width: 1.5rem;
-}
-
-[aria-expanded="true"] .hamburger__1,
-[aria-expanded="true"] .hamburger__3 {
-	width: 1.85rem;
-}
-
-.screen-reader-text {
-	width: 1px;
-}
-
 .avatar {
 	max-width: 8rem;
 }
@@ -273,58 +122,12 @@
 	max-width: 36.4rem;
 }
 
-.hamburger {
-	height: 0.25rem;
-}
-
-.screen-reader-text {
-	height: 1px;
-}
-
-.js .navigation ul {
-	max-height: 0;
-}
-
-.js .navigation .is-active {
-	max-height: 100vh;
-}
-
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
-
-	.js .navigation ul {
-		max-height: none;
-	}
-
-}
-
-.screen-reader-text {
-	clip: rect( 1px, 1px, 1px, 1px );
-	clip-path: inset( 50% );
-  padding: 0;
-}
-
 .avatar {
 	clip-path: circle( 50% );
 }
 
-.navigation[aria-expanded="false"] {
-  padding: 0;
-}
-
-.button {
-	padding: 0.25rem;
-}
-
-.button_cta {
-	padding: 0.5rem;
-}
-
 .container {
 	padding: 1rem;
-}
-
-.navigation button {
-	padding: 0.75rem 1rem;
 }
 
 .post-content ul,
@@ -344,10 +147,6 @@
 	margin: 0 0.125rem;
 }
 
-.hamburger {
-	margin: 0.25rem 0;
-}
-
 .single .post-header__image,
 .single .post-footer {
 	margin: 4rem 0 0;
@@ -363,43 +162,6 @@
 
 .pagination {
 	margin: 4em 0;
-}
-
-.screen-reader-text {
-	margin: -1px;
-}
-
-.navigation button {
-	position: absolute;
-}
-
-.screen-reader-text {
-	position: absolute !important;
-}
-
-/* Top */
-
-.navigation button {
-	top: 0;
-}
-
-/* Right */
-
-.navigation button {
-	right: 0;
-}
-
-.screen-reader-text,
-.js .navigation ul {
-	overflow: hidden;
-}
-
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
-
-	.js .navigation ul {
-		overflow: auto;
-	}
-
 }
 
 .pagination ul {
@@ -492,80 +254,3 @@
 [type=checkbox]:checked + .toggle__switch::after {
   transform: translate( calc( 3em - 100% ), -50% );
 }
-
-/**
-	* Under-Engineered Custom Radio Buttons and Checkboxen
-	* http://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html
-	*
-	* TODO: Decide if this is the appropriate approach
-	* TODO: if (it's not) { replace this with [Accessibility First Radio Buttons](https://dev.to/link2twenty/accessibility-first-radio-buttons-2302) }
-	* TODO: else { continue }
-	* TODO: Update styles to match look and feel of the rest of the site
-	* TODO: Integrate and organize these styles in with the rest of the file
-	* 
-	* ```html
-	* <input type="radio" name="radio-button-1" id="radio-button-1" checked>
-	* <label for="radio-button-1">Radio Button 1</label>
-	* ```
-	*
-	* ```css
-	* input[type=radio],
-	* input[type=checkbox] {
-	*   position: absolute;
-	*   top: auto;
-	*   overflow: hidden;
-	*   clip: rect(1px 1px 1px 1px); // IE 6/7
-	*   clip: rect(1px, 1px, 1px, 1px);
-	*   width: 1px;
-	*   height: 1px;
-	*   white-space: nowrap; // https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-	* }
-	* 
-	* input[type=radio] + label:before,
-	* input[type=checkbox] + label:before {
-	*   content: '';
-	*   background: #fff;
-	*   border: .1em solid rgba(0, 0, 0, .75);
-	*   background-color: rgba(255, 255, 255, .8);
-	*   display: block;
-	*   box-sizing: border-box;
-	*   float: left;
-	*   width: 1em;
-	*   height: 1em;
-	*   margin-left: -1.5em;
-	*   margin-top: .15em;
-	*   vertical-align: top;
-	*   cursor: pointer;
-	*   text-align: center;
-	*   transition: all .1s ease-out;
-	* }
-	* 
-	* input[type=radio] + label:before {
-	*   border-radius: 100%;
-	* }
-	* 
-	* input[type=radio]:checked + label:before {
-	*   background-color: #00f;
-	*   box-shadow: inset 0 0 0 .15em rgba(255, 255, 255, .95);
-	* }
-	* 
-	* input[type=checkbox] + label:before {
-	* 	// content: '\00d7';
-	* 	// content: '\002718';
-	* 	// content: '\002715';
-	* 	// content: '\0025a0';
-	*   content: '\002713';
-	*   font-weight: bold;
-	*   text-align: center;
-	*   line-height: 1.15;
-	*   color: rgba(0, 0, 255, 0);
-	* }
-	* 
-	* input[type=checkbox]:checked + label:before {
-	*   color: rgba(0, 0, 255, 1);
-	*   line-height: .75;
-	*   text-shadow: .05em 0 0 rgba(0, 0, 255, 1), -.05em 0 0 rgba(0, 0, 255, 1);
-	* }
-	* ```
-	* 
-	*/
