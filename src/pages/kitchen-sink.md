@@ -44,7 +44,6 @@ navigation: 2
 		<p>
 			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
 		</p>
-
 		<table class="t1" summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
 			<caption>
 				Most Downloaded Movies on BitTorrent, 2011
@@ -125,7 +124,6 @@ navigation: 2
 				</tr>
 			</tbody>
 		</table>
-
 		<table>
 			<tr>
 				<th>
@@ -168,19 +166,16 @@ navigation: 2
 				</td>
 			</tr>
 		</table>
-
 		<h3>A sub heading which is not as important as the second, but should be used with consideration</h3>
 		<p>
 			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
 		</p>
-
 		<blockquote>
 			<p><em>This is a properly formatted blockquote, btw.</em> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</p>
 			<footer>
 				— <cite><a href="http://www.thegatesnotes.com">Bill Gates</a></cite>
 			</footer>
 		</blockquote>
-
 		<h4>A sub heading which is not as important as the second, but should be used with consideration</h4>
 		<p>
 			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
@@ -190,18 +185,15 @@ navigation: 2
 				“Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”
 			</p>
 		</blockquote>
-
 <pre><code>#header h1 a {
 display: block;
 width: 300px;
 height: 80px;
 }</code></pre>
-
 		<h5>A sub heading which is not as important as the second, but should be used with consideration</h5>
 		<p>
 			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
 		</p>
-
 		<dl>
 			<dt>Definition list</dt>
 			<dd>
@@ -212,7 +204,6 @@ height: 80px;
 				Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 			</dd>
 		</dl>
-
 		<h6>This heading plays a relatively small bit part role, if you use it at all</h6>
 		<p>
 			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
@@ -399,9 +390,7 @@ and another</pre>
 			I am the <span class="quiet">quiet class</span> example<br>
 			I am the <span class="highlight">highlight class</span> example<br>
 		</p>
-
 		<hr>
-
 		<ul>
 			<li>Unordered list 01</li>
 			<li>Unordered list 02</li>
@@ -432,7 +421,6 @@ and another</pre>
 				</ol>
 			</li>
 		</ol>
-
 		<dl>
 			<dt>
 				Description list title 01
@@ -450,7 +438,6 @@ and another</pre>
 				Description list description 03
 			</dd>
 		</dl>
-
 		<table>
 			<caption>
 				Table Caption
@@ -494,7 +481,6 @@ and another</pre>
 				</tr>
 			</tbody>
 		</table>
-
 		<form action="#">
 			<fieldset>
 				<legend>Form legend</legend>
@@ -539,7 +525,6 @@ and another</pre>
 				</div>
 			</fieldset>
 		</form>
-
 		I am <a href="something.doc">a word document</a> link, so readers know that I'm not a normal link.<br>
 		I am <a href="something.pdf">a pdf document</a> link, so readers know that I'm not a normal link.<br>
 		I am <a href="http://www.something.com">an external website</a> link, so readers know that I'm not a normal link.<br>
@@ -548,9 +533,7 @@ and another</pre>
 		I am <a href="aim:something">an AIM screenname</a> link, so readers know that I'm not a normal link.<br>
 		I am <a href="mailto:something">an email address</a> link, so readers know that I'm not a normal link.<br>
 		I am <a href="http://yourwebsite.com">an internal link</a>. Change the stylesheet's "http://yourwebsite.com" to your domain name so I don't look like an external link.<br>
-
 		<br>
-
 		<p class="success">
 			<img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> This is a paragraph with class="success" and <a href="http://www.something.com">a link</a>.
 		</p>
