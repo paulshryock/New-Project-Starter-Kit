@@ -19,7 +19,7 @@
   },
 
   "layout": "page",
-  "body_class": "site",
+  "content_type": "page",
 
   "copyright": "&copy {{ 'now' | date: '%Y' }} {{ pkg.title }}. All rights reserved."
 }

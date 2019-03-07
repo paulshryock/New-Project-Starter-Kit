@@ -1,0 +1,12 @@
+iframe {
+	border: none;
+}
+
+embed,
+iframe,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}

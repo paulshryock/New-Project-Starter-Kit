@@ -1,0 +1,6 @@
+
+
+/* Isolate this selector */
+:focus:not(:focus-visible) {
+	outline: none;
+}
