@@ -1,11 +1,3 @@
-.breadcrumb,
-.card footer {
-	font-family: "IBM Plex Mono", /* Ideal */
-		Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, /* Fit */ /* Common */
-		monospace; /* Generic */
-}
-
-.card footer,
 .post-meta,
 .post-footer {
 	font-size: 85%;
@@ -13,10 +5,6 @@
 
 .lead {
 	font-size: 125%;
-}
-
-.breadcrumb {
-	font-size: 0.85rem;
 }
 
 .archive h2 {
@@ -59,24 +47,13 @@
   line-height: 1.4;
 }
 
-.site-title,
-.breadcrumb [aria-current="page"] {
+.site-title {
 	font-weight: bold;
 }
 
 .button,
-.site-title a,
-.card a {
+.site-title a {
 	text-decoration: none;
-}
-
-/* This selector fails in some browsers; keep it isolated */
-.card:focus-within a:focus {
-	text-decoration: none;
-}
-
-.card a:focus {
-	text-decoration: underline;
 }
 
 .button,
@@ -130,54 +107,18 @@
 .button:visited,
 .button:hover,
 .button:focus,
-.button:active,
-.breadcrumb [aria-current="page"] {
-	color: #1a1a1a;
-	color: rgb( 26, 26, 26 );
+.button:active {
 	color: hsl( 0, 0%, 10% );
-}
-
-.breadcrumb {
-	border-top: 0.25rem solid #1a1a1a;
-	border-top: 0.25rem solid rgb( 26, 26, 26 );
-	border-top: 0.25rem solid hsl( 0, 0%, 10% );
 }
 
 .post-content,
 .post-meta {
-	color: #4d4d4d;
-	color: rgb( 77, 77, 77 );
 	color: hsl( 0, 0%, 30% );
-}
-
-.card:hover {
-	box-shadow: 0 0 0.125rem 0.125rem #4d4d4d;
-	box-shadow: 0 0 0.125rem 0.125rem rgb( 77, 77, 77 );
-	box-shadow: 0 0 0.125rem 0.125rem hsl( 0, 0%, 30% );
-}
-
-/* This selector fails in some browsers; keep it isolated */
-.card:focus-within {
-	box-shadow: 0 0 0.125rem 0.125rem #4d4d4d;
-	box-shadow: 0 0 0.125rem 0.125rem rgb( 77, 77, 77 );
-	box-shadow: 0 0 0.125rem 0.125rem hsl( 0, 0%, 30% );
 }
 
 .button:hover,
 .button:focus {
 	box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 50% );
-}
-
-.card {
-	border: 0.125rem solid #b3b3b3;
-	border-color: rgb( 179, 179, 179 );
-	border-color: hsl( 0, 0%, 70% );
-}
-
-.breadcrumb li + li::before {
-	border-right: 0.125em solid #b3b3b3;
-	border-right: 0.125em solid rgb( 179, 179, 179 );
-	border-right: 0.125em solid hsl( 0, 0%, 70% );
 }
 
 .button {
@@ -188,22 +129,16 @@
 .button_cta:visited,
 .button_cta:hover,
 .button_cta:focus {
-	color: #fff;
-	color: rgb( 255, 255, 255 );
 	color: hsl( 0, 0%, 100% );
 }
 
 .button {
-	background: #fff;
-	background: rgb( 255, 255, 255 );
 	background: hsl( 0, 0%, 100% );
 }
 
 .button_cta:link,
 .button_cta:visited,
 .hamburger {
-	background: #1a1aff;
-	background: rgb( 26, 26, 255 );
 	background: hsl( 240, 100%, 55% );
 }
 
@@ -235,11 +170,6 @@
 	border: 0.0625rem solid;
 }
 
-/* This selector fails in some browsers; keep it isolated */
-.card:focus-within a:focus {
-	outline: none;
-}
-
 .js .navigation ul,
 [aria-expanded="true"] .hamburger__2 {
 	opacity: 0;
@@ -255,11 +185,6 @@
 		opacity: 1;
 	}
 
-}
-
-.breadcrumb li + li::before {
-	-webkit-transform: rotate( 15deg );
-	transform: rotate( 15deg );
 }
 
 [aria-expanded="true"] .hamburger__1 {
@@ -290,8 +215,7 @@
 }
 
 .hamburger__1,
-.hamburger__3,
-.breadcrumb li + li::before {
+.hamburger__3 {
 	content: '';
 }
 
@@ -308,22 +232,6 @@
 	border-radius: 0.25em;
 }
 
-.card {
-	border-radius: 1em;
-}
-
-.card img {
-	border-top-left-radius: 0.875em;
-}
-
-.card img {
-	border-top-right-radius: 0.875em;
-}
-
-.card__image img {
-  object-fit: cover;
-}
-
 .post-meta ul,
 .post-meta ol {
 	display: inline;
@@ -331,8 +239,7 @@
 
 .post-meta li,
 .navigation button,
-.button,
-.breadcrumb li + li::before {
+.button {
 	display: inline-block;
 }
 
@@ -362,10 +269,6 @@
 	width: 0;
 }
 
-.card__image img {
-  width: 100%;
-}
-
 .hamburger {
 	width: 1.5rem;
 }
@@ -387,20 +290,8 @@
 	max-width: 36.4rem;
 }
 
-.card__image img {
-  height: 100%;
-}
-
 .hamburger {
 	height: 0.25rem;
-}
-
-.card__image {
-  height: 10rem;
-}
-
-.breadcrumb li + li::before {
-	height: 0.75em;
 }
 
 .screen-reader-text {
@@ -445,8 +336,7 @@
 	padding: 0.5rem;
 }
 
-.container,
-.card__text {
+.container {
 	padding: 1rem;
 }
 
@@ -463,8 +353,7 @@
 	padding: 0 0 0 2em;
 }
 
-.site-title,
-.cards p {
+.site-title {
   margin: 0;
 }
 
@@ -480,14 +369,6 @@
 	margin: 0.25rem 0;
 }
 
-.breadcrumb li + li::before {
-	margin: 0 0.25em;
-}
-
-.card {
-	margin: 2rem 0.5rem;
-}
-
 .single .post-header__image,
 .single .post-footer {
 	margin: 4rem 0 0;
@@ -495,14 +376,6 @@
 
 .single .post-header {
 	margin: 0 0 4rem;
-}
-
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
-
-	.card {
-		margin: 1rem 0.5rem;
-	}
-
 }
 
 .post-title {
@@ -515,22 +388,6 @@
 
 .screen-reader-text {
 	margin: -1px;
-}
-
-.card__text > * {
-	margin-top: 0;
-}
-
-.card__text :last-child {
-  margin-top: auto;
-}
-
-.card__text > * + * {
-  margin-top: 1rem;
-}
-
-.card__text :nth-last-child(2) {
-  margin-bottom: 1rem;
 }
 
 .navigation button {
@@ -566,17 +423,6 @@
 
 }
 
-.card,
-.card__text {
-  display: flex;
-  flex-direction: column;
-}
-
-.card__text {
-  flex-grow: 1;
-  order: 1;
-}
-
 .pagination ul {
 	display: flex;
 	justify-content: center;
@@ -594,60 +440,6 @@
 	}
 
 }
-
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
-
-	nav ul,
-	nav ol {
-		display: flex;
-		justify-content: flex-start;
-	}
-
-}
-
-/**
-	* Grid
-	*/
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax( 15rem, 1fr ) );
-  grid-gap: 2rem;
-}
-
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
-
-	.cards {
-	  grid-gap: 1rem;
-	}
-
-}
-
-/* Supports Grid */
-
-@supports (display: grid) {
-
-	/* Margin */
-
-	/* 0 */
-
-  .card {
-  	margin: 0;
-  }
-
-}
-
-/**
-	* Accessibility First Toggle Switch
-	*
-	* TODO: Decide if this is the appropriate approach
-	* TODO: if (it's not) { replace this with a better approach }
-	* TODO: else { continue }
-	* TODO: Update styles to match look and feel of the rest of the site
-	* TODO: Integrate and organize these styles in with the rest of the file
-	*/
-
-/* Default */
 
 .toggle {
   margin: 0.25rem 0;
