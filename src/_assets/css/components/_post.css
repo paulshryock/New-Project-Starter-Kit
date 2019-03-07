@@ -36,6 +36,7 @@
 .post-meta ul,
 .post-meta ol {
 	display: inline;
+	margin: 0 0 0 0.5em;
 }
 
 .post-meta li {
@@ -44,6 +45,7 @@
 
 .post-meta li + li::before {
 	content: '/ ';
+	margin: 0 0 0 0.5em;
 }
 
 .post-content {
