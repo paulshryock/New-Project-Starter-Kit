@@ -7,4 +7,39 @@ nav_title: Home
 navigation: 1
 ---
 
-Home page content
+<table>
+	<thead>
+		<tr>
+			<th>Heading</th>
+			<th>Heading</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Cell</td>
+			<td>Cell</td>
+		</tr>
+		<tr>
+			<td>Cell</td>
+			<td>Cell</td>
+		</tr>
+		<tr>
+			<td>Cell</td>
+			<td>Cell</td>
+		</tr>
+		<tr>
+			<td>Cell</td>
+			<td>Cell</td>
+		</tr>
+		<tr>
+			<td>Cell</td>
+			<td>Cell</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Cell</td>
+			<td>Cell</td>
+		</tr>
+	</tfoot>
+</table>
