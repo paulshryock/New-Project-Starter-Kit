@@ -7,11 +7,11 @@
 }
 
 .single .post-header {
-	margin: 0 0 4rem;
+	margin: 0 0 2rem;
 }
 
 .single .post-header__image {
-	margin: 4rem 0 0;
+	margin: 2rem 0 0;
 }
 
 .post-title {
@@ -85,5 +85,5 @@
 .post-footer {
 	color: hsl( 0, 0%, 10% );
 	font-size: 85%;
-	margin: 4rem 0 0;
+	margin: 2rem 0 0;
 }

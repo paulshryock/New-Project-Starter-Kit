@@ -1,7 +1,7 @@
 .button {
-	background: hsl( 0, 0%, 100% );
+	background: hsl( 240, 100%, 50% );
 	border-radius: 0.25em;
-	box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 80% );
+	color: hsl( 0, 0%, 100% );
 	display: inline-block;
   line-height: 1.4;
 	padding: 0.25rem;
@@ -12,35 +12,19 @@
 
 .button:link,
 .button:visited {
-	color: hsl( 0, 0%, 10% );
+	box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 240, 25%, 90% );
+	color: hsl( 0, 0%, 100% );
 }
 
 .button:hover,
 .button:focus {
-	box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 50% );
-	color: hsl( 0, 0%, 10% );
+	background: hsl( 240, 100%, 54% );
+	box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 240, 25%, 80% );
+	color: hsl( 0, 0%, 100% );
 }
 
 .button:active {
-	color: hsl( 0, 0%, 10% );
-}
-
-.button_cta {
-	padding: 0.5rem;
-}
-
-.button_cta:link,
-.button_cta:visited {
-	background: hsl( 240, 100%, 55% );
+	background: hsl( 240, 100%, 58% );
+	box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 240, 25%, 100% );
 	color: hsl( 0, 0%, 100% );
-}
-
-.button_cta:hover,
-.button_cta:focus {
-	background: hsl( 280, 100%, 37% );
-	color: hsl( 0, 0%, 100% );
-}
-
-.button_cta:active {
-	background: hsl( 0, 100%, 50% );
 }
