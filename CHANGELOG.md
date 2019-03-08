@@ -15,7 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.15.0 - 2019-03-07 - Components
+## 0.16.0 - 2019-03-08 - GitBook
+
+### Added
+- Configure GitBook
+
+## 0.15.0 - 2019-03-08 - Components
 
 ### Added
 - Style components
