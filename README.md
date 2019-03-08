@@ -31,7 +31,7 @@ Working on your first Pull Request? You can learn how from this *free* series, [
 - Changelog: [https://github.com/paulshryock/New-Project-Starter-Kit/blob/master/CHANGELOG.md](CHANGELOG.md)
 - Pull Requests: [https://github.com/paulshryock/New-Project-Starter-Kit/pulls](https://github.com/paulshryock/New-Project-Starter-Kit/pulls)
 - Issues: [https://github.com/paulshryock/New-Project-Starter-Kit/issues](https://github.com/paulshryock/New-Project-Starter-Kit/issues)
-  - In case of sensitive bugs like security vulnerabilities, please contact [paul.shryock@realogy.com](mailto:paul.shryock@realogy.com) directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
+  - In case of sensitive bugs like security vulnerabilities, please contact [paul@pshry.com](mailto:paul@pshry.com) directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
 - Releases:
 	- v0 - Development
 		- [v0.17.0 - Configure GitBook, Organize Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.17.0)
