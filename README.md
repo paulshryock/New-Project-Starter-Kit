@@ -15,13 +15,7 @@ $ npm start
 
 ## Documentation
 
-Project documentation is in the `_docs` directory.
-
-- [npm Scripts](_docs/npm-scripts.md)
-- [Assets](_docs/assets.md)
-	- [JavaScript](_docs/assets.md#javascript)
-	- [CSS](_docs/assets.md#css)
-	- [Images](_docs/assets.md#images)
+[Project documentation](https://docs.pshry.com/new-project-starter-kit/) is in the `_docs` directory.
 
 ## Contributing
 
@@ -40,6 +34,7 @@ Working on your first Pull Request? You can learn how from this *free* series, [
   - In case of sensitive bugs like security vulnerabilities, please contact [paul.shryock@realogy.com](mailto:paul.shryock@realogy.com) directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
 - Releases:
 	- v0 - Development
+		- [v0.17.0 - Configure GitBook](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.17.0)
 		- [v0.16.0 - GitBook](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.16.0)
 		- [v0.15.0 - Components](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.15.0)
 		- [v0.14.0 - Styles, Data, Body Classes](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.14.0)
