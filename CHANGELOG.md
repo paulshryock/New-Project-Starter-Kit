@@ -15,7 +15,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.14.0 - 2019-03-06 - Styles, Data, Body Classes
+## 0.16.0 - 2019-03-08 - GitBook
+
+### Added
+- Configure GitBook
+
+## 0.15.0 - 2019-03-08 - Components
+
+### Added
+- Style components
+
+### Removed
+- Remove form layout_class
+- Remove markdown code spaces
+
+## 0.14.0 - 2019-03-07 - Styles, Data, Body Classes
 
 ### Added
 - Add Pull Request template checklist items

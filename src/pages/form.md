@@ -1,11 +1,7 @@
 ---
-title: Form
-slug: form
+title: Form Ipsum
+slug: form-ipsum
 date: 2019-01-01T00:00:00-5
-
-seo_title: Form | Site Title
-
-navigation: 3
 ---
 
 <header class="container">
@@ -23,10 +19,8 @@ navigation: 3
 </div><!-- .container -->
 
 <form method="get" action="/" class="container">
-
 	<fieldset id="inputs">
 		<legend>Input Element Types (All)</legend>
-
 		<div>
 			<label for="a-button">Input Button</label>
 			<input type="button" value="Button" placeholder="button" name="a-button" id="a-button" />
@@ -115,13 +109,9 @@ navigation: 3
 			<label for="a-reset">Reset</label>
 			<input type="reset" value="Reset" name="a-reset" id="a-reset" />
 		</div>
-
 	</fieldset>
-
-
 	<fieldset id="checkboxes">
 		<legend>Checkboxes, Toggles</legend>
-
 		<div>
 			<label for="check-1">
 				<input type="checkbox" value="check-1" name="check-1" id="check-1" />
@@ -140,7 +130,6 @@ navigation: 3
 				Check the microphone
 			</label>
 		</div>
-
 		<div>
 			<label class="toggle" for="check-a">
 				<input type="checkbox" value="check-a" name="check-a" id="check-a" />
@@ -162,13 +151,9 @@ navigation: 3
 				Toggle the microphone
 			</label>
 		</div>
-
 	</fieldset>
-
-
 	<fieldset id="radio-buttons">
 		<legend>Radio Buttons</legend>
-
 		<div>
 			<input type="radio" value="radio-1" name="radio-1" id="radio-1" />
 			<label for="a-button">AM</label>
@@ -181,13 +166,9 @@ navigation: 3
 			<input type="radio" value="radio-3" name="radio-3" id="radio-3" />
 			<label for="a-button">XM</label>
 		</div>
-
 	</fieldset>
-
-
 	<fieldset id="classic-form-elements">
 		<legend>Other Classic Form Elements</legend>
-
 		<div>
 			<label for="a-textarea">Textarea</label>
 			<textarea name="a-textarea" id="a-textarea">My new stuff is nothin' like my old stuff was.</textarea>
@@ -231,13 +212,9 @@ navigation: 3
 			<label for="a-button-element">Button</label>
 			<button type="submit" name="a-button-element" id="a-button-element">Button</button>
 		</div>
-
 	</fieldset>
-
-
 	<fieldset id="new-form-elements">
 		<legend>New Form Elements since HTML5</legend>
-
 		<div>
 			<label for="the-datalist">Datalist</label>
 			<input type="text" list="a-datalist" placeholder="Enter the name of any one of the Beatles" />
@@ -252,8 +229,5 @@ navigation: 3
 			<label for="a-keygen">Keygen</label>
 			<keygen name="a-keygen" id="a-keygen" />
 		</div>
-
 	</fieldset>
-
-
 </form>

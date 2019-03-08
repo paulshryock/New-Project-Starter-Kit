@@ -3,5 +3,9 @@ form {
 }
 
 form div {
+	margin: 0 0 1rem;
+}
+
+form div + div {
 	margin: 1rem 0;
 }

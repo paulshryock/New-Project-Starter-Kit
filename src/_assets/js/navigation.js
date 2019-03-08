@@ -14,7 +14,8 @@ let navigation = {};
 	*/
 navigation.init = function() {
 
-	navigation.addEventListeners();
+	// navigation.addEventListeners();
+	navigation.addMobileNavigation();
 
 };
 
@@ -161,13 +162,17 @@ navigation.toggleNavElements = function( mq ) {
 
 };
 
+
 /**
 	* Adds mobile navigation
 	*
 	*/
 navigation.addMobileNavigation = function() {
 
-	let mq = window.matchMedia( '(min-width: 37.5rem)' );
+	const nav = require('./../../_data/hamburger.11tydata.js');
+
+	let query = nav.mediaQuery || '37.5rem',
+			mq = window.matchMedia( `(min-width: ${query})` );
 
 	navigation.toggleNavElements( mq ); // Call listener function at run time
 	mq.addListener( navigation.toggleNavElements ); // Attach listener function on state changes
@@ -178,11 +183,9 @@ navigation.addMobileNavigation = function() {
 	* Adds navigation event listners
 	*
 	*/
-navigation.addEventListeners = function() {
+// navigation.addEventListeners = function() {
 
-	window.addEventListener( 'load', navigation.addMobileNavigation, false );
-
-};
+// };
 
 /**
 	* Initialize the main navigation object

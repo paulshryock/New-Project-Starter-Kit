@@ -10,9 +10,9 @@ a:visited {
 
 a:hover,
 a:focus {
-	color: hsl( 280, 100%, 37% );
+	color: hsl( 220, 100%, 50% );
 }
 
 a:active {
-	color: hsl( 0, 100%, 50% );
+	color: hsl( 220, 100%, 60% );
 }

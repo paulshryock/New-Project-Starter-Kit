@@ -1,9 +1,6 @@
 table {
-	background: hsl( 0, 0%, 100% );
 	border-collapse: collapse;
-	border-radius: 1em;
 	border-spacing: 0;
-	box-shadow: 0 0 0.25rem 0.25rem hsl( 0, 0%, 90% );
 	color: hsl( 0, 0%, 30% );
 	margin: 2em 0;
 }
@@ -13,16 +10,6 @@ thead {
 	color: hsl( 0, 0%, 100% );
 }
 
-thead th:first-child,
-thead td:first-child {
-	border-top-left-radius: 1em;
-}
-
-thead th:last-child,
-thead td:last-child {
-	border-top-right-radius: 1em;
-}
-
 tfoot {
 	background: hsl( 0, 0%, 80% );
 }
@@ -30,16 +17,6 @@ tfoot {
 tfoot th,
 tfoot td {
 	border-bottom: none;
-}
-
-tfoot th:first-child,
-tfoot td:first-child {
-	border-bottom-left-radius: 1em;
-}
-
-tfoot th:last-child,
-tfoot td:last-child {
-	border-bottom-right-radius: 1em;
 }
 
 tr:nth-of-type(even) {
