@@ -64,7 +64,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addLayoutAlias('page', '_layouts/page');
 	eleventyConfig.addLayoutAlias('article', '_layouts/article');
 	eleventyConfig.addLayoutAlias('articles', '_layouts/articles');
-	eleventyConfig.addLayoutAlias('form', '_layouts/form');
 	
 	/**
 		* Add custom collections

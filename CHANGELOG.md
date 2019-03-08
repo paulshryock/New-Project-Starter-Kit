@@ -15,7 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.17.0 - 2019-03-08 - Configure GitBook
+## 0.17.0 - 2019-03-08 - Configure GitBook, Organize Docs
+
+### Added
+- Add content docs
 
 ### Changed
 - Update pdf paper size

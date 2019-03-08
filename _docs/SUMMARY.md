@@ -18,3 +18,10 @@
 	- [JavaScript](assets/README.md#javascript)
 	- [CSS](assets/README.md#css)
 	- [Images](assets/README.md#images)
+
+- [Content](content/README.md)
+	- [Default Content Types](content/README.md#default-content-types)
+	- [Markup and Styling](content/README.md#markup-and-styling)
+	- [Add a Content Type](content/README.md#add-a-content-type)
+	- [Add a Content Type API](content/README.md#add-a-content-type-api)
+	- [Add a Content Type Archive](content/README.md#add-a-content-type-archive)
