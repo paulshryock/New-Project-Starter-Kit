@@ -1,5 +1,11 @@
 # Content
 
+- [Default Content Types](#default-content-types)
+- [Markup and Styling](#markup-and-styling)
+- [Add a Content Type](#add-a-content-type)
+- [Add a Content Type API](#add-a-content-type-api)
+- [Add a Content Type Archive](#add-a-content-type-archive)
+
 ## Default Content Types
 
 - page
