@@ -1,7 +1,7 @@
 # npm Scripts
 
-- `[start](#start)`
-- [clean](#clean)
+- [`start`](#start)
+- [`clean`](#clean)
 - [`webpack`](#webpack)
 - [`webpack:watch`](#webpackwatch)
 - [`eleventy`](#eleventy)
