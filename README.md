@@ -15,13 +15,7 @@ $ npm start
 
 ## Documentation
 
-Project documentation is in the `_docs` directory.
-
-- [npm Scripts](_docs/npm-scripts.md)
-- [Assets](_docs/assets.md)
-	- [JavaScript](_docs/assets.md#javascript)
-	- [CSS](_docs/assets.md#css)
-	- [Images](_docs/assets.md#images)
+[Project documentation](https://docs.pshry.com/new-project-starter-kit/) is in the `_docs` directory.
 
 ## Contributing
 
