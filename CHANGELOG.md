@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.17.0 - 2019-03-08 - Configure GitBook, Organize Docs
+## 0.17.0 - 2019-03-08 - Configure GitBook, Organize Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.17.0)
 
 ### Added
 - Add content docs
@@ -24,12 +24,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update pdf paper size
 - Organize docs files
 
-## 0.16.0 - 2019-03-08 - GitBook
+## 0.16.0 - 2019-03-08 - [GitBook](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.16.0)]
 
 ### Added
 - Configure GitBook
 
-## 0.15.0 - 2019-03-08 - Components
+## 0.15.0 - 2019-03-08 - [Components](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.15.0)]
 
 ### Added
 - Style components
@@ -38,7 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove form layout_class
 - Remove markdown code spaces
 
-## 0.14.0 - 2019-03-07 - Styles, Data, Body Classes
+## 0.14.0 - 2019-03-07 - [Styles, Data, Body Classes](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.14.0)]
 
 ### Added
 - Add Pull Request template checklist items
@@ -48,17 +48,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update body classes
 - Update package and site data
 
-## 0.13.0 - 2019-03-06 - Zeit Now
+## 0.13.0 - 2019-03-06 - [Zeit Now](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.13.0)]
 
 ### Added
 - Configure Zeit Now
 
-## 0.12.0 - 2019-03-05 - Netlify
+## 0.12.0 - 2019-03-05 - [Netlify](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.12.0)]
 
 ### Added
 - Configure Netlify
 
-## 0.11.0 - 2019-03-05 - Titles, Meta
+## 0.11.0 - 2019-03-05 - [Titles, Meta](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.11.0)]
 
 ### Added
 - Add document head meta for PWA, icons, colors
@@ -68,7 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update page titles
 - Reorder document head meta
 
-## 0.10.0 - 2019-03-05 - Images, New Title
+## 0.10.0 - 2019-03-05 - [Images, New Title](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.10.0)]
 
 ### Added
 - Install `image-webpack-loader`
@@ -76,7 +76,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Give the project a new title
 
-## 0.9.0 - 2019-03-01 - Favicon, Data, Includes
+## 0.9.0 - 2019-03-01 - [Favicon, Data, Includes](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.9.0)]
 
 ### Added
 - [x] Add generic `src/favicon.ico` and favicon images to `src/_assets/img` to be replaced later
@@ -89,7 +89,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 	- [ ] `_modules`
 	- [ ] `_components`
 
-## 0.8.0 - 2019-03-01 - Boilerplate, PWA, Service Worker
+## 0.8.0 - 2019-03-01 - [Boilerplate, PWA, Service Worker](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.8.0)]
 
 ### Added
 - Add boilerplate HTML files:
@@ -111,7 +111,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Remove `style-loader`
 
-## 0.7.0 - 2019-03-01 - Eleventy
+## 0.7.0 - 2019-03-01 - [Eleventy](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.7.0)]
 
 ### Added
 - Install and configure Eleventy
@@ -121,7 +121,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Update npm scripts
 
-## 0.6.0 - 2019-03-01 - Babel
+## 0.6.0 - 2019-03-01 - [Babel](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.6.0)]
 
 ### Added
 - Install and configure Babel
@@ -137,7 +137,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update npm scripts
 - Update webpack configuration
 
-## 0.5.0 - 2019-03-01 - PostCSS
+## 0.5.0 - 2019-03-01 - [PostCSS](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.5.0)]
 
 ### Added
 - Install PostCSS
@@ -159,25 +159,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update npm script
 - Update webpack configuration
 
-## 0.4.0 - 2019-02-28 - Configure webpack
+## 0.4.0 - 2019-02-28 - [Configure webpack](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.4.0)]
 
 ### Added
 - Add npm private attribute and scripts
 - Add `webpack.config.js`
 - Add `app.js`
 
-## 0.3.0 - 2019-02-28 - webpack
+## 0.3.0 - 2019-02-28 - [webpack](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.3.0)]
 
 ### Added
 - Install webpack
 - Install webpack cli
 
-## 0.2.0 - 2019-02-28 - npm
+## 0.2.0 - 2019-02-28 - [npm](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.2.0)]
 
 ### Added
 - Install npm
 
-## 0.1.0 - 2019-02-28 - Setup
+## 0.1.0 - 2019-02-28 - [Setup](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.1.0)
 
 ### Added
 - Add `.gitattributes`
