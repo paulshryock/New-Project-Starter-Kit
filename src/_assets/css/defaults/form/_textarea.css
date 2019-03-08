@@ -11,11 +11,3 @@ textarea {
   overflow: auto;
 	padding: 0.25rem;
 }
-
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
-
-	textarea {
-		display: inline-block;
-	}
-
-}

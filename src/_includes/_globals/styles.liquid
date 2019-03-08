@@ -1,9 +1,9 @@
 		<!-- Linked resource(s) -->
-		<link rel="stylesheet" media="all" href="/css/app.css">
+		<link rel="preload" as="style" onload="this.rel='stylesheet'" media="all" href="/css/app.css">
 		
 		{% if "development" == server.environment -%}
 
 			<!-- Load development styles -->
-			<link rel="stylesheet" media="all" href="/css/development.css">
+			<link rel="preload" as="style" onload="this.rel='stylesheet'" media="all" href="/css/development.css">
 
 		{%- endif %}

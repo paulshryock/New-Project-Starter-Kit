@@ -13,6 +13,11 @@ button {
   -webkit-appearance: button;
 }
 
+button[disabled] {
+  color: hsl( 0, 0%, 70% );
+  cursor: auto;
+}
+
 /* Isolate this selector */
 button::-moz-focus-inner {
   border-style: none;
@@ -27,16 +32,10 @@ button:-moz-focusring {
 input[type="button"] {
   border: none;
   border-radius: 0.25em;
-  box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 80% );
   padding: 0.25rem;
   text-transform: capitalize;
   transition: box-shadow 200ms ease;
   -webkit-appearance: button;
-}
-
-input[type="button"]:hover,
-input[type="button"]:focus {
-  box-shadow: 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 50% );
 }
 
 [type="reset"],

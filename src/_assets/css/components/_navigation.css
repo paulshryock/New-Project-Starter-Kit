@@ -1,5 +1,3 @@
-
-
 .navigation[aria-expanded="false"] {
   padding: 0;
 }
@@ -11,7 +9,8 @@
 	transition: all 500ms;
 }
 
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+/*@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+@media screen and (min-width: 137.5rem) { /* Tablet Portrait / 37.5rem / 600px */
 
 	.js .navigation ul {
 		max-height: none;
@@ -30,7 +29,8 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+/*@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+@media screen and (min-width: 137.5rem) { /* Tablet Portrait / 37.5rem / 600px */
 
 	.navigation li {
 		display: inline-block;
