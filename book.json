@@ -1,3 +1,4 @@
 {
-	"root": "_docs"
+	"root": "_docs",
+	"pdf.paperSize": "letter"
 }
