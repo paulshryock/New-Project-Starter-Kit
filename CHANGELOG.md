@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.20.0 - 2019-03-08 - [Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.20.0)
+
+### Added
+- Add docs summary links
+
 ## 0.19.0 - 2019-03-08 - [Dependencies, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.19.0)
 
 ### Added

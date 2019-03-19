@@ -12,5 +12,6 @@
 
 ## Deploy
 
+- [Robots](deploy/robots/README.md)
 - [Netlify](deploy/netlify/README.md)
 - [Zeit Now](deploy/zeit-now/README.md)
