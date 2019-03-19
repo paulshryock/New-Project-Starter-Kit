@@ -1,4 +1,5 @@
 {
   "version": 2,
-  "builds": [{ "src": "*/app.js", "use": "@now/node-server" }]
+  "alias": ["example.com"],
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
 }

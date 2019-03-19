@@ -2,12 +2,19 @@
 
 **New Project Starter Kit** lets you start from scratch without reinventing the wheel. It has webpack, Babel, Sass, PostCSS, Eleventy, PWA, and a service worker installed and configured, along with some boilerplate HTML and default styles and components written.
 
-## Installation and Configuration
+## Install
 
-- [Quick Start](quick-start/README.md)
-- [npm Scripts](npm-scripts/README.md)
+- [Quick Start](install/quick-start/README.md)
+- [npm Scripts](install/npm-scripts/README.md)
 
-## Development
+## Develop
 
-- [Assets](assets/README.md)
-- [Content](content/README.md)
+- [Assets](develop/assets/README.md)
+- [Content](develop/content/README.md)
+
+## Deploy
+
+This project includes configuration for simple deployment with Netlify or Zeit Now. You can, however, deploy it anywhere you like.
+
+- [Netlify](deploy/netlify/README.md)
+- [Zeit Now](deploy/zeit-now/README.md)
