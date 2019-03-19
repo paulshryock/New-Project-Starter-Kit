@@ -22,13 +22,13 @@ $ npm start
 - [npm Scripts](https://paul-shryock.gitbook.io/new-project-starter-kit/install/npm-scripts)
 
 ### Develop
-- [Assets](https://paul-shryock.gitbook.io/new-project-starter-kit/install/assets)
-- [Content](https://paul-shryock.gitbook.io/new-project-starter-kit/install/content)
+- [Assets](https://paul-shryock.gitbook.io/new-project-starter-kit/develop/assets)
+- [Content](https://paul-shryock.gitbook.io/new-project-starter-kit/develop/content)
 
 ### Deploy
-- [Robots](https://paul-shryock.gitbook.io/new-project-starter-kit/install/robots)
-- [Netlify](https://paul-shryock.gitbook.io/new-project-starter-kit/install/netlify)
-- [Zeit Now](https://paul-shryock.gitbook.io/new-project-starter-kit/install/zeit-now)
+- [Robots](https://paul-shryock.gitbook.io/new-project-starter-kit/deploy/robots)
+- [Netlify](https://paul-shryock.gitbook.io/new-project-starter-kit/deploy/netlify)
+- [Zeit Now](https://paul-shryock.gitbook.io/new-project-starter-kit/deploy/zeit-now)
 
 ## Contributing
 
