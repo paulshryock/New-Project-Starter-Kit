@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.18.0 - 2019-03-08 - [Navigation, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.18.0)
+## 0.18.0 - 2019-03-08 - [CMS, Navigation, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.18.0)
 
 ### Added
 - Add deployment docs
