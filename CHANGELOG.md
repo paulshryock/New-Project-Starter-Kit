@@ -15,6 +15,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.19.0 - 2019-03-08 - [Dependencies, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.19.0)
+
+### Added
+- Add `pkg.company` for use in `/src/_data/site.json` in `copyright`
+- Add deploy docs
+
+### Changed
+- Update dev dependencies
+- Update quick start docs
+- Update `browserconfig.xml`
+- Update `humans.txt`
+- Update `manifest.json`
+- Update `robots.txt`
+- Update `serviceworker.js`
+
 ## 0.18.0 - 2019-03-08 - [CMS, Navigation, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.18.0)
 
 ### Added

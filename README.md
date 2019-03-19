@@ -7,8 +7,8 @@ Start from scratch without reinventing the wheel: webpack, Babel, Sass, PostCSS,
 Fork or clone this repo, install dev dependencies, and start:
 
 ```shell
-$ git clone https://github.com/paulshryock/New-Project-Starter-Kit
-$ cd New-Project-Starter-Kit
+$ git clone https://github.com/paulshryock/New-Project-Starter-Kit new-project
+$ cd new-project
 $ npm install
 $ npm start
 ```
@@ -16,6 +16,19 @@ $ npm start
 ## Documentation
 
 [Project documentation](https://paul-shryock.gitbook.io/new-project-starter-kit/) is in the `_docs` directory.
+
+### Install
+- [Quick Start](https://paul-shryock.gitbook.io/new-project-starter-kit/install/quick-start)
+- [npm Scripts](https://paul-shryock.gitbook.io/new-project-starter-kit/install/npm-scripts)
+
+### Develop
+- [Assets](https://paul-shryock.gitbook.io/new-project-starter-kit/install/assets)
+- [Content](https://paul-shryock.gitbook.io/new-project-starter-kit/install/content)
+
+### Deploy
+- [Robots](https://paul-shryock.gitbook.io/new-project-starter-kit/install/robots)
+- [Netlify](https://paul-shryock.gitbook.io/new-project-starter-kit/install/netlify)
+- [Zeit Now](https://paul-shryock.gitbook.io/new-project-starter-kit/install/zeit-now)
 
 ## Contributing
 
