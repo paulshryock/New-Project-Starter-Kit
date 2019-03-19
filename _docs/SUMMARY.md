@@ -1,11 +1,16 @@
 # Summary
 
-## Installation and Configuration
+## Install
 
-- [Quick Start](quick-start/README.md)
-- [npm Scripts](npm-scripts/README.md)
+- [Quick Start](install/quick-start/README.md)
+- [npm Scripts](install/npm-scripts/README.md)
 
-## Development
+## Develop
 
-- [Assets](assets/README.md)
-- [Content](content/README.md)
+- [Assets](develop/assets/README.md)
+- [Content](develop/content/README.md)
+
+## Deploy
+
+- [Netlify](deploy/netlify/README.md)
+- [Zeit Now](deploy/zeit-now/README.md)

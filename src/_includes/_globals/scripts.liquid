@@ -1,8 +1,9 @@
 		<script src="/js/app.js" async></script>
+
+		{% if slug == '.' %}
+			<script src="/js/cms.js" async></script>
+		{% endif %}
 		
 		{% if "development" == server.environment -%}
-
-			<!-- Load development scripts -->
 			<script src="/js/development.js" async></script>
-
 		{%- endif %}
