@@ -15,23 +15,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.19.0 - 2019-03-19 - [Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.19.0)
+## 0.18.0 - 2019-03-08 - [Navigation, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.18.0)
 
 ### Added
 - Add deployment docs
 
 ### Changed
+- Make navigation markup conditional
 - Update Eleventy passthrough assets
 - Update npm scripts
 - Update git ignored files
 - Update now ignored files and config settings
 - Update webpack entry config and image path
 - Update docs Readme and directory structure
-
-## 0.18.0 - 2019-03-08 - [Conditional Navigation](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.18.0)
-
-### Changed
-- Make navigation markup conditional
 
 ## 0.17.0 - 2019-03-08 - [Configure GitBook, Organize Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.17.0)
 
