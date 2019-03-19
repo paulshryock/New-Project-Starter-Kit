@@ -1,6 +1,10 @@
+# Project files
 node_modules/
 dist/
 src/js/
 src/css/
 src/fonts/
 src/img/
+
+# System files
+.DS_Store
