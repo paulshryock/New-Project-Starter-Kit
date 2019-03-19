@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update git ignored files
 - Update now ignored files and config settings
 - Update webpack entry config and image path
-- Update docs Readme and directory structure
+- Update docs
 
 ## 0.17.0 - 2019-03-08 - [Configure GitBook, Organize Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.17.0)
 
