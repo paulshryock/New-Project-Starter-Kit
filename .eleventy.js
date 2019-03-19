@@ -238,15 +238,15 @@ module.exports = function(eleventyConfig) {
 	const assets = [
 		'css',
 		'js',
-		// 'img',
-		// 'fonts',
-		// '_redirects',
-		// 'browserconfig.xml',
-		// 'favicon.ico',
-		// 'humans.txt',
-		// 'manifest.json',
-		// 'robots.txt',
-		// 'serviceworker.js',
+		'img',
+		'fonts',
+		'_redirects',
+		'browserconfig.xml',
+		'favicon.ico',
+		'humans.txt',
+		'manifest.json',
+		'robots.txt',
+		'serviceworker.js',
 	];
 
 	assets.forEach((asset) => {

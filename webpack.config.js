@@ -8,8 +8,8 @@ module.exports = {
   mode: process.env.NODE_ENV == 'production' ? 'production' : 'development',
 
   entry: {
-    'app': './src/_assets/js/app.js',
-    'development': './src/_assets/js/development.js'
+    app: './src/_assets/js/app.js',
+    development: './src/_assets/js/development.js'
   },
 
   output: {
@@ -45,7 +45,13 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          'file-loader',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+              outputPath: 'img'
+            }
+          },
           {
             loader: 'image-webpack-loader'
           }
