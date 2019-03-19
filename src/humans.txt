@@ -9,10 +9,17 @@ The humans responsible & technology colophon
 ## Technology Colophon
 
 - HTML
+	- Liquid
 - CSS
 	- SASS
 	- PostCSS
 - JavaScript
+	- ES6
+	- EJS
 	- Babel
+	- Node
+	- npm
+	- Service worker
 - webpack
 - Eleventy
+- Netlify CMS
