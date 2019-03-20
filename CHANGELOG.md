@@ -21,6 +21,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add docs summary links
 - Install JSHint
 
+### Changed
+- Update Readme
+
 ## 0.19.0 - 2019-03-08 - [Dependencies, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.19.0)
 
 ### Added

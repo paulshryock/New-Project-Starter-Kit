@@ -17,19 +17,6 @@ $ npm start
 
 [Project documentation](https://paul-shryock.gitbook.io/new-project-starter-kit/) is in the `_docs` directory.
 
-### Install
-- [Quick Start](https://paul-shryock.gitbook.io/new-project-starter-kit/install/quick-start)
-- [npm Scripts](https://paul-shryock.gitbook.io/new-project-starter-kit/install/npm-scripts)
-
-### Develop
-- [Assets](https://paul-shryock.gitbook.io/new-project-starter-kit/develop/assets)
-- [Content](https://paul-shryock.gitbook.io/new-project-starter-kit/develop/content)
-
-### Deploy
-- [Robots](https://paul-shryock.gitbook.io/new-project-starter-kit/deploy/robots)
-- [Netlify](https://paul-shryock.gitbook.io/new-project-starter-kit/deploy/netlify)
-- [Zeit Now](https://paul-shryock.gitbook.io/new-project-starter-kit/deploy/zeit-now)
-
 ## Contributing
 
 If you'd like to contribute, please read the [Code of Conduct](https://github.com/paulshryock/Eustace/blob/master/CODE_OF_CONDUCT.md), then fork the repository and use a feature branch. Pull requests are welcome.
