@@ -2,14 +2,16 @@
 
 Start from scratch without reinventing the wheel: webpack, Babel, Sass, PostCSS, Eleventy, PWA, service worker
 
-## Requirements
+## Quick Start
+
+### Requirements
 
 1. Node
 	- Check if Node is installed: `node --version`
 	- If you see a version number, such as `v11.6.0`, proceed to [Quick Start](#quick-start)
-	- If Node isn't installed, [download](https://nodejs.org/en/download/) and install it
+	- If Node isn't installed, [download](https://nodejs.org/en/download/) and install it, then proceed to [Quick Start](#quick-start)
 
-## Quick Start
+### Get Started
 
 Fork or clone this repo, install dev dependencies, and start:
 
