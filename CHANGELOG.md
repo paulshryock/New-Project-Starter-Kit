@@ -21,9 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add docs summary links
 - Install JSHint
 - Add `.jshintrc`
+- Add strict mode to js files
 
 ### Changed
 - Update Readme
+- Lint js files and fix typos
+- Update dev dependencies
 
 ## 0.19.0 - 2019-03-08 - [Dependencies, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.19.0)
 
