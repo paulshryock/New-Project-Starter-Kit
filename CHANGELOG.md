@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Install JSHint
 - Add `.jshintrc`
 - Add strict mode to js files
+- Install postcss-import
 
 ### Changed
 - Update Readme
