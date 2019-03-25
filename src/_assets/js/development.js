@@ -1,3 +1,5 @@
+"use strict";
+
 // Load development CSS
 import './../css/development.css';
 
