@@ -1,3 +1,9 @@
 {
-  "esversion": 6
+  "browser": true,
+  "esversion": 6,
+  "globals": {},
+  "node": true,
+  "strict": "global",
+  "undef": true,
+  "unused": true
 }
