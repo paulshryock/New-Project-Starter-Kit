@@ -26,11 +26,7 @@ $ npm start
 
 ## Contributing
 
-If you'd like to contribute, please read the [Code of Conduct](https://github.com/paulshryock/Eustace/blob/master/CODE_OF_CONDUCT.md), then fork the repository and use a feature branch. Pull requests are welcome.
-
-### Your First Contribution
-
-Working on your first Pull Request? You can learn how from this *free* series, [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
+If you'd like to contribute, please read the [Contributing instructions](https://github.com/paulshryock/New-Project-Starter-Kit/blob/master/CODE_OF_CONDUCT.md) and [Code of Conduct](https://github.com/paulshryock/New-Project-Starter-Kit/blob/master/CONTRIBUTING.md), then fork the repository and use a feature branch. Pull requests are welcome.
 
 ## Links
 
