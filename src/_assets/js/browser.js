@@ -1,6 +1,4 @@
-/******************************************
-	* Browser
-	*****************************************/
+"use strict";
 
 /**
 	* The main browser object
@@ -25,21 +23,21 @@ browser.init = function() {
 browser.log = function ( message, color='black' ) {
 	switch (color) {
 		case 'success':  
-			color = 'Green'
-			break
+			color = 'Green';
+			break;
 		case 'info':     
-			color = 'Blue'  
+			color = 'Blue';
 			break;
 		case 'error':
-			color = 'Red'   
+			color = 'Red';
 			break;
 		case 'warning':
-			color = 'Orange' 
+			color = 'Orange';
 			break;
 		default: 
-			color = color
+			color = color;
 	}
-	console.log( `%c${message}`, `color:${color}` )
+	console.log( `%c${message}`, `color:${color}` );
 
 	// browser.log('Hello World!')
 	// browser.log('Success!', 'success')
@@ -51,7 +49,7 @@ browser.log = function ( message, color='black' ) {
 	// console.error()
 	// console.warn()
 	// console.table()
-}
+};
 
 /**
 	* Swaps html element classes: `.no-js` to `.js`
@@ -82,7 +80,7 @@ browser.addSmoothScrolling = function() {
 		});
 	});
 
-}
+};
 
 /**
 	* Registers a service worker
@@ -97,10 +95,10 @@ browser.registerServiceWorker = function() {
 			// TODO: Uncomment this line if we're using it
 			// if (registration.waiting) registration.update();
 		} ).catch( function( err ) {
-			console.log( 'ServiceWorker registration failed: ', err )
+			console.log( 'ServiceWorker registration failed: ', err );
 		} );
 
-}
+};
 
 /**
 	* Adds browser event listners

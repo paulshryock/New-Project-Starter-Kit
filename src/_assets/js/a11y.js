@@ -1,6 +1,4 @@
-/******************************************
-	* Accessibility
-	*****************************************/
+"use strict";
 
 /**
 	* The main a11y object
@@ -32,7 +30,7 @@ a11y.requireCardClickTime = function() {
       if ( (up - down) < 200 ) {
         link.click();
       }
-    }
+    };
 		card.style.cursor = 'pointer';
 	} );
 };
