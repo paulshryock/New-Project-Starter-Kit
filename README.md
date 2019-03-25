@@ -2,6 +2,13 @@
 
 Start from scratch without reinventing the wheel: webpack, Babel, Sass, PostCSS, Eleventy, PWA, service worker
 
+## Requirements
+
+1. Node
+	- Check if Node is installed: `node --version`
+	- If you see a version number, such as `v11.6.0`, proceed to [Quick Start](#quick-start)
+	- If Node isn't installed, [download](https://nodejs.org/en/download/) and install it
+
 ## Quick Start
 
 Fork or clone this repo, install dev dependencies, and start:
@@ -16,19 +23,6 @@ $ npm start
 ## Documentation
 
 [Project documentation](https://paul-shryock.gitbook.io/new-project-starter-kit/) is in the `_docs` directory.
-
-### Install
-- [Quick Start](https://paul-shryock.gitbook.io/new-project-starter-kit/install/quick-start)
-- [npm Scripts](https://paul-shryock.gitbook.io/new-project-starter-kit/install/npm-scripts)
-
-### Develop
-- [Assets](https://paul-shryock.gitbook.io/new-project-starter-kit/develop/assets)
-- [Content](https://paul-shryock.gitbook.io/new-project-starter-kit/develop/content)
-
-### Deploy
-- [Robots](https://paul-shryock.gitbook.io/new-project-starter-kit/deploy/robots)
-- [Netlify](https://paul-shryock.gitbook.io/new-project-starter-kit/deploy/netlify)
-- [Zeit Now](https://paul-shryock.gitbook.io/new-project-starter-kit/deploy/zeit-now)
 
 ## Contributing
 
