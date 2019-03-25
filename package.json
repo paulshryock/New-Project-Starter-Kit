@@ -1,8 +1,8 @@
 {
   "name": "New-Project-Starter-Kit",
   "title": "New Project Starter Kit",
-  "version": "0.20.0",
-  "description": "Start from scratch without reinventing the wheel: webpack, Babel, Sass, PostCSS, Eleventy, PWA, service worker",
+  "version": "0.21.0",
+  "description": "Start from scratch without reinventing the wheel: webpack, Babel, Sass, PostCSS, Eleventy, PWA, service worker, JShint",
   "url": "https://example.com",
   "company": "Example Corp",
   "private": true,
