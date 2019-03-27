@@ -2,6 +2,9 @@
 title: Form Ipsum
 slug: form-ipsum
 date: 2019-01-01T00:00:00-5
+
+navigation: 4
+nav_title: Form
 ---
 
 <header class="container">
