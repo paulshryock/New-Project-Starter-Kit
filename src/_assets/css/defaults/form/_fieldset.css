@@ -20,7 +20,6 @@ fieldset + fieldset {
 }
 
 legend {
-  color: inherit;
   display: table;
 	font-weight: bold;
   margin-bottom: 0.75em;

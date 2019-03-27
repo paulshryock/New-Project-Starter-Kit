@@ -7,11 +7,11 @@ navigation: 4
 nav_title: Form
 ---
 
-<header class="container">
+<header>
 	<h1 class="post-title">Form</h1>
-</header><!-- .container -->
+</header>
 
-<div class="container">
+<div>
 	<ul class="list_bulleted">
 		<li><a href="#inputs">Inputs</a></li>
 		<li><a href="#checkboxes">Checkboxes, Toggles</a></li>
@@ -19,9 +19,9 @@ nav_title: Form
 		<li><a href="#classic-form-elements">Classic Form Elements</a></li>
 		<li><a href="#new-form-elements">New Form Elements</a></li>
 	</ul>
-</div><!-- .container -->
+</div>
 
-<form method="get" action="/" class="container">
+<form method="get" action="/">
 	<fieldset id="inputs">
 		<legend>Input Element Types (All)</legend>
 		<div>
@@ -198,7 +198,7 @@ nav_title: Form
 			</select>
 		</div>
 		<div>
-			<label for="a-multi-select">Select</label>
+			<label for="a-multi-select">Select Multiple</label>
 			<select multiple name="a-multi-select" id="a-multi-select">
 				<option value="douglas-fir">Douglas-fir</option>
 				<option value="hemlock">Hemlock</option>
@@ -213,7 +213,7 @@ nav_title: Form
 		</div>
 		<div>
 			<label for="a-button-element">Button</label>
-			<button type="submit" name="a-button-element" id="a-button-element">Button</button>
+			<button type="submit" class="button" name="a-button-element" id="a-button-element">Button</button>
 		</div>
 	</fieldset>
 	<fieldset id="new-form-elements">
