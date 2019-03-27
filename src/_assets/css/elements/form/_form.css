@@ -9,3 +9,7 @@ form div {
 form div + div {
 	margin: 1rem 0;
 }
+
+[aria-invalid] {
+	border-color: red;
+}

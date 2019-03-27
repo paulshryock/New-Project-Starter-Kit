@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update default and component styles
 - Update project description
 - Chunk CSS includes
+- Rename 'defaults' styles to 'elements'
 
 ### Removed
 - Uninstall postcss-import

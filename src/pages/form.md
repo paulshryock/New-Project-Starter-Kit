@@ -26,7 +26,7 @@ nav_title: Form
 		<legend>Input Element Types (All)</legend>
 		<div>
 			<label for="a-button">Input Button</label>
-			<input type="button" value="Button" placeholder="button" name="a-button" id="a-button" />
+			<input class="button" type="button" value="Button" placeholder="button" name="a-button" id="a-button" />
 		</div>
 		<div>
 			<label for="a-color">Color</label>
