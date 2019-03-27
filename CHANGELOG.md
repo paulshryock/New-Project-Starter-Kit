@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Install postcss-easy-import
 - Add strict mode to JS files
+- Add thanks credits in humans.txt
 
 ### Changed
 - Update default and component styles
