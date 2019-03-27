@@ -11,3 +11,7 @@ label {
 	font-size: 0.75em;
 	text-transform: capitalize;
 }
+
+input[type="radio"] + label {
+	padding-left: 0.25em;
+}

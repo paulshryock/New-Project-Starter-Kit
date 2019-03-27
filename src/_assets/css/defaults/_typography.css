@@ -1,13 +1,1 @@
-@import './typography/_paragraph';
-@import './typography/_headline';
-@import './typography/_list';
-@import './typography/_quote';
-@import './typography/_blockquote';
-@import './typography/_bigsmall';
-@import './typography/_supsubscript';
-@import './typography/_hyperlink';
-@import './typography/_abbr';
-@import './typography/_acronym';
-@import './typography/_caption';
-@import './typography/_precode';
-@import './typography/_strongem';
+@import './typography/*.css';

@@ -15,12 +15,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.21.0 - 2019-03-25 - [JSHint, Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.21.0)
+## 0.21.0 - 2019-03-26 - [Styles, Strict JS](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.21.0)
 
 ### Added
+- Install postcss-easy-import
+- Add strict mode to JS files
 
 ### Changed
+- Update default and component styles
 - Update project description
+
+### Removed
+- Uninstall postcss-import
 
 ## 0.20.0 - 2019-03-25 - [JSHint, Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.20.0)
 

@@ -1,4 +1,5 @@
 button {
+  appearance: none;
   background-color: transparent;
 	border: none;
 	color: hsl( 0, 0%, 10% );

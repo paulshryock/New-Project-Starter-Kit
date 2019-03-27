@@ -17,10 +17,4 @@
 
 */
 
-@import './form/_form';
-@import './form/_fieldset';
-@import './form/_label';
-@import './form/_input';
-@import './form/_textarea';
-@import './form/_select';
-@import './form/_button';
+@import './form/*.css';
