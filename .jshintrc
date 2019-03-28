@@ -3,7 +3,7 @@
   "esversion": 6,
   "globals": {},
   "node": true,
-  "strict": "global",
+  // "strict": "global",
   "undef": true,
   "unused": true
 }

@@ -11,6 +11,7 @@ module.exports = {
 
   entry: {
     app: './src/_assets/js/app.js',
+    cms: './src/_assets/js/cms.js',
     development: './src/_assets/js/development.js'
   },
 
