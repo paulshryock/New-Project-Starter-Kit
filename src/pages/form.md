@@ -158,16 +158,22 @@ nav_title: Form
 	<fieldset id="radio-buttons">
 		<legend>Radio Buttons</legend>
 		<div>
-			<input type="radio" value="radio-1" name="radio-1" id="radio-1" />
-			<label for="a-button">AM</label>
+			<label for="radio-1">
+				<input type="radio" value="radio-1" name="radio-station" id="radio-1" />
+				AM
+			</label>
 		</div>
 		<div>
-			<input type="radio" value="radio-2" name="radio-2" id="radio-2" />
-			<label for="a-button">FM</label>
+			<label for="radio-2">
+				<input type="radio" value="radio-2" name="radio-station" id="radio-2" />
+				FM
+			</label>
 		</div>
 		<div>
-			<input type="radio" value="radio-3" name="radio-3" id="radio-3" />
-			<label for="a-button">XM</label>
+			<label for="radio-3">
+				<input type="radio" value="radio-3" name="radio-station" id="radio-3" />
+				XM
+			</label>
 		</div>
 	</fieldset>
 	<fieldset id="classic-form-elements">

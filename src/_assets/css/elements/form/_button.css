@@ -53,10 +53,6 @@ button:-moz-focusring {
   padding: 0;
 }
 
-[type="file"] {
-  border-radius: 0.25em;
-}
-
 /* Isolate this selector */
 ::-webkit-file-upload-button {
   font: inherit;
