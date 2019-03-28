@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add strict mode to JS files
 - Add thanks credits in humans.txt
 - Add cms.js
+- Add cms Passthrough
 
 ### Changed
 - Update default and component styles

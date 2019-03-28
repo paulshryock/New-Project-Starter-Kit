@@ -240,6 +240,7 @@ module.exports = function(eleventyConfig) {
 		'js',
 		'img',
 		'fonts',
+		'cms',
 		'_redirects',
 		'browserconfig.xml',
 		'favicon.ico',
