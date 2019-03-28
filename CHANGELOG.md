@@ -33,6 +33,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Uninstall postcss-import
 
+### Fixed
+- Fix npm clean scripts
+- Fix image webpacking
+
 ## 0.20.0 - 2019-03-25 - [JSHint, Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.20.0)
 
 ### Added

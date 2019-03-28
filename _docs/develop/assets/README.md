@@ -26,4 +26,4 @@ CSS files are in the `src/_assets/css` directory. `app.css` includes `_defaults.
 
 - image-webpack-loader: Image loader module for webpack
 
-Image files are in the `scr/_assets/img` directory. Processed images are output to `src/img`.
+Image files are in the `src/_assets/img` directory. Processed images are output to `src/img`.
