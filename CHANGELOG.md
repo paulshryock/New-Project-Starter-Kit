@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add cms.js
 - Add cms Passthrough
 - Update netlify config
+- Deploy dev branch
 
 ### Changed
 - Update default and component styles
