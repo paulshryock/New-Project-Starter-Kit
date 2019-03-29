@@ -16,7 +16,7 @@ collections:
     label: "Pages" # Used in the UI
     label_singular: "Page" # singular label for certain elements in the editor
     description: "Individual site pages"
-    folder: "pages" # The path to the folder where the documents are stored
+    folder: "src/pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     format: "frontmatter"
     slug: "{{slug}}" # Filename template, e.g., title.md
@@ -36,7 +36,7 @@ collections:
     label: "Articles" # Used in the UI
     label_singular: "Article" # singular label for certain elements in the editor
     description: "This is the Articles archive excerpt."
-    folder: "articles" # The path to the folder where the documents are stored
+    folder: "src/articles" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     format: "frontmatter"
     slug: "{{slug}}" # Filename template, e.g., title.md
