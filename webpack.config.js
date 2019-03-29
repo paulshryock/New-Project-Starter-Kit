@@ -46,36 +46,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf)$/,
-        use: {
-          loader: "file-loader",
-            options: {
-              name: '[name].[ext]',
-              outputPath: (url, resourcePath, context) => {
-                // `resourcePath` is original absolute path to asset
-                // `context` is directory where stored asset (`rootContext`) or `context` option
-
-                // To get relative path you can use
-                // const relativePath = path.relative(context, resourcePath);
-
-                const urlParts = url.split( '-' ),
-                      fontFamily = urlParts[0],
-                      fontWeight = urlParts[1];
-
-                // if (/my-custom-image\.png/.test(resourcePath)) {
-                //   return `other_output_path/${url}`;
-                // }
-
-                // if (/images/.test(context)) {
-                //   return `image_output_path/${url}`;
-                // }
-
-                return `/fonts/${fontFamily}/${fontWeight}/${url}`;
-              },
-            }
-        }
-      },
-      {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {

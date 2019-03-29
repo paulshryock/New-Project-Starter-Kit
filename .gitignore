@@ -1,7 +1,6 @@
 # Project files
 node_modules/
 certs/
-scratch/
 dist/
 src/js/
 src/css/

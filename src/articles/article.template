@@ -14,5 +14,6 @@ short_title: // optional, doesn't display, no default
 permalink: // defaults to ./{{ title | slug }}/index.html
 content_type: // defaults to article
 layout: // defaults to article
+body_class: [ ] // array, defaults to single article
 tags: [ ] // array, doesn't display, no default
 ---
