@@ -1,7 +1,7 @@
 button {
+  appearance: none;
   background-color: transparent;
 	border: none;
-	color: hsl( 0, 0%, 10% );
 	cursor: pointer;
   font-family: inherit;
   font-size: 100%;
@@ -29,7 +29,7 @@ button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
-input[type="button"] {
+[type="button"] {
   border: none;
   border-radius: 0.25em;
   padding: 0.25rem;
@@ -51,10 +51,6 @@ input[type="button"] {
   border-style: none;
   outline: 1px dotted ButtonText;
   padding: 0;
-}
-
-input[type="file"] {
-  border-radius: 0.25em;
 }
 
 /* Isolate this selector */

@@ -1,2 +1,1 @@
-@import './development/_red';
-@import './development/_media-queries';
+@import './development/*.css';

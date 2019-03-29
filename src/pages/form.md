@@ -2,13 +2,16 @@
 title: Form Ipsum
 slug: form-ipsum
 date: 2019-01-01T00:00:00-5
+
+navigation: 4
+nav_title: Form
 ---
 
-<header class="container">
+<header>
 	<h1 class="post-title">Form</h1>
-</header><!-- .container -->
+</header>
 
-<div class="container">
+<div>
 	<ul class="list_bulleted">
 		<li><a href="#inputs">Inputs</a></li>
 		<li><a href="#checkboxes">Checkboxes, Toggles</a></li>
@@ -16,14 +19,14 @@ date: 2019-01-01T00:00:00-5
 		<li><a href="#classic-form-elements">Classic Form Elements</a></li>
 		<li><a href="#new-form-elements">New Form Elements</a></li>
 	</ul>
-</div><!-- .container -->
+</div>
 
-<form method="get" action="/" class="container">
+<form method="get" action="/">
 	<fieldset id="inputs">
 		<legend>Input Element Types (All)</legend>
 		<div>
 			<label for="a-button">Input Button</label>
-			<input type="button" value="Button" placeholder="button" name="a-button" id="a-button" />
+			<input class="button" type="button" value="Button" placeholder="button" name="a-button" id="a-button" />
 		</div>
 		<div>
 			<label for="a-color">Color</label>
@@ -155,16 +158,22 @@ date: 2019-01-01T00:00:00-5
 	<fieldset id="radio-buttons">
 		<legend>Radio Buttons</legend>
 		<div>
-			<input type="radio" value="radio-1" name="radio-1" id="radio-1" />
-			<label for="a-button">AM</label>
+			<label for="radio-1">
+				<input type="radio" value="radio-1" name="radio-station" id="radio-1" />
+				AM
+			</label>
 		</div>
 		<div>
-			<input type="radio" value="radio-2" name="radio-2" id="radio-2" />
-			<label for="a-button">FM</label>
+			<label for="radio-2">
+				<input type="radio" value="radio-2" name="radio-station" id="radio-2" />
+				FM
+			</label>
 		</div>
 		<div>
-			<input type="radio" value="radio-3" name="radio-3" id="radio-3" />
-			<label for="a-button">XM</label>
+			<label for="radio-3">
+				<input type="radio" value="radio-3" name="radio-station" id="radio-3" />
+				XM
+			</label>
 		</div>
 	</fieldset>
 	<fieldset id="classic-form-elements">
@@ -195,7 +204,7 @@ date: 2019-01-01T00:00:00-5
 			</select>
 		</div>
 		<div>
-			<label for="a-multi-select">Select</label>
+			<label for="a-multi-select">Select Multiple</label>
 			<select multiple name="a-multi-select" id="a-multi-select">
 				<option value="douglas-fir">Douglas-fir</option>
 				<option value="hemlock">Hemlock</option>
@@ -210,7 +219,7 @@ date: 2019-01-01T00:00:00-5
 		</div>
 		<div>
 			<label for="a-button-element">Button</label>
-			<button type="submit" name="a-button-element" id="a-button-element">Button</button>
+			<button type="submit" class="button" name="a-button-element" id="a-button-element">Button</button>
 		</div>
 	</fieldset>
 	<fieldset id="new-form-elements">

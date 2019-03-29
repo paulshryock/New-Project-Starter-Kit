@@ -15,7 +15,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.20.0 - 2019-03-08 - [JSHint, Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.20.0)
+## 0.21.0 - 2019-03-26 - [CMS, Styles, Strict JS](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.21.0)
+
+### Added
+- Install postcss-easy-import
+- Add strict mode to JS files
+- Add thanks credits in humans.txt
+- Add cms.js
+- Add cms Passthrough
+- Update netlify config
+- Deploy dev branch
+
+### Changed
+- Update default and component styles
+- Update project description
+- Chunk CSS includes
+- Rename 'defaults' styles to 'elements'
+- Lower input type selectors' specificity
+
+### Removed
+- Uninstall postcss-import
+
+### Fixed
+- Fix npm clean scripts
+- Fix image webpacking
+
+## 0.20.0 - 2019-03-25 - [JSHint, Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.20.0)
 
 ### Added
 - Add docs summary links

@@ -17,32 +17,42 @@ input {
 	overflow: visible;
 }
 
-input[disabled] {
-	cursor: auto;
+input:placeholder {
+	color: hsl( 0, 0%, 50% );
 }
 
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="week"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"] {
+input:disabled,
+input:readonly {
+	color: hsl( 0, 0%, 50% );
+	cursor: not-allowed;
+}
+
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="week"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"] {
+	border: 1px solid hsl( 0, 0%, 65% );
 	border-radius: 0.25em;
-	box-shadow: inset 0 0.0625rem 0.0625rem 0.0625rem hsl( 0, 0%, 50% );
-	display: block;
+	background: hsl( 0, 0%, 97% );
 	padding: 0.25rem;
 }
 
 [type="checkbox"] {
   padding: 0;
 }
+
+/* TODO: Style color picker input: https://jsfiddle.net/9zhap7rb/3/ */
+
+/* TODO: Style file upload input: http://jsfiddle.net/barney/uxPjN/ */
 
 /* Isolate this selector */
 [type="number"]::-webkit-inner-spin-button,

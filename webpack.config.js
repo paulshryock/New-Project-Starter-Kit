@@ -11,6 +11,7 @@ module.exports = {
 
   entry: {
     app: './src/_assets/js/app.js',
+    cms: './src/_assets/js/cms.js',
     development: './src/_assets/js/development.js'
   },
 
@@ -50,7 +51,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[ext]',
+              name: '[name].[ext]',
               outputPath: 'img'
             }
           },

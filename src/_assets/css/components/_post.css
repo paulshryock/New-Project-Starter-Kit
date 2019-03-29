@@ -2,10 +2,6 @@
 	max-width: 36.4rem;
 }*/
 
-.post-header {
-	color: hsl( 0, 0%, 10% );
-}
-
 .single .post-header {
 	margin: 0 0 2rem;
 }
@@ -48,10 +44,6 @@
 	margin: 0 0 0 0.5em;
 }
 
-.post-content {
-	color: hsl( 0, 0%, 30% );
-}
-
 .post-content ul {
 	list-style: disc;
 	padding: 0 0 0 2em;
@@ -83,7 +75,6 @@
 }
 
 .post-footer {
-	color: hsl( 0, 0%, 10% );
 	font-size: 85%;
 	margin: 2rem 0 0;
 }

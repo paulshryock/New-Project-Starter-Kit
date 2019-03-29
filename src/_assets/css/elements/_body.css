@@ -1,9 +1,15 @@
 body {
 	background: hsl( 0, 0%, 100% );
-	color: hsl( 0, 0%, 10% );
+	color: hsl( 0, 0%, 5% );
 	font-family: sans-serif;
 	font-size: 1rem;
   line-height: 1.4;
   margin: 0;
-	overflow-y: scroll;
+	overflow-y: auto;
+}
+
+* {
+	font-family: inherit;
+	line-height: inherit;
+	color: inherit;
 }

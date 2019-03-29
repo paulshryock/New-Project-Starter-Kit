@@ -3,6 +3,8 @@ table {
 	border-spacing: 0;
 	color: hsl( 0, 0%, 30% );
 	margin: 2em 0;
+  table-layout: fixed;
+  width: 100%;
 }
 
 thead {

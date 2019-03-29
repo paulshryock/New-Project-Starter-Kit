@@ -8,6 +8,15 @@
 */
 
 label {
+	display: block;
 	font-size: 0.75em;
 	text-transform: capitalize;
+}
+
+label + * {
+	margin-top: 0.25rem;
+}
+
+[type="radio"] + label {
+	padding-left: 0.25em;
 }

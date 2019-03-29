@@ -1,6 +1,9 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+  accept_roles: #optional - accepts all users if left out
+    - admin
+    - editor
 publish_mode: editorial_workflow # Allow drafts
 media_folder: "src/_assets/img/uploads" # Media files will be stored in the repo under src/_assets/img/uploads
 public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /img/uploads
@@ -29,8 +32,6 @@ collections:
       - {label: "Content", name: "body", widget: "markdown", required: false}
       - {label: "Navigation Title", name: "nav_title", widget: "string", required: false}
       - {label: "Navigation", name: "navigation", widget: "number", required: false}
-
-collections:
   - name: "articles" # Used in routes, e.g., /cms/collections/articles
     label: "Articles" # Used in the UI
     label_singular: "Article" # singular label for certain elements in the editor
