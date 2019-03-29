@@ -1,6 +1,6 @@
 # New Project Starter Kit
 
-Start new projects with webpack, Babel, Sass, PostCSS, Eleventy, PWA, service workers, JShint, and Netlify CMS installed and configured, with some common accessible HTML, CSS, and JS components and patterns. Includes deployment configuration for Netlify and Zeit Now.
+{{ site.description }}
 
 ## Quick Start
 
