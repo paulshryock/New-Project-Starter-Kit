@@ -1,0 +1,15 @@
+---
+layout: single
+---
+{% capture author_details %}{% if author.title %}, <em>{{ author.title }}</em>{% endif %}{% if author.company %} at <strong>{{ author.company }}</strong>{% endif %}{% endcapture %}
+
+			<article class="container post">
+				<div class="post-content">
+					<blockquote>
+						{{ content }}
+					</blockquote>
+					<cite>
+						{{ author.name }}{{ author_details }}
+					</cite>
+				</div><!-- .post-content -->
+			</article><!-- .container .post -->

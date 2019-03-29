@@ -1,0 +1,7 @@
+					{% if site.logo.url.k %}
+						<object class="site-title__object" type="image/svg+xml" data="{{ site.logo.url.k }}">
+							<img src="{{ site.logo.url.k }}" alt="{{ site.title }}" width="{{ width }}" height="{{ height }}">
+						</object>
+					{% else %}
+						{{ site.title }}
+					{% endif %}

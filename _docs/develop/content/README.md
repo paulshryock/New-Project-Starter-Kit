@@ -47,7 +47,7 @@ All content items use the `.post` class. To style a single article, use `.single
 
 	```javascript
 	// Return API articles
-	eleventyConfig.addCollection("api_articles", function(collection) {
+	eleventyConfig.addCollection("apiArticles", function(collection) {
 
 		let items = collection.getAll().filter(function(item) {
 			return item.data.content_type == "article";
@@ -85,7 +85,7 @@ All content items use the `.post` class. To style a single article, use `.single
 	permalink: api/articles.json
 	content_type: api
 	---
-	<%- JSON.stringify(collections.api_articles) -%>
+	<%- JSON.stringify(collections.apiArticles) -%>
 	```
 	
 	You will be able to access this from `/api/articles.json`

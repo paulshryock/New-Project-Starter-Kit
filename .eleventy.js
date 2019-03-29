@@ -64,6 +64,14 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addLayoutAlias('page', '_layouts/page');
 	eleventyConfig.addLayoutAlias('article', '_layouts/article');
 	eleventyConfig.addLayoutAlias('articles', '_layouts/articles');
+	eleventyConfig.addLayoutAlias('project', '_layouts/project');
+	eleventyConfig.addLayoutAlias('projects', '_layouts/projects');
+	eleventyConfig.addLayoutAlias('testimonial', '_layouts/testimonial');
+	eleventyConfig.addLayoutAlias('testimonials', '_layouts/testimonials');
+	eleventyConfig.addLayoutAlias('case-study', '_layouts/case-study');
+	eleventyConfig.addLayoutAlias('case-studies', '_layouts/case-studies');
+	eleventyConfig.addLayoutAlias('client', '_layouts/client');
+	eleventyConfig.addLayoutAlias('clients', '_layouts/clients');
 	
 	/**
 		* Add custom collections
@@ -117,8 +125,36 @@ module.exports = function(eleventyConfig) {
 		});
 	});
 	
+	// Return projects
+	eleventyConfig.addCollection("projects", function(collection) {
+		return collection.getAll().filter(function(item) {
+			return item.data.content_type == "project";
+		});
+	});
+	
+	// Return testimonials
+	eleventyConfig.addCollection("testimonials", function(collection) {
+		return collection.getAll().filter(function(item) {
+			return item.data.content_type == "testimonial";
+		});
+	});
+	
+	// Return case studies
+	eleventyConfig.addCollection("caseStudies", function(collection) {
+		return collection.getAll().filter(function(item) {
+			return item.data.content_type == "case-study";
+		});
+	});
+	
+	// Return clients
+	eleventyConfig.addCollection("clients", function(collection) {
+		return collection.getAll().filter(function(item) {
+			return item.data.content_type == "client";
+		});
+	});
+	
 	// Return API navigation
-	eleventyConfig.addCollection("api_navigation", function(collection) {
+	eleventyConfig.addCollection("apiNavigation", function(collection) {
 
 		let items = collection.getAll().filter(function(item) {
 			return "navigation" in item.data;
@@ -134,7 +170,7 @@ module.exports = function(eleventyConfig) {
 	});
 	
 	// Return API pages
-	eleventyConfig.addCollection("api_pages", function(collection) {
+	eleventyConfig.addCollection("apiPages", function(collection) {
 
 		let items = collection.getAll().filter(function(item) {
 			return item.data.content_type == "page";
@@ -166,7 +202,7 @@ module.exports = function(eleventyConfig) {
 	});
 	
 	// Return API articles
-	eleventyConfig.addCollection("api_articles", function(collection) {
+	eleventyConfig.addCollection("apiArticles", function(collection) {
 
 		let items = collection.getAll().filter(function(item) {
 			return item.data.content_type == "article";
@@ -196,9 +232,137 @@ module.exports = function(eleventyConfig) {
 		});
 
 	});
+	
+	// Return API projects
+	eleventyConfig.addCollection("apiProjects", function(collection) {
+
+		let items = collection.getAll().filter(function(item) {
+			return item.data.content_type == "project";
+		});
+
+		return items.map(item => {
+			return {
+				title: item.data.title,
+				seo_title: item.data.seo_title,
+				display_title: item.data.display_title,
+				nav_title: item.data.nav_title,
+				excerpt: item.data.excerpt,
+				seo_description: item.data.seo_description,
+				date: item.data.date,
+				navigation: item.data.navigation,
+				content_type: item.data.content_type,
+				topics: item.data.topics,
+				skills: item.data.skills,
+				tags: item.data.tags,
+				inputPath: item.inputPath,
+				slug: item.data.slug,
+				permalink: item.data.permalink,
+				url: item.url,
+				outputPath: item.outputPath,
+				content: item.templateContent,
+			};
+		});
+
+	});
+	
+	// Return API testimonials
+	eleventyConfig.addCollection("apiTestimonials", function(collection) {
+
+		let items = collection.getAll().filter(function(item) {
+			return item.data.content_type == "testimonial";
+		});
+
+		return items.map(item => {
+			return {
+				title: item.data.title,
+				seo_title: item.data.seo_title,
+				display_title: item.data.display_title,
+				nav_title: item.data.nav_title,
+				excerpt: item.data.excerpt,
+				seo_description: item.data.seo_description,
+				date: item.data.date,
+				navigation: item.data.navigation,
+				content_type: item.data.content_type,
+				topics: item.data.topics,
+				skills: item.data.skills,
+				tags: item.data.tags,
+				inputPath: item.inputPath,
+				slug: item.data.slug,
+				permalink: item.data.permalink,
+				url: item.url,
+				outputPath: item.outputPath,
+				content: item.templateContent,
+			};
+		});
+
+	});
+	
+	// Return API case studies
+	eleventyConfig.addCollection("apiCaseStudies", function(collection) {
+
+		let items = collection.getAll().filter(function(item) {
+			return item.data.content_type == "case-study";
+		});
+
+		return items.map(item => {
+			return {
+				title: item.data.title,
+				seo_title: item.data.seo_title,
+				display_title: item.data.display_title,
+				nav_title: item.data.nav_title,
+				excerpt: item.data.excerpt,
+				seo_description: item.data.seo_description,
+				date: item.data.date,
+				navigation: item.data.navigation,
+				content_type: item.data.content_type,
+				topics: item.data.topics,
+				skills: item.data.skills,
+				tags: item.data.tags,
+				inputPath: item.inputPath,
+				slug: item.data.slug,
+				permalink: item.data.permalink,
+				url: item.url,
+				outputPath: item.outputPath,
+				content: item.templateContent,
+			};
+		});
+
+	});
+	
+	// Return API clients
+	eleventyConfig.addCollection("apiClients", function(collection) {
+
+		let items = collection.getAll().filter(function(item) {
+			return item.data.content_type == "client";
+		});
+
+		return items.map(item => {
+			return {
+				title: item.data.title,
+				seo_title: item.data.seo_title,
+				display_title: item.data.display_title,
+				nav_title: item.data.nav_title,
+				excerpt: item.data.excerpt,
+				seo_description: item.data.seo_description,
+				date: item.data.date,
+				navigation: item.data.navigation,
+				content_type: item.data.content_type,
+				topics: item.data.topics,
+				skills: item.data.skills,
+				tags: item.data.tags,
+				inputPath: item.inputPath,
+				slug: item.data.slug,
+				permalink: item.data.permalink,
+				url: item.url,
+				outputPath: item.outputPath,
+				content: item.templateContent,
+			};
+		});
+
+	});
 
 	// Return search index
-  eleventyConfig.addCollection("api_searchIndex", function(collection) {
+  eleventyConfig.addCollection("apiSearchIndex", function(collection) {
 
   	let items = collection.getAll().filter(function(item) {
 			return	( item.data.content_type !== "api" ) &&

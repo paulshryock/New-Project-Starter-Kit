@@ -4,6 +4,15 @@
   "url": "{{ pkg.url }}",
   "version": "{{ pkg.version }}",
 
+  "logo": {
+    "url": {
+      "k": "/img/logos/visual-communications.svg",
+      "ko": "/img/logos/visual-communications-ko.svg"
+    },
+    "width": 180,
+    "height": 72
+  },
+
   "feed": {
     "subtitle": "{{ pkg.title }}",
     "filename": "feed.xml",

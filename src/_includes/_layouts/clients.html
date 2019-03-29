@@ -1,0 +1,30 @@
+---
+layout: archive
+---
+
+			{% for client in collections.clients %}
+			{% capture title %}{{ client.data.title }}{% endcapture %}
+			{% capture excerpt %}{{ client.data.excerpt }}{% endcapture %}
+			<li>
+				<article class="post">
+					<header class="post-header">
+						<h2><a href="{{ client.url }}">{{ title }}</a></h2>
+{% comment %}
+						<ul class="post-meta">
+							<li><time>{{ page.date | timePosted }}</time></li>
+							<li><span class="screen-reader-text">Topics: </span><ul>
+								{% for topic in client.data.topics %}
+								<li><a href="/topics/{{ topic | slug }}">{{ topic }}</a></li>
+								{% endfor %}
+							</ul></li>
+						</ul><!-- .post-meta -->
+{% endcomment %}
+					</header><!-- .post-header -->
+					{% if excerpt %}
+					<div class="post-content">
+						{{ excerpt }}
+					</div><!-- .post-content -->
+					{% endif %}
+				</article><!-- .post -->
+			</li>
+			{% endfor %}

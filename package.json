@@ -1,10 +1,10 @@
 {
-  "name": "New-Project-Starter-Kit",
-  "title": "New Project Starter Kit",
-  "version": "0.21.0",
-  "description": "Start new projects with webpack, Babel, Sass, PostCSS, Eleventy, PWA, service workers, JShint, and Netlify CMS installed and configured, with some common accessible HTML, CSS, and JS components and patterns. Includes deployment configuration for Netlify and Zeit Now.",
-  "url": "https://example.com",
-  "company": "Example Corp",
+  "name": "VisComm",
+  "title": "VisComm",
+  "version": "0.1.0",
+  "description": "Realogy Visual Communications Department",
+  "url": "viscommdept.com",
+  "company": "Visual Communications",
   "private": true,
   "scripts": {
     "start": "npm run build",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulshryock/New-Project-Starter-Kit.git"
+    "url": "git+https://github.com/paulshryock/VisComm.git"
   },
   "keywords": [],
   "author": {
@@ -39,9 +39,9 @@
   },
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
+    "url": "https://github.com/paulshryock/VisComm/issues"
   },
-  "homepage": "https://github.com/paulshryock/New-Project-Starter-Kit#readme",
+  "homepage": "https://github.com/paulshryock/VisComm#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.7.1",
     "@babel/core": "^7.4.0",

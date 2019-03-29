@@ -1,12 +1,12 @@
 {
-  "name": "New Project Starter Kit",
-  "short_name": "New Project",
+  "name": "VisComm",
+  "short_name": "VisComm",
   "start_url": "/?utm_source=homescreen",
   "background_color": "#f2f2f2",
   "theme_color": "#1a1aff",
   "display": "standalone",
   "lang": "en-US",
-  "description" : "Start from scratch without reinventing the wheel: webpack, Babel, Sass, PostCSS, Eleventy, PWA, service worker",
+  "description" : "Realogy Visual Communications department",
   "scope" : "./",
   "icons": [
     {

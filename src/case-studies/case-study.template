@@ -1,0 +1,18 @@
+---
+title:
+excerpt:
+date: // example: 2019-01-01T00:00:00-5, defaults to creation page.date
+cover_image: '' // optional
+cover_image_alt: // optional
+topics: [ ] // array, defaults to Front End Development
+
+seo_title: // defaults to title
+seo_description: // defaults to excerpt
+
+short_title: // optional, doesn't display, no default
+
+permalink: // defaults to ./{{ title | slug }}/index.html
+content_type: // defaults to case-study
+layout: // defaults to case-study
+tags: [ ] // array, doesn't display, no default
+---
