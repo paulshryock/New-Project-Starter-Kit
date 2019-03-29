@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Chunk CSS includes
 - Rename 'defaults' styles to 'elements'
 - Lower input type selectors' specificity
+- Update CMS title
 
 ### Removed
 - Uninstall postcss-import
