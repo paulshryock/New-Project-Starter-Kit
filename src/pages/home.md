@@ -6,4 +6,4 @@ nav_title: Home
 navigation: 1
 ---
 
-Home page content lorem ipsum
+Home page content [lorem](#) ipsum

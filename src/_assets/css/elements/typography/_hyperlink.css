@@ -5,14 +5,18 @@ a {
 
 a:link,
 a:visited {
-	color: hsl( 240, 100%, 50% );
+	color: $blue;
 }
 
 a:hover,
 a:focus {
-	color: hsl( 220, 100%, 50% );
+	color: $blue-alt;
 }
 
 a:active {
-	color: hsl( 220, 100%, 60% );
+	color: $blue-alt-light;
+}
+
+:focus {
+	outline: 0.125rem dashed $blue-alt-lighter;
 }

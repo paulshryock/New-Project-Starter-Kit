@@ -1,3 +1,26 @@
-$color-primary: hsl( 240, 100%, 50% );
-$color-primary-focus: hsl( 220, 100%, 50% );
-$color-primary-active: hsl( 220, 100%, 60% );
+/* Color variables */
+$blue-white:				hsl( 240, 100%, 95% );
+$blue-lightest:			hsl( 240, 100%, 90% );
+$blue-lighter:			hsl( 240, 100%, 80% );
+$blue-light:				hsl( 240, 100%, 70% );
+$blue-medium-light:	hsl( 240, 100%, 60% );
+$blue-medium:				hsl( 240, 100%, 50% );
+$blue-medium-dark:	hsl( 240, 100%, 40% );
+$blue-dark:					hsl( 240, 100%, 30% );
+$blue-darker:				hsl( 240, 100%, 20% );
+$blue-darkest:			hsl( 240, 100%, 10% );
+$blue-black:				hsl( 240, 100%, 0% );
+$blue:							$blue-medium;
+
+$blue-alt-white:				hsl( 220, 100%, 95% );
+$blue-alt-lightest:			hsl( 220, 100%, 90% );
+$blue-alt-lighter:			hsl( 220, 100%, 80% );
+$blue-alt-light:				hsl( 220, 100%, 70% );
+$blue-alt-medium-light:	hsl( 220, 100%, 60% );
+$blue-alt-medium:				hsl( 220, 100%, 50% );
+$blue-alt-medium-dark:	hsl( 220, 100%, 40% );
+$blue-alt-dark:					hsl( 220, 100%, 30% );
+$blue-alt-darker:				hsl( 220, 100%, 20% );
+$blue-alt-darkest:			hsl( 220, 100%, 10% );
+$blue-alt-black:				hsl( 220, 100%, 0% );
+$blue-alt:							$blue-alt-medium;

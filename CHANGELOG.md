@@ -26,6 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Now alias
 - Update pull request template
 - Update Readme description
+- Style focus state
+- Update docs link in Readme
 
 ## 0.21.0 - 2019-03-26 - [CMS, Styles, Strict JS](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.21.0)
 
