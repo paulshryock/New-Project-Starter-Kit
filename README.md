@@ -2,6 +2,8 @@
 
 Start new projects with webpack, Babel, Sass, PostCSS, Eleventy, PWA, service workers, JShint, and Netlify CMS installed and configured, with some common accessible HTML, CSS, and JS components and patterns. Includes deployment configuration for Netlify and Zeit Now.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a1031bfd-6642-45fe-9547-2438c4bc0de4/deploy-status)](https://app.netlify.com/sites/npsk/deploys)
+
 ## Quick Start
 
 ### Requirements
