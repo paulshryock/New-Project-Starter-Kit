@@ -7,10 +7,6 @@ navigation: 4
 nav_title: Form
 ---
 
-<header>
-	<h1 class="post-title">Form</h1>
-</header>
-
 <div>
 	<ul class="list_bulleted">
 		<li><a href="#inputs">Inputs</a></li>
