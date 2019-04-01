@@ -1,5 +1,5 @@
 {
   "version": 2,
-  "alias": ["newprojectstarterkit.com"],
+  "alias": ["example.com"],
   "builds": [{ "src": "package.json", "use": "@now/static-build" }]
 }
