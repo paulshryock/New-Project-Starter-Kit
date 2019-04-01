@@ -26,7 +26,7 @@ $ npm start
 
 ## Documentation
 
-[Project documentation](https://paul-shryock.gitbook.io/new-project-starter-kit/) is in the `_docs` directory.
+[Project documentation](https://docs.newprojectstarterkit.com/) files are in the `_docs` directory.
 
 ## Contributing
 
