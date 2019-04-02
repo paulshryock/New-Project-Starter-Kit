@@ -33,6 +33,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Put humans before robots
 - Add canonical links to head
 
+### Fixed
+- Fix favicon directory locations
+
 ## 0.21.0 - 2019-03-26 - [CMS, Styles, Strict JS](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.21.0)
 
 ### Added

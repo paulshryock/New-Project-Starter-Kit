@@ -47,11 +47,12 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
+        include: path.resolve(__dirname, 'src/_assets/img'),
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
+              name: '[folder]/[name].[ext]',
               outputPath: 'img'
             }
           },
