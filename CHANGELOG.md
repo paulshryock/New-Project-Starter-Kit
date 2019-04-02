@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Sass variables
 - Install StandardJS
 - Add Netlify Status badge to Readme
+- Add cms subdomain proxy redirect to /cms
 
 ### Changed
 - Update Now alias
@@ -34,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add canonical links to head
 - Disable Netlify CMS content previews
 - Add Netlify CMS display url
+- Update Pages and Articles CMS description
 
 ### Fixed
 - Fix image and font directory locations
