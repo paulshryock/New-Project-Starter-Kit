@@ -60,6 +60,22 @@ module.exports = {
             loader: 'image-webpack-loader'
           }
         ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        include: path.resolve(__dirname, 'src/_assets/fonts'),
+        use: {
+          loader: "file-loader",
+            options: {
+              name: '[name].[ext]',
+              outputPath: (url, resourcePath, context) => {
+                const urlParts = url.split( '-' ),
+                      fontFamily = urlParts[0],
+                      fontWeight = urlParts[1];
+                return `/fonts/${fontFamily}/${fontWeight}/${url}`;
+              },
+            }
+        }
       }
     ]
   },
