@@ -7,9 +7,9 @@ backend:
 publish_mode: editorial_workflow # Allow drafts
 media_folder: "src/_assets/img/uploads" # Media files will be stored in the repo under src/_assets/img/uploads
 public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /img/uploads
-#display_url: https://example.com
+display_url: https://newprojectstarterkit.com
 editor:
-  preview: true
+  preview: false
 
 collections:
   - name: "pages" # Used in routes, e.g., /cms/collections/pages

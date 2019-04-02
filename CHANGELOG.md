@@ -32,6 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Eleventy
 - Put humans before robots
 - Add canonical links to head
+- Disable Netlify CMS content previews
+- Add Netlify CMS display url
 
 ### Fixed
 - Fix image and font directory locations
