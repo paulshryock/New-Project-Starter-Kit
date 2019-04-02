@@ -14,6 +14,9 @@
 # Redirect with a 301
 # /home         /              301
 
+# Redirect default Netlify subdomain to primary domain
+https://npsk.netlify.com/* https://newprojectstarterkit.com/:splat 301!
+
 # Redirect with a 302
 # /my-redirect  /              302
 
