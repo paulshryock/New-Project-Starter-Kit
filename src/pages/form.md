@@ -38,7 +38,7 @@ nav_title: Form
 		</div>
 		<div>
 			<label for="a-datetime-local">Datetime-local</label>
-			<input type="datetime-local" value="1999-12-31 23:59" placeholder="enter a date and time in the YYYY-MM-DD HH:MM format" name="a-datetime-local" id="a-datetime-local" />
+			<input type="datetime-local" value="1999-12-31T23:59" placeholder="enter a date and time in the YYYY-MM-DD HH:MM format" name="a-datetime-local" id="a-datetime-local" />
 		</div>
 		<div>
 			<label for="an-email-address">Email</label>
@@ -54,7 +54,7 @@ nav_title: Form
 		</div>
 		<div>
 			<label for="an-image">Image</label>
-			<input type="image" src="http://clicknathan.com/wp-content/uploads/2014/05/red-button.png" width="50" height="50" name="an-image" id="an-image" />
+			<input type="image" src="https://clicknathan.com/wp-content/uploads/2014/05/red-button.png" width="50" height="50" name="an-image" id="an-image" />
 		</div>
 		<div>
 			<label for="a-month">Month</label>
@@ -62,7 +62,7 @@ nav_title: Form
 		</div>
 		<div>
 			<label for="a-week">Week</label>
-			<input type="week" value="2014-w52" placeholder="enter a year and week in the YYYY-wWW format where the 'w' is just a w, and the 'WW' represents the week number" name="a-week" id="a-week" />
+			<input type="week" value="2014-W52" placeholder="enter a year and week in the YYYY-wWW format where the 'w' is just a w, and the 'WW' represents the week number" name="a-week" id="a-week" />
 		</div>
 		<div>
 			<label for="a-number">Number</label>
@@ -70,7 +70,7 @@ nav_title: Form
 		</div>
 		<div>
 			<label for="a-password">Password</label>
-			<input type="password" value="" placeholder="enter a password" name="a-password" id="a-password" />
+			<input type="password" value="" placeholder="enter a password" name="a-password" id="a-password" autocomplete="current-password" />
 		</div>
 		<div>
 			<label for="a-range">Range</label>
