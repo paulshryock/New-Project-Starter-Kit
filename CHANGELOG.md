@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Netlify CMS display url
 - Update Pages and Articles CMS description
 - Swap CMS config display_url for site_url
+- Update Readme description
 
 ### Fixed
 - Fix image and font directory locations
