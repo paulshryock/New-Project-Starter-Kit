@@ -32,7 +32,8 @@
 # API JSON files
 /api/* /api/:splat.json    200
 
-# proxy the request
+# proxy the subdomain request
+https://cms.newprojectstarterkit.com /cms 200!
 https://cms.newprojectstarterkit.com/* /cms/* 200!
 
 # Redirect default Netlify subdomain to primary domain
