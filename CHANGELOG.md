@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add humans credits
 - Add a few style resets
 - Add cms deploy context to Netlify config
+- Add .nvmrc
 
 ### Changed
 - Update Now alias
