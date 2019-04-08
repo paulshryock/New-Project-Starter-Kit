@@ -2,7 +2,7 @@
   padding: 0;
 }
 
-.js .navigation ul {
+.js .navigation:first-of-type ul {
 	opacity: 0;
 	max-height: 0;
 	overflow: hidden;
@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
 
-	.js .navigation ul {
+	.js .navigation:first-of-type ul {
 		max-height: none;
 		opacity: 1;
 		overflow: auto;
