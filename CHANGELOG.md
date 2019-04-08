@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add cms subdomain proxy redirect to /cms
 - Add humans credits
 - Add a few style resets
+- Add cms deploy context to Netlify config
 
 ### Changed
 - Update Now alias
