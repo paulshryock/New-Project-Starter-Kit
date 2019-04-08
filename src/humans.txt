@@ -14,6 +14,7 @@ Thanks to these individuals and groups for releasing high-quality open-source re
 | :--- | :--- |
 | Ahmad Shadeed | [a11ymatters](http://www.a11ymatters.com/patterns/) |
 | Andrew Bone | [Accessibility first toggle switches](https://dev.to/link2twenty), [Accessibility first radio buttons](https://dev.to/link2twenty/accessibility-first-radio-buttons-2302), [Accessibility first text input](https://dev.to/link2twenty/accessibility-first-text-input-1l7l) |
+| Andy Bell | [Minimal CSS reset](https://gist.github.com/andybelldesign/3ff68ebe3011e17f5ea7c287f47868fc) |
 | Eric Rasch | [HTML Kitchen Sink](https://codepen.io/ericrasch/pen/qIiyK) |
 | Heydon Pickering | [Inclusive Components](https://inclusive-components.design/), [CSS Inheritance, the Cascade and Global Scope](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/) |
 | Jeremy Thomas | [minireset.css](https://jgthms.com/minireset.css/) |
@@ -27,6 +28,7 @@ Thanks to these individuals and groups for releasing high-quality open-source re
 | Sarah Cope | [quotes](https://css-tricks.com/almanac/properties/q/quotes/) |
 | Tim Brown | [Flexible Typesetting](https://abookapart.com/products/flexible-typesetting) |
 | The Web Robot Pages | [robots.txt](http://www.robotstxt.org/) |
+| Zach Leat | [Eleventy](https://www.11ty.io/) |
 
 ## Technology Colophon
 

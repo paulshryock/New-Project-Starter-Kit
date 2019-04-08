@@ -17,6 +17,13 @@ input {
 	overflow: visible;
 }
 
+/* Normalise form field line-height in WebKit */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  line-height: normal;
+}
+
 input:placeholder {
 	color: hsl( 0, 0%, 50% );
 }
@@ -69,6 +76,8 @@ input:readonly {
   -webkit-appearance: textfield;
 }
 
-[type="search"]::-webkit-search-decoration {
+/* Turn off the recent search in WebKit. */
+::-webkit-search-decoration {
+  display: none;
   -webkit-appearance: none;
 }

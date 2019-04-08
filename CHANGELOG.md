@@ -22,6 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Install StandardJS
 - Add Netlify Status badge to Readme
 - Add cms subdomain proxy redirect to /cms
+- Add humans credits
+- Add a few style resets
 
 ### Changed
 - Update Now alias
