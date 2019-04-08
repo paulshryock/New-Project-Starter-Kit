@@ -33,8 +33,7 @@
 /api/* /api/:splat.json    200
 
 # proxy the subdomain request
-https://cms.newprojectstarterkit.com /cms 200!
-https://cms.newprojectstarterkit.com/* /cms/* 200!
+https://cms.newprojectstarterkit.com/* /cms/:splat 200!
 
 # Redirect default Netlify subdomain to primary domain
 https://npsk.netlify.com/* https://newprojectstarterkit.com/:splat 301!

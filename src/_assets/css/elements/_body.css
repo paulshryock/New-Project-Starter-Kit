@@ -5,7 +5,14 @@ body {
 	font-size: 1rem;
   line-height: 1.4;
   margin: 0;
+  min-height: 100vh;
 	overflow-y: auto;
+	
+  /* Hide persistent scrollbar in IE (10/11) and Edge */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  /* Anchor links will transition rather than skip */
+  scroll-behavior: smooth;
 }
 
 * {
