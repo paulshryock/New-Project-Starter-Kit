@@ -1,3 +1,9 @@
 [build]
-	command = "npm start"
+	base = "src"
 	publish = "dist"
+	command = "npm start"
+
+[context.cms]
+	base = "src/cms"
+	publish = "dist"
+	command = "npm start"
