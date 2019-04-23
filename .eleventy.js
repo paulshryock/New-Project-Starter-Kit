@@ -2,6 +2,13 @@ const fs = require('fs');
 const htmlmin = require('html-minifier');
 
 module.exports = function(eleventyConfig) {
+
+	/**
+		* Configure BrowserSync
+		*/
+	eleventyConfig.setBrowserSyncConfig({
+    port: 8081
+  });
 	
 	/**
 		* Add custom filters

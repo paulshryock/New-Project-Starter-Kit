@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Pages and Articles CMS description
 - Swap CMS config display_url for site_url
 - Update Readme description
+- Move local serve port into Eleventy config
 
 ### Removed 
 - Remove duplicate docs files

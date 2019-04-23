@@ -18,7 +18,7 @@
     "webpack:watch": "npx webpack --watch",
     "eleventy": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
-    "eleventy:serve": "npx eleventy --serve --port=8081",
+    "eleventy:serve": "npx eleventy --serve",
     "prebuild": "npm run clean && npm run webpack",
     "build": "npm run eleventy",
     "prewatch": "npm run prebuild",
@@ -27,6 +27,7 @@
     "serve": "npm run eleventy:serve",
     "now-build": "npm start"
   },
+  "port": 8081,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/paulshryock/New-Project-Starter-Kit.git"
