@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 module.exports = {
   plugins: [
@@ -8,7 +8,7 @@ module.exports = {
     require('postcss-preset-env'), // Convert modern CSS into something browsers understand
     require('autoprefixer'), // Add vendor prefixes
     require('cssnano')({ // Modern CSS compression
-        preset: 'default',
-    }),
+      preset: 'default'
+    })
   ]
-};
+}

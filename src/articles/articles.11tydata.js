@@ -1,14 +1,12 @@
-"use strict";
+'use strict'
 
-module.exports = function() {
-
+module.exports = function () {
   return {
-		"permalink": "./{{ title | slug }}/index.html",
-		"content_type": "article",
-		"layout": "article",
-		"topics": [
-			"General"
-		]
-  };
-
-};
+    'permalink': './{{ title | slug }}/index.html',
+    'content_type': 'article',
+    'layout': 'article',
+    'topics': [
+      'General'
+    ]
+  }
+}

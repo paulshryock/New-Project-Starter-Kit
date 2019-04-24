@@ -1,11 +1,9 @@
-"use strict";
+'use strict'
 
-module.exports = function() {
-
+module.exports = function () {
   return {
-		"permalink": "./{{ slug }}/index.html",
-		"content_type": "page",
-		"layout": "page"
-  };
-
-};
+    'permalink': './{{ slug }}/index.html',
+    'content_type': 'page',
+    'layout': 'page'
+  }
+}

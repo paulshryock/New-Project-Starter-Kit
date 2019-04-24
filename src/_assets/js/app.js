@@ -1,18 +1,16 @@
-"use strict";
-
-// JS
-const browser = require( './browser' );
-const a11y = require( './a11y' );
-const navigation = require( './navigation' );
-
 // SCSS
-import './../css/app.css';
+import './../css/app.css'
 
 // Images
-import './../img/favicon/android-chrome-192x192.png';
-import './../img/favicon/android-chrome-512x512.png';
-import './../img/favicon/apple-touch-icon.png';
-import './../img/favicon/favicon-16x16.png';
-import './../img/favicon/favicon-32x32.png';
-import './../img/favicon/mstile-150x150.png';
-import './../img/favicon/safari-pinned-tab.svg';
+import './../img/favicon/android-chrome-192x192.png'
+import './../img/favicon/android-chrome-512x512.png'
+import './../img/favicon/apple-touch-icon.png'
+import './../img/favicon/favicon-16x16.png'
+import './../img/favicon/favicon-32x32.png'
+import './../img/favicon/mstile-150x150.png'
+import './../img/favicon/safari-pinned-tab.svg'
+
+// JS
+const browser = require('./browser')
+const a11y = require('./a11y')
+const navigation = require('./navigation')
