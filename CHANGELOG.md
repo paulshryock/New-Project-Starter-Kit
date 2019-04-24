@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add navigation data file
+- Add API files
 
 ### Changed
 - Update npm packages
