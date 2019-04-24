@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/paulshryock/New-Project-Starter-Kit#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.2",
+    "@11ty/eleventy": "^0.7.1",
     "@babel/core": "^7.4.0",
     "@babel/polyfill": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
