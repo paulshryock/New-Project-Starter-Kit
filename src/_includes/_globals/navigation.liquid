@@ -6,8 +6,8 @@
 			-->
 		<nav role="navigation" class="container navigation">
 			<ul>
-			{% for page in collections.navigation %}
-				<li><a href="/{{ page.data.slug | default: page.fileSlug }}">{{ page.data.nav_title | default: page.data.title }}</a></li>
+			{% for item in navigation.items %}
+				<li><a href="{{ item.slug }}">{{ item.title }}</a></li>
 			{% endfor %}
 			</ul>
 		</nav><!-- .container .navigation -->
