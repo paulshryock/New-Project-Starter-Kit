@@ -15,7 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.22.0 - 2019-04-01 - [Sass variables, StandardJS](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.22.0)
+## 0.23.0 - 2019-04-24 - [Package updates](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.0)
+
+### Changed
+- Update npm packages
+
+## 0.22.0 - 2019-04-24 - [Sass variables, StandardJS, more config](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.22.0)
 
 ### Added
 - Add Sass variables
