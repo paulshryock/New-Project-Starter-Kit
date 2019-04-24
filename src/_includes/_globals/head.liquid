@@ -6,7 +6,7 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 		<!-- Page-specific information -->
-		<title>{{ seo_title | default: title | default: site.title }}</title>
+		<title>{% if seo_title %}{{ seo_title }}{% else %}{{ title }} | {{ site.title }}{% endif %}</title>
 		<meta name="description" content="{{ seo_description | default: excerpt | default: site.description }}">
 		<link rel="author" href="/humans.txt">
 		<meta name="robots" content="index,follow">

@@ -17,11 +17,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.23.0 - 2019-04-24 - [Package updates](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.0)
 
+### Added
+- Add navigation data file
+
 ### Changed
 - Update npm packages
 - Update babel corejs version
 - Run standard to fix some js syntax
 - Update project description
+- Update page title markup
 
 ## 0.22.0 - 2019-04-24 - [Sass variables, StandardJS, more config](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.22.0)
 
