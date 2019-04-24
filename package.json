@@ -1,7 +1,7 @@
 {
   "name": "New-Project-Starter-Kit",
   "title": "New Project Starter Kit",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "Start new projects with webpack, Babel, Sass, PostCSS, Eleventy, PWA, service workers, JShint, and Netlify CMS installed and configured, with some common accessible HTML, CSS, and JS components and patterns. Includes deployment configuration for Netlify and Zeit Now.",
   "url": "https://newprojectstarterkit.com",
   "company": "Paul Shryock",

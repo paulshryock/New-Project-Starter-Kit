@@ -1,11 +1,11 @@
-"use strict";
+'use strict'
 
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-require('@babel/register');
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+require('@babel/register')
 
 module.exports = {
-  
+
   name: process.env.NODE_ENV == 'production' ? 'production' : 'development',
   mode: process.env.NODE_ENV == 'production' ? 'production' : 'development',
 
@@ -32,12 +32,12 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: MiniCssExtractPlugin.loader
           },
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
+              importLoaders: 1
             }
           },
           {
@@ -65,16 +65,18 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
         include: path.resolve(__dirname, 'src/_assets/fonts'),
         use: {
-          loader: "file-loader",
-            options: {
-              name: '[name].[ext]',
-              outputPath: (url, resourcePath, context) => {
-                const urlParts = url.split( '-' ),
-                      fontFamily = urlParts[0],
-                      fontWeight = urlParts[1];
-                return `/fonts/${fontFamily}/${fontWeight}/${url}`;
-              },
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: (url, resourcePath, context) => {
+              const urlParts = url.split('-')
+
+              const fontFamily = urlParts[0]
+
+              const fontWeight = urlParts[1]
+              return `/fonts/${fontFamily}/${fontWeight}/${url}`
             }
+          }
         }
       }
     ]
@@ -83,10 +85,10 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(
       {
-        filename: "./css/[name].css",
-        chunkFilename: "./css/[id].css"
+        filename: './css/[name].css',
+        chunkFilename: './css/[id].css'
       }
     )
   ]
 
-};
+}

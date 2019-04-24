@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update npm packages
+- Update babel corejs version
+- Run standard to fix some js syntax
 
 ## 0.22.0 - 2019-04-24 - [Sass variables, StandardJS, more config](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.22.0)
 
