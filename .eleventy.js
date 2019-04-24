@@ -2,6 +2,13 @@ const fs = require('fs');
 const htmlmin = require('html-minifier');
 
 module.exports = function(eleventyConfig) {
+
+	/**
+		* Configure BrowserSync
+		*/
+	eleventyConfig.setBrowserSyncConfig({
+		port: 8081
+	});
 	
 	/**
 		* Add custom filters
@@ -35,25 +42,25 @@ module.exports = function(eleventyConfig) {
 		* Add custom filters/transforms
 		*/
 
-  // addFilter is deprecated and renamed, use the Configuration API instead
-  // eleventyConfig.addFilter( "myFilter", function() {});
+	// addFilter is deprecated and renamed, use the Configuration API instead
+	// eleventyConfig.addFilter( "myFilter", function() {});
 
-  // eleventyConfig.addTransform("transform-name", function(content, outputPath) {});
-  // eleventyConfig.addTransform("async-transform-name", async function(content, outputPath) {});
+	// eleventyConfig.addTransform("transform-name", function(content, outputPath) {});
+	// eleventyConfig.addTransform("async-transform-name", async function(content, outputPath) {});
 
 	// Minify HTML output
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
+	eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+		if( outputPath.endsWith(".html") ) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true
+			});
+			return minified;
+		}
 
-    return content;
-  });
+		return content;
+	});
 	
 	/**
 		* Add layout aliases
@@ -126,8 +133,8 @@ module.exports = function(eleventyConfig) {
 
 		return items.map(item => {
 			return {
-  			title: item.data.title,
-  			navigation: item.data.navigation,
+				title: item.data.title,
+				navigation: item.data.navigation,
 			};
 		});
 
@@ -198,9 +205,9 @@ module.exports = function(eleventyConfig) {
 	});
 
 	// Return search index
-  eleventyConfig.addCollection("api_searchIndex", function(collection) {
+	eleventyConfig.addCollection("api_searchIndex", function(collection) {
 
-  	let items = collection.getAll().filter(function(item) {
+		let items = collection.getAll().filter(function(item) {
 			return	( item.data.content_type !== "api" ) &&
 							( item.data.slug !== "sitemap" ) &&
 							( item.data.slug !== "404" ) &&
@@ -208,7 +215,7 @@ module.exports = function(eleventyConfig) {
 		});
 
 		return items.map(item => {
-  		return {
+			return {
 				title: item.data.title,
 				seo_title: item.data.seo_title,
 				display_title: item.data.display_title,
@@ -227,10 +234,10 @@ module.exports = function(eleventyConfig) {
 				url: item.url,
 				outputPath: item.outputPath,
 				content: item.templateContent,
-  		};
-  	});
+			};
+		});
 
-  });
+	});
 	
 	/**
 		* Copy static assets
@@ -251,21 +258,21 @@ module.exports = function(eleventyConfig) {
 	];
 
 	assets.forEach((asset) => {
-	  try {
-		  if (fs.existsSync(`./src/${asset}`)) {
+		try {
+			if (fs.existsSync(`./src/${asset}`)) {
 				eleventyConfig.addPassthroughCopy(`src/${asset}`);
-		  }
+			}
 		} catch(err) {
-		  console.error(err)
+			console.error(err)
 		}
 	});
-  
-  return {
-    dir: {
-	    input: "src",
-	    output: "dist"
-    },
-    passthroughFileCopy: true
-  };
-  
+	
+	return {
+		dir: {
+			input: "src",
+			output: "dist"
+		},
+		passthroughFileCopy: true
+	};
+	
 };

@@ -18,7 +18,7 @@
     "webpack:watch": "npx webpack --watch",
     "eleventy": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
-    "eleventy:serve": "npx eleventy --serve --port=8081",
+    "eleventy:serve": "npx eleventy --serve",
     "prebuild": "npm run clean && npm run webpack",
     "build": "npm run eleventy",
     "prewatch": "npm run prebuild",
