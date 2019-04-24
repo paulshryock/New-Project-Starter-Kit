@@ -1,24 +1,24 @@
 'use strict'
 
 /**
-	* The main navigation object
-	*
-	*/
+  * The main navigation object
+  *
+  */
 let navigation = {}
 
 /**
-	* Initializes the main navigation object
-	*
-	*/
+  * Initializes the main navigation object
+  *
+  */
 navigation.init = function () {
   // navigation.addEventListeners();
   navigation.addMobileNavigation()
 }
 
 /**
-	* Adds mobile navigation menu toggle button
-	*
-	*/
+  * Adds mobile navigation menu toggle button
+  *
+  */
 navigation.addNavButton = function () {
   let nav = document.querySelector('.navigation')
 
@@ -50,9 +50,9 @@ navigation.addNavButton = function () {
 }
 
 /**
-	* Removes mobile navigation menu toggle button
-	*
-	*/
+  * Removes mobile navigation menu toggle button
+  *
+  */
 navigation.removeNavButton = function () {
   let nav = document.querySelector('.navigation')
 
@@ -64,23 +64,23 @@ navigation.removeNavButton = function () {
 }
 
 /**
-	* Sets mobile navigation menu toggle button text
-	*
-	*/
+  * Sets mobile navigation menu toggle button text
+  *
+  */
 navigation.setNavButtonText = function () {
   let button = document.querySelector('.navigation button span')
 
-  if (button.textContent == 'Menu') {
+  if (button.textContent === 'Menu') {
     button.textContent = 'Close'
-  } else if (button.textContent == 'Close') {
+  } else if (button.textContent === 'Close') {
     button.textContent = 'Menu'
   }
 }
 
 /**
-	* Hides mobile navigation menu
-	*
-	*/
+  * Hides mobile navigation menu
+  *
+  */
 navigation.hideNavMenu = function () {
   let nav = document.querySelector('.navigation')
 
@@ -92,9 +92,9 @@ navigation.hideNavMenu = function () {
 }
 
 /**
-	* Shows mobile navigation menu
-	*
-	*/
+  * Shows mobile navigation menu
+  *
+  */
 navigation.showNavMenu = function () {
   let nav = document.querySelector('.navigation')
 
@@ -106,9 +106,9 @@ navigation.showNavMenu = function () {
 }
 
 /**
-	* Toggles navigation button and menu elements' states
-	*
-	*/
+  * Toggles navigation button and menu elements' states
+  *
+  */
 navigation.toggleNavElementsStates = function () {
   let menu = document.querySelector('.navigation ul')
 
@@ -127,9 +127,9 @@ navigation.toggleNavElementsStates = function () {
 }
 
 /**
-	* Toggles navigation button and menu elements
-	*
-	*/
+  * Toggles navigation button and menu elements
+  *
+  */
 navigation.toggleNavElements = function (mq) {
   if (mq.matches) { // Tablet and up
     let button = document.querySelector('.navigation button')
@@ -151,9 +151,9 @@ navigation.toggleNavElements = function (mq) {
 }
 
 /**
-	* Adds mobile navigation
-	*
-	*/
+  * Adds mobile navigation
+  *
+  */
 navigation.addMobileNavigation = function () {
   const nav = require('./../../_data/hamburger.11tydata.js')
 
@@ -166,15 +166,15 @@ navigation.addMobileNavigation = function () {
 }
 
 /**
-	* Adds navigation event listners
-	*
-	*/
+  * Adds navigation event listners
+  *
+  */
 // navigation.addEventListeners = function() {
 
 // };
 
 /**
-	* Initialize the main navigation object
-	*
-	*/
+  * Initialize the main navigation object
+  *
+  */
 navigation.init()

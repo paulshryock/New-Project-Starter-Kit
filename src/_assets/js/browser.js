@@ -1,24 +1,24 @@
 'use strict'
 
 /**
-	* The main browser object
-	*
-	*/
+  * The main browser object
+  *
+  */
 let browser = {}
 
 /**
-	* Initializes the main browser object
-	*
-	*/
+  * Initializes the main browser object
+  *
+  */
 browser.init = function () {
   browser.addEventListeners()
 }
 
 /**
-	* Customizes console.log()
-	*
-	*/
-browser.log = function (message, color = 'black') {
+  * Customizes console.log()
+  *
+  */
+browser.log = function (message, color) {
   switch (color) {
     case 'success':
       color = 'Green'
@@ -33,7 +33,7 @@ browser.log = function (message, color = 'black') {
       color = 'Orange'
       break
     default:
-      color = color
+      color = 'black'
   }
   console.log(`%c${message}`, `color:${color}`)
 
@@ -50,9 +50,9 @@ browser.log = function (message, color = 'black') {
 }
 
 /**
-	* Swaps html element classes: `.no-js` to `.js`
-	*
-	*/
+  * Swaps html element classes: `.no-js` to `.js`
+  *
+  */
 browser.swapHTMLClasses = function () {
   let el = document.querySelector('html')
 
@@ -61,9 +61,9 @@ browser.swapHTMLClasses = function () {
 }
 
 /**
-	* Adds smooth scrolling to ID links
-	*
-	*/
+  * Adds smooth scrolling to ID links
+  *
+  */
 browser.addSmoothScrolling = function () {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -77,9 +77,9 @@ browser.addSmoothScrolling = function () {
 }
 
 /**
-	* Registers a service worker
-	*
-	*/
+  * Registers a service worker
+  *
+  */
 browser.registerServiceWorker = function () {
   console.log('Will the service worker register?')
   navigator.serviceWorker.register('/serviceworker.js')
@@ -93,9 +93,9 @@ browser.registerServiceWorker = function () {
 }
 
 /**
-	* Adds browser event listners
-	*
-	*/
+  * Adds browser event listners
+  *
+  */
 browser.addEventListeners = function () {
   window.addEventListener('load', browser.swapHTMLClasses, false)
   window.addEventListener('load', browser.addSmoothScrolling, false)
@@ -106,7 +106,7 @@ browser.addEventListeners = function () {
 }
 
 /**
-	* Initialize the main browser object
-	*
-	*/
+  * Initialize the main browser object
+  *
+  */
 browser.init()

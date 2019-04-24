@@ -1,23 +1,23 @@
 'use strict'
 
 /**
-	* The main a11y object
-	*
-	*/
+  * The main a11y object
+  *
+  */
 let a11y = {}
 
 /**
-	* Initializes the main a11y object
-	*
-	*/
+  * Initializes the main a11y object
+  *
+  */
 a11y.init = function () {
   a11y.addEventListeners()
 }
 
 /**
-	* Requires minimum click time to trigger card link click
-	*
-	*/
+  * Requires minimum click time to trigger card link click
+  *
+  */
 a11y.requireCardClickTime = function () {
   const cards = document.querySelectorAll('.card')
   Array.prototype.forEach.call(cards, card => {
@@ -36,9 +36,9 @@ a11y.requireCardClickTime = function () {
 }
 
 /**
-	* Adds pagination link labels
-	*
-	*/
+  * Adds pagination link labels
+  *
+  */
 a11y.addPaginationLinkLabels = function () {
   let links = document.querySelectorAll('.pagination a')
 
@@ -58,16 +58,16 @@ a11y.addPaginationLinkLabels = function () {
 }
 
 /**
-	* Adds a11y event listners
-	*
-	*/
+  * Adds a11y event listners
+  *
+  */
 a11y.addEventListeners = function () {
   window.addEventListener('load', a11y.requireCardClickTime, false)
   window.addEventListener('load', a11y.addPaginationLinkLabels, false)
 }
 
 /**
-	* Initialize the main a11y object
-	*
-	*/
+  * Initialize the main a11y object
+  *
+  */
 a11y.init()

@@ -16,7 +16,7 @@
     "clean:img": "if [ -e src/img ]; then rm -R src/img; fi",
     "standard": "npx standard",
     "standard:fix": "npx standard --fix",
-    "test": "npm run standard",
+    "pretest": "npx standard --fix",
     "webpack": "npx webpack",
     "webpack:watch": "npx webpack --watch",
     "eleventy": "npx eleventy",
