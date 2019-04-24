@@ -22,7 +22,9 @@ a11y.requireCardClickTime = function () {
   const cards = document.querySelectorAll('.card')
   Array.prototype.forEach.call(cards, card => {
     let down; let up; let link = card.querySelector('h2 a')
-    card.onmousedown = () => down = +new Date()
+    card.onmousedown = () => {
+      down = +new Date()
+    }
     card.onmouseup = () => {
       up = +new Date()
       if ((up - down) < 200) {

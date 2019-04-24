@@ -10,8 +10,6 @@ import './../img/favicon/favicon-32x32.png'
 import './../img/favicon/mstile-150x150.png'
 import './../img/favicon/safari-pinned-tab.svg'
 
-'use strict'
-
 // JS
 const browser = require('./browser')
 const a11y = require('./a11y')
