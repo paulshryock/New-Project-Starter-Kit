@@ -1,4 +1,3 @@
-{% if collections.navigation.size > 0 %}
 		<!--
 			-- Accessible Mobile Navigation
 			-- 
@@ -6,9 +5,8 @@
 			-->
 		<nav role="navigation" class="container navigation">
 			<ul>
-			{% for item in navigation.items %}
-				<li><a href="{{ item.slug }}">{{ item.title }}</a></li>
-			{% endfor %}
+				{% for item in nav.items %}
+					<li><a href="{{ item.slug }}"{% if true === item.external %} target="_blank"{% endif %}>{{ item.title }}</a>
+				{% endfor %}
 			</ul>
 		</nav><!-- .container .navigation -->
-{% endif %}

@@ -19,7 +19,7 @@
 
 }
 
-.js .navigation .is-active {
+.js .navigation:first-of-type .is-active {
 	max-height: 100vh;
 	opacity: 1;
 }
