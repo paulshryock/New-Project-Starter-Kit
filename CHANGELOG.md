@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed 3 high severity vulnerabilities
 - Fix navigation condition
 
-## 0.23.0 - 2019-04-24 - [Package updates](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.0)
+## 0.23.0 - 2019-04-24 - [Navigation data file, Package updates](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.0)
 
 ### Added
 - Add navigation data file
