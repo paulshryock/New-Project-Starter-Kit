@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Clean up StandardJS warnings
 - Audit and fix dev dependency vulnerability
+
 ## 0.23.3 - 2019-06-05 - [Security fix](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.3)
 
 ### Removed
