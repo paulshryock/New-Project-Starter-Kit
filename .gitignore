@@ -6,6 +6,7 @@ src/js/
 src/css/
 src/fonts/
 src/img/
+*.report.html
 
 # System files
 .DS_Store

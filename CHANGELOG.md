@@ -15,6 +15,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.24.0 - 2019-05-31 - [Performance budget](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.24.0)
+
+### Added
+- Add budget.json
+- Add Performance Budget docs
+- Install Lighthouse cli
+
+### Changed
+- Upgrade Eleventy to 0.8.3
+
+### Fixed
+- Clean up StandardJS warnings
+- Audit and fix dev dependency vulnerability
+
 ## 0.23.2 - 2019-05-31 - [Security fix](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.2)
 
 ### Fixed

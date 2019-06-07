@@ -10,6 +10,8 @@ const precacheFiles = [
   'robots.txt'
 ]
 
+/* global self, caches, fetch */
+
 self.addEventListener('install', function (event) {
   console.log('[New Project] Install Event processing')
 
@@ -73,7 +75,7 @@ function fromCache (request) {
   return caches.open(CACHE).then(function (cache) {
     return cache.match(request).then(function (matching) {
       if (!matching || matching.status === 404) {
-        return Promise.reject('no-match')
+        return Promise.reject('no-match') /* eslint-disable-line prefer-promise-reject-errors */
       }
 
       return matching
