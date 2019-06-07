@@ -28,11 +28,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Clean up StandardJS warnings
 - Audit and fix dev dependency vulnerability
+## 0.23.3 - 2019-06-05 - [Security fix](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.3)
 
-## 0.23.2 - 2019-05-31 - [Security fix](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.2)
+### Removed
+- Remove package-lock.json
+
+## 0.23.2 - 2019-06-05 - [Security fix](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.2)
 
 ### Fixed
-- Fix severity vulnerability
+- Fix security vulnerability
 
 ## 0.23.1 - 2019-05-30 - [Security fixes, Navigation fix](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.1)
 

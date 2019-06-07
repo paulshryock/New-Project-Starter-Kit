@@ -1,7 +1,11 @@
 {
   "name": "New-Project-Starter-Kit",
   "title": "New Project Starter Kit",
+<<<<<<< HEAD
   "version": "0.24.0",
+=======
+  "version": "0.23.3",
+>>>>>>> 4a8a35271e0041a03744680fb41a37d841e132ab
   "description": "Start new projects with Eleventy, webpack, Babel, StandardJS, Sass, PostCSS, PWA, service workers, and Netlify CMS installed and configured, with some common accessible HTML, CSS, and JS components and patterns. Includes deployment configuration for Netlify and Zeit Now. This starter kit is open source and completely free. Use it however you like.",
   "url": "https://newprojectstarterkit.com",
   "company": "Paul Shryock",
