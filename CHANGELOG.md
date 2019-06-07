@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add budget.json
 - Add Performance Budget docs
 - Install Lighthouse cli
+- Add aspect ratio classes
 
 ### Changed
 - Upgrade Eleventy to 0.8.3
