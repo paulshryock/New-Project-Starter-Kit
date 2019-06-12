@@ -15,7 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.24.0 - 2019-05-31 - [Performance budget](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.24.0)
+## 0.25.0 - 2019-06-12 - [Full Width component](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.25.0)
+
+### Added
+- Add full width component
+
+## 0.24.0 - 2019-06-07 - [Performance budget](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.24.0)
 
 ### Added
 - Add budget.json
