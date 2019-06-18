@@ -4,7 +4,7 @@
   * The main a11y object
   *
   */
-let a11y = {}
+const a11y = {}
 
 /**
   * Initializes the main a11y object
@@ -21,7 +21,10 @@ a11y.init = function () {
 a11y.requireCardClickTime = function () {
   const cards = document.querySelectorAll('.card')
   Array.prototype.forEach.call(cards, card => {
-    let down; let up; let link = card.querySelector('h2 a')
+    let down
+    let up
+    const link = card.querySelector('h2 a')
+
     card.onmousedown = () => {
       down = +new Date()
     }
@@ -40,11 +43,11 @@ a11y.requireCardClickTime = function () {
   *
   */
 a11y.addPaginationLinkLabels = function () {
-  let links = document.querySelectorAll('.pagination a')
+  const links = document.querySelectorAll('.pagination a')
 
   if (links.length > 0) {
     for (var i = 0; i < links.length; i++) {
-      let counter = i + 1
+      const counter = i + 1
 
       let string = 'Go to Page ' + counter
 

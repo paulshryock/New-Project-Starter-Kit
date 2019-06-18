@@ -4,7 +4,7 @@
   * The main browser object
   *
   */
-let browser = {}
+const browser = {}
 
 /**
   * Initializes the main browser object
@@ -54,7 +54,7 @@ browser.log = function (message, color) {
   *
   */
 browser.swapHTMLClasses = function () {
-  let el = document.querySelector('html')
+  const el = document.querySelector('html')
 
   el.classList.toggle('no-js')
   el.classList.toggle('js')
