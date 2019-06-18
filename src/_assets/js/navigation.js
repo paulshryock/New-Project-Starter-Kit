@@ -4,7 +4,7 @@
   * The main navigation object
   *
   */
-let navigation = {}
+const navigation = {}
 
 /**
   * Initializes the main navigation object
@@ -21,7 +21,7 @@ navigation.init = function () {
 navigation.addNavButton = function () {
   const nav = document.querySelector('.navigation')
   const menu = document.querySelector('.navigation ul')
-  const button = document.createElement('button')
+  let button = document.createElement('button')
   const span = document.createElement('span')
   const hamburger1 = span.cloneNode()
   const hamburger2 = span.cloneNode()
@@ -48,7 +48,7 @@ navigation.addNavButton = function () {
   */
 navigation.removeNavButton = function () {
   const nav = document.querySelector('.navigation')
-  const button = document.querySelector('.navigation button')
+  let button = document.querySelector('.navigation button')
 
   if (button) {
     button = nav.removeChild(button)

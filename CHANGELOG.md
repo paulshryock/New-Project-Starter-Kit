@@ -26,8 +26,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ ] Move layouts to their own directory
 - [ ] Only load cms files on cms pages
 
-###
+### Fixed
 - [x] Fix eleventy error
+- [x] Fix linter warnings
 
 ## 0.25.0 - 2019-06-12 - [Full Width component](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.25.0)
 
