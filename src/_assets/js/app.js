@@ -11,6 +11,6 @@ import './../img/favicon/mstile-150x150.png'
 import './../img/favicon/safari-pinned-tab.svg'
 
 // JS
-const browser = require('./browser')
-const a11y = require('./a11y')
-const navigation = require('./navigation')
+require('./browser')
+require('./a11y')
+require('./navigation')
