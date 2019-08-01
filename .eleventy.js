@@ -166,7 +166,6 @@ module.exports = function(eleventyConfig) {
 				permalink: item.data.permalink,
 				url: item.url,
 				outputPath: item.outputPath,
-				content: item.templateContent,
 			};
 		});
 
@@ -198,7 +197,6 @@ module.exports = function(eleventyConfig) {
 				permalink: item.data.permalink,
 				url: item.url,
 				outputPath: item.outputPath,
-				content: item.templateContent,
 			};
 		});
 
@@ -233,7 +231,6 @@ module.exports = function(eleventyConfig) {
 				permalink: item.data.permalink,
 				url: item.url,
 				outputPath: item.outputPath,
-				content: item.templateContent,
 			};
 		});
 

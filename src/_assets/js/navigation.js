@@ -4,14 +4,13 @@
   * The main navigation object
   *
   */
-let navigation = {}
+const navigation = {}
 
 /**
   * Initializes the main navigation object
   *
   */
 navigation.init = function () {
-  // navigation.addEventListeners();
   navigation.addMobileNavigation()
 }
 
@@ -20,19 +19,13 @@ navigation.init = function () {
   *
   */
 navigation.addNavButton = function () {
-  let nav = document.querySelector('.navigation')
-
-  let menu = document.querySelector('.navigation ul')
-
+  const nav = document.querySelector('.navigation')
+  const menu = document.querySelector('.navigation ul')
   let button = document.createElement('button')
-
-  let span = document.createElement('span')
-
-  let hamburger1 = span.cloneNode()
-
-  let hamburger2 = span.cloneNode()
-
-  let hamburger3 = span.cloneNode()
+  const span = document.createElement('span')
+  const hamburger1 = span.cloneNode()
+  const hamburger2 = span.cloneNode()
+  const hamburger3 = span.cloneNode()
 
   span.textContent = 'Menu'
   span.classList.add('screen-reader-text')
@@ -54,8 +47,7 @@ navigation.addNavButton = function () {
   *
   */
 navigation.removeNavButton = function () {
-  let nav = document.querySelector('.navigation')
-
+  const nav = document.querySelector('.navigation')
   let button = document.querySelector('.navigation button')
 
   if (button) {
@@ -68,7 +60,7 @@ navigation.removeNavButton = function () {
   *
   */
 navigation.setNavButtonText = function () {
-  let button = document.querySelector('.navigation button span')
+  const button = document.querySelector('.navigation button span')
 
   if (button.textContent === 'Menu') {
     button.textContent = 'Close'
@@ -82,9 +74,8 @@ navigation.setNavButtonText = function () {
   *
   */
 navigation.hideNavMenu = function () {
-  let nav = document.querySelector('.navigation')
-
-  let menu = document.querySelector('.navigation ul')
+  const nav = document.querySelector('.navigation')
+  const menu = document.querySelector('.navigation ul')
 
   menu.setAttribute('hidden', '')
   menu.classList.remove('is-active')
@@ -96,9 +87,8 @@ navigation.hideNavMenu = function () {
   *
   */
 navigation.showNavMenu = function () {
-  let nav = document.querySelector('.navigation')
-
-  let menu = document.querySelector('.navigation ul')
+  const nav = document.querySelector('.navigation')
+  const menu = document.querySelector('.navigation ul')
 
   menu.removeAttribute('hidden')
   menu.classList.add('is-active')
@@ -110,9 +100,8 @@ navigation.showNavMenu = function () {
   *
   */
 navigation.toggleNavElementsStates = function () {
-  let menu = document.querySelector('.navigation ul')
-
-  let links = document.querySelectorAll('.navigation ul a')
+  const menu = document.querySelector('.navigation ul')
+  const links = document.querySelectorAll('.navigation ul a')
 
   if (menu.classList.contains('is-active')) {
     this.setAttribute('aria-expanded', 'false')
@@ -132,7 +121,7 @@ navigation.toggleNavElementsStates = function () {
   */
 navigation.toggleNavElements = function (mq) {
   if (mq.matches) { // Tablet and up
-    let button = document.querySelector('.navigation button')
+    const button = document.querySelector('.navigation button')
 
     if (button) {
       button.removeEventListener('click', navigation.toggleNavElementsStates, false)
@@ -141,7 +130,7 @@ navigation.toggleNavElements = function (mq) {
     navigation.showNavMenu()
   } else { // Mobile
     navigation.addNavButton()
-    let button = document.querySelector('.navigation button')
+    const button = document.querySelector('.navigation button')
 
     if (button) {
       button.addEventListener('click', navigation.toggleNavElementsStates, false)
@@ -152,29 +141,17 @@ navigation.toggleNavElements = function (mq) {
 
 /**
   * Adds mobile navigation
-  *
   */
 navigation.addMobileNavigation = function () {
   const nav = require('./../../_data/hamburger.11tydata.js')
-
-  let query = nav.mediaQuery || '37.5rem'
-
-  let mq = window.matchMedia(`(min-width: ${query})`)
+  const query = nav.mediaQuery || '37.5rem'
+  const mq = window.matchMedia(`(min-width: ${query})`)
 
   navigation.toggleNavElements(mq) // Call listener function at run time
   mq.addListener(navigation.toggleNavElements) // Attach listener function on state changes
 }
 
 /**
-  * Adds navigation event listners
-  *
-  */
-// navigation.addEventListeners = function() {
-
-// };
-
-/**
   * Initialize the main navigation object
-  *
   */
 navigation.init()
