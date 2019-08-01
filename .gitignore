@@ -1,8 +1,9 @@
 # Project files
 node_modules/
 package-lock.json
-certs/
+build/
 dist/
+temp/
 src/js/
 src/css/
 src/fonts/
