@@ -1,0 +1,6 @@
+  {% unless seoTitle %}
+  {% capture seoTitle %}
+    {% unless slug == '.' %}{{ title }} | {% endunless %}{{ site.title }}
+  {% endcapture %}
+  {% endunless %}
+  <title>{{ seoTitle }}</title>

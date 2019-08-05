@@ -1,5 +1,0 @@
-{
-  "version": 2,
-  "alias": ["example.com"],
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
-}

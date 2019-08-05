@@ -15,36 +15,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.27.0 - 2019-XX-XX - [RELEASE_TITLE](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.27.0)
-
-### Changed
-- [ ] Move layouts to their own directory
-- [ ] Only load cms files on cms pages
-
-## 0.26.0 - 2019-08-01 - [Clean up dependencies](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.26.0)
+## 0.27.0 - 2019-08-02 - Restructure
 
 ### Added
-- [x] Install npm-run-all
+- Configure Eleventy: data, includes, input, layouts, output, collections, Passthrough file copy (`.eleventy.js`)
+- Add npm scripts (`package.json`)
+- Add assets, data, includes, layouts, content (`/src/*`)
+- Add environment variables (`.env`)
 
 ### Changed
-- [x] Update npm scripts
-- [x] Update dependencies
-- [x] Update gitignore
+- Move netlify and now config files to `/deploy/*`
+
+## 0.26.0 - 2019-08-01 - Clean up dependencies
+
+### Added
+- Install npm-run-all
+
+### Changed
+- Update npm scripts
+- Update dependencies
+- Update gitignore
 
 ### Removed
-- [x] Remove Readme links
-- [x] Remove package-lock.json
+- Remove Readme links
+- Remove package-lock.json
 
 ### Fixed
-- [x] Fix eleventy error
-- [x] Fix linter warnings
+- Fix eleventy error
+- Fix linter warnings
 
-## 0.25.0 - 2019-06-12 - [Full Width component](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.25.0)
+## 0.25.0 - 2019-06-12 - Full Width component
 
 ### Added
 - Add full width component
 
-## 0.24.0 - 2019-06-07 - [Performance budget](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.24.0)
+## 0.24.0 - 2019-06-07 - Performance budget
 
 ### Added
 - Add budget.json
@@ -59,23 +64,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Clean up StandardJS warnings
 - Audit and fix dev dependency vulnerability
 
-## 0.23.3 - 2019-06-05 - [Security fix](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.3)
+## 0.23.3 - 2019-06-05 - Security fix
 
 ### Removed
 - Remove package-lock.json
 
-## 0.23.2 - 2019-06-05 - [Security fix](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.2)
+## 0.23.2 - 2019-06-05 - Security fix
 
 ### Fixed
 - Fix security vulnerability
 
-## 0.23.1 - 2019-05-30 - [Security fixes, Navigation fix](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.1)
+## 0.23.1 - 2019-05-30 - Security fixes, Navigation fix
 
 ### Fixed
 - Fixed 3 high severity vulnerabilities
 - Fix navigation condition
 
-## 0.23.0 - 2019-04-24 - [Navigation data file, Package updates](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.23.0)
+## 0.23.0 - 2019-04-24 - Navigation data file, Package updates
 
 ### Added
 - Add navigation data file
@@ -88,7 +93,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update project description
 - Update page title markup
 
-## 0.22.0 - 2019-04-24 - [Sass variables, StandardJS, more config](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.22.0)
+## 0.22.0 - 2019-04-24 - Sass variables, StandardJS, more config
 
 ### Added
 - Add Sass variables
@@ -123,7 +128,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fix image and font directory locations
 
-## 0.21.0 - 2019-03-26 - [CMS, Styles, Strict JS](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.21.0)
+## 0.21.0 - 2019-03-26 - CMS, Styles, Strict JS
 
 ### Added
 - Install postcss-easy-import
@@ -149,7 +154,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix npm clean scripts
 - Fix image webpacking
 
-## 0.20.0 - 2019-03-25 - [JSHint, Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.20.0)
+## 0.20.0 - 2019-03-25 - JSHint, Docs
 
 ### Added
 - Add docs summary links
@@ -164,7 +169,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update dev dependencies
 - Move contributing instructions to CONTRIBUTING.md
 
-## 0.19.0 - 2019-03-08 - [Dependencies, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.19.0)
+## 0.19.0 - 2019-03-08 - Dependencies, Docs, Configs
 
 ### Added
 - Add `pkg.company` for use in `/src/_data/site.json` in `copyright`
@@ -179,7 +184,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `robots.txt`
 - Update `serviceworker.js`
 
-## 0.18.0 - 2019-03-08 - [CMS, Navigation, Docs, Configs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.18.0)
+## 0.18.0 - 2019-03-08 - CMS, Navigation, Docs, Configs
 
 ### Added
 - Add deployment docs
@@ -195,7 +200,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update webpack entry config and image path
 - Update docs
 
-## 0.17.0 - 2019-03-08 - [Configure GitBook, Organize Docs](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.17.0)
+## 0.17.0 - 2019-03-08 - Configure GitBook, Organize Docs
 
 ### Added
 - Add content docs
@@ -204,12 +209,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update pdf paper size
 - Organize docs files
 
-## 0.16.0 - 2019-03-08 - [GitBook](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.16.0)
+## 0.16.0 - 2019-03-08 - GitBook
 
 ### Added
 - Configure GitBook
 
-## 0.15.0 - 2019-03-08 - [Components](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.15.0)
+## 0.15.0 - 2019-03-08 - Components
 
 ### Added
 - Style components
@@ -218,7 +223,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove form layout_class
 - Remove markdown code spaces
 
-## 0.14.0 - 2019-03-07 - [Styles, Data, Body Classes](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.14.0)
+## 0.14.0 - 2019-03-07 - Styles, Data, Body Classes
 
 ### Added
 - Add Pull Request template checklist items
@@ -228,17 +233,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update body classes
 - Update package and site data
 
-## 0.13.0 - 2019-03-06 - [Zeit Now](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.13.0)
+## 0.13.0 - 2019-03-06 - Zeit Now
 
 ### Added
 - Configure Zeit Now
 
-## 0.12.0 - 2019-03-05 - [Netlify](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.12.0)
+## 0.12.0 - 2019-03-05 - Netlify
 
 ### Added
 - Configure Netlify
 
-## 0.11.0 - 2019-03-05 - [Titles, Meta](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.11.0)
+## 0.11.0 - 2019-03-05 - Titles, Meta
 
 ### Added
 - Add document head meta for PWA, icons, colors
@@ -248,7 +253,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update page titles
 - Reorder document head meta
 
-## 0.10.0 - 2019-03-05 - [Images, New Title](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.10.0)
+## 0.10.0 - 2019-03-05 - Images, New Title
 
 ### Added
 - Install `image-webpack-loader`
@@ -256,42 +261,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Give the project a new title
 
-## 0.9.0 - 2019-03-01 - [Favicon, Data, Includes](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.9.0)
+## 0.9.0 - 2019-03-01 - Favicon, Data, Includes
 
 ### Added
-- [x] Add generic `src/favicon.ico` and favicon images to `src/_assets/img` to be replaced later
-- [x] Add data files
-	- `server.11tydata.js`
-	- `site.11tydata.js`
+- Add generic `src/favicon.ico` and favicon images to `src/_assets/img` to be replaced later
+- Add data files
+  - `server.11tydata.js`
+  - `site.11tydata.js`
 - Add includes
-	- [x] `_globals`
-	- [x] `_layouts`
-	- [ ] `_modules`
-	- [ ] `_components`
+  - `_globals`
+  - `_layouts`
 
-## 0.8.0 - 2019-03-01 - [Boilerplate, PWA, Service Worker](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.8.0)
+## 0.8.0 - 2019-03-01 - Boilerplate, PWA, Service Worker
 
 ### Added
 - Add boilerplate HTML files:
-	- `boilerplate.html`
-	- `form.html`
-	- `index.html`
-	- `kitchen-sink.html`
-	- `offline.html`
+  - `boilerplate.html`
+  - `form.html`
+  - `index.html`
+  - `kitchen-sink.html`
+  - `offline.html`
 - Add humans and robots txt files:
-	- `humans.txt`
-	- `robots.txt`
+  - `humans.txt`
+  - `robots.txt`
 - Add pwa and service worker files:
-	- `browserconfig.xml`
-	- `manifest.json`
-	- `serviceworker.js`
+  - `browserconfig.xml`
+  - `manifest.json`
+  - `serviceworker.js`
 - Add CSS and JavaScript files
 - Add Assets documentation in `_docs` directory
 
 ### Removed
 - Remove `style-loader`
 
-## 0.7.0 - 2019-03-01 - [Eleventy](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.7.0)
+## 0.7.0 - 2019-03-01 - Eleventy
 
 ### Added
 - Install and configure Eleventy
@@ -301,15 +304,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Update npm scripts
 
-## 0.6.0 - 2019-03-01 - [Babel](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.6.0)
+## 0.6.0 - 2019-03-01 - Babel
 
 ### Added
 - Install and configure Babel
-  - [x] @babel/core
-  - [x] @babel-polyfill
-  - [x] @babel/preset-env
-  - [x] @babel/register
-  - [x] babel-loader
+  - @babel/core
+  - @babel-polyfill
+  - @babel/preset-env
+  - @babel/register
+  - babel-loader
 - Let git ignore generated files
 - Add `browser.js`
 
@@ -317,20 +320,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update npm scripts
 - Update webpack configuration
 
-## 0.5.0 - 2019-03-01 - [PostCSS](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.5.0)
+## 0.5.0 - 2019-03-01 - PostCSS
 
 ### Added
 - Install PostCSS
 - Install PostCSS plugins
-	- [x] autoprefixer
-	- [x] cssnano
-	- [x] postcss-node-sass
-	- [x] postcss-preset-env
-	- [x] precss
+  - autoprefixer
+  - cssnano
+  - postcss-node-sass
+  - postcss-preset-env
+  - precss
 - Install webpack plugins
-	- [x] style-loader
-	- [x] css-loader
-	- [x] mini-css-extract-plugin
+  - style-loader
+  - css-loader
+  - mini-css-extract-plugin
 - Add `app.css`
 - Add `.browserslistrc`
 
@@ -339,25 +342,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update npm script
 - Update webpack configuration
 
-## 0.4.0 - 2019-02-28 - [Configure webpack](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.4.0)
+## 0.4.0 - 2019-02-28 - Configure webpack
 
 ### Added
 - Add npm private attribute and scripts
 - Add `webpack.config.js`
 - Add `app.js`
 
-## 0.3.0 - 2019-02-28 - [webpack](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.3.0)
+## 0.3.0 - 2019-02-28 - webpack
 
 ### Added
 - Install webpack
 - Install webpack cli
 
-## 0.2.0 - 2019-02-28 - [npm](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.2.0)
+## 0.2.0 - 2019-02-28 - npm
 
 ### Added
 - Install npm
 
-## 0.1.0 - 2019-02-28 - [Setup](https://github.com/paulshryock/New-Project-Starter-Kit/releases/tag/v0.1.0)
+## 0.1.0 - 2019-02-28 - Setup
 
 ### Added
 - Add `.gitattributes`

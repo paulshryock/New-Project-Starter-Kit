@@ -1,0 +1,21 @@
+---
+layout: global
+---
+<article class="post">
+  <header class="post__header">
+    <h2 class="post__title">{{ title }}</h2>
+    <p class="post__meta">Last updated: {{ page.date | date: "%m/%d/%Y" }}</p>
+  </header><!-- .post__header -->
+  <div class="post__content">
+    {{ content }}
+  </div><!-- .post__content -->
+</article><!-- .post -->
+<aside>
+  {% if collections.projects %}
+  <ul class="posts">
+    {% for post in collections.projects %}
+    <li class="post"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</aside>

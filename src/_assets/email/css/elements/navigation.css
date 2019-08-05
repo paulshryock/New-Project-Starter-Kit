@@ -1,0 +1,43 @@
+nav ul,
+nav ol {
+	font-size: 0;
+	margin: 0 -0.5rem;
+}
+
+nav li {
+	display: inline-block;
+	font-size: 1rem;
+}
+
+nav a {
+	padding: 0.5rem;
+	text-decoration: none;
+}
+
+nav a:link,
+nav a:visited {
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+	text-decoration: underline;
+}
+
+nav a:focus {
+	outline-offset: -0.125em;
+}
+
+@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+
+	nav ul,
+	nav ol {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	nav button {
+		display: none;
+	}
+
+}

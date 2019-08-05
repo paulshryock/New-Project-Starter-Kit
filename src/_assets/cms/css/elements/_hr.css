@@ -1,0 +1,6 @@
+hr {
+	background: hsl( 0, 0%, 70% );
+	border: none;
+	height: 0.125rem;
+	margin: 1rem 0;
+}

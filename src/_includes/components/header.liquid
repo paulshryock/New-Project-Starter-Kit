@@ -1,0 +1,8 @@
+<header role="banner" class="site-header">
+  {%- if slug == '.' %}
+  <h1 class="site-title"><a class="site-title__link" href="/">{{ site.title }}</a></h1>
+  {%- else %}
+  <p class="site-title"><a class="site-title__link" href="/">{{ site.title }}</a></p>
+  {%- endif %}
+  <p class="site-description">{{ site.description }}</p>
+</header>

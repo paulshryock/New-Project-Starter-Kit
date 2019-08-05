@@ -1,5 +1,3 @@
-'use strict'
-
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 require('@babel/register')
@@ -10,14 +8,15 @@ module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 
   entry: {
-    app: './src/_assets/js/app.js',
-    cms: './src/_assets/js/cms.js',
-    development: './src/_assets/js/development.js'
+    app: './src/_assets/app/js/app.js',
+    cms: './src/_assets/cms/js/cms.js',
+    email: './src/_assets/email/js/email.js',
+    site: './src/_assets/site/js/site.js'
   },
 
   output: {
-    path: path.resolve(__dirname, 'src'),
-    filename: './js/[name].js'
+    path: path.resolve(__dirname, 'process'),
+    filename: './[name]/js/[name].js'
   },
 
   module: {
@@ -70,10 +69,10 @@ module.exports = {
             name: '[name].[ext]',
             outputPath: (url, resourcePath, context) => {
               const urlParts = url.split('-')
-
               const fontFamily = urlParts[0]
-
               const fontWeight = urlParts[1]
+
+              // TODO (paulshryock): Test font processing
               return `/fonts/${fontFamily}/${fontWeight}/${url}`
             }
           }
@@ -85,8 +84,8 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(
       {
-        filename: './css/[name].css',
-        chunkFilename: './css/[id].css'
+        filename: './[name]/css/[name].css',
+        chunkFilename: './[name]/css/[id].css'
       }
     )
   ]

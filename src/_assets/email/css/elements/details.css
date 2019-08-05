@@ -1,0 +1,26 @@
+details {
+	border-color: hsl( 0, 0%, 70% );
+	border-radius: 0.25em;
+	display: block;
+	margin: 2em 0;
+}
+
+details[open] {
+	background: hsl( 0, 0%, 100% );
+	padding: 1rem;
+}
+
+details:not([open]) summary {
+	padding: 1rem;
+}
+
+summary {
+	cursor: pointer;
+	display: list-item;
+  /*list-style-image: url(right-arrow.svg);*/
+}
+
+/*summary::-webkit-details-marker {
+  background: url(right-arrow.svg);
+  color: transparent;
+}*/

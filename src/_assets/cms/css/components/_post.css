@@ -1,0 +1,80 @@
+/*.post {
+	max-width: 36.4rem;
+}*/
+
+.single .post-header {
+	margin: 0 0 2rem;
+}
+
+.single .post-header__image {
+	margin: 2rem 0 0;
+}
+
+.post-title {
+	font-size: 2rem;
+	margin: 1em 0 0.5em;
+}
+
+@media screen and (min-width: 75rem) { /* Desktop / 75rem / 1200px */
+
+	.post-title {
+		font-size: 3rem;
+	}
+
+}
+
+.post-meta {
+	color: hsl( 0, 0%, 30% );
+	font-size: 85%;
+	text-transform: capitalize;
+}
+
+.post-meta ul,
+.post-meta ol {
+	display: inline;
+	margin: 0 0 0 0.5em;
+}
+
+.post-meta li {
+	display: inline-block;
+}
+
+.post-meta li + li::before {
+	content: '/ ';
+	margin: 0 0 0 0.5em;
+}
+
+.post-content ul {
+	list-style: disc;
+	padding: 0 0 0 2em;
+}
+
+.post-content ul ul {
+	list-style: square;
+}
+
+.post-content ul ul ul {
+	list-style: circle;
+}
+
+.post-content ol {
+	list-style: decimal;
+	padding: 0 0 0 2em;
+}
+
+.post-content ol ol {
+	list-style: lower-alpha;
+}
+
+.post-content ol ol ol {
+	list-style: lower-roman;
+}
+
+.post-content li {
+	display: list-item;
+}
+
+.post-footer {
+	font-size: 85%;
+	margin: 2rem 0 0;
+}

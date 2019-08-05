@@ -1,14 +1,9 @@
-# Project files
+.env
 node_modules/
 package-lock.json
+*.report.html
+.DS_Store
+process/
 build/
 dist/
 temp/
-src/js/
-src/css/
-src/fonts/
-src/img/
-*.report.html
-
-# System files
-.DS_Store

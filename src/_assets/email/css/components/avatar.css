@@ -1,0 +1,5 @@
+.avatar {
+	border-radius: 50%;
+	clip-path: circle( 50% );
+	max-width: 8rem;
+}

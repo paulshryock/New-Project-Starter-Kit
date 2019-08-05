@@ -3,7 +3,6 @@ title: Kitchen Sink
 slug: kitchen-sink
 date: 2019-01-01T00:00:00-5
 ---
-
 <!-- Kitchen sink -->
 <article class="container post">
 	<header class="post-header">

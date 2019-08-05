@@ -1,0 +1,108 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax( 15rem, 1fr ) );
+  grid-gap: 2rem;
+}
+
+@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+
+	.cards {
+	  grid-gap: 1rem;
+	}
+
+}
+
+.cards p {
+  margin: 0;
+}
+
+.card {
+	border-color: hsl( 0, 0%, 70% );
+	border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+	margin: 2rem 0.5rem;
+}
+
+@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+
+	.card {
+		margin: 1rem 0.5rem;
+	}
+
+}
+
+@supports (display: grid) {
+
+  .card {
+  	margin: 0;
+  }
+
+}
+
+.card:hover {
+	box-shadow: 0 0 0.125rem 0.125rem hsl( 0, 0%, 30% );
+}
+
+/* Isolate selector */
+.card:focus-within {
+	box-shadow: 0 0 0.125rem 0.125rem hsl( 0, 0%, 30% );
+}
+
+.card__image {
+  height: 10rem;
+}
+
+.card img {
+	border-top-left-radius: 0.875em;
+	border-top-right-radius: 0.875em;
+}
+
+.card__image img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  order: 1;
+	padding: 1rem;
+}
+
+.card__text > * {
+	margin-top: 0;
+}
+
+.card__text :last-child {
+  margin-top: auto;
+}
+
+.card__text > * + * {
+  margin-top: 1rem;
+}
+
+.card__text :nth-last-child(2) {
+  margin-bottom: 1rem;
+}
+
+.card footer {
+	font-family: monospace; /* Generic */
+	font-size: 85%;
+}
+
+.card a {
+	text-decoration: none;
+}
+
+/* Isolate selector */
+.card:focus-within a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+.card a:focus {
+	text-decoration: underline;
+}

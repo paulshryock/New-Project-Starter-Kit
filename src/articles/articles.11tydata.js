@@ -1,12 +1,7 @@
-'use strict'
-
 module.exports = function () {
   return {
-    'permalink': './{{ title | slug }}/index.html',
-    'content_type': 'article',
+    'contentType': 'article',
     'layout': 'article',
-    'topics': [
-      'General'
-    ]
+    'permalink': './articles/{{ slug }}/index.html'
   }
 }

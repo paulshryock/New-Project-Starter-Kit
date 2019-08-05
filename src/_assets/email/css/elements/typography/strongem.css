@@ -1,0 +1,9 @@
+strong,
+b {
+	font-weight: bolder;
+}
+
+em,
+i {
+	font-style: italic;
+}

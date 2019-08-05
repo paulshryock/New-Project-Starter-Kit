@@ -1,0 +1,43 @@
+.list_unordered,
+.list_bulleted,
+.list_ordered,
+.list_numbered {
+	padding: 0 0 0 2em;
+}
+
+.list_unordered,
+.list_bulleted {
+	list-style: disc;
+}
+
+.list_unordered ul,
+.list_bulleted ul {
+	list-style: square;
+}
+
+.list_unordered ul ul,
+.list_bulleted ul ul {
+	list-style: circle;
+}
+
+.list_ordered,
+.list_numbered {
+	list-style: decimal;
+}
+
+.list_ordered ol,
+.list_numbered ol {
+	list-style: lower-alpha;
+}
+
+.list_ordered ol ol,
+.list_numbered ol ol {
+	list-style: lower-roman;
+}
+
+.list_unordered li,
+.list_bulleted li,
+.list_ordered li,
+.list_numbered li {
+	display: list-item;
+}
