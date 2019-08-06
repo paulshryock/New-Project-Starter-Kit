@@ -1,3 +1,4 @@
+const fs = require('fs')
 const htmlmin = require('html-minifier')
 
 module.exports = function(eleventyConfig) {
@@ -77,25 +78,38 @@ module.exports = function(eleventyConfig) {
   // Return API
   eleventyConfig.addCollection("api", function(collection) {
 
-    return collection.getAll().map(post => {
+    const posts = collection.getAll()
+    const filteredPosts = posts
+                            .filter(post => post.data.contentType !== 'api')
+                            .filter(post => post.data.contentType !== 'cms')
+
+    return filteredPosts.map(post => {
       return {
         title: post.data.title,
         slug: post.data.slug,
-        permalink: post.data.permalink,
         url: post.url,
-        excerpt: post.data.excerpt,
+        contentType: post.data.contentType,
         date: post.data.date,
-        content_type: post.data.content_type
+        excerpt: post.data.excerpt,
+        tags: post.data.tags,
+        content: post.data.templateContent
       }
     })
 
   })
 
   // Passthrough file copy
-  eleventyConfig.addPassthroughCopy("process/css")
-  eleventyConfig.addPassthroughCopy("process/fonts")
-  eleventyConfig.addPassthroughCopy("process/img")
-  eleventyConfig.addPassthroughCopy("process/js")
+  const assets = [ 'css', 'fonts', 'img', 'js' ]
+
+  assets.map(asset => {
+    try {
+      if (fs.existsSync(`./process/${asset}`)) {
+        eleventyConfig.addPassthroughCopy(`process/${asset}`);
+      }
+    } catch(err) {
+      console.error(err)
+    }
+  });
   
   return {
     dir: {

@@ -46,7 +46,8 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
-        include: path.resolve(__dirname, 'src/_assets/img'),
+        exclude: /node_modules/,
+        // include: path.resolve(__dirname, 'src/_assets/img'),
         use: [
           {
             loader: 'file-loader',
@@ -62,6 +63,7 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
+        exclude: /node_modules/,
         include: path.resolve(__dirname, 'src/_assets/fonts'),
         use: {
           loader: 'file-loader',

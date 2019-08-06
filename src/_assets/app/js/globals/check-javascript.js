@@ -1,7 +1,7 @@
 /**
   * Checks if Javascript is running
   */
-function checkJavascript() {
+function checkJavascript () {
   const html = document.querySelector('html')
 
   html.classList.replace('no-js', 'js')

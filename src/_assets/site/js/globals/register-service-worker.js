@@ -3,7 +3,7 @@
   *
   * param {string} file
   */
-function registerServiceWorker(file) {
+function registerServiceWorker (file) {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register(file)
       .then(registration => {
@@ -20,4 +20,4 @@ function registerServiceWorker(file) {
 /**
   * Register service worker
   */
-registerServiceWorker( '/serviceworker.js' )
+registerServiceWorker('/serviceworker.js')

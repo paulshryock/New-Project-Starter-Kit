@@ -11,19 +11,9 @@ import './../img/favicon/mstile-150x150.png'
 import './../img/favicon/safari-pinned-tab.svg'
 
 // JS
-require('./browser')
-
-const globals = [
-  'check-javascript',
-  'register-service-worker',
-  'smooth-scrolling'
-]
-const components = [
-  'card',
-  'navigation',
-  'pagination'
-]
-const scripts = [ globals, components ]
+const globals = ['check-javascript', 'register-service-worker', 'smooth-scrolling']
+const components = ['card', 'navigation', 'pagination']
+const scripts = [globals, components]
 
 scripts.map(script => {
   script.map(item => {

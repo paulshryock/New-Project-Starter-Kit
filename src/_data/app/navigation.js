@@ -22,7 +22,7 @@ const navigation = [
   {
     title: 'Contact',
     slug: 'contact'
-  },
+  }
 ]
 
 module.exports = navigation

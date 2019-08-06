@@ -60,7 +60,7 @@ navigation.hideNavMenu = function () {
   menu.setAttribute('hidden', '')
   menu.classList.remove('is-active')
   nav.setAttribute('aria-expanded', 'false')
-  
+
   navigation.setNavButtonText('Menu')
 }
 
@@ -74,7 +74,7 @@ navigation.showNavMenu = function () {
   menu.removeAttribute('hidden')
   menu.classList.add('is-active')
   nav.setAttribute('aria-expanded', 'true')
-  
+
   navigation.setNavButtonText('Close')
 }
 
@@ -103,7 +103,6 @@ navigation.toggleNavElementsStates = function () {
     navigation.showNavMenu()
     links[0].focus()
   }
-
 }
 
 /**
@@ -113,7 +112,7 @@ navigation.toggleNavElementsStates = function () {
   */
 navigation.toggleNavElements = function (mediaQuery) {
   const button = document.querySelector('.navigation button')
-  
+
   if (mediaQuery.matches) { // Tablet and up
     if (button) {
       button.removeEventListener('click', navigation.toggleNavElementsStates, false)

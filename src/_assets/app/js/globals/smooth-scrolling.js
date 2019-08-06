@@ -2,7 +2,7 @@
   * Adds anchor link smooth scrolling
   *
   */
-function addAnchorLinkSmoothScrolling() {
+function addAnchorLinkSmoothScrolling () {
   const links = document.querySelectorAll('a[href^="#"]')
 
   links.map(link => {

@@ -20,7 +20,7 @@ function requireCardClickTime () {
         link.click()
       }
     }
-    
+
     card.style.cursor = 'pointer'
   })
 }
