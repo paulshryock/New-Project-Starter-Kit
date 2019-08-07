@@ -26,6 +26,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Move netlify and now config files to `/deploy/*`
 
+### Fixed
+- Fix API post content
+
 ## 0.26.0 - 2019-08-01 - Clean up dependencies
 
 ### Added
