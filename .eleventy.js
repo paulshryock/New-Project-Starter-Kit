@@ -92,7 +92,8 @@ module.exports = function(eleventyConfig) {
         date: post.data.date,
         excerpt: post.data.excerpt,
         tags: post.data.tags,
-        content: post.template.frontMatter.content
+        content: post.template.frontMatter.content,
+        template: post.template
       }
     })
 

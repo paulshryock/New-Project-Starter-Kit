@@ -30,7 +30,7 @@
 
 
 # API JSON files
-/api/* /api/:splat.json    200
+/api /api.json    200
 
 # proxy the subdomain request
 https://cms.newprojectstarterkit.com/* /cms/:splat 200!
