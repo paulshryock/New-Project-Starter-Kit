@@ -3,6 +3,7 @@ node_modules/
 package-lock.json
 *.report.html
 .DS_Store
+*/.DS_Store
 build/
 dist/
 temp/

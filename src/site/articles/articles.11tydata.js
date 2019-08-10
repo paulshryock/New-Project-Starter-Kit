@@ -2,6 +2,6 @@ module.exports = function () {
   return {
     contentType: 'article',
     layout: 'article',
-    permalink: './articles/{{ slug }}/index.html'
+    permalink: './site/articles/{{ slug }}/index.html'
   }
 }

@@ -47,13 +47,16 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         exclude: /node_modules/,
-        // include: path.resolve(__dirname, 'src/_assets/img'),
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[folder]/[name].[ext]',
-              outputPath: 'img'
+              outputPath: (url, resourcePath, context) => {
+                const splitPath = resourcePath.split('/')
+                const assets = splitPath.indexOf('_assets')
+                const path = splitPath.slice(assets + 1).join('/')
+                return `/${path}`
+              }
             }
           },
           {

@@ -24,7 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add environment variables (`.env`)
 
 ### Changed
-- Move netlify and now config files to `/deploy/*`
+- Move netlify and now config files to `/_deploy/*`
+- Move assets and content into platform directories (`app`, `cms`, `email`, `site`)
 
 ### Fixed
 - Fix API post content
