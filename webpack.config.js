@@ -15,7 +15,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'process'),
+    path: path.resolve(__dirname, 'build'),
     filename: './[name]/js/[name].js'
   },
 

@@ -99,17 +99,24 @@ module.exports = function(eleventyConfig) {
   })
 
   // Passthrough file copy
+  const platforms = [ 'app', 'cms', 'email', 'site' ]
   const assets = [ 'css', 'fonts', 'img', 'js' ]
 
-  assets.map(asset => {
+  platforms.map(platform => {
     try {
-      if (fs.existsSync(`./process/${asset}`)) {
-        eleventyConfig.addPassthroughCopy(`process/${asset}`);
-      }
+      assets.map(asset => {
+        try {
+          if (fs.existsSync(`./src/${platform}/${asset}`)) {
+            eleventyConfig.addPassthroughCopy(`src/${platform}/${asset}`)
+          }
+        } catch(err) {
+          console.error(err)
+        }
+      })
     } catch(err) {
       console.error(err)
     }
-  });
+  })
   
   return {
     dir: {
