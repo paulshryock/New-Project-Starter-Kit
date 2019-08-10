@@ -96,11 +96,8 @@ module.exports = function (eleventyConfig) {
   })
 
   // Passthrough file copy
-  const platforms = ['app', 'cms', 'email', 'site']
-  const assets = [
-    'favicon.ico',
-    'serviceworker.js'
-  ]
+  const platforms = ['app', 'site']
+  const assets = ['favicon.ico', 'serviceworker.js']
 
   platforms.map(platform => {
     try {
