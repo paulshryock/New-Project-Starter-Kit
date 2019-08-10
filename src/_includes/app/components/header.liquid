@@ -1,0 +1,8 @@
+<header role="banner" class="app-header">
+  {%- if slug == '.' %}
+  <h1 class="app-title"><a class="app-title__link" href="/">{{ app.data.title }}</a></h1>
+  {%- else %}
+  <p class="app-title"><a class="app-title__link" href="/">{{ app.data.title }}</a></p>
+  {%- endif %}
+  <p class="app-description">{{ app.data.description }}</p>
+</header>

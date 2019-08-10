@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include app/meta/utf %}
+  {% include app/meta/viewport %}
+  {% include app/meta/ie %}
+  {% include app/meta/page %}
+  {% include app/meta/pwa %}
+  {% include app/meta/icons %}
+  {% include app/meta/colors %}
+  {% include app/globals/styles %}
+</head>
+<body class="app {% if contentType %}{{ contentType }} {{ contentType }}-{{ page.fileSlug }}{% endif %}">
+  {% include app/components/skip-link %}
+  {% include app/components/header %}
+  {% include app/components/navigation %}
+  <main id="content" class="app-main">
+    {{ content }}
+  </main><!-- .app-main -->
+  {% include app/components/footer %}
+  {% include app/globals/scripts %}
+</body>
+</html>

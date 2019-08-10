@@ -1,0 +1,62 @@
+---
+layout: global
+---
+<article class="post">
+  <header class="post__header">
+    <h2 class="post__title">{{ title }}</h2>
+    {% if description %}
+    <p class="post__meta">{{ description}}</p>
+    {% endif %}
+  </header><!-- .post__header -->
+  <div class="post__content">
+    {{ content }}
+  </div><!-- .post__content -->
+</article><!-- .post -->
+
+{%- if collections.articles %}
+<section class="more-content">
+  {%- for post in collections.pages %}
+  {%- if post.data.slug == 'articles' %}
+  <h3>{{ post.data.title }}</h3>
+  <p class="post__meta">{{ post.data.description }}</p>
+  {%- endif %}
+  {%- endfor %}
+  <ul class="posts">
+    {%- for post in collections.articles %}
+    <li class="post"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if collections.projects %}
+<section class="more-content">
+  {%- for post in collections.pages %}
+  {%- if post.data.slug == 'portfolio' %}
+  <h3>{{ post.data.title }}</h3>
+  <p class="post__meta">{{ post.data.description }}</p>
+  {%- endif %}
+  {%- endfor %}
+  <ul class="posts">
+    {%- for post in collections.projects %}
+    <li class="post"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if collections.testimonials %}
+<section class="more-content">
+  {%- for post in collections.pages %}
+  {%- if post.data.slug == 'testimonials' %}
+  <h3>{{ post.data.title }}</h3>
+  <p class="post__meta">{{ post.data.description }}</p>
+  {%- endif %}
+  {%- endfor %}
+  <ul class="posts">
+    {%- for post in collections.testimonials %}
+    <li class="post"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}

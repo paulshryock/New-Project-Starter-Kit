@@ -71,14 +71,11 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
             outputPath: (url, resourcePath, context) => {
-              const urlParts = url.split('-')
-              const fontFamily = urlParts[0]
-              const fontWeight = urlParts[1]
-
-              // TODO (paulshryock): Test font processing
-              return `/fonts/${fontFamily}/${fontWeight}/${url}`
+              const splitPath = resourcePath.split('/')
+              const assets = splitPath.indexOf('_assets')
+              const path = splitPath.slice(assets + 1).join('/')
+              return `/${path}`
             }
           }
         }

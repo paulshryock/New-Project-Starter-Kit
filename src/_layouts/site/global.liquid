@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include site/meta/utf %}
+  {% include site/meta/viewport %}
+  {% include site/meta/ie %}
+  {% include site/meta/page %}
+  {% include site/meta/pwa %}
+  {% include site/meta/icons %}
+  {% include site/meta/colors %}
+  {% include site/globals/styles %}
+  {% include site/globals/cms %}
+</head>
+<body class="site {% if contentType %}{{ contentType }} {{ contentType }}-{{ page.fileSlug }}{% endif %}">
+  {% include site/components/skip-link %}
+  {% include site/components/header %}
+  {% include site/components/navigation %}
+  <main id="content" class="site-main">
+    {{ content }}
+  </main><!-- .site-main -->
+  {% include site/components/footer %}
+  {% include site/globals/scripts %}
+</body>
+</html>
