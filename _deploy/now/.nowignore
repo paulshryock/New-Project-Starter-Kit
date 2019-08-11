@@ -1,9 +1,15 @@
+# Environment variables
 .env
+
+# Dependencies
 node_modules/
 package-lock.json
-*.report.html
-.DS_Store
-*/.DS_Store
+
+# Temp files
+_logs/
 build/
 dist/
 temp/
+
+# OS files
+.DS_Store

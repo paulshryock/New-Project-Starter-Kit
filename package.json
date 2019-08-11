@@ -1,12 +1,20 @@
 {
-  "name": "",
-  "description": "",
-  "version": "1.0.0",
+  "name": "npsk",
+  "description": "Start new projects with Eleventy, webpack, Babel, StandardJS, Sass, PostCSS, PWA, service workers, and Netlify CMS installed and configured, with some common accessible HTML, CSS, and JS components and patterns. Includes deployment configuration for Netlify and Zeit Now. This starter kit is open source and completely free. Use it however you like.",
+  "version": "0.27.0",
   "license": "MIT",
   "author": {
     "name": "Paul Shryock",
     "email": "paul@pshry.com",
     "url": "https://pshry.com/"
+  },
+  "homepage": "https://newprojectstarterkit.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulshryock/New-Project-Starter-Kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
   },
   "scripts": {
     "start": "npm run build",
@@ -22,7 +30,7 @@
     "audit": "npm audit && npm run lighthouse",
     "standard": "npx standard",
     "standard:fix": "npx standard --fix",
-    "lighthouse": "lighthouse http://localhost:8081 --budget-path=performance-budget.json --view",
+    "lighthouse": "./_scripts/lighthouse.sh",
     "clean": "npm run clean:build",
     "clean:build": "if [ -d build ]; then rm -R build; fi",
     "webpack": "npx webpack",
