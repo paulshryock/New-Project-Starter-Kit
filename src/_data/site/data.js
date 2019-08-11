@@ -1,5 +1,6 @@
 const data = {}
 
+data.platform = 'site'
 data.title = 'Site title'
 data.shortName = 'Short name'
 data.description = 'Site description'

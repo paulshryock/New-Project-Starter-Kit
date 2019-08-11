@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
   {% include app/meta/utf %}
   {% include app/meta/viewport %}
@@ -10,13 +10,14 @@
   {% include app/meta/colors %}
   {% include app/globals/styles %}
 </head>
-<body class="app {% if contentType %}{{ contentType }} {{ contentType }}-{{ page.fileSlug }}{% endif %}">
+{%- assign platform = app.data.platform %}
+<body class="{{ platform }} {% if layout %}{{ layout }} {{ layout }}-{{ page.fileSlug }}{% endif %}">
   {% include app/components/skip-link %}
   {% include app/components/header %}
   {% include app/components/navigation %}
-  <main id="content" class="app-main">
+  <main id="content" class="{{ platform }}-main">
     {{ content }}
-  </main><!-- .app-main -->
+  </main><!-- .{{ platform }}-main -->
   {% include app/components/footer %}
   {% include app/globals/scripts %}
 </body>

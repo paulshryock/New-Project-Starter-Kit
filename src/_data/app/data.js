@@ -1,5 +1,6 @@
 const data = {}
 
+data.platform = 'app'
 data.title = 'App title'
 data.description = 'App description'
 data.year = new Date().getFullYear()

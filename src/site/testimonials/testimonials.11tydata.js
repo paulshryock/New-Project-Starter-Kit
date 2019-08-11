@@ -1,7 +1,7 @@
 module.exports = function () {
   return {
     contentType: 'testimonial',
-    layout: 'testimonial',
+    layout: 'site/testimonial',
     permalink: './site/testimonials/{{ slug }}/index.html'
   }
 }

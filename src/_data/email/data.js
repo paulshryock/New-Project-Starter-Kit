@@ -1,5 +1,6 @@
 const data = {}
 
+data.platform = 'email'
 data.title = 'Email title'
 data.description = 'Email description'
 data.year = new Date().getFullYear()

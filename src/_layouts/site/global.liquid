@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
   {% include site/meta/utf %}
   {% include site/meta/viewport %}
@@ -11,13 +11,14 @@
   {% include site/globals/styles %}
   {% include site/globals/cms %}
 </head>
-<body class="site {% if contentType %}{{ contentType }} {{ contentType }}-{{ page.fileSlug }}{% endif %}">
+{%- assign platform = site.data.platform %}
+<body class="{{ platform }} {% if contentType %}{{ contentType }} {{ contentType }}-{{ page.fileSlug }}{% endif %}">
   {% include site/components/skip-link %}
   {% include site/components/header %}
   {% include site/components/navigation %}
-  <main id="content" class="site-main">
+  <main id="content" class="{{ platform }}-main">
     {{ content }}
-  </main><!-- .site-main -->
+  </main><!-- .{{ platform }}-main -->
   {% include site/components/footer %}
   {% include site/globals/scripts %}
 </body>
