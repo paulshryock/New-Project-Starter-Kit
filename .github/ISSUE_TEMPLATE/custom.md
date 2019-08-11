@@ -1,5 +1,7 @@
 ---
 name: Custom issue template
 about: Describe this issue template's purpose here.
-assignees: paulshryock
+title: ''
+labels: ''
+assignees: 'paulshryock'
 ---
