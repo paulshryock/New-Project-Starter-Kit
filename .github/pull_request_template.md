@@ -1,10 +1,3 @@
----
-name: Pull request
-about: ''
-title: ''
-labels: ''
-assignees: 'paulshryock'
----
 # Description
 
 # Closes issue(s)
