@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Move netlify and now config files to `/_deploy/*`
 - Move assets and content into platform directories (`app`, `cms`, `email`, `site`)
+- Update GitHub Issue and Pull Request templates
 
 ### Fixed
 - Fix API post content
