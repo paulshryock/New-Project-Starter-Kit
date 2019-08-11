@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  {% include site/meta/utf %}
+  {% include site/meta/viewport %}
+  {% include site/meta/ie %}
+  {% include site/meta/page %}
+  {% include site/meta/pwa %}
+  {% include site/meta/icons %}
+  {% include site/meta/colors %}
+  {% include site/globals/styles %}
+  {% include site/globals/cms %}
+</head>
+{%- assign platform = site.data.platform %}
+<body class="{{ platform }} {% if contentType %}{{ contentType }} {{ contentType }}-{{ page.fileSlug }}{% endif %}">
+  {% include site/components/skip-link %}
+  {% include site/components/header %}
+  {% include site/components/navigation %}
+  <main id="content" class="{{ platform }}-main">
+    {{ content }}
+  </main><!-- .{{ platform }}-main -->
+  {% include site/components/footer %}
+  {% include site/globals/scripts %}
+</body>
+</html>

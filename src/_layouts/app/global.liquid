@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  {% include app/meta/utf %}
+  {% include app/meta/viewport %}
+  {% include app/meta/ie %}
+  {% include app/meta/page %}
+  {% include app/meta/pwa %}
+  {% include app/meta/icons %}
+  {% include app/meta/colors %}
+  {% include app/globals/styles %}
+</head>
+{%- assign platform = app.data.platform %}
+<body class="{{ platform }} {% if layout %}{{ layout }} {{ layout }}-{{ page.fileSlug }}{% endif %}">
+  {% include app/components/skip-link %}
+  {% include app/components/header %}
+  {% include app/components/navigation %}
+  <main id="content" class="{{ platform }}-main">
+    {{ content }}
+  </main><!-- .{{ platform }}-main -->
+  {% include app/components/footer %}
+  {% include app/globals/scripts %}
+</body>
+</html>

@@ -1,275 +1,127 @@
-const fs = require('fs');
-const htmlmin = require('html-minifier');
+const fs = require('fs')
+const htmlmin = require('html-minifier')
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
+  /**
+    * Configure BrowserSync
+    */
+  eleventyConfig.setBrowserSyncConfig({
+    port: 8081
+  })
 
-	/**
-		* Configure BrowserSync
-		*/
-	eleventyConfig.setBrowserSyncConfig({
-		port: 8081
-	});
-	
-	/**
-		* Add custom filters
-		*/
+  // Add Liquid filter: timePosted
+  eleventyConfig.addLiquidFilter('timePosted', date => {
+    const numDays = ((Date.now() - date) / (1000 * 60 * 60 * 24))
+    const daysPosted = Math.round(parseFloat(numDays))
+    const weeksPosted = parseFloat((numDays / 7).toFixed(0))
+    const monthsPosted = parseFloat((numDays / 30).toFixed(0))
+    const yearsPosted = parseFloat((numDays / 365).toFixed(1))
 
-	// Add custom filter
-	// eleventyConfig.addFilter("myFilter", function(value) {
-	// 	return value;
-	// });
+    if (daysPosted < 7) {
+      return daysPosted + ' day' + (daysPosted !== 1 ? 's' : '') + ' ago'
+    } else if (daysPosted < 30) {
+      return weeksPosted + ' week' + (daysPosted !== 1 ? 's' : '') + ' ago'
+    } if (daysPosted < 365) {
+      return monthsPosted + ' month' + (daysPosted !== 1 ? 's' : '') + ' ago'
+    } else {
+      return yearsPosted + ' year' + (yearsPosted !== 1 ? 's' : '') + ' ago'
+    }
+  })
 
-	// Add timePosted filter
-	eleventyConfig.addLiquidFilter("timePosted", date => {
-		let numDays = ((Date.now() - date) / (1000 * 60 * 60 * 24));
-		let daysPosted = Math.round( parseFloat( numDays ) );
-		let weeksPosted = parseFloat( (numDays / 7).toFixed(0) );
-		let monthsPosted = parseFloat( (numDays / 30).toFixed(0) );
-		let yearsPosted = parseFloat( (numDays / 365).toFixed(1) );
+  // Minify HTML output
+  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+    if (outputPath.endsWith('.html')) {
+      const minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      })
+      return minified
+    }
 
-		if( daysPosted < 7 ) {
-			return daysPosted + " day" + (daysPosted !== 1 ? "s" : "") + ' ago';
-		} else if( daysPosted < 30 ) {
-			return weeksPosted + " week" + (daysPosted !== 1 ? "s" : "") + ' ago';
-		} if( daysPosted < 365 ) {
-			return monthsPosted + " month" + (daysPosted !== 1 ? "s" : "") + ' ago';
-		} else {
-			return yearsPosted + " year" + (yearsPosted !== 1 ? "s" : "") + ' ago';
-		}
-	});
-	
-	/**
-		* Add custom filters/transforms
-		*/
+    return content
+  })
 
-	// addFilter is deprecated and renamed, use the Configuration API instead
-	// eleventyConfig.addFilter( "myFilter", function() {});
+  /**
+    * Add collections
+    */
 
-	// eleventyConfig.addTransform("transform-name", function(content, outputPath) {});
-	// eleventyConfig.addTransform("async-transform-name", async function(content, outputPath) {});
+  // Return pages
+  eleventyConfig.addCollection('pages', function (collection) {
+    return collection.getAll().filter(function (post) {
+      return post.data.contentType === 'page'
+    })
+  })
 
-	// Minify HTML output
-	eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-		if( outputPath.endsWith(".html") ) {
-			let minified = htmlmin.minify(content, {
-				useShortDoctype: true,
-				removeComments: true,
-				collapseWhitespace: true
-			});
-			return minified;
-		}
+  // Return articles
+  eleventyConfig.addCollection('articles', function (collection) {
+    return collection.getAll().filter(function (post) {
+      return post.data.contentType === 'article'
+    })
+  })
 
-		return content;
-	});
-	
-	/**
-		* Add layout aliases
-		*/
-	eleventyConfig.addLayoutAlias('global', '_globals/global');
-	eleventyConfig.addLayoutAlias('single', '_layouts/single');
-	eleventyConfig.addLayoutAlias('archive', '_layouts/archive');
-	eleventyConfig.addLayoutAlias('page', '_layouts/page');
-	eleventyConfig.addLayoutAlias('article', '_layouts/article');
-	eleventyConfig.addLayoutAlias('articles', '_layouts/articles');
-	
-	/**
-		* Add custom collections
-		*/
-	
-	// Return all content including archives
-	eleventyConfig.addCollection("everything", function(collection) {
-		return collection.getAll().filter(function(item) {
-			return	item.data.content_type !== "api" &&
-							item.data.content_type !== "cms" &&
-							item.data.content_type !== "css";
-		});
-	});
-	
-	// Return all content except archives
-	eleventyConfig.addCollection("all", function(collection) {
-		return collection.getAll().filter(function(item) {
-			return	item.data.content_type !== "api" &&
-							item.data.content_type !== "cms" &&
-							item.data.content_type !== "css" &&
-							item.data.content_type !== "archive" &&
-							item.data.content_type !== "search-results";
-		});
-	});
-	
-	// Return navigation items
-	eleventyConfig.addCollection("navigation", function(collection) {
-		return collection.getAll().filter(function(item) {
-			return "navigation" in item.data;
-		}).sort( function(a,b){ return a.data.navigation - b.data.navigation } );
-	});
-	
-	// Return pages
-	eleventyConfig.addCollection("pages", function(collection) {
-		return collection.getAll().filter(function(item) {
-			return item.data.content_type == "page";
-		});
-	});
-	
-	// Return archives
-	eleventyConfig.addCollection("archives", function(collection) {
-		return collection.getAll().filter(function(item) {
-			return item.data.content_type == "archive";
-		});
-	});
-	
-	// Return articles
-	eleventyConfig.addCollection("articles", function(collection) {
-		return collection.getAll().filter(function(item) {
-			return item.data.content_type == "article";
-		});
-	});
-	
-	// Return API navigation
-	eleventyConfig.addCollection("api_navigation", function(collection) {
+  // Return projects
+  eleventyConfig.addCollection('projects', function (collection) {
+    return collection.getAll().filter(function (post) {
+      return post.data.contentType === 'project'
+    })
+  })
 
-		let items = collection.getAll().filter(function(item) {
-			return "navigation" in item.data;
-		}).sort( function(a,b){ return a.data.navigation - b.data.navigation } );
+  // Return testimonials
+  eleventyConfig.addCollection('testimonials', function (collection) {
+    return collection.getAll().filter(function (post) {
+      return post.data.contentType === 'testimonial'
+    })
+  })
 
-		return items.map(item => {
-			return {
-				title: item.data.title,
-				navigation: item.data.navigation,
-			};
-		});
+  // Return API
+  eleventyConfig.addCollection('api', function (collection) {
+    const posts = collection.getAll()
+    const filteredPosts = posts
+      .filter(post => post.data.contentType !== 'api')
+      .filter(post => post.data.contentType !== 'cms')
 
-	});
-	
-	// Return API pages
-	eleventyConfig.addCollection("api_pages", function(collection) {
+    return filteredPosts.map(post => {
+      return {
+        title: post.data.title,
+        slug: post.data.slug,
+        url: post.url,
+        contentType: post.data.contentType,
+        date: post.data.date,
+        excerpt: post.data.excerpt,
+        tags: post.data.tags,
+        content: post.template.frontMatter.content
+      }
+    })
+  })
 
-		let items = collection.getAll().filter(function(item) {
-			return item.data.content_type == "page";
-		});
+  // Passthrough file copy
+  const platforms = ['app', 'site']
+  const assets = ['favicon.ico', 'serviceworker.js']
 
-		return items.map(item => {
-			return {
-				title: item.data.title,
-				seo_title: item.data.seo_title,
-				display_title: item.data.display_title,
-				nav_title: item.data.nav_title,
-				excerpt: item.data.excerpt,
-				seo_description: item.data.seo_description,
-				date: item.data.date,
-				navigation: item.data.navigation,
-				content_type: item.data.content_type,
-				topics: item.data.topics,
-				skills: item.data.skills,
-				tags: item.data.tags,
-				inputPath: item.inputPath,
-				slug: item.data.slug,
-				permalink: item.data.permalink,
-				url: item.url,
-				outputPath: item.outputPath,
-			};
-		});
+  platforms.map(platform => {
+    try {
+      assets.map(asset => {
+        try {
+          if (fs.existsSync(`./src/${platform}/${asset}`)) {
+            eleventyConfig.addPassthroughCopy(`src/${platform}/${asset}`)
+          }
+        } catch (err) {
+          console.error(err)
+        }
+      })
+    } catch (err) {
+      console.error(err)
+    }
+  })
 
-	});
-	
-	// Return API articles
-	eleventyConfig.addCollection("api_articles", function(collection) {
-
-		let items = collection.getAll().filter(function(item) {
-			return item.data.content_type == "article";
-		});
-
-		return items.map(item => {
-			return {
-				title: item.data.title,
-				seo_title: item.data.seo_title,
-				display_title: item.data.display_title,
-				nav_title: item.data.nav_title,
-				excerpt: item.data.excerpt,
-				seo_description: item.data.seo_description,
-				date: item.data.date,
-				navigation: item.data.navigation,
-				content_type: item.data.content_type,
-				topics: item.data.topics,
-				skills: item.data.skills,
-				tags: item.data.tags,
-				inputPath: item.inputPath,
-				slug: item.data.slug,
-				permalink: item.data.permalink,
-				url: item.url,
-				outputPath: item.outputPath,
-			};
-		});
-
-	});
-
-	// Return search index
-	eleventyConfig.addCollection("api_searchIndex", function(collection) {
-
-		let items = collection.getAll().filter(function(item) {
-			return	( item.data.content_type !== "api" ) &&
-							( item.data.slug !== "sitemap" ) &&
-							( item.data.slug !== "404" ) &&
-							( item.data.slug !== "offline" );
-		});
-
-		return items.map(item => {
-			return {
-				title: item.data.title,
-				seo_title: item.data.seo_title,
-				display_title: item.data.display_title,
-				nav_title: item.data.nav_title,
-				excerpt: item.data.excerpt,
-				seo_description: item.data.seo_description,
-				date: item.data.date,
-				navigation: item.data.navigation,
-				content_type: item.data.content_type,
-				topics: item.data.topics,
-				skills: item.data.skills,
-				tags: item.data.tags,
-				inputPath: item.inputPath,
-				slug: item.data.slug,
-				permalink: item.data.permalink,
-				url: item.url,
-				outputPath: item.outputPath,
-			};
-		});
-
-	});
-	
-	/**
-		* Copy static assets
-		*/
-	const assets = [
-		'css',
-		'js',
-		'img',
-		'fonts',
-		'cms',
-		'_redirects',
-		'browserconfig.xml',
-		'favicon.ico',
-		'humans.txt',
-		'manifest.json',
-		'robots.txt',
-		'serviceworker.js',
-	];
-
-	assets.forEach((asset) => {
-		try {
-			if (fs.existsSync(`./src/${asset}`)) {
-				eleventyConfig.addPassthroughCopy(`src/${asset}`);
-			}
-		} catch(err) {
-			console.error(err)
-		}
-	});
-	
-	return {
-		dir: {
-			input: "src",
-			output: "dist"
-		},
-		passthroughFileCopy: true
-	};
-	
-};
+  return {
+    dir: {
+      data: '_data',
+      includes: '_includes',
+      input: 'src',
+      layouts: '_layouts',
+      output: 'build'
+    }
+  }
+}

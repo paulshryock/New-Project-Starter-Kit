@@ -8,7 +8,7 @@ publish_mode: editorial_workflow # Allow drafts
 media_folder: "src/_assets/img/uploads" # Media files will be stored in the repo under src/_assets/img/uploads
 public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /img/uploads
 site_url: https://newprojectstarterkit.com
-# logo_url: https://your-site.com/images/logo.svg
+# logo_url: https://newprojectstarterkit.com/images/logo.svg
 editor:
   preview: false
 
@@ -16,23 +16,16 @@ collections:
   - name: "pages" # Used in routes, e.g., /cms/collections/pages
     label: "Pages" # Used in the UI
     label_singular: "Page" # singular label for certain elements in the editor
-    description: "Site pages are a static core part of the website, are not timely in nature (no publish date or author) and are not a single piece of content (i.e., a project, an article, a video, etc.) or an archive (i.e., projects, articles, videos, etc.). Common examples of pages are 'About us' or 'Contact'."
+    description: "Site pages are a static core part of the website, are not timely in nature (no publish date or author) and are not a single piece of content (i.e., an article, a project, a testimonial, etc.). Common examples of pages are 'Home', 'About' or 'Contact'."
     folder: "src/pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     format: "frontmatter"
     slug: "{{ slug }}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "SEO Title", name: "seo_title", widget: "string", required: false}
-      - {label: "Short Title", name: "short_title", widget: "string", required: false}
       - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
-      - {label: "SEO Description", name: "seo_description", widget: "string", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Cover Image", name: "cover_image", widget: "image", required: false}
-      - {label: "Cover Image Alt Text", name: "cover_image_alt", widget: "string", required: false}
       - {label: "Content", name: "body", widget: "markdown", required: false}
-      - {label: "Navigation Title", name: "nav_title", widget: "string", required: false}
-      - {label: "Navigation", name: "navigation", widget: "number", required: false}
   - name: "articles" # Used in routes, e.g., /cms/collections/articles
     label: "Articles" # Used in the UI
     label_singular: "Article" # singular label for certain elements in the editor
@@ -43,13 +36,35 @@ collections:
     slug: "{{ slug }}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "SEO Title", name: "seo_title", widget: "string", required: false}
-      - {label: "Short Title", name: "short_title", widget: "string", required: false}
       - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
-      - {label: "SEO Description", name: "seo_description", widget: "string", required: false}
-      - {label: "Topics", name: "topics", widget: "list", default: [ "General" ]}
-      - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Cover Image", name: "cover_image", widget: "image", required: false}
-      - {label: "Cover Image Alt Text", name: "cover_image_alt", widget: "string", required: false}
       - {label: "Content", name: "body", widget: "markdown", required: false}
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "projects" # Used in routes, e.g., /cms/collections/projects
+    label: "Projects" # Used in the UI
+    label_singular: "Project" # singular label for certain elements in the editor
+    description: "Projects are work samples."
+    folder: "src/projects" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    format: "frontmatter"
+    slug: "{{ slug }}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "testimonials" # Used in routes, e.g., /cms/collections/testimonials
+    label: "Testimonials" # Used in the UI
+    label_singular: "Testimonial" # singular label for certain elements in the editor
+    description: "Testimonials are positive reviews or quotes from clients."
+    folder: "src/testimonials" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    format: "frontmatter"
+    slug: "{{ slug }}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
+      - {label: "Tags", name: "tags", widget: "list"}

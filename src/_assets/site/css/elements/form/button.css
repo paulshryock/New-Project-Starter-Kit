@@ -1,0 +1,60 @@
+button {
+  appearance: none;
+  background-color: transparent;
+	border: none;
+	cursor: pointer;
+  font-family: inherit;
+  font-size: 100%;
+	line-height: 1;
+  margin: 0;
+	overflow: visible;
+	padding: 0.25rem;
+	text-transform: capitalize;
+  -webkit-appearance: button;
+}
+
+button[disabled] {
+  color: hsl( 0, 0%, 70% );
+  cursor: auto;
+}
+
+/* Isolate this selector */
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Isolate this selector */
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+[type="button"] {
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.25rem;
+  text-transform: capitalize;
+  transition: box-shadow 200ms ease;
+  -webkit-appearance: button;
+}
+
+[type="reset"],
+[type="submit"] {
+  border-radius: 0.25em;
+  -webkit-appearance: button;
+}
+
+/* Isolate this selector */
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  border-style: none;
+  outline: 1px dotted ButtonText;
+  padding: 0;
+}
+
+/* Isolate this selector */
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}

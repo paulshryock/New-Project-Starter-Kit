@@ -1,6 +1,6 @@
 # Contributing
 
-If you'd like to contribute, please read the [Code of Conduct](https://github.com/paulshryock/New-Project-Starter-Kit/blob/master/CODE_OF_CONDUCT.md), then fork the repository and use a feature branch. Pull requests are welcome.
+If you'd like to contribute, please read the [Code of Conduct](CODE_OF_CONDUCT.md), then fork the repository and use a feature branch. Pull requests are welcome.
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository before making a change. 

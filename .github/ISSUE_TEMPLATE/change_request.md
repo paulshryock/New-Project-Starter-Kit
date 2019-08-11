@@ -1,7 +1,9 @@
 ---
 name: Change Request
 about: Update existing functionality
-assignees: paulshryock
+title: ''
+labels: change-request
+assignees: 'paulshryock'
 ---
 
 ## Location

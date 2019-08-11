@@ -1,7 +1,9 @@
 ---
 name: Bug
 about: Something isn't working
-assignees: paulshryock
+title: ''
+labels: bug
+assignees: 'paulshryock'
 ---
 
 ## Description

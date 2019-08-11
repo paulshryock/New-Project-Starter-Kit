@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
   plugins: [
     require('postcss-easy-import'), // Inline @import rules content with extra features

@@ -1,0 +1,22 @@
+/*
+
+<blockquote>
+	<p>Lorem ipsum</p>
+	<cite>Janelle Monae</cite>
+</blockquote>
+
+*/
+
+blockquote {
+	margin: 2em;
+	text-align: center;
+}
+
+blockquote p {
+	line-height: 1.3;
+	margin-bottom: 0.5em;
+}
+
+blockquote cite {
+	font-weight: bold;
+}

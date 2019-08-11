@@ -1,5 +1,3 @@
-'use strict'
-
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 require('@babel/register')
@@ -10,14 +8,15 @@ module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 
   entry: {
-    app: './src/_assets/js/app.js',
-    cms: './src/_assets/js/cms.js',
-    development: './src/_assets/js/development.js'
+    app: './src/_assets/app/js/app.js',
+    cms: './src/_assets/cms/js/cms.js',
+    email: './src/_assets/email/js/email.js',
+    site: './src/_assets/site/js/site.js'
   },
 
   output: {
-    path: path.resolve(__dirname, 'src'),
-    filename: './js/[name].js'
+    path: path.resolve(__dirname, 'build'),
+    filename: './[name]/js/[name].js'
   },
 
   module: {
@@ -47,13 +46,17 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
-        include: path.resolve(__dirname, 'src/_assets/img'),
+        exclude: /node_modules/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[folder]/[name].[ext]',
-              outputPath: 'img'
+              outputPath: (url, resourcePath, context) => {
+                const splitPath = resourcePath.split('/')
+                const assets = splitPath.indexOf('_assets')
+                const path = splitPath.slice(assets + 1).join('/')
+                return `/${path}`
+              }
             }
           },
           {
@@ -63,18 +66,16 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
+        exclude: /node_modules/,
         include: path.resolve(__dirname, 'src/_assets/fonts'),
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
             outputPath: (url, resourcePath, context) => {
-              const urlParts = url.split('-')
-
-              const fontFamily = urlParts[0]
-
-              const fontWeight = urlParts[1]
-              return `/fonts/${fontFamily}/${fontWeight}/${url}`
+              const splitPath = resourcePath.split('/')
+              const assets = splitPath.indexOf('_assets')
+              const path = splitPath.slice(assets + 1).join('/')
+              return `/${path}`
             }
           }
         }
@@ -85,8 +86,8 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(
       {
-        filename: './css/[name].css',
-        chunkFilename: './css/[id].css'
+        filename: './[name]/css/[name].css',
+        chunkFilename: './[name]/css/[id].css'
       }
     )
   ]
