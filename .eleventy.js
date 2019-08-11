@@ -1,12 +1,14 @@
 const fs = require('fs')
 const htmlmin = require('html-minifier')
+require('dotenv').config()
 
 module.exports = function (eleventyConfig) {
   /**
     * Configure BrowserSync
     */
   eleventyConfig.setBrowserSyncConfig({
-    port: 8081
+    port: process.env.PORT || 8080,
+    server: `build/${process.env.PLATFORM || 'site'}`
   })
 
   // Add Liquid filter: timePosted

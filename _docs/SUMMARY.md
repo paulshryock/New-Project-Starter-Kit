@@ -4,6 +4,7 @@
 
 - [Quick Start](install/quick-start/README.md)
 - [npm Scripts](install/npm-scripts/README.md)
+- [Environment Variables](install/environment/README.md)
 
 ## Develop
 
