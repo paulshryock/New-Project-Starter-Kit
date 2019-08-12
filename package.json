@@ -66,7 +66,6 @@
     "image-webpack-loader": "^5.0.0",
     "lighthouse": "^5.2.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "npm-run-all": "^4.1.5",
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-node-sass": "^2.1.8",
@@ -80,6 +79,7 @@
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
     "dotenv": "^8.0.0",
+    "npm-run-all": "^4.1.5",
     "papaparse": "^5.0.1"
   }
 }
