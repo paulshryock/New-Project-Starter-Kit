@@ -19,7 +19,7 @@
   "scripts": {
     "prestart": "npm-run-all create:env permission env clean webpack",
     "start": "npm run build",
-    "prestart:production": "npm-run-all audit:fix create:env permission env clean webpack",
+    "prestart:production": "npm i --package-lock-only && npm-run-all audit:fix create:env permission env clean webpack",
     "start:production": "npm run build",
     "test": "npm-run-all lint audit debug",
     "prebuild": "npm-run-all clean webpack",
@@ -33,7 +33,6 @@
     "audit": "npm-run-all audit:*",
     "audit:fix": "npm audit fix",
     "audit:lighthouse": "npm run lighthouse",
-    "postinstall": "npm-run-all audit:fix create:env permission env",
     "permission": "npm-run-all permission:*",
     "permission:env": "chmod +x ./_scripts/env.sh",
     "permission:lighthouse": "chmod +x ./_scripts/lighthouse.sh",
