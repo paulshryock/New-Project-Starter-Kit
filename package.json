@@ -32,7 +32,7 @@
     "permission": "npm-run-all permission:*",
     "permission:env": "chmod +x ./_scripts/env.sh",
     "permission:lighthouse": "chmod +x ./_scripts/lighthouse.sh",
-    "create:env": "touch .env",
+    "create:env": "> .env",
     "env": "./_scripts/env.sh",
     "postenv": "source .env",
     "standard": "npx standard",
