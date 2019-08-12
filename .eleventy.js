@@ -98,24 +98,10 @@ module.exports = function (eleventyConfig) {
   })
 
   // Passthrough file copy
-  const platforms = ['app', 'site']
-  const assets = ['favicon.ico', 'serviceworker.js']
-
-  platforms.map(platform => {
-    try {
-      assets.map(asset => {
-        try {
-          if (fs.existsSync(`./src/${platform}/${asset}`)) {
-            eleventyConfig.addPassthroughCopy(`src/${platform}/${asset}`)
-          }
-        } catch (err) {
-          console.error(err)
-        }
-      })
-    } catch (err) {
-      console.error(err)
-    }
-  })
+  eleventyConfig.addPassthroughCopy({ 'src/app/favicon.ico': 'app/favicon.ico' })
+  eleventyConfig.addPassthroughCopy({ 'src/app/serviceworker.js': 'app/serviceworker.js' })
+  eleventyConfig.addPassthroughCopy({ 'src/site/favicon.ico': 'site/favicon.ico' })
+  eleventyConfig.addPassthroughCopy({ 'src/site/serviceworker.js': 'site/serviceworker.js' })
 
   return {
     dir: {
