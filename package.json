@@ -17,7 +17,10 @@
     "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
   },
   "scripts": {
+    "prestart": "npm-run-all create:env permission env clean webpack",
     "start": "npm run build",
+    "prestart:production": "npm-run-all audit:fix create:env permission env clean webpack",
+    "start:production": "npm run build",
     "test": "npm-run-all lint audit debug",
     "prebuild": "npm-run-all clean webpack",
     "build": "npm run eleventy",
