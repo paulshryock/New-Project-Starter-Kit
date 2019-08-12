@@ -33,7 +33,6 @@
     "audit": "npm-run-all audit:*",
     "audit:fix": "npm audit fix",
     "audit:lighthouse": "npm run lighthouse",
-    "postinstall": "npm-run-all audit:fix create:env permission env",
     "permission": "npm-run-all permission:*",
     "permission:env": "chmod +x ./_scripts/env.sh",
     "permission:lighthouse": "chmod +x ./_scripts/lighthouse.sh",
