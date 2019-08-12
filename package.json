@@ -1,12 +1,20 @@
 {
-  "name": "",
-  "description": "",
-  "version": "1.0.0",
+  "name": "npsk",
+  "description": "Start new projects with Eleventy, webpack, Babel, StandardJS, Sass, PostCSS, PWA, service workers, and Netlify CMS installed and configured, with some common accessible HTML, CSS, and JS components and patterns. Includes deployment configuration for Netlify and Zeit Now. This starter kit is open source and completely free. Use it however you like.",
+  "version": "0.27.0",
   "license": "MIT",
   "author": {
     "name": "Paul Shryock",
     "email": "paul@pshry.com",
     "url": "https://pshry.com/"
+  },
+  "homepage": "https://newprojectstarterkit.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulshryock/New-Project-Starter-Kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
   },
   "scripts": {
     "start": "npm run build",
@@ -16,13 +24,20 @@
     "watch": "npm run eleventy:watch",
     "preserve": "npm run prebuild",
     "serve": "npm run eleventy:serve",
-    "update": "ncu -u && npm update",
+    "update": "ncu -u && npm update && npm i",
     "lint": "npm run standard:fix",
     "debug": "npm run eleventy:debug",
     "audit": "npm audit && npm run lighthouse",
+    "postinstall": "npm-run-all create:env permission env",
+    "permission": "npm-run-all permission:*",
+    "permission:env": "chmod +x ./_scripts/env.sh",
+    "permission:lighthouse": "chmod +x ./_scripts/lighthouse.sh",
+    "create:env": "touch .env",
+    "env": "./_scripts/env.sh",
+    "postenv": "source .env",
     "standard": "npx standard",
     "standard:fix": "npx standard --fix",
-    "lighthouse": "lighthouse http://localhost:8081 --budget-path=performance-budget.json --view",
+    "lighthouse": "./_scripts/lighthouse.sh",
     "clean": "npm run clean:build",
     "clean:build": "if [ -d build ]; then rm -R build; fi",
     "webpack": "npx webpack",
@@ -33,16 +48,16 @@
     "eleventy:serve": "npx eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy": "^0.9.0-beta.1",
     "@babel/core": "^7.5.5",
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
-    "css-loader": "^3.1.0",
+    "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
-    "file-loader": "^4.1.0",
+    "file-loader": "^4.2.0",
     "html-minifier": "^4.0.0",
     "image-webpack-loader": "^5.0.0",
     "lighthouse": "^5.2.0",
@@ -54,7 +69,7 @@
     "postcss-preset-env": "^6.7.0",
     "precss": "^4.0.0",
     "standard": "^13.1.0",
-    "style-loader": "^0.23.1",
+    "style-loader": "^1.0.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
   },

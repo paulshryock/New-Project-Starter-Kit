@@ -1,12 +1,14 @@
 const fs = require('fs')
 const htmlmin = require('html-minifier')
+require('dotenv').config()
 
 module.exports = function (eleventyConfig) {
   /**
     * Configure BrowserSync
     */
   eleventyConfig.setBrowserSyncConfig({
-    port: 8081
+    port: process.env.PORT || 8080,
+    server: `build/${process.env.PLATFORM || 'site'}`
   })
 
   // Add Liquid filter: timePosted
@@ -96,24 +98,10 @@ module.exports = function (eleventyConfig) {
   })
 
   // Passthrough file copy
-  const platforms = ['app', 'site']
-  const assets = ['favicon.ico', 'serviceworker.js']
-
-  platforms.map(platform => {
-    try {
-      assets.map(asset => {
-        try {
-          if (fs.existsSync(`./src/${platform}/${asset}`)) {
-            eleventyConfig.addPassthroughCopy(`src/${platform}/${asset}`)
-          }
-        } catch (err) {
-          console.error(err)
-        }
-      })
-    } catch (err) {
-      console.error(err)
-    }
-  })
+  eleventyConfig.addPassthroughCopy({ 'src/app/favicon.ico': 'app/favicon.ico' })
+  eleventyConfig.addPassthroughCopy({ 'src/app/serviceworker.js': 'app/serviceworker.js' })
+  eleventyConfig.addPassthroughCopy({ 'src/site/favicon.ico': 'site/favicon.ico' })
+  eleventyConfig.addPassthroughCopy({ 'src/site/serviceworker.js': 'site/serviceworker.js' })
 
   return {
     dir: {

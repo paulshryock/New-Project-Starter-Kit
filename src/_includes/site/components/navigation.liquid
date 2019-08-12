@@ -1,7 +1,7 @@
-  {%- if site.navigation.items %}
+  {%- if site.navigation %}
   <nav role="navigation" class="navigation">
     <ul>
-      {%- for item in site.navigation.items %}
+      {%- for item in site.navigation %}
       {%- if item.slug == page.slug %}
       {% assign isActive = "class='is-active'" %}
       {%- endif %}

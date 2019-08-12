@@ -27,6 +27,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Move netlify and now config files to `/_deploy/*`
 - Move assets and content into platform directories (`app`, `cms`, `email`, `site`)
 - Update GitHub Issue and Pull Request templates
+- Update lighthouse script and move into `/_scripts/lighthouse.sh`
+- Move lighthouse logs into `/_logs/lighthouse`
 
 ### Fixed
 - Fix API post content
