@@ -1,7 +1,0 @@
-[build]
-	command = "npm start"
-	publish = "dist"
-
-[context.cms]
-	command = "npm start"
-	publish = "dist/cms"

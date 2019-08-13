@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update GitHub Issue and Pull Request templates
 - Update lighthouse script and move into `/_scripts/lighthouse.sh`
 - Move lighthouse logs into `/_logs/lighthouse`
+- Update Netlify config (`/netlify.toml`)
 
 ### Fixed
 - Fix API post content

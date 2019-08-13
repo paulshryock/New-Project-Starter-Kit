@@ -1,0 +1,7 @@
+[build]
+  command = "npm run start:production"
+  publish = "build/site"
+
+[context.cms]
+  command = "npm run start:production"
+  publish = "build/cms"
