@@ -22,6 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add npm scripts (`package.json`)
 - Add assets, data, includes, layouts, content (`/src/*`)
 - Add environment variables (`.env`)
+- Install Jake
+- Add `Jakefile`
 
 ### Changed
 - Move netlify and now config files to `/_deploy/*`
