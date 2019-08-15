@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fs = require('fs')
 
 /**
   * Adds new content type
@@ -17,12 +17,8 @@ const type = process.argv[3]
   * param {string} platform
   * param {string} type
   */
-addContent.init = async (platform, type) => {
-
-  await addContent.folder(platform, type)
-  await addContent.data(platform, type)
-  await addContent.collection(platform, type)
-  await addContent.layout(platform, type)
+addContent.init = (platform, type) => {
+  addContent.folder(platform, type)
 }
 
 /**
@@ -31,19 +27,22 @@ addContent.init = async (platform, type) => {
   * param {string} platform
   * param {string} type
   */
-addContent.folder = async (platform, type) => {
-  console.log('Ran addContent.folder()')
+addContent.folder = (platform, type) => {
   const path = `./src/${platform}/${type}`
+  const mask = 484
 
-  fs.mkdir(path, mask = 484, function(err) {
+  fs.mkdir(path, mask, function (err) {
     if (err) {
-      if (err.code == 'EEXIST') {
+      if (err.code === 'EEXIST') {
         console.error(`${path} already exists`)
       } else {
         console.error(err)
       }
     } else {
       console.log(`Add content folder: ${path}`)
+      addContent.data(platform, type)
+      addContent.collection(platform, type)
+      addContent.layout(platform, type)
     }
   })
 }
@@ -54,7 +53,7 @@ addContent.folder = async (platform, type) => {
   * param {string} platform
   * param {string} type
   */
-addContent.data = async (platform, type) => {
+addContent.data = (platform, type) => {
   console.log('Ran addContent.data()')
 }
 
@@ -64,9 +63,8 @@ addContent.data = async (platform, type) => {
   * param {string} platform
   * param {string} type
   */
-addContent.collection = async (platform, type) => {
+addContent.collection = (platform, type) => {
   console.log('Ran addContent.collection()')
-  
 }
 
 /**
@@ -75,9 +73,8 @@ addContent.collection = async (platform, type) => {
   * param {string} platform
   * param {string} type
   */
-addContent.layout = async (platform, type) => {
+addContent.layout = (platform, type) => {
   console.log('Ran addContent.layout()')
-  
 }
 
 /**
