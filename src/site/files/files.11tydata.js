@@ -1,5 +1,5 @@
 module.exports = function () {
   return {
-    permalink: './site/{{ fileName }}'
+    permalink: './site/{{ slug }}'
   }
 }
