@@ -40,8 +40,8 @@ addContent.folder = (platform, type) => {
       }
     } else {
       console.log(`Add content folder: ${path}`)
-      addContent.data(platform, type)
-      addContent.collection(platform, type)
+      addContent.data(type, path)
+      addContent.collection(type)
       addContent.layout(platform, type)
     }
   })
@@ -50,20 +50,36 @@ addContent.folder = (platform, type) => {
 /**
   * Add content directory data file: (/src/${platform}/${type}/${type}.11tydata.js)
   *
-  * param {string} platform
   * param {string} type
+  * param {string} path
   */
-addContent.data = (platform, type) => {
-  console.log('Ran addContent.data()')
+addContent.data = (type, path) => {
+  const file = `${path}/${type}.11tydata.js`
+  const data = `module.exports = function () {
+  return {
+    contentType: '${type}',
+    layout: 'site/${type}',
+    permalink: './site/{{ slug }}/index.html'
+  }
+}
+`
+  const flag = 'ax'
+
+  fs.writeFile(file, data, { flag: flag }, function (err) {
+    if (err) {
+      console.error(err)
+    } else {
+      console.log(`Add content directory data file: ${file}`)
+    }
+  })
 }
 
 /**
   * Add content collection: (.eleventy.js)
   *
-  * param {string} platform
   * param {string} type
   */
-addContent.collection = (platform, type) => {
+addContent.collection = (type) => {
   console.log('Ran addContent.collection()')
 }
 
