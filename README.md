@@ -1,6 +1,6 @@
 # New Project Starter Kit
 
-[![Netlify Status](deploy-status)](deploys)
+[![Netlify Status][deploy-status]](deploys)
 
 Start new projects with Eleventy, webpack, Babel, StandardJS, Sass, PostCSS, PWA, service workers, and Netlify CMS installed and configured, with some common accessible HTML, CSS, and JS components and patterns. Includes deployment configuration for Netlify and Zeit Now. This starter kit is open source and completely free. Use it however you like.
 
