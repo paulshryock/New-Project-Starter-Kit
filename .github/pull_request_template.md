@@ -1,15 +1,10 @@
-# Description
+## Description
 
-# Closes issue(s)
+## Closes issue(s)
 
-# Screenshots
+## Screenshots
 
-# Changes include
-- [ ] Bugfix (non-breaking change that solves an issue)
-- [ ] New feature (non-breaking change that adds functionality)
-- [ ] Breaking change (change that is not backwards-compatible and/or changes current functionality)
-
-# Checklist
+## Checklist
 - [ ] I have tested this code
 - [ ] I have updated the Changelog
 - [ ] I have updated the Docs
