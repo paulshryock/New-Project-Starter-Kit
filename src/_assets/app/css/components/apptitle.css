@@ -1,4 +1,4 @@
-.site-title {
+.app-title {
 	font-size: 1.5rem;
 	font-weight: bold;
 	line-height: 1.1;
@@ -7,12 +7,12 @@
 
 @media screen and (min-width: 75rem) { /* Desktop / 75rem / 1200px */
 
-	.site-title {
+	.app-title {
 		font-size: 2rem;
 	}
 
 }
 
-.site-title a {
+.app-title a {
 	text-decoration: none;
 }
