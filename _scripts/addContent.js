@@ -11,6 +11,8 @@ const addContent = {}
 const platform = process.argv[2]
 const type = process.argv[3]
 
+console.log(process.argv)
+
 /**
   * Initializes addContent
   *
