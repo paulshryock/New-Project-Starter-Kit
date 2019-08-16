@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update lighthouse script and move into `/_scripts/lighthouse.sh`
 - Move lighthouse logs into `/_logs/lighthouse`
 - Update Netlify config (`/netlify.toml`)
+- Update Zeit Now config (`/now.json`)
 - Update page markup
 
 ### Fixed
