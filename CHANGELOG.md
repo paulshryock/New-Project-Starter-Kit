@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add npm scripts (`package.json`)
 - Add assets, data, includes, layouts, content (`/src/*`)
 - Add environment variables (`.env`)
-- Add script to create content type
+- Add create:content script
 
 ### Changed
 - Move netlify and now config files to `/_deploy/*`

@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
   /**
     * Add collections
     */
-
+                  
   // Return pages
   eleventyConfig.addCollection('pages', function (collection) {
     return collection.getAll().filter(function (post) {

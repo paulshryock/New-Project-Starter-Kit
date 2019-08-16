@@ -26,14 +26,22 @@ addContent.getParameters = () => {
     rl.question(`What kind of ${platform} content? `, (type) => {
       rl.question(`What is the plural form of ${type}? `, (typePlural) => {
         rl.question(`Should ${platform} ${typePlural} live in a subdirectory? (true/false) `, (hasSubdirectory) => {
-          // TODO: Restrict hasSubdirectory input to a true boolean instead of a string,
-          //        or restrict input to 'true' or 'false' strings
-          let bool = false
-          if (hasSubdirectory === 'true') {
-            bool = true
-          }
-          addContent.folder(platform, type, typePlural, bool)
-          rl.close()
+          rl.question(`Do you want to create a new ${type} layout? (true/false) `, (addLayout) => {
+            // TODO: Restrict hasSubdirectory input to a true boolean instead of a string,
+            //        or restrict input to 'true' or 'false' strings
+            let hasSubdirectoryBool = false
+            if (hasSubdirectory === 'true') {
+              hasSubdirectoryBool = true
+            }
+            // TODO: Restrict addLayout input to a true boolean instead of a string,
+            //        or restrict input to 'true' or 'false' strings
+            let addLayoutBool = false
+            if (addLayout === 'true') {
+              addLayoutBool = true
+            }
+            addContent.folder(platform, type, typePlural, hasSubdirectoryBool, addLayoutBool)
+            rl.close()
+          })
         })
       })
     })
@@ -47,8 +55,9 @@ addContent.getParameters = () => {
   * param {string} type
   * param {string} typePlural
   * param {boolean} hasSubdirectory
+  * param {boolean} addLayout
   */
-addContent.folder = (platform, type, typePlural, hasSubdirectory) => {
+addContent.folder = (platform, type, typePlural, hasSubdirectory, addLayout) => {
   const path = `./src/${platform}/${typePlural}`
   const mask = 484
 
@@ -62,7 +71,7 @@ addContent.folder = (platform, type, typePlural, hasSubdirectory) => {
       return false
     } else {
       console.log(`Adding content folder: ${path}`)
-      addContent.data(path, platform, type, hasSubdirectory, typePlural)
+      addContent.data(path, platform, type, hasSubdirectory, typePlural, addLayout)
     }
   })
 }
@@ -75,8 +84,9 @@ addContent.folder = (platform, type, typePlural, hasSubdirectory) => {
   * param {string} type
   * param {boolean} hasSubdirectory
   * param {string} typePlural
+  * param {boolean} addLayout
   */
-addContent.data = (path, platform, type, hasSubdirectory, typePlural) => {
+addContent.data = (path, platform, type, hasSubdirectory, typePlural, addLayout) => {
   const file = `${path}/${typePlural}.11tydata.js`
   const subdirectory = hasSubdirectory === true ? `${typePlural}/` : ''
   const data = `module.exports = function () {
@@ -87,15 +97,15 @@ addContent.data = (path, platform, type, hasSubdirectory, typePlural) => {
   }
 }
 `
-  const flag = 'ax'
+  const options = { flag: 'ax' }
 
-  fs.writeFile(file, data, { flag: flag }, function (err) {
+  fs.writeFile(file, data, options, function (err) {
     if (err) {
       console.error(err)
       return false
     } else {
       console.log(`Added ${platform} ${typePlural} data file: ${file}`)
-      addContent.layout(platform, type, typePlural)
+      addContent.layout(platform, type, typePlural, addLayout)
     }
   })
 }
@@ -106,23 +116,27 @@ addContent.data = (path, platform, type, hasSubdirectory, typePlural) => {
   * param {string} platform
   * param {string} type
   * param {string} typePlural
+  * param {boolean} addLayout
   */
-addContent.layout = (platform, type, typePlural) => {
+addContent.layout = (platform, type, typePlural, addLayout) => {
   const file = `./src/_layouts/${platform}/${type}.liquid`
   const data = `---
 layout: ${platform}/global
 ---`
   const options = { flag: 'ax' }
 
-  fs.writeFile(file, data, options, (err) => {
-    if (err) {
-      console.error(err)
-      return false
-    } else {
-      console.log(`Added ${platform} ${type} layout: ${file}`)
-      addContent.collection(type, typePlural)
-    }
-  })
+  if (addLayout) {
+    fs.writeFile(file, data, options, (err) => {
+      if (err) {
+        console.error(err)
+        return false
+      } else {
+        console.log(`Added ${platform} ${type} layout: ${file}`)
+      }
+    })
+  }
+
+  addContent.collection(type, typePlural)
 }
 
 /**
@@ -134,16 +148,40 @@ addContent.collection = (type, typePlural) => {
   const file = './.eleventy.js'
 
   // Get file content
-  fs.readFile(file, 'utf8', (err, data) => {
+  fs.readFile(file, 'utf-8', (err, data) => {
     if (err) {
       console.error(err)
+      return false
     }
-    console.log(data)
+
+    const splitter = '  /**\n' +
+      '    * Add collections\n' +
+      '    */\n'
+
+    const collection = `
+  // Return ${typePlural}
+  eleventyConfig.addCollection('${typePlural}', function (collection) {
+    return collection.getAll().filter(function (post) {
+      return post.data.contentType === '${type}'
+    })
   })
-  // Split into array
-  // Add content
-  // Convert back to a string
-  // Write file content
+      `
+
+    // Split data into array
+    const dataArray = data.split(splitter)
+
+    // Add collection and convert back to a string
+    const content = [dataArray[0], splitter, collection, dataArray[1]].join('')
+
+    // Write file content
+    fs.writeFile(file, content, (err) => {
+      if (err) {
+        console.error(err)
+      } else {
+        console.log(`Added ${type} content collection: (.eleventy.js)`)
+      }
+    })
+  })
 }
 
 /**
