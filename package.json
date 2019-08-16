@@ -37,7 +37,7 @@
     "permission:env": "chmod +x ./_scripts/env.sh",
     "permission:lighthouse": "chmod +x ./_scripts/lighthouse.sh",
     "create:env": "touch .env",
-    "create:content": "node ./_scripts/addContent.js",
+    "create:content": "node ./_scripts/addContentType.js",
     "env": "./_scripts/env.sh",
     "postenv": ". ./.env",
     "standard": "npx standard",
