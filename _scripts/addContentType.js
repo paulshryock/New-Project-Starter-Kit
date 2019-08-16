@@ -49,7 +49,7 @@ addContent.getParameters = () => {
 }
 
 /**
-  * Add content folder: (/src/${platform}/${type})
+  * Add content folder: (/src/${platform}/${typePlural})
   *
   * param {string} platform
   * param {string} type
@@ -77,7 +77,7 @@ addContent.folder = (platform, type, typePlural, hasSubdirectory, addLayout) => 
 }
 
 /**
-  * Add content directory data file: (/src/${platform}/${type}/${type}.11tydata.js)
+  * Add content directory data file: (/src/${platform}/${typePlural}/${typePlural}.11tydata.js)
   *
   * param {string} path
   * param {string} platform
@@ -111,7 +111,7 @@ addContent.data = (path, platform, type, hasSubdirectory, typePlural, addLayout)
 }
 
 /**
-  * Add layout: (/src/_layouts/${platform}/${type}.liquid)
+  * Add layout file: (/src/_layouts/${platform}/${type}.liquid)
   *
   * param {string} platform
   * param {string} type
@@ -131,7 +131,7 @@ layout: ${platform}/global
         console.error(err)
         return false
       } else {
-        console.log(`Added ${platform} ${type} layout: ${file}`)
+        console.log(`Added ${platform} ${type} layout file: ${file}`)
       }
     })
   }
@@ -177,6 +177,7 @@ addContent.collection = (type, typePlural) => {
     fs.writeFile(file, content, (err) => {
       if (err) {
         console.error(err)
+        return false
       } else {
         console.log(`Added ${type} content collection: (.eleventy.js)`)
       }
