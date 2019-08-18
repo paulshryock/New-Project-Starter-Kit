@@ -1,8 +1,8 @@
-module.exports = () => {
-  return {
-    contentType: 'article',
-    layout: 'site/article',
-    permalink: './site/articles/{{ slug }}/index.html',
-    url: './articles/{{ slug }}/index.html'
-  }
+const articles = {
+  contentType: 'article',
+  layout: 'site/article',
+  permalink: './site/{{ slug }}/index.html',
+  url: './{{ slug }}/index.html'
 }
+
+module.exports = articles
