@@ -20,4 +20,4 @@ function registerServiceWorker (file) {
 /**
   * Register service worker
   */
-registerServiceWorker('/serviceworker.js')
+// registerServiceWorker('/serviceworker.js')

@@ -156,16 +156,17 @@ addContent.collection = (type, typePlural) => {
 
     const splitter = '  /**\n' +
       '    * Add collections\n' +
-      '    */\n'
+      '    */\n' +
+      '  const types = [\n'
 
-    const collection = `
-  // Return ${typePlural}
-  eleventyConfig.addCollection('${typePlural}', function (collection) {
-    return collection.getAll().filter(function (post) {
-      return post.data.contentType === '${type}'
-    })
-  })
-      `
+    const collection = `    { plural: '${typePlural}', single: '${type}' },
+`
+
+    //   const collection = `
+    // // Return ${typePlural}
+    // eleventyConfig.addCollection('${typePlural}', collection => collection.getAll()
+    //   .filter(post => post.data.contentType === '${type}'))
+    //     `
 
     // Split data into array
     const dataArray = data.split(splitter)

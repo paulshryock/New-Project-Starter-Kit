@@ -1,4 +1,4 @@
-module.exports = function () {
+module.exports = () => {
   return {
     contentType: 'article',
     layout: 'site/article',

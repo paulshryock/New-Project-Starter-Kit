@@ -1,4 +1,4 @@
-module.exports = function () {
+module.exports = () => {
   return {
     contentType: 'page',
     layout: 'site/page',

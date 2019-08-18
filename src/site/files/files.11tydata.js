@@ -1,5 +1,6 @@
-module.exports = function () {
+module.exports = () => {
   return {
+    contentType: 'file',
     permalink: './site/{{ slug }}'
   }
 }

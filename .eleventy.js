@@ -1,4 +1,3 @@
-const fs = require('fs')
 const htmlmin = require('html-minifier')
 require('dotenv').config()
 
@@ -47,43 +46,23 @@ module.exports = function (eleventyConfig) {
   /**
     * Add collections
     */
-                  
-  // Return pages
-  eleventyConfig.addCollection('pages', function (collection) {
-    return collection.getAll().filter(function (post) {
-      return post.data.contentType === 'page'
-    })
-  })
+  const types = [
+    { plural: 'pages', single: 'page' },
+    { plural: 'articles', single: 'article' },
+    { plural: 'projects', single: 'project' },
+    { plural: 'testimonials', single: 'testimonial' }
+  ]
 
-  // Return articles
-  eleventyConfig.addCollection('articles', function (collection) {
-    return collection.getAll().filter(function (post) {
-      return post.data.contentType === 'article'
-    })
-  })
-
-  // Return projects
-  eleventyConfig.addCollection('projects', function (collection) {
-    return collection.getAll().filter(function (post) {
-      return post.data.contentType === 'project'
-    })
-  })
-
-  // Return testimonials
-  eleventyConfig.addCollection('testimonials', function (collection) {
-    return collection.getAll().filter(function (post) {
-      return post.data.contentType === 'testimonial'
-    })
+  types.map(type => {
+    eleventyConfig.addCollection(type.plural, collection => collection.getAll().filter(post => post.data.contentType === type.single))
   })
 
   // Return API
-  eleventyConfig.addCollection('api', function (collection) {
+  eleventyConfig.addCollection('api', collection => {
     const posts = collection.getAll()
-    const filteredPosts = posts
-      .filter(post => post.data.contentType !== 'api')
-      .filter(post => post.data.contentType !== 'cms')
+      .filter(post => !['api', 'cms', 'file'].includes(post.data.contentType))
 
-    return filteredPosts.map(post => {
+    return posts.map(post => {
       return {
         title: post.data.title,
         slug: post.data.slug,

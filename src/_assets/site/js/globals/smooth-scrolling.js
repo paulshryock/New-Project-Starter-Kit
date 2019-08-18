@@ -3,7 +3,7 @@
   *
   */
 function addAnchorLinkSmoothScrolling () {
-  const links = document.querySelectorAll('a[href^="#"]')
+  const links = [].slice.call(document.querySelectorAll('a[href^="#"]'))
 
   links.map(link => {
     link.addEventListener('click', (e) => {
