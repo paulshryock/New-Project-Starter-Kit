@@ -1,8 +1,7 @@
-module.exports = function () {
-  return {
-    contentType: 'page',
-    layout: 'app/page',
-    permalink: './app/{{ slug }}/index.html',
-    url: './{{ slug }}/index.html'
-  }
+const pages = {
+  contentType: 'page',
+  layout: 'app/page',
+  permalink: './app/{{ slug }}/index.html'
 }
+
+module.exports = pages

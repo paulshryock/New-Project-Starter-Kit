@@ -1,6 +1,6 @@
-module.exports = () => {
-  return {
-    contentType: 'file',
-    permalink: './site/{{ slug }}'
-  }
+const files = {
+  contentType: 'file',
+  permalink: './site/{{ slug }}'
 }
+
+module.exports = files
