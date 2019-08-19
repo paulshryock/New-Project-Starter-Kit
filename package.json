@@ -53,10 +53,10 @@
     "eleventy:watch": "npx eleventy --watch",
     "eleventy:serve": "npx eleventy --serve",
     "eleventy:platform": "npm-run-all eleventy:platform:*",
-    "eleventy:platform:app": "npx eleventy --input=src/app --output=build/app",
-    "eleventy:platform:cms": "npx eleventy --input=src/cms --output=build/cms",
-    "eleventy:platform:email": "npx eleventy --input=src/email --output=build/email",
-    "eleventy:platform:site": "npx eleventy --input=src/site --output=build/site"
+    "eleventy:platform:app": "npx eleventy --output=build/app",
+    "eleventy:platform:cms": "npx eleventy --output=build/cms",
+    "eleventy:platform:email": "npx eleventy --output=build/email",
+    "eleventy:platform:site": "npx eleventy --output=build/site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0-beta.2",
