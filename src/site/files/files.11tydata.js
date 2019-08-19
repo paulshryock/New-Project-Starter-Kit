@@ -1,6 +1,6 @@
 const files = {
   contentType: 'file',
-  permalink: './site/{{ slug }}'
+  permalink: './{{ slug }}'
 }
 
 module.exports = files

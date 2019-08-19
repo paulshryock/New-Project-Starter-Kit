@@ -24,7 +24,7 @@
     "start:production": "npm run build",
     "test": "npm-run-all lint audit debug",
     "prebuild": "npm-run-all clean webpack",
-    "build": "npm run eleventy",
+    "build": "npm run eleventy:platform",
     "watch": "npm run eleventy:watch",
     "preserve": "npm run prebuild",
     "serve": "npm run eleventy:serve",
@@ -51,7 +51,12 @@
     "eleventy": "npx eleventy",
     "eleventy:debug": "DEBUG=Eleventy* npm run eleventy --dryrun",
     "eleventy:watch": "npx eleventy --watch",
-    "eleventy:serve": "npx eleventy --serve"
+    "eleventy:serve": "npx eleventy --serve",
+    "eleventy:platform": "npm-run-all eleventy:platform:*",
+    "eleventy:platform:app": "npx eleventy --input=src/app --output=build/app",
+    "eleventy:platform:cms": "npx eleventy --input=src/cms --output=build/cms",
+    "eleventy:platform:email": "npx eleventy --input=src/email --output=build/email",
+    "eleventy:platform:site": "npx eleventy --input=src/site --output=build/site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0-beta.2",
