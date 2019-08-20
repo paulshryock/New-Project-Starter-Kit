@@ -20,7 +20,7 @@
     "start": "npm run build",
     "now-build": "npm start",
     "test": "npm-run-all lint audit debug",
-    "prebuild": "npm-run-all clean webpack",
+    "prebuild": "npm-run-all setup:permission clean webpack",
     "build": "npm run eleventy:platform",
     "watch": "npm run eleventy:watch",
     "preserve": "npm run prebuild",
