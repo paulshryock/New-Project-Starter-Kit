@@ -12,8 +12,8 @@ Start new projects with Eleventy, webpack, Babel, StandardJS, Sass, PostCSS, PWA
 
 1. Node
 	- Check if Node is installed: `node --version`
-	- If you see a version number, such as `v11.6.0`, proceed to [et Started](#get-started)
-	- If Node isn't installed, [download][node-download] and install it, then proceed to [et Started](#get-started)
+	- If you see a version number, such as `v11.6.0`, proceed to [Get Started](#get-started)
+	- If Node isn't installed, [download][node-download] and install it, then proceed to [Get Started](#get-started)
 
 ### Get Started
 

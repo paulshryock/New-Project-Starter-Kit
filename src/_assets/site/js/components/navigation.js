@@ -85,7 +85,9 @@ navigation.setNavButtonText = function (text) {
   const button = document.querySelector('.navigation button span')
 
   // TODO (paulshryock) Replace textContent with innerText?
-  button.textContent = text
+  if (button) {
+    button.textContent = text
+  }
 }
 
 /**

@@ -8,9 +8,9 @@ module.exports = {
   mode: process.env.ELEVENTY_ENV === 'production' ? 'production' : 'development',
 
   entry: {
-    app: './src/_assets/app/js/app.js',
-    cms: './src/_assets/cms/js/cms.js',
-    email: './src/_assets/email/js/email.js',
+    // app: './src/_assets/app/js/app.js',
+    // cms: './src/_assets/cms/js/cms.js',
+    // email: './src/_assets/email/js/email.js',
     site: './src/_assets/site/js/site.js'
   },
 

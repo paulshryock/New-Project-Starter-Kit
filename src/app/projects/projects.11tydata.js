@@ -1,6 +1,6 @@
 const projects = {
   contentType: 'project',
-  layout: 'site/project',
+  layout: 'app/project',
   permalink: './portfolio/{{ slug }}/index.html'
 }
 

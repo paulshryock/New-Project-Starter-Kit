@@ -1,15 +1,16 @@
-const fs = require('fs')
 const htmlmin = require('html-minifier')
 require('dotenv').config()
 
 module.exports = function (eleventyConfig) {
-  /**
-    * Configure BrowserSync
-    */
-  eleventyConfig.setBrowserSyncConfig({
-    port: process.env.PORT || 8080,
-    server: `build/${process.env.PLATFORM || 'site'}`
-  })
+  const eleventyEnv = process.env.ELVENTY_ENV
+
+  if (eleventyEnv !== 'production') {
+    // Configure BrowserSync
+    eleventyConfig.setBrowserSyncConfig({
+      port: process.env.PORT || 8080,
+      server: `build/${process.env.PLATFORM || 'site'}`
+    })
+  }
 
   // Add Liquid filter: timePosted
   eleventyConfig.addLiquidFilter('timePosted', date => {
@@ -30,60 +31,42 @@ module.exports = function (eleventyConfig) {
     }
   })
 
-  // Minify HTML output
-  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-    if (outputPath.endsWith('.html')) {
-      const minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      })
-      return minified
-    }
+  if (eleventyEnv === 'production') {
+    // Minify HTML output
+    eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+      if (outputPath.endsWith('.html')) {
+        const minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        })
+        return minified
+      }
 
-    return content
-  })
+      return content
+    })
+  }
 
   /**
-    * Add collections
+    * Add content collections
     */
-                  
-  // Return pages
-  eleventyConfig.addCollection('pages', function (collection) {
-    return collection.getAll().filter(function (post) {
-      return post.data.contentType === 'page'
-    })
+  const types = [
+    { plural: 'pages', single: 'page' },
+    { plural: 'articles', single: 'article' },
+    { plural: 'projects', single: 'project' },
+    { plural: 'testimonials', single: 'testimonial' }
+  ]
+
+  types.map(type => {
+    eleventyConfig.addCollection(type.plural, collection => collection.getAll().filter(post => post.data.contentType === type.single))
   })
 
-  // Return articles
-  eleventyConfig.addCollection('articles', function (collection) {
-    return collection.getAll().filter(function (post) {
-      return post.data.contentType === 'article'
-    })
-  })
-
-  // Return projects
-  eleventyConfig.addCollection('projects', function (collection) {
-    return collection.getAll().filter(function (post) {
-      return post.data.contentType === 'project'
-    })
-  })
-
-  // Return testimonials
-  eleventyConfig.addCollection('testimonials', function (collection) {
-    return collection.getAll().filter(function (post) {
-      return post.data.contentType === 'testimonial'
-    })
-  })
-
-  // Return API
-  eleventyConfig.addCollection('api', function (collection) {
+  // Add API collection
+  eleventyConfig.addCollection('api', collection => {
     const posts = collection.getAll()
-    const filteredPosts = posts
-      .filter(post => post.data.contentType !== 'api')
-      .filter(post => post.data.contentType !== 'cms')
+      .filter(post => !['api', 'cms', 'file'].includes(post.data.contentType))
 
-    return filteredPosts.map(post => {
+    return posts.map(post => {
       return {
         title: post.data.title,
         slug: post.data.slug,

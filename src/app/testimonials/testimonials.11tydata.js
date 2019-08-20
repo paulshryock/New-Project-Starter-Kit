@@ -1,6 +1,6 @@
 const testimonials = {
   contentType: 'testimonial',
-  layout: 'site/testimonial',
+  layout: 'app/testimonial',
   permalink: './testimonials/{{ slug }}/index.html'
 }
 

@@ -1,6 +1,6 @@
 const articles = {
   contentType: 'article',
-  layout: 'site/article',
+  layout: 'app/article',
   permalink: './{{ slug }}/index.html'
 }
 

@@ -13,10 +13,11 @@ import './../img/favicon/safari-pinned-tab.svg'
 // JS
 const globals = ['check-javascript', 'register-service-worker', 'smooth-scrolling']
 const components = ['card', 'navigation', 'pagination']
-const scripts = [globals, components]
 
-scripts.map(script => {
-  script.map(item => {
-    require(`./${item}`)
-  })
+globals.map(global => {
+  require(`./globals/${global}`)
+})
+
+components.map(component => {
+  require(`./components/${component}`)
 })
