@@ -1,32 +1,23 @@
 const fs = require('fs')
+require('dotenv').config()
 
 /**
   * Adds new content type
   */
 const ignorePlatforms = {}
 
+// Configure ignorePlatforms
+ignorePlatforms.file = './.eleventyignore'
+ignorePlatforms.platform = process.env.PLATFORM
+ignorePlatforms.platforms = ['app', 'cms', 'email', 'site']
+
 /**
   * Initializes ignorePlatforms
   */
 ignorePlatforms.init = () => {
-  ignorePlatforms.updatePlatforms()
-}
-
-ignorePlatforms.file = './.eleventyignore'
-ignorePlatforms.platforms = ['app','cms','email','site']
-
-/**
-  * Writes file content
-  */
-ignorePlatforms.writeFileContent = (file, content, message) => {
-  fs.writeFile(file, content, (err) => {
-    if (err) {
-      console.error(err)
-      return false
-    } else {
-      console.log(message)
-    }
-  })
+  // TODO: Make these function calls async
+  ignorePlatforms.updatePlatforms(false)
+  ignorePlatforms.updatePlatforms(true)
 }
 
 /**
@@ -36,7 +27,7 @@ ignorePlatforms.writeFileContent = (file, content, message) => {
   */
 ignorePlatforms.updatePlatforms = (add = true) => {
   const file = ignorePlatforms.file
-  const platforms = ignorePlatforms.platforms
+  const platforms = add ? ignorePlatforms.platforms.filter(platform => platform !== ignorePlatforms.platform) : ignorePlatforms.platforms
   let splitter = ''
 
   // Get file content
@@ -47,27 +38,27 @@ ignorePlatforms.updatePlatforms = (add = true) => {
     }
 
     let content = data
-    const message = add ? 'Added all platforms' : 'Removed all platforms';
+    const message = add ? `Ignoring all platforms except ${ignorePlatforms.platform}` : 'Removed all ignored platforms'
 
     platforms.map(platform => {
       splitter = `src/${platform}/\n`
 
-      if (add) {
-        if (!content.includes(splitter)) {
-          content = content.split(splitter)
-          content = [content[0], splitter, content[1]]
-          content = content.join('')
-        }
-      } else {
-        if (content.includes(splitter)) {
-          content = content.split(splitter)
-          content = content.join('')
-        }
+      const checkSplitter = add ? !content.includes(splitter) : content.includes(splitter)
+
+      if (checkSplitter) {
+        content = content.split(splitter)
+        if (add) content = [content[0], splitter, content[1]]
+        content = content.join('')
       }
     })
 
-    ignorePlatforms.writeFileContent(file, content, message)
-
+    fs.writeFile(file, content, (err) => {
+      if (err) {
+        console.error(err)
+      } else {
+        console.log(message)
+      }
+    })
   })
 }
 
