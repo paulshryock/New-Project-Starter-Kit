@@ -1,5 +1,9 @@
 const fs = require('fs')
+const EventEmitter = require('events')
 require('dotenv').config()
+
+class IgnoreEmitter extends EventEmitter {}
+const ignoreEmitter = new IgnoreEmitter()
 
 /**
   * Adds new content type
@@ -10,14 +14,17 @@ const ignorePlatforms = {}
 ignorePlatforms.file = './.eleventyignore'
 ignorePlatforms.platform = process.env.PLATFORM
 ignorePlatforms.platforms = ['app', 'cms', 'email', 'site']
+ignorePlatforms.filteredPlatforms = ignorePlatforms.platforms.filter(platform => platform !== ignorePlatforms.platform)
 
 /**
   * Initializes ignorePlatforms
   */
 ignorePlatforms.init = () => {
-  // TODO: Make these function calls async
   ignorePlatforms.updatePlatforms(false)
-  ignorePlatforms.updatePlatforms(true)
+
+  ignoreEmitter.once('platformsRemoved', () => {
+    ignorePlatforms.updatePlatforms(true)
+  })
 }
 
 /**
@@ -27,7 +34,7 @@ ignorePlatforms.init = () => {
   */
 ignorePlatforms.updatePlatforms = (add = true) => {
   const file = ignorePlatforms.file
-  const platforms = add ? ignorePlatforms.platforms.filter(platform => platform !== ignorePlatforms.platform) : ignorePlatforms.platforms
+  const platforms = add ? ignorePlatforms.filteredPlatforms : ignorePlatforms.platforms
   let splitter = ''
 
   // Get file content
@@ -38,7 +45,7 @@ ignorePlatforms.updatePlatforms = (add = true) => {
     }
 
     let content = data
-    const message = add ? `Ignoring all platforms except ${ignorePlatforms.platform}` : 'Removed all ignored platforms'
+    const message = add ? `Ignoring all platforms except ${ignorePlatforms.platform}` : 'Removed all ignored platforms...'
 
     platforms.map(platform => {
       splitter = `src/${platform}/\n`
@@ -57,6 +64,7 @@ ignorePlatforms.updatePlatforms = (add = true) => {
         console.error(err)
       } else {
         console.log(message)
+        ignoreEmitter.emit('platformsRemoved')
       }
     })
   })
