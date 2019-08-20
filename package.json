@@ -17,11 +17,8 @@
     "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
   },
   "scripts": {
-    "prestart": "npm-run-all create:env permission env clean webpack",
     "start": "npm run build",
     "now-build": "npm start",
-    "prestart:production": "npm-run-all clean webpack",
-    "start:production": "npm run build",
     "test": "npm-run-all lint audit debug",
     "prebuild": "npm-run-all clean webpack",
     "build": "npm run eleventy:platform",
@@ -34,13 +31,15 @@
     "audit": "npm-run-all audit:*",
     "audit:fix": "npm audit fix",
     "audit:lighthouse": "npm run lighthouse",
-    "permission": "npm-run-all permission:*",
-    "permission:env": "chmod +x ./_scripts/env.sh",
-    "permission:lighthouse": "chmod +x ./_scripts/lighthouse.sh",
     "create:env": "touch .env",
     "create:content": "node ./_scripts/addContentType.js",
-    "env": "./_scripts/env.sh",
-    "postenv": ". ./.env",
+    "setup": "npm-run-all create:env setup:*",
+    "setup:permission": "npm-run-all setup:permission:*",
+    "setup:permission:eleventyplatform": "chmod +x ./_scripts/eleventyPlatform.sh",
+    "setup:permission:env": "chmod +x ./_scripts/env.sh && . ./_scripts/env.sh",
+    "setup:permission:lighthouse": "chmod +x ./_scripts/lighthouse.sh",
+    "setup:env": "./_scripts/env.sh",
+    "postsetup:env": ". ./.env",
     "standard": "npx standard",
     "standard:fix": "npx standard --fix",
     "lighthouse": "./_scripts/lighthouse.sh",
@@ -50,13 +49,9 @@
     "webpack:watch": "npx webpack --watch",
     "eleventy": "npx eleventy",
     "eleventy:debug": "DEBUG=Eleventy* npm run eleventy --dryrun",
-    "eleventy:watch": "npx eleventy --watch",
-    "eleventy:serve": "npx eleventy --serve",
-    "eleventy:platform": "npm-run-all eleventy:platform:*",
-    "eleventy:platform:app": "npx eleventy --output=build/app",
-    "eleventy:platform:cms": "npx eleventy --output=build/cms",
-    "eleventy:platform:email": "npx eleventy --output=build/email",
-    "eleventy:platform:site": "npx eleventy --output=build/site"
+    "eleventy:watch": "npm run eleventy --watch",
+    "eleventy:serve": "npm run eleventy --serve",
+    "eleventy:platform": "./_scripts/eleventyPlatform.sh"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0-beta.2",
@@ -74,7 +69,6 @@
     "lighthouse": "^5.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "npm-check-updates": "^3.1.21",
-    "npm-run-all": "^4.1.5",
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-node-sass": "^2.1.8",
@@ -88,6 +82,7 @@
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
     "dotenv": "^8.1.0",
+    "npm-run-all": "^4.1.5",
     "papaparse": "^5.0.2"
   }
 }

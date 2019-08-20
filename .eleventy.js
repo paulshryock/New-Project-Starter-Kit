@@ -2,13 +2,15 @@ const htmlmin = require('html-minifier')
 require('dotenv').config()
 
 module.exports = function (eleventyConfig) {
-  /**
-    * Configure BrowserSync
-    */
-  eleventyConfig.setBrowserSyncConfig({
-    port: process.env.PORT || 8080,
-    server: `build/${process.env.PLATFORM || 'site'}`
-  })
+  const eleventyEnv = process.env.ELVENTY_ENV
+
+  if (eleventyEnv !== 'production') {
+    // Configure BrowserSync
+    eleventyConfig.setBrowserSyncConfig({
+      port: process.env.PORT || 8080,
+      server: `build/${process.env.PLATFORM || 'site'}`
+    })
+  }
 
   // Add Liquid filter: timePosted
   eleventyConfig.addLiquidFilter('timePosted', date => {
@@ -29,22 +31,24 @@ module.exports = function (eleventyConfig) {
     }
   })
 
-  // Minify HTML output
-  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-    if (outputPath.endsWith('.html')) {
-      const minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      })
-      return minified
-    }
+  if (eleventyEnv === 'production') {
+    // Minify HTML output
+    eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+      if (outputPath.endsWith('.html')) {
+        const minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        })
+        return minified
+      }
 
-    return content
-  })
+      return content
+    })
+  }
 
   /**
-    * Add collections
+    * Add content collections
     */
   const types = [
     { plural: 'pages', single: 'page' },
@@ -57,7 +61,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection(type.plural, collection => collection.getAll().filter(post => post.data.contentType === type.single))
   })
 
-  // Return API
+  // Add API collection
   eleventyConfig.addCollection('api', collection => {
     const posts = collection.getAll()
       .filter(post => !['api', 'cms', 'file'].includes(post.data.contentType))
