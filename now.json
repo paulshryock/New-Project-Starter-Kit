@@ -1,5 +1,22 @@
 {
   "version": 2,
   "alias": ["newprojectstarterkit.com"],
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "build/api"
+      }
+    }
+  ],
+  "env": {
+    "ELEVENTY_ENV": "@eleventy_env",
+    "NODE_ENV": "@node_env",
+    "PLATFORM": "@platform",
+    "PORT": "@port"
+  },
+  "github": {
+    "silent": true
+  }
 }

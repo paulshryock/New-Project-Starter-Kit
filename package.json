@@ -34,6 +34,7 @@
     "create:env": "touch .env",
     "create:content": "node ./_scripts/addContentType.js",
     "setup": "npm-run-all create:env setup:*",
+    "setup:ignore": "node ./_scripts/ignorePlatforms.js",
     "setup:permission": "npm-run-all setup:permission:*",
     "setup:permission:eleventyplatform": "chmod +x ./_scripts/eleventyPlatform.sh",
     "setup:permission:env": "chmod +x ./_scripts/env.sh && . ./_scripts/env.sh",
