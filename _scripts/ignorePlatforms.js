@@ -13,7 +13,7 @@ const ignorePlatforms = {}
 // Configure ignorePlatforms
 ignorePlatforms.file = './.eleventyignore'
 ignorePlatforms.platform = process.env.PLATFORM
-ignorePlatforms.platforms = ['app', 'cms', 'email', 'site']
+ignorePlatforms.platforms = ['api', 'app', 'cms', 'email', 'site']
 ignorePlatforms.filteredPlatforms = ignorePlatforms.platforms.filter(platform => platform !== ignorePlatforms.platform)
 
 /**
