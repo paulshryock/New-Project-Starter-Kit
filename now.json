@@ -7,15 +7,15 @@
       "use": "@now/static-build",
       "config": {
         "distDir": "build/api"
-      },
-      "env": {
-        "ELEVENTY_ENV": "@ELEVENTY_ENV",
-        "NODE_ENV": "@NODE_ENV",
-        "PLATFORM": "@PLATFORM",
-        "PORT": "@PORT"
       }
     }
   ],
+  "env": {
+    "ELEVENTY_ENV": "@ELEVENTY_ENV",
+    "NODE_ENV": "@NODE_ENV",
+    "PLATFORM": "@PLATFORM",
+    "PORT": "@PORT"
+  },
   "github": {
     "silent": true
   }
