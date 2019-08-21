@@ -1,5 +1,13 @@
 {
   "version": 2,
   "alias": ["newprojectstarterkit.com"],
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "build/api"
+      }
+    }
+  ]
 }
