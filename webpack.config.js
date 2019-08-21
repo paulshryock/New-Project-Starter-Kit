@@ -1,18 +1,12 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 require('@babel/register')
+require('dotenv').config()
 
-module.exports = {
+const webpackConfig = {
 
   name: process.env.ELEVENTY_ENV === 'production' ? 'production' : 'development',
   mode: process.env.ELEVENTY_ENV === 'production' ? 'production' : 'development',
-
-  entry: {
-    // app: './src/_assets/app/js/app.js',
-    // cms: './src/_assets/cms/js/cms.js',
-    // email: './src/_assets/email/js/email.js',
-    site: './src/_assets/site/js/site.js'
-  },
 
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -93,3 +87,11 @@ module.exports = {
   ]
 
 }
+
+const platform = process.env.PLATFORM
+
+webpackConfig.entry = {
+  platform: `./src/_assets/${platform}/js/${platform}.js`
+}
+
+module.exports = webpackConfig
