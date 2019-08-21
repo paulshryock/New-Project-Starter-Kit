@@ -15,5 +15,8 @@
         "PORT": "@PORT"
       }
     }
-  ]
+  ],
+  "github": {
+    "silent": true
+  }
 }
