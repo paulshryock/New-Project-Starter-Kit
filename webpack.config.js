@@ -13,6 +13,8 @@ const webpackConfig = {
     filename: './[name]/js/[name].js'
   },
 
+  entry: {},
+
   module: {
     rules: [
       {
@@ -90,8 +92,24 @@ const webpackConfig = {
 
 const platform = process.env.PLATFORM
 
-webpackConfig.entry = {
-  platform: `./src/_assets/${platform}/js/${platform}.js`
+switch (platform) {
+  case 'api':
+    webpackConfig.entry.api = `./src/_assets/${platform}/js/${platform}.js`
+    break
+  case 'app':
+    webpackConfig.entry.app = `./src/_assets/${platform}/js/${platform}.js`
+    break
+  case 'cms':
+    webpackConfig.entry.cms = `./src/_assets/${platform}/js/${platform}.js`
+    break
+  case 'email':
+    webpackConfig.entry.email = `./src/_assets/${platform}/js/${platform}.js`
+    break
+  case 'site':
+    webpackConfig.entry.site = `./src/_assets/${platform}/js/${platform}.js`
+    break
+  default:
+    webpackConfig.entry.site = `./src/_assets/${platform}/js/${platform}.js`
 }
 
 module.exports = webpackConfig
