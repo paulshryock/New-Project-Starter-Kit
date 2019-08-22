@@ -1,7 +1,7 @@
 [build]
-  command = "npm run start:production"
+  command = "npm run start"
   publish = "build/site"
 
 [context.cms]
-  command = "npm run start:production"
+  command = "npm run start"
   publish = "build/cms"
