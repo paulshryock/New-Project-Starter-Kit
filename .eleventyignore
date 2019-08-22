@@ -15,7 +15,7 @@ temp/
 .DS_Store
 
 # Platform files
+src/api/
 src/app/
 src/cms/
 src/email/
-src/site/
