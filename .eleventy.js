@@ -2,7 +2,7 @@ const htmlmin = require('html-minifier')
 require('dotenv').config()
 
 module.exports = function (eleventyConfig) {
-  const eleventyEnv = process.env.ELVENTY_ENV
+  const eleventyEnv = process.env.ELEVENTY_ENV
 
   if (eleventyEnv !== 'production') {
     // Configure BrowserSync
