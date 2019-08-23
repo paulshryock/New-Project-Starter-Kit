@@ -9,3 +9,8 @@ slug: \_headers
 #  X-XSS-Protection: 1; mode=block
 #/templates/index2.html
 #  X-Frame-Options: SAMEORIGIN
+
+{%- if environment.auth_user[0] %}
+/secret/*
+  Basic-Auth:{% for user in environment.auth_user %} {{ user.name }}:{{ user.password }}{% endfor %}
+{%- endif %}
