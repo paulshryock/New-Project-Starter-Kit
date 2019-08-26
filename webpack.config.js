@@ -93,9 +93,6 @@ const webpackConfig = {
 const platform = process.env.PLATFORM
 
 switch (platform) {
-  case 'api':
-    webpackConfig.entry.api = `./src/_assets/${platform}/js/${platform}.js`
-    break
   case 'app':
     webpackConfig.entry.app = `./src/_assets/${platform}/js/${platform}.js`
     break
@@ -108,8 +105,6 @@ switch (platform) {
   case 'site':
     webpackConfig.entry.site = `./src/_assets/${platform}/js/${platform}.js`
     break
-  default:
-    webpackConfig.entry.site = `./src/_assets/${platform}/js/${platform}.js`
 }
 
 module.exports = webpackConfig

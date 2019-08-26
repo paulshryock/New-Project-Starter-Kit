@@ -3,12 +3,13 @@ require('dotenv').config()
 
 module.exports = function (eleventyConfig) {
   const eleventyEnv = process.env.ELEVENTY_ENV
+  const platform = process.env.PLATFORM
 
   if (eleventyEnv !== 'production') {
     // Configure BrowserSync
     eleventyConfig.setBrowserSyncConfig({
       port: process.env.PORT || 8080,
-      server: `build/${process.env.PLATFORM || 'site'}`
+      server: `build/${platform || 'site'}`
     })
   }
 
@@ -81,10 +82,16 @@ module.exports = function (eleventyConfig) {
   })
 
   // Passthrough file copy
-  eleventyConfig.addPassthroughCopy({ 'src/app/favicon.ico': 'app/favicon.ico' })
-  eleventyConfig.addPassthroughCopy({ 'src/app/serviceworker.js': 'app/serviceworker.js' })
-  eleventyConfig.addPassthroughCopy({ 'src/site/favicon.ico': 'site/favicon.ico' })
-  eleventyConfig.addPassthroughCopy({ 'src/site/serviceworker.js': 'site/serviceworker.js' })
+  switch (platform) {
+    case 'app':
+      eleventyConfig.addPassthroughCopy({ 'src/app/favicon.ico': 'favicon.ico' })
+      eleventyConfig.addPassthroughCopy({ 'src/app/serviceworker.js': 'serviceworker.js' })
+      break
+    case 'site':
+      eleventyConfig.addPassthroughCopy({ 'src/site/favicon.ico': 'favicon.ico' })
+      eleventyConfig.addPassthroughCopy({ 'src/site/serviceworker.js': 'serviceworker.js' })
+      break
+  }
 
   return {
     dir: {
