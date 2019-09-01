@@ -1,12 +1,12 @@
+const config = require('config')
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 require('@babel/register')
-require('dotenv').config()
 
 const webpackConfig = {
 
-  name: process.env.ELEVENTY_ENV === 'production' ? 'production' : 'development',
-  mode: process.env.ELEVENTY_ENV === 'production' ? 'production' : 'development',
+  name: config.get('eleventy.environment') || 'development',
+  mode: config.get('eleventy.environment') || 'development',
 
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -90,7 +90,7 @@ const webpackConfig = {
 
 }
 
-const platform = process.env.PLATFORM
+const platform = config.get('eleventy.platform')
 
 switch (platform) {
   case 'app':

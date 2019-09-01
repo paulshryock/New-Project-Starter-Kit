@@ -1,14 +1,15 @@
+const config = require('config')
 const htmlmin = require('html-minifier')
-require('dotenv').config()
 
 module.exports = function (eleventyConfig) {
-  const eleventyEnv = process.env.ELEVENTY_ENV
-  const platform = process.env.PLATFORM
+  const eleventyEnv = config.get('eleventy.environment')
+  const platform = config.get('eleventy.platform')
+  const port = config.get('server.port')
 
   if (eleventyEnv !== 'production') {
     // Configure BrowserSync
     eleventyConfig.setBrowserSyncConfig({
-      port: process.env.PORT || 8080,
+      port: port || 8080,
       server: `build/${platform || 'site'}`
     })
   }
@@ -99,7 +100,7 @@ module.exports = function (eleventyConfig) {
       includes: '_includes',
       input: 'src',
       layouts: '_layouts',
-      output: 'build'
+      output: `build/${platform}`
     }
   }
 }

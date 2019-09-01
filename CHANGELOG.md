@@ -22,7 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add npm scripts (`package.json`)
 - Add assets, data, includes, layouts, content (`/src/*`)
 - Add environment variables (`.env`)
-- Add scripts
+- Add configuration files (`/config`)
+- Add scripts (`/_scripts`)
 
 ### Changed
 - Move assets and content into platform directories (`app`, `cms`, `email`, `site`)

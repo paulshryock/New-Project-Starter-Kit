@@ -11,10 +11,7 @@
     }
   ],
   "env": {
-    "ELEVENTY_ENV": "@eleventy_env",
-    "NODE_ENV": "@node_env",
-    "PLATFORM": "@platform",
-    "PORT": "@port"
+    "NODE_ENV": "@node_env"
   },
   "github": {
     "silent": true

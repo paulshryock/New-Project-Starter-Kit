@@ -10,7 +10,7 @@ slug: \_headers
 #/templates/index2.html
 #  X-Frame-Options: SAMEORIGIN
 
-{%- if environment.auth_user[0] %}
+{%- if environment.auth[0] %}
 /secret/*
-  Basic-Auth:{% for user in environment.auth_user %} {{ user.name }}:{{ user.password }}{% endfor %}
+  Basic-Auth:{% for user in environment.auth %} {{ user.username }}:{{ user.password }}{% endfor %}
 {%- endif %}

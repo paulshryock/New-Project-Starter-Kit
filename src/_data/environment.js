@@ -1,14 +1,22 @@
+const config = require('config')
+
 const environment = {
-  auth_user: [
+  auth: [
     {
-      name: process.env.AUTH_USER_NAME,
-      password: process.env.AUTH_USER_PASSWORD
+      username: config.get('auth.username'),
+      password: config.get('auth.password')
     }
   ],
-  eleventy_env: process.env.ELEVENTY_ENV,
-  node_env: process.env.NODE_ENV,
-  platform: process.env.PLATFORM,
-  port: process.env.PORT
+  eleventy: {
+    environment: config.get('eleventy.environment'),
+    platform: config.get('eleventy.platform')
+  },
+  node: {
+    environment: config.get('node.environment')
+  },
+  server: {
+    port: config.get('server.port')
+  }
 }
 
 module.exports = environment
