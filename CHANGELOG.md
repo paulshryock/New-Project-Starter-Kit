@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.27.0 - 2019-08-05 - Restructure
+## 0.27.0 - 2019-09-10 - Restructure
 
 ### Added
 - Configure Eleventy: data, includes, input, layouts, output, collections, Passthrough file copy (`.eleventy.js`)
@@ -36,6 +36,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fix API post content
+
+### Security
+- Update dependencies
 
 ## 0.26.0 - 2019-08-01 - Clean up dependencies
 
