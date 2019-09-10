@@ -39,9 +39,9 @@
     "webpack": "npx webpack",
     "webpack:watch": "npx webpack --watch",
     "eleventy": "npx eleventy",
-    "eleventy:debug": "DEBUG=Eleventy* npx eleventy --dryrun",
-    "eleventy:watch": "npx eleventy --watch",
-    "eleventy:serve": "npx eleventy --serve",
+    "eleventy:debug": "NODE_ENV='development' DEBUG=Eleventy* npx eleventy --dryrun",
+    "eleventy:watch": "NODE_ENV='development' npx eleventy --watch",
+    "eleventy:serve": "NODE_ENV='development' npx eleventy --serve",
     "create:content": "node ./_scripts/addContentType.js",
     "setup": "npm-run-all setup:*",
     "setup:ignore": "node ./_scripts/ignorePlatforms.js"
