@@ -1,3 +1,25 @@
-@import './variables/*.css';
+/**
+  * Media Queries
+  */
+
+/* Default: Mobile */
+
+@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+
+}
+
+@media screen and (min-width: 56.25rem) { /* Tablet Landscape / 56.25rem / 900px */
+
+}
+
+@media screen and (min-width: 75rem) { /* Desktop / 75rem / 1200px */
+
+}
+
+@media screen and (min-width: 112.5rem) { /* Big Desktop / 112.5rem / 1800px */
+
+}
+
+@import './reset.css';
 @import './elements/*.css';
 @import './components/*.css';

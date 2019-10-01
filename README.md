@@ -2,7 +2,9 @@
 
 [![Netlify Status][deploy-status]](deploys)
 
-Start new projects with Eleventy, webpack, Babel, StandardJS, Sass, PostCSS, PWA, service workers, and Netlify CMS installed and configured, with some common accessible HTML, CSS, and JS components and patterns. Includes deployment configuration for Netlify and Zeit Now. This starter kit is open source and completely free. Use it however you like.
+Fork this repository to start a new project with Eleventy, Netlify CMS, Gulp, Babel, PostCSS, and the following workflow: linting, Sass and modern CSS transpiling, ES2015+ compiling, concatenation, minification, beautification, source maps, bundling fonts, images, and favicons, serving files, watching for changes, and live reloading. Includes common accessible HTML, CSS, and JS components, and continuous deployment configurations for Netlify and Zeit Now.
+
+This is an open source project which uses the [The Hippocratic License][license].
 
 [NewProjectStarterKit.com][npsk]
 
@@ -11,24 +13,26 @@ Start new projects with Eleventy, webpack, Babel, StandardJS, Sass, PostCSS, PWA
 ### Requirements
 
 1. Node
-	- Check if Node is installed: `node --version`
-	- If you see a version number, such as `v11.6.0`, proceed to [Get Started](#get-started)
-	- If Node isn't installed, [download][node-download] and install it, then proceed to [Get Started](#get-started)
+  - Check if Node is installed: `node --version`
+  - If you see a version number, such as `v11.6.0`, proceed to [Get Started](#get-started)
+  - If Node isn't installed, [download][node-download] and install it, then proceed to [Get Started](#get-started)
 
 ### Get Started
 
 Fork or clone this repo, install dev dependencies, and start:
 
-```shell
-$ git clone https://github.com/paulshryock/New-Project-Starter-Kit new-project
-$ cd new-project
-$ npm install
-$ npm start
+```bash
+git clone https://github.com/paulshryock/New-Project-Starter-Kit.git
+cd New-Project-Starter-Kit
+npm i
+npm start
 ```
+
+Then find and replace the package name (`New-Project-Starter-Kit`) and author name (`Paul Shryock`) in [`LICENSE`][license], [`package.json`][pkg], and `README.md`.
 
 ## Documentation
 
-[Project documentation][npsk-docs] files are in the `_docs` directory.
+[Project documentation][docs] files are in the `_docs` directory.
 
 ## Contributing
 
@@ -36,8 +40,9 @@ If you'd like to contribute, please read the [Code of Conduct][code-of-conduct] 
 
 [deploy-status]: https://api.netlify.com/api/v1/badges/a1031bfd-6642-45fe-9547-2438c4bc0de4/deploy-status
 [deploys]: https://app.netlify.com/sites/npsk/deploys
+[license]: https://firstdonoharm.dev/
 [npsk]: https://newprojectstarterkit.com/
 [node-download]: https://nodejs.org/en/download/
-[npsk-docs]: https://docs.newprojectstarterkit.com/
+[docs]: https://docs.newprojectstarterkit.com/
 [code-of-conduct]: blob/master/CODE_OF_CONDUCT.md
 [contributing]: blob/master/CONTRIBUTING.md
