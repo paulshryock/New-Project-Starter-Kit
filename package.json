@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "npm run build",
-    "build": "NODE_ENV='production' npx gulp build && npx eleventy",
+    "build": "NODE_ENV='production' npx gulp build && NODE_ENV='production' npx eleventy",
     "develop": "NODE_ENV='development' npx gulp develop && npx eleventy",
     "watch": "NODE_ENV='development' npx eleventy --watch",
     "serve": "NODE_ENV='development' npx gulp serve",
