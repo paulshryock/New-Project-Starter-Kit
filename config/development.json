@@ -1,8 +1,0 @@
-{
-  "eleventy": {
-    "environment": "development"
-  },
-  "server": {
-    "port": 8081
-  }
-}
