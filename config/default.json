@@ -1,0 +1,9 @@
+{
+  "eleventy": {
+    "environment": "development",
+    "platform": "site"
+  },
+  "server": {
+    "port": 8080
+  }
+}

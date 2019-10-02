@@ -1,0 +1,8 @@
+<header role="banner" class="{{ platform }}-header">
+  {%- if slug == '.' %}
+  <h1 class="{{ platform }}-title"><a class="{{ platform }}-title__link" href="/">{{ site.title }}</a></h1>
+  {%- else %}
+  <p class="{{ platform }}-title"><a class="{{ platform }}-title__link" href="/">{{ site.title }}</a></p>
+  {%- endif %}
+  <p class="{{ platform }}-description">{{ site.description }}</p>
+</header>

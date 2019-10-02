@@ -1,0 +1,16 @@
+---
+slug: \_headers
+---
+
+### A path:
+#/templates/index.html
+#  # Headers for that path:
+#  X-Frame-Options: DENY
+#  X-XSS-Protection: 1; mode=block
+#/templates/index2.html
+#  X-Frame-Options: SAMEORIGIN
+
+{%- if env.auth[0] %}
+/secret/*
+  Basic-Auth:{% for user in env.auth %} {{ user.username }}:{{ user.password }}{% endfor %}
+{%- endif %}

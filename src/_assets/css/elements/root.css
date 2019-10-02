@@ -1,0 +1,48 @@
+:root {
+	font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
+	font-size: calc( 1 * 100% ); /* 1 * 16px = 16px base rem unit */
+	font-size-adjust: 0.516; /* Set x-height */
+}
+
+@supports (font-kerning: normal) and (font-variant-ligatures: common-ligatures contextual) and (font-variant-numeric: oldstyle-nums proportional-nums) {
+
+	:root {
+		font-kerning: normal;
+		font-variant-ligatures: common-ligatures contextual;
+		font-variant-numeric: oldstyle-nums proportional-nums;
+		font-feature-settings: normal;
+	}
+	
+}
+
+@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+
+	:root {
+		font-size: calc( 1.125 * 100% ); /* 1.125 * 16px = 18px base rem unit */
+	}
+
+}
+
+@media screen and (min-width: 56.25rem) { /* Tablet Landscape / 56.25rem / 900px */
+
+	:root {
+		font-size: calc( 1.25 * 100% ); /* 1.25 * 16px = 20px base rem unit */
+	}
+
+}
+
+@media screen and (min-width: 75rem) { /* Desktop / 75rem / 1200px */
+
+	:root {
+		font-size: calc( 1.375 * 100% ); /* 1.375 * 16px = 22px base rem unit */
+	}
+
+}
+
+@media screen and (min-width: 112.5rem) { /* Big Desktop / 112.5rem / 1800px */
+
+	:root {
+		font-size: calc( 1.5 * 100% ); /* 1.5 * 16px = 24px base rem unit */
+	}
+
+}

@@ -1,0 +1,9 @@
+body {
+	background: hsl( 0, 0%, 100% );
+	color: hsl( 0, 0%, 5% );
+	font-family: sans-serif;
+	font-size: 1rem;
+	overflow-y: auto;
+  /* Hide persistent scrollbar in IE (10/11) and Edge */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

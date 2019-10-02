@@ -1,6 +1,6 @@
+const config = require('config')
 const fs = require('fs')
 const EventEmitter = require('events')
-require('dotenv').config()
 
 class IgnoreEmitter extends EventEmitter {}
 const ignoreEmitter = new IgnoreEmitter()
@@ -12,7 +12,7 @@ const ignorePlatforms = {}
 
 // Configure ignorePlatforms
 ignorePlatforms.file = './.eleventyignore'
-ignorePlatforms.platform = process.env.PLATFORM
+ignorePlatforms.platform = config.get('eleventy.platform')
 ignorePlatforms.platforms = ['api', 'app', 'cms', 'email', 'site']
 ignorePlatforms.filteredPlatforms = ignorePlatforms.platforms.filter(platform => platform !== ignorePlatforms.platform)
 

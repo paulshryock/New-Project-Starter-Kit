@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  {% include meta/utf %}
+  {% include meta/viewport %}
+  {% include meta/ie %}
+  {% include meta/page %}
+  {% include meta/pwa %}
+  {% include meta/icons %}
+  {% include meta/colors %}
+  {% include globals/styles %}
+  {% include globals/cms %}
+</head>
+{%- assign platform = site.platform %}
+<body class="{{ platform }} {% if contentType %}{{ contentType }} {{ contentType }}-{{ page.fileSlug }}{% endif %}">
+  {% include components/skip-link %}
+  {% include components/header %}
+  {% include components/navigation %}
+  <main id="content" class="{{ platform }}-main">
+    {{ content }}
+  </main><!-- .{{ platform }}-main -->
+  {% include components/footer %}
+  {% include globals/scripts %}
+</body>
+</html>

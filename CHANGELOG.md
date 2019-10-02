@@ -1,8 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](changelog),
+and this project adheres to [Semantic Versioning](semver).
 
 <!--
 ## X.X.X - XXXX-XX-XX - XXXXXX
@@ -15,17 +15,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## 0.27.0 - 2019-08-05 - Restructure
+## 0.27.0 - 2019-11-02 - Restructure and simplify
 
 ### Added
 - Configure Eleventy: data, includes, input, layouts, output, collections, Passthrough file copy (`.eleventy.js`)
-- Add npm scripts (`package.json`)
 - Add assets, data, includes, layouts, content (`/src/*`)
-- Add environment variables (`.env`)
-- Add scripts
+- Add configuration files (`/config`)
+- Add scripts (`/_scripts`)
+- Add Gulp
 
 ### Changed
-- Move assets and content into platform directories (`app`, `cms`, `email`, `site`)
 - Update GitHub Issue and Pull Request templates
 - Update lighthouse script and move into `/_scripts/lighthouse.sh`
 - Move lighthouse logs into `/_logs/lighthouse`
@@ -33,8 +32,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Zeit Now config (`/now.json`)
 - Update page markup
 
+### Removed
+- Remove webpack
+
 ### Fixed
 - Fix API post content
+
+### Security
+- Update dependencies
 
 ## 0.26.0 - 2019-08-01 - Clean up dependencies
 
@@ -379,3 +384,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `CODE_OF_CONDUCT.md`
 - Add `README.md`
 - Add Issue and Pull Request templates
+
+[changelog]: https://keepachangelog.com/en/1.0.0/
+[semver]: https://semver.org/spec/v2.0.0.html

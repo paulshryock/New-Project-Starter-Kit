@@ -15,6 +15,6 @@ I want my site to load in 1 second on a Mobile 3G (780 Kbps) connection.
 
 ## Lighthouse
 
-1. Set a `PORT` environment variable in `.env`
+1. Set a `server.port` value in `/config/default.json`
 4. Serve the project: `npm run serve`
 5. In another tab, audit the project: `npm run audit`

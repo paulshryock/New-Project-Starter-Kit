@@ -13,9 +13,3 @@ temp/
 
 # OS files
 .DS_Store
-
-# Platform files
-src/app/
-src/cms/
-src/email/
-src/site/

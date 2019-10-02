@@ -1,0 +1,5 @@
+{
+  "eleventy": {
+    "environment": "production"
+  }
+}

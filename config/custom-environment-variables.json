@@ -1,0 +1,9 @@
+{
+  "auth": {
+    "username": "NPSK_AUTH_USERNAME",
+    "password": "NPSK_AUTH_PASSWORD"
+  },
+  "node": {
+    "environment": "NODE_ENV"
+  }
+}

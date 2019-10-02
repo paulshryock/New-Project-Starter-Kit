@@ -1,0 +1,9 @@
+    {%- if env.eleventy.environment == 'production' %}
+		<script src="/js/bundle.min.js" async></script>
+    {%- else %}
+    <script src="/js/bundle.js" async></script>
+    {%- endif %}
+
+		{%- if slug == '.' %}
+			<!-- <script src="/js/cms.js" async></script> -->
+		{%- endif %}

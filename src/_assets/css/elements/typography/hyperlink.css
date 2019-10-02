@@ -1,0 +1,22 @@
+a {
+  background-color: transparent;
+	transition: color 200ms ease;
+}
+
+a:link,
+a:visited {
+	color: hsl( 240, 100%, 50% );
+}
+
+a:hover,
+a:focus {
+	color: hsl( 220, 100%, 50% );
+}
+
+a:active {
+	color: hsl( 220, 100%, 70% );
+}
+
+:focus {
+	outline: 0.125rem dashed hsl( 220, 100%, 80% );
+}
