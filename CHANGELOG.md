@@ -15,24 +15,25 @@ and this project adheres to [Semantic Versioning](semver).
 ### Security
 -->
 
-## 0.27.0 - 2019-09-10 - Restructure
+## 0.27.0 - 2019-09-10 - Restructure and simplify
 
 ### Added
 - Configure Eleventy: data, includes, input, layouts, output, collections, Passthrough file copy (`.eleventy.js`)
-- Add npm scripts (`package.json`)
 - Add assets, data, includes, layouts, content (`/src/*`)
-- Add environment variables (`.env`)
 - Add configuration files (`/config`)
 - Add scripts (`/_scripts`)
+- Add Gulp
 
 ### Changed
-- Move assets and content into platform directories (`app`, `cms`, `email`, `site`)
 - Update GitHub Issue and Pull Request templates
 - Update lighthouse script and move into `/_scripts/lighthouse.sh`
 - Move lighthouse logs into `/_logs/lighthouse`
 - Update Netlify config (`/netlify.toml`)
 - Update Zeit Now config (`/now.json`)
 - Update page markup
+
+### Removed
+- Remove webpack
 
 ### Fixed
 - Fix API post content
