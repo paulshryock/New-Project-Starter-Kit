@@ -1,3 +1,7 @@
+@import './reset.css';
+@import './elements/*.css';
+@import './components/*.css';
+
 /**
   * Media Queries
   */
@@ -19,7 +23,3 @@
 @media screen and (min-width: 112.5rem) { /* Big Desktop / 112.5rem / 1800px */
 
 }
-
-@import './reset.css';
-@import './elements/*.css';
-@import './components/*.css';

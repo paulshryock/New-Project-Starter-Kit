@@ -1,6 +1,6 @@
 <!-- Page-specific information -->
-  {% include site/globals/seotitle %}
-  <meta name="description" content="{{ excerpt | default: site.data.description }}">
+  {% include globals/seotitle %}
+  <meta name="description" content="{{ excerpt | default: site.description }}">
   <link rel="author" href="/humans.txt">
   <meta name="robots" content="index,follow">
-  <link rel="canonical" href="{{ site.data.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">

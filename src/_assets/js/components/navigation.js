@@ -85,7 +85,9 @@ navigation.setNavButtonText = function (text) {
   const button = document.querySelector('.navigation button span')
 
   // TODO (paulshryock) Replace textContent with innerText?
-  button.textContent = text
+  if (button) {
+    button.textContent = text
+  }
 }
 
 /**
@@ -111,9 +113,9 @@ navigation.toggleNavElementsStates = function () {
   * param {string} mediaQuery
   */
 navigation.toggleNavElements = function (mediaQuery) {
-  const button = document.querySelector('.navigation button')
 
   if (mediaQuery.matches) { // Tablet and up
+    const button = document.querySelector('.navigation button')
     if (button) {
       button.removeEventListener('click', navigation.toggleNavElementsStates, false)
     }
@@ -122,6 +124,7 @@ navigation.toggleNavElements = function (mediaQuery) {
   } else { // Mobile
     navigation.addNavButton()
     navigation.hideNavMenu()
+    const button = document.querySelector('.navigation button')
     if (button) {
       button.addEventListener('click', navigation.toggleNavElementsStates, false)
     }

@@ -1,6 +1,6 @@
 const config = require('config')
 
-const environment = {
+const env = {
   // auth: [
   //   {
   //     username: config.get('auth.username'),
@@ -19,4 +19,4 @@ const environment = {
   }
 }
 
-module.exports = environment
+module.exports = env

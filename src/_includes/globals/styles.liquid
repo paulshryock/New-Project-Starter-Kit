@@ -1,1 +1,5 @@
-<link rel="stylesheet" href="/css/site.css">
+{%- if env.eleventy.environment == 'production' %}
+<link rel="stylesheet" href="/css/bundle.min.css">
+{%- else %}
+<link rel="stylesheet" href="/css/bundle.css">
+{%- endif %}

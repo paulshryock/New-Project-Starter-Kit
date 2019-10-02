@@ -11,7 +11,7 @@
   {% include globals/styles %}
   {% include globals/cms %}
 </head>
-{%- assign platform = site.data.platform %}
+{%- assign platform = site.platform %}
 <body class="{{ platform }} {% if contentType %}{{ contentType }} {{ contentType }}-{{ page.fileSlug }}{% endif %}">
   {% include components/skip-link %}
   {% include components/header %}
