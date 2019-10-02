@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](semver).
 ### Security
 -->
 
+## 0.27.1 - 2019-XX-XX - RELEASE_NAME
+
+### Fixed
+- Fix favicon bundle
+
 ## 0.27.0 - 2019-11-02 - Restructure and simplify
 
 ### Added
