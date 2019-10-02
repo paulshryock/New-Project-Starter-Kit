@@ -41,6 +41,7 @@ If you'd like to contribute, please read the [Code of Conduct][code-of-conduct] 
 [deploy-status]: https://api.netlify.com/api/v1/badges/a1031bfd-6642-45fe-9547-2438c4bc0de4/deploy-status
 [deploys]: https://app.netlify.com/sites/npsk/deploys
 [license]: https://firstdonoharm.dev/
+[pkg]: package.json
 [npsk]: https://newprojectstarterkit.com/
 [node-download]: https://nodejs.org/en/download/
 [docs]: https://docs.newprojectstarterkit.com/
