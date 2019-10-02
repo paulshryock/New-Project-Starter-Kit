@@ -28,7 +28,7 @@
     "now-build": "npm start",
     "audit:performance": "node ./_scripts/lighthouse.js",
     "create:content": "node ./_scripts/addContentType.js",
-    "update:gitignore": "node ./_scripts/ignorePlatforms.js",
+    "update:gitignore": "node ./_scripts/ignorePlatforms.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
