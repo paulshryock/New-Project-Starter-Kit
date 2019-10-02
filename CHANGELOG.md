@@ -15,7 +15,10 @@ and this project adheres to [Semantic Versioning](semver).
 ### Security
 -->
 
-## 0.27.1 - 2019-XX-XX - RELEASE_NAME
+## 0.28.0 - 2019-XX-XX - RELEASE_NAME
+
+### Changed
+- Make cms tags fields not required
 
 ### Fixed
 - Fix favicon bundle
