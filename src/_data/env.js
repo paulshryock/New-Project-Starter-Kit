@@ -7,16 +7,14 @@ const env = {
   //     password: config.get('auth.password')
   //   }
   // ],
-  eleventy: {
-    environment: config.get('eleventy.environment'),
-    platform: config.get('eleventy.platform')
-  },
-  // node: {
-  //   environment: config.get('node.environment')
+  // eleventy: {
+  //   environment: config.get('eleventy.environment'),
+  //   platform: config.get('eleventy.platform')
   // },
-  server: {
-    port: config.get('server.port')
-  }
+  node_env: config.get('node.environment'),
+  // server: {
+  //   port: config.get('server.port')
+  // }
 }
 
 module.exports = env

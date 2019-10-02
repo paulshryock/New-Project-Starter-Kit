@@ -1,4 +1,4 @@
-    {%- if env.eleventy.environment == 'production' %}
+    {%- if env.node_env == 'production' %}
 		<script src="/js/bundle.min.js" async></script>
     {%- else %}
     <script src="/js/bundle.js" async></script>
