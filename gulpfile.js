@@ -29,13 +29,17 @@ const defaults = {
     src: './src/_assets/fonts/**/*',
     dest: './build/fonts'
   },
+  favicon: {
+    src: './src/_assets/favicon/**/*',
+    dest: './build'
+  },
   images: {
     src: './src/_assets/img/**/*',
     dest: './build/img'
   },
-  favicon: {
-    src: './src/_assets/favicon/**/*',
-    dest: './build'
+  cms: {
+    src: './src/cms/config.yml',
+    dest: './build/cms'
   }
 }
 
@@ -152,7 +156,7 @@ function minifyJs () {
   return bundle
 }
 
-function fontsBundle () {
+function bundleFonts () {
   const bundle = gulp.src(defaults.fonts.src)
     .pipe(gulp.dest(defaults.fonts.dest))
     .pipe(connect.reload())
@@ -160,7 +164,15 @@ function fontsBundle () {
   return bundle
 }
 
-function imagesBundle () {
+function bundleFavicon () {
+  const bundle = gulp.src(defaults.favicon.src)
+    .pipe(gulp.dest(defaults.favicon.dest))
+    .pipe(connect.reload())
+
+  return bundle
+}
+
+function bundleImages () {
   const bundle = gulp.src(defaults.images.src)
     .pipe(gulp.dest(defaults.images.dest))
     .pipe(connect.reload())
@@ -168,9 +180,9 @@ function imagesBundle () {
   return bundle
 }
 
-function faviconBundle () {
-  const bundle = gulp.src(defaults.favicon.src)
-    .pipe(gulp.dest(defaults.favicon.dest))
+function copyCms () {
+  const bundle = gulp.src(defaults.cms.src)
+    .pipe(gulp.dest(defaults.cms.dest))
     .pipe(connect.reload())
 
   return bundle
@@ -187,16 +199,22 @@ function watch () {
   gulp.watch([defaults.html.src], buildHtml)
   gulp.watch([defaults.css.src], buildCss)
   gulp.watch([defaults.js.src, defaults.js.root], buildJs)
+  gulp.watch([defaults.fonts.src], bundleFonts)
+  gulp.watch([defaults.favicon.src], bundleFavicon)
+  gulp.watch([defaults.images.src], bundleImages)
+  gulp.watch([defaults.cms.src], copyCms)
 }
 
 /**
  * Gulp tasks
  */
 
+exports.bundleFavicon = bundleFavicon
+
 exports.default = gulp.series(
   cleanBuild,
   gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildHtml, buildCss, buildJs, fontsBundle, imagesBundle, faviconBundle),
+  gulp.parallel(buildCss, buildJs, bundleFonts, bundleFavicon, bundleImages, copyCms),
   gulp.parallel(minifyHtml, minifyCss, minifyJs),
   cleanBundles
 )
@@ -204,7 +222,7 @@ exports.default = gulp.series(
 exports.build = gulp.series(
   cleanBuild,
   gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildHtml, buildCss, buildJs, fontsBundle, imagesBundle, faviconBundle),
+  gulp.parallel(buildCss, buildJs, bundleFonts, bundleFavicon, bundleImages, copyCms),
   gulp.parallel(minifyHtml, minifyCss, minifyJs),
   cleanBundles
 )
@@ -212,12 +230,12 @@ exports.build = gulp.series(
 exports.develop = gulp.series(
   cleanBuild,
   gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildHtml, buildCss, buildJs, fontsBundle, imagesBundle, faviconBundle)
+  gulp.parallel(buildCss, buildJs, bundleFonts, bundleFavicon, bundleImages, copyCms)
 )
 
 exports.serve = gulp.series(
   cleanBuild,
   gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildHtml, buildCss, buildJs, fontsBundle, imagesBundle, faviconBundle),
+  gulp.parallel(buildCss, buildJs, bundleFonts, bundleFavicon, bundleImages, copyCms),
   gulp.parallel(serve, watch)
 )
