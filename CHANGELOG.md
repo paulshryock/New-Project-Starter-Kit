@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](semver).
 ### Security
 -->
 
-## 0.27.0 - 2019-09-10 - Restructure and simplify
+## 0.27.0 - 2019-11-02 - Restructure and simplify
 
 ### Added
 - Configure Eleventy: data, includes, input, layouts, output, collections, Passthrough file copy (`.eleventy.js`)
