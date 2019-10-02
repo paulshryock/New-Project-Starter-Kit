@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](semver).
 
 ### Fixed
 - Fix favicon bundle
+- Fix cms redirect
 
 ## 0.27.0 - 2019-11-02 - Restructure and simplify
 
