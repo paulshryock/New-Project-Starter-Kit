@@ -1,5 +1,5 @@
+{%- assign file = 'bundle' %}
 {%- if env.node_env == 'production' %}
-<link rel="stylesheet" href="/css/bundle.min.css">
-{%- else %}
-<link rel="stylesheet" href="/css/bundle.css">
+{%- assign file = 'bundle.min' %}
 {%- endif %}
+<link rel="stylesheet" href="/css/{{ file }}.css">

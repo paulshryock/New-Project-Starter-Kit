@@ -1,9 +1,9 @@
-    {%- if env.node_env == 'production' %}
-		<script src="/js/bundle.min.js" async></script>
-    {%- else %}
-    <script src="/js/bundle.js" async></script>
-    {%- endif %}
+{%- assign file = 'bundle' %}
+{%- if env.node_env == 'production' %}
+{%- assign file = 'bundle.min' %}
+{%- endif %}
+    <script src="/js/{{ file }}.js" async></script>
 
-		{%- if slug == '.' %}
-			<script src="/js/cms.js" async></script>
-		{%- endif %}
+{%- if slug == '.' %}
+		<script src="/js/cms.js" async></script>
+{%- endif %}
