@@ -30,9 +30,17 @@ npm start
 
 Then find and replace the package name (`New-Project-Starter-Kit`) and author name (`Paul Shryock`) in [`LICENSE`][license], [`package.json`][pkg], and `README.md`.
 
-## Documentation
+## CLI
 
-[Project documentation][docs] files are in the `_docs` directory.
+- `npm start`: Builds website for production
+- `npm run build`: Builds website for production 
+- `npm run develop`: Builds website for development
+- `npm run watch`: Builds markup and watches for changes
+- `npm run serve`: Builds website for development, serves to `localhost:8080`, and watches for changes to assets
+
+<!-- ## Documentation -->
+
+<!-- [Project documentation][docs] files are in the `_docs` directory. -->
 
 ## Contributing
 
