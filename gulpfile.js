@@ -2,11 +2,14 @@ const gulp = require('gulp')
 const del = require('del')
 const sourcemaps = require('gulp-sourcemaps')
 const postcss = require('gulp-postcss')
-const babel = require('gulp-babel')
+const webpack = require('webpack')
+const path = require('path')
 const concat = require('gulp-concat')
 const beautify = require('gulp-beautify')
 const rename = require('gulp-rename')
 const connect = require('gulp-connect')
+
+const isProduction = process.env.NODE_ENV === 'production'
 
 const defaults = {
   html: {
@@ -42,6 +45,33 @@ const defaults = {
     dest: './build/cms'
   }
 }
+
+const compiler = webpack({
+  // Webpack configuration
+  mode: isProduction ? 'production' : 'development',
+  entry: {
+    bundle: './src/_assets/js/index.js'
+  },
+  output: {
+    path: path.resolve(__dirname, 'build/js'),
+    filename: '[name].js',
+    publicPath: '/js/'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  }
+})
 
 function cleanBuild () {
   const clean = del([defaults.html.dest])
@@ -112,7 +142,7 @@ function buildCss () {
 function minifyCss () {
   const bundle = gulp.src(defaults.css.output)
     .pipe(sourcemaps.init())
-    .pipe(postcss([ require('cssnano') ])) // Minify
+    .pipe(postcss([require('cssnano')])) // Minify
     .pipe(rename({ suffix: '.min' })) // Rename
     .pipe(sourcemaps.write('.')) // Maintain Sourcemaps
     .pipe(gulp.dest(defaults.css.dest))
@@ -133,8 +163,11 @@ function lintJs () {
 function buildJs () {
   const bundle = gulp.src(defaults.js.src)
     .pipe(sourcemaps.init())
-    .pipe(concat('bundle.js')) // Concatenate and rename
-    .pipe(babel()) // Compile ECMAScript 2015+ into a backwards compatible version of JavaScript
+    .pipe(compiler.run((err) => {
+      if (err) throw new Error(err)
+    })) // Webpack
+    // .pipe(concat('bundle.js')) // Concatenate and rename
+    // .pipe(babel()) // Compile ECMAScript 2015+ into a backwards compatible version of JavaScript
     .pipe(beautify({ indent_size: 2 })) // Beautify
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(defaults.js.dest))
@@ -209,33 +242,35 @@ function watch () {
  * Gulp tasks
  */
 
-exports.bundleFavicon = bundleFavicon
-
 exports.default = gulp.series(
-  cleanBuild,
-  gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildCss, buildJs, bundleFonts, bundleFavicon, bundleImages, copyCms),
-  gulp.parallel(minifyHtml, minifyCss, minifyJs),
-  cleanBundles
+  cleanBuild, // Clean
+  gulp.parallel(lintCss, lintJs), // Lint
+  gulp.parallel(buildCss, buildJs), // Build
+  gulp.parallel(bundleFonts, bundleFavicon, bundleImages, copyCms), // Copy
+  gulp.parallel(minifyHtml, minifyCss, minifyJs), // Minify
+  cleanBundles // Clean
 )
 
 exports.build = gulp.series(
-  cleanBuild,
-  gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildCss, buildJs, bundleFonts, bundleFavicon, bundleImages, copyCms),
-  gulp.parallel(minifyHtml, minifyCss, minifyJs),
-  cleanBundles
+  cleanBuild, // Clean
+  gulp.parallel(lintCss, lintJs), // Lint
+  gulp.parallel(buildCss, buildJs), // Build
+  gulp.parallel(bundleFonts, bundleFavicon, bundleImages, copyCms), // Copy
+  gulp.parallel(minifyHtml, minifyCss, minifyJs), // Minify
+  cleanBundles // Clean
 )
 
 exports.develop = gulp.series(
-  cleanBuild,
-  gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildCss, buildJs, bundleFonts, bundleFavicon, bundleImages, copyCms)
+  cleanBuild, // Clean
+  gulp.parallel(lintCss, lintJs), // Lint
+  gulp.parallel(buildCss, buildJs), // Build
+  gulp.parallel(bundleFonts, bundleFavicon, bundleImages, copyCms) // Copy
 )
 
 exports.serve = gulp.series(
-  cleanBuild,
-  gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildCss, buildJs, bundleFonts, bundleFavicon, bundleImages, copyCms),
-  gulp.parallel(serve, watch)
+  cleanBuild, // Clean
+  gulp.parallel(lintCss, lintJs), // Lint
+  gulp.parallel(buildCss, buildJs), // Build
+  gulp.parallel(bundleFonts, bundleFavicon, bundleImages, copyCms), // Copy
+  gulp.parallel(serve, watch) // Serve, watch
 )
