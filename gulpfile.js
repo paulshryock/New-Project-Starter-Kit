@@ -1,5 +1,7 @@
 const gulp = require('gulp')
 const del = require('del')
+const Eleventy = require('@11ty/eleventy')
+const ssg = new Eleventy()
 const htmlmin = require('gulp-htmlmin')
 const gulpStylelint = require('gulp-stylelint')
 const sourcemaps = require('gulp-sourcemaps')
@@ -58,56 +60,89 @@ function clean (cb) {
   return cb()
 }
 
-function buildHtml () {
-  const bundle = gulp.src(paths.html.src)
-    .pipe(beautify.html({ indent_size: 2 })) // Beautify
+async function buildHtml (cb) {
+  await ssg.init()
+  await ssg.write()
+
+  const options = {
+    indent_size: 2,
+    max_preserve_newlines: 1
+  }
+
+  gulp.src(paths.html.output)
+    .pipe(beautify.html(options)) // Beautify
     .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
 
-  return bundle
+  return cb()
 }
 
-function minifyHtml () {
-  const bundle = gulp.src(paths.html.output)
-    .pipe(htmlmin({ collapseWhitespace: true })) // Minify
+function minifyHtml (cb) {
+  const options = {
+    collapseBooleanAttributes: true,
+    collapseWhitespace: true,
+    decodeEntities: true,
+    html5: true,
+    minifyCSS: true,
+    minifyJS: true,
+    processConditionalComments: true,
+    removeAttributeQuotes: true,
+    removeComments: true,
+    removeEmptyAttributes: true,
+    removeOptionalTags: true,
+    removeRedundantAttributes: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    sortAttributes: true,
+    sortClassName: true,
+    trimCustomFragments: true,
+    useShortDoctype: true
+  }
+
+  gulp.src(paths.html.output, { base: './' })
+    .pipe(htmlmin(options)) // Minify
     .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
 
-  return bundle
+  return cb()
 }
 
 function lintCss () {
+  const settings = {
+    config: {
+      extends: ['stylelint-config-standard']
+    },
+    fix: true,
+    reporters: [
+      { formatter: 'string', console: true }
+    ]
+  }
+
   const lint = gulp.src(paths.css.src)
-    .pipe(gulpStylelint({
-      config: {
-        extends: ['stylelint-config-standard']
-      },
-      fix: true,
-      reporters: [
-        { formatter: 'string', console: true }
-      ]
-    }))
+    .pipe(gulpStylelint(settings))
 
   return lint
 }
 
-function buildCss () {
-  const bundle = gulp.src(paths.css.src)
+function buildCss (cb) {
+  const plugins = [
+    require('postcss-easy-import'), // @import files
+    require('precss'), // Transpile Sass-like syntax
+    require('postcss-preset-env'), // Polyfill modern CSS
+    require('autoprefixer'), // Add vendor prefixes
+    require('pixrem')() // Add fallbacks for rem units
+  ]
+
+  gulp.src(paths.css.src)
     .pipe(sourcemaps.init())
-    .pipe(postcss([
-      require('postcss-easy-import'), // @import files
-      require('precss'), // Transpile Sass-like syntax
-      require('postcss-preset-env'), // Polyfill modern CSS
-      require('autoprefixer'), // Add vendor prefixes
-      require('pixrem')() // Add fallbacks for rem units
-    ]))
+    .pipe(postcss(plugins))
     .pipe(concat('bundle.css')) // Concatenate and rename
     .pipe(beautify.css({ indent_size: 2 })) // Beautify
     .pipe(sourcemaps.write('.')) // Maintain Sourcemaps
     .pipe(gulp.dest(paths.css.dest))
     .pipe(connect.reload())
 
-  return bundle
+  return cb()
 }
 
 function minifyCss (cb) {
@@ -188,36 +223,36 @@ function minifyJs (cb) {
   return cb()
 }
 
-function bundleFonts () {
-  const bundle = gulp.src(paths.fonts.src)
+function bundleFonts (cb) {
+  gulp.src(paths.fonts.src)
     .pipe(gulp.dest(paths.fonts.dest))
     .pipe(connect.reload())
 
-  return bundle
+  return cb()
 }
 
-function bundleFavicon () {
-  const bundle = gulp.src(paths.favicon.src)
+function bundleFavicon (cb) {
+  gulp.src(paths.favicon.src)
     .pipe(gulp.dest(paths.favicon.dest))
     .pipe(connect.reload())
 
-  return bundle
+  return cb()
 }
 
-function bundleImages () {
-  const bundle = gulp.src(paths.images.src)
+function bundleImages (cb) {
+  gulp.src(paths.images.src)
     .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
 
-  return bundle
+  return cb()
 }
 
-function copyCms () {
-  const bundle = gulp.src(paths.cms.src)
+function copyCms (cb) {
+  gulp.src(paths.cms.src)
     .pipe(gulp.dest(paths.cms.dest))
     .pipe(connect.reload())
 
-  return bundle
+  return cb()
 }
 
 function serve () {
@@ -243,16 +278,21 @@ function watch () {
 
 exports.default = gulp.series(
   clean,
-  gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildCss, buildJs),
-  gulp.parallel(bundleFonts, bundleFavicon, bundleImages, copyCms),
-  gulp.parallel(minifyHtml, minifyCss, minifyJs)
+  gulp.parallel(
+    gulp.series(buildHtml, minifyHtml),
+    gulp.series(lintCss, buildCss, minifyCss),
+    gulp.series(lintJs, buildJs, minifyJs),
+    bundleFonts,
+    bundleFavicon,
+    bundleImages,
+    copyCms
+  )
 )
 
 exports.build = gulp.series(
   clean,
   gulp.parallel(lintCss, lintJs),
-  gulp.parallel(buildCss, buildJs),
+  gulp.parallel(buildHtml, buildCss, buildJs),
   gulp.parallel(bundleFonts, bundleFavicon, bundleImages, copyCms),
   gulp.parallel(minifyHtml, minifyCss, minifyJs)
 )
