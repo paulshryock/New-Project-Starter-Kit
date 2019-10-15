@@ -1,4 +1,9 @@
 /**
+ * Polyfills
+ */
+require('./polyfills/element-matches.js')
+
+/**
  * Globals
  */
 // require('./globals/register-service-worker.js')

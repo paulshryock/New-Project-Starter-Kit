@@ -26,6 +26,7 @@
     "develop": "NODE_ENV='development' npx gulp develop",
     "watch": "NODE_ENV='development' npx eleventy --watch",
     "serve": "NODE_ENV='development' npx gulp serve",
+    "update": "ncu -u && npm update",
     "now-build": "npm start",
     "audit:performance": "node ./_scripts/lighthouse.js",
     "create:content": "node ./_scripts/addContentType.js",

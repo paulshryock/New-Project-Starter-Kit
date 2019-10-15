@@ -48,8 +48,14 @@ slug: robots.txt
 
 # ------------------------
 
-User-agent: *
-Disallow: /
-Disallow: /api/
-Disallow: /404.html
-Disallow: /offline.html
+{%- if env.node_env == 'production' %}
+  # Exclude all robots from part of the server
+  User-agent: *
+  Disallow: /api/
+  Disallow: /404.html
+  Disallow: /offline.html
+{%- else %}
+  # Exclude all robots from the entire server
+  User-agent: *
+  Disallow: /
+{%- endif %}

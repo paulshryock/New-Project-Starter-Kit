@@ -172,7 +172,7 @@ function buildJs (cb) {
     // Webpack configuration
     mode: isProduction ? 'production' : 'development',
     entry: {
-      bundle: './src/_assets/js/index.js'
+      bundle: paths.js.entry
     },
     output: {
       path: path.resolve(__dirname, 'build/js'),
