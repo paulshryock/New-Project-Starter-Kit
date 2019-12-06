@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const merge = require('merge-stream')
 const del = require('del')
 const Eleventy = require('@11ty/eleventy')
 const ssg = new Eleventy()
@@ -19,20 +20,31 @@ const connect = require('gulp-connect')
 const isProduction = process.env.NODE_ENV === 'production'
 
 const paths = {
+  liquid: {
+    src: './src/**/*.liquid'
+  },
+  markdown: {
+    src: './src/**/*.md'
+  },
   html: {
-    src: './src/*.html',
     dest: './build',
     output: './build/**/*.html'
   },
   css: {
+    all: './src/_assets/css/**/*.css',
     src: './src/_assets/css/style.css',
     dest: './build/css',
     output: './build/css/bundle.css'
   },
   js: {
     root: './*.js',
-    entry: './src/_assets/js/index.js',
     src: './src/_assets/js/**/*.js',
+    data: './src/_data/**/*.js',
+    entry: {
+      all: './src/_assets/js/*.js',
+      index: './src/_assets/js/index.js',
+      cms: './src/_assets/js/cms.js'
+    },
     dest: './build/js',
     output: './build/js/bundle.js'
   },
@@ -263,7 +275,10 @@ function serve () {
 }
 
 function watch () {
-  gulp.watch([paths.html.src], buildHtml)
+  gulp.watch([
+    paths.liquid.src,
+    paths.markdown.src
+  ], buildHtml)
   gulp.watch([paths.css.src], buildCss)
   gulp.watch([paths.js.src, paths.js.root], buildJs)
   gulp.watch([paths.fonts.src], bundleFonts)

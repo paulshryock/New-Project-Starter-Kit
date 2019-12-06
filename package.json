@@ -54,6 +54,7 @@
     "gulp-stylelint": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "lighthouse": "^5.5.0",
+    "merge-stream": "^2.0.0",
     "pixrem": "^5.0.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
