@@ -1,0 +1,14 @@
+body {
+  background: $white;
+  color: $black;
+  font: 400 1rem/1.5 $font-stack-primary;
+  margin: 0;
+  overflow-y: auto;
+  /* Hide persistent scrollbar in IE (10/11) and Edge */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  @media (prefers-color-scheme: dark) {
+    background: $black;
+    color: $white;
+  }
+}

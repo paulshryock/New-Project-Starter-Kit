@@ -1,0 +1,6 @@
+hr {
+	background: $light-gray;
+	border: none;
+	height: $border-thin;
+	margin: $space 0;
+}

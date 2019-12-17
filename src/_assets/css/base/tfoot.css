@@ -1,0 +1,8 @@
+tfoot {
+  background: $lighter-gray;
+
+  th,
+  td {
+    border-bottom: none;
+  }
+}

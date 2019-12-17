@@ -1,0 +1,14 @@
+label {
+	display: block;
+	font-size: 0.75em;
+	text-transform: capitalize;
+
+  + * {
+  	margin-top: 0.25rem;
+  }
+
+  /* TODO (paulshryock): Verify this selector isn't nesting */
+  [type="radio"] + & {
+  	padding-left: 0.25em;
+  }
+}

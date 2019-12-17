@@ -1,0 +1,6 @@
+/**
+  * TODO (paulshryock): Move colors to ../settings/colors.css
+  */
+:focus {
+  outline: $border-thin dashed hsl( 220, 100%, 80% );
+}

@@ -1,0 +1,7 @@
+select {
+	border-radius: 0.25em;
+	display: block;
+  font-size: 100%;
+  margin: 0;
+  text-transform: none;
+}

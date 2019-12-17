@@ -1,0 +1,43 @@
+nav {
+	ul,
+	ol {
+		font-size: 0;
+		margin: 0 -0.5rem;
+
+		@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+			display: flex;
+			justify-content: flex-start;
+		}
+	}
+
+	li {
+		display: inline-block;
+		font-size: 1rem;
+	}
+
+	a {
+		padding: 0.5rem;
+		text-decoration: none;
+
+		&:link,
+		&:visited {
+			text-decoration: none;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+
+		&:focus {
+			outline-offset: -0.125em;
+		}
+	}
+
+	button {
+		/* TODO: (paulshryock) Move media queryies to ../settings/media-queries.css */
+		@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+			display: none;
+		}
+	}
+}

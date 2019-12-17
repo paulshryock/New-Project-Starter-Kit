@@ -1,0 +1,15 @@
+form {
+	margin: 2em 0;
+
+  div {
+  	margin: 0 0 $space;
+  }
+
+  div + div {
+  	margin: $space 0;
+  }
+}
+
+[aria-invalid] {
+	border-color: red;
+}

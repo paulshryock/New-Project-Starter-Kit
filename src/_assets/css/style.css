@@ -1,25 +1,17 @@
-@import './reset.css';
-@import './elements/*.css';
-@import './components/*.css';
-
 /**
-  * Media Queries
+  * Settings: Global variables, config switches
+  * Tools: Default mixins and functions
+  * Generic: Ground-zero styles (Normalize.css, resets, box-sizing)
+  * Base: Unclassed HTML elements (type selectors)
+  * Objects: Cosmetic-free design patterns
+  * Components: Designed components, chunks of UI
+  * Trumps: Helpers and overrides
   */
 
-/* Default: Mobile */
-
-@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
-
-}
-
-@media screen and (min-width: 56.25rem) { /* Tablet Landscape / 56.25rem / 900px */
-
-}
-
-@media screen and (min-width: 75rem) { /* Desktop / 75rem / 1200px */
-
-}
-
-@media screen and (min-width: 112.5rem) { /* Big Desktop / 112.5rem / 1800px */
-
-}
+@import './settings/*.css';
+/*@import './tools/*.css';*/
+@import './generic/*.css';
+@import './base/*.css';
+/*@import './objects/*.css';*/
+@import './components/*.css';
+/*@import './trumps/*.css';*/

@@ -1,0 +1,11 @@
+th {
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 0.5em;
+  text-align: left;
+
+  /* TODO: (paulshryock) Move media queryies to ../settings/media-queries.css */
+  @media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+    padding: 1em;
+  }
+}

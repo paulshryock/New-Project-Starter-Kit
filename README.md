@@ -1,6 +1,7 @@
 # New Project Starter Kit
 
-[![Netlify Status][deploy-status]](deploys)
+[![Netlify Status][deploy-status]][deploys]
+[![JavaScript Style Guide][standard-badge)][standard]
 
 Fork this repository to start a new project with Eleventy, Netlify CMS, Gulp, Babel, PostCSS, and the following workflow: linting, Sass and modern CSS transpiling, ES2015+ compiling, concatenation, minification, beautification, source maps, bundling fonts, images, and favicons, serving files, watching for changes, and live reloading. Includes common accessible HTML, CSS, and JS components, and continuous deployment configurations for Netlify and Zeit Now.
 
@@ -48,6 +49,8 @@ If you'd like to contribute, please read the [Code of Conduct][code-of-conduct] 
 
 [deploy-status]: https://api.netlify.com/api/v1/badges/a1031bfd-6642-45fe-9547-2438c4bc0de4/deploy-status
 [deploys]: https://app.netlify.com/sites/npsk/deploys
+[standard-badge]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
+[standard]: https://standardjs.com
 [license]: https://firstdonoharm.dev/
 [pkg]: package.json
 [npsk]: https://newprojectstarterkit.com/

@@ -1,0 +1,11 @@
+/**
+  * Import web fonts
+  */
+/*@import './fonts/*.css';*/
+
+/**
+  * Declare font stacks
+  */
+$font-stack-primary: sans-serif;
+$font-stack-secondary: serif;
+$font-stack-code: monospace;

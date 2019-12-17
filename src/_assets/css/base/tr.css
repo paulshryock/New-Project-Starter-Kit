@@ -1,0 +1,5 @@
+tr {
+  &:nth-of-type(even) {
+    background: $darkest-gray;
+  }
+}

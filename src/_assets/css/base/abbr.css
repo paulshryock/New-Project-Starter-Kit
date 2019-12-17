@@ -1,0 +1,17 @@
+abbr {
+	font-feature-settings: "kern", "liga", "clig", "calt", "c2sc", "smcp";
+	letter-spacing: 0.01em;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+
+	@supports (font-variant-caps: all-small-caps) {
+		font-variant-caps: all-small-caps;
+		font-feature-settings: normal;
+	}
+
+	&[title] {
+		border-bottom: none;
+		text-decoration: underline;
+		text-decoration: underline dotted;
+	}
+}

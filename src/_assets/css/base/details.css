@@ -1,0 +1,15 @@
+details {
+	border-color: $light-gray;
+	border-radius: 0.25em;
+	display: block;
+	margin: 2em 0;
+
+  &[open] {
+  	background: $white;
+  	padding: $space;
+  }
+
+  &:not([open]) summary {
+  	padding: $space;
+  }
+}

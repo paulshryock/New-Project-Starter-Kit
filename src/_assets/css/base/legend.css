@@ -1,0 +1,9 @@
+legend {
+  display: table;
+	font-weight: 700;
+  margin-bottom: 0.75em;
+  max-width: 100%;
+  padding: 0;
+	text-transform: capitalize;
+  white-space: normal;
+}

@@ -1,0 +1,10 @@
+summary {
+	cursor: pointer;
+	display: list-item;
+  /*list-style-image: url(right-arrow.svg);*/
+
+  /*&::-webkit-details-marker {
+    background: url(right-arrow.svg);
+    color: transparent;
+  }*/
+}

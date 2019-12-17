@@ -3,7 +3,16 @@
   "description": "Fork this repository to start a new project with Eleventy, Netlify CMS, Gulp, Babel, PostCSS, and the following workflow: linting, Sass and modern CSS transpiling, ES2015+ compiling, concatenation, minification, beautification, source maps, bundling fonts, images, and favicons, serving files, watching for changes, and live reloading. Includes common accessible HTML, CSS, and JS components, and deployment configurations for Netlify and Zeit Now.",
   "keywords": [
     "eleventy",
-    "eleventy-starter"
+    "gulp",
+    "html",
+    "liquid",
+    "css",
+    "postcss",
+    "sass",
+    "bem",
+    "itcss",
+    "javascript",
+    "webpack"
   ],
   "version": "0.27.0",
   "license": "Hippocratic License v1.0",
@@ -22,10 +31,10 @@
   },
   "scripts": {
     "start": "npm run build",
-    "build": "NODE_ENV='production' npx gulp build",
-    "develop": "NODE_ENV='development' npx gulp develop",
-    "watch": "NODE_ENV='development' npx eleventy --watch",
-    "serve": "NODE_ENV='development' npx gulp serve",
+    "develop": "NODE_ENV='development' gulp develop",
+    "serve": "NODE_ENV='development' gulp serve",
+    "build": "NODE_ENV='production' gulp",
+    "production": "NODE_ENV='production' gulp production",
     "update": "ncu -u && npm update",
     "now-build": "npm start",
     "audit:performance": "node ./_scripts/lighthouse.js",
