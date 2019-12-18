@@ -8,7 +8,7 @@ body {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 
   @media (prefers-color-scheme: dark) {
-    background: $black;
+    background: $darkest-gray;
     color: $white;
   }
 }
