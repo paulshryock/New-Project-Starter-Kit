@@ -10,3 +10,9 @@ $light-gray: hsl( 0, 0%, 70% );
 $lighter-gray: hsl( 0, 0%, 80% );
 $lightest-gray: hsl( 0, 0%, 90% );
 $white: hsl( 0, 0%, 100% );
+
+$medium-blue: hsl( 240, 100%, 50% );
+$blue: $medium-blue;
+$light-medium-blue: hsl( 220, 100%, 50% );
+$light-blue: hsl( 220, 100%, 70% );
+$lighter-blue: hsl( 220, 100%, 80% );

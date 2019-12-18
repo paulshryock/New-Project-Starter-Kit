@@ -2,20 +2,17 @@ a {
   background-color: transparent;
 	transition: color $speed-fast ease;
 
-  /**
-    * TODO (paulshryock): Move colors to ../settings/colors.css
-    */
   &:link,
   &:visited {
-  	color: hsl( 240, 100%, 50% );
+  	color: $medium-blue;
   }
 
   &:hover,
   &:focus {
-  	color: hsl( 220, 100%, 50% );
+  	color: $light-medium-blue;
   }
 
   &:active {
-  	color: hsl( 220, 100%, 70% );
+  	color: $light-blue;
   }
 }
