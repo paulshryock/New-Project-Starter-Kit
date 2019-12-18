@@ -43,6 +43,24 @@ Then find and replace the package name (`New-Project-Starter-Kit`) and author na
 
 <!-- [Project documentation][docs] files are in the `_docs` directory. -->
 
+## ASPIRE
+
+Great websites should [aspire][aspire] to be:
+
+- **Accessible** to folks with varying cognitive and physical abilities and disabilities
+- **Secure** and reliable for storing, manipulating, and transferring information
+- **Performant** on average devices and in constrained or unreliable network conditions
+- **Inclusive** to diverse audiences and produced by diverse teams to create better experiences
+- **Responsive** in adapting the user interface contextually to any screen
+- **Ethical** in how users’ preferences and data are handled
+
+
+## Ideals
+
+1. We will prefer server-generated HTML
+2. The HTML on a page can be swapped out and replaced on a whim
+3. We will favor the use of native Browser APIs
+
 ## Contributing
 
 If you'd like to contribute, please read the [Code of Conduct][code-of-conduct] and [Contributing instructions][contributing], then fork the repository and use a feature branch. Pull requests are welcome.
@@ -56,5 +74,6 @@ If you'd like to contribute, please read the [Code of Conduct][code-of-conduct] 
 [npsk]: https://newprojectstarterkit.com/
 [node-download]: https://nodejs.org/en/download/
 [docs]: https://docs.newprojectstarterkit.com/
+[aspire]: https://www.filamentgroup.com/lab/aspire/
 [code-of-conduct]: blob/master/CODE_OF_CONDUCT.md
 [contributing]: blob/master/CONTRIBUTING.md
