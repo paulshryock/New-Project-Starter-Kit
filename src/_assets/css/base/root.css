@@ -10,20 +10,19 @@
 		font-feature-settings: normal;
 	}
 
-	/* TODO: (paulshryock) Move media queryies to ../settings/media-queries.css */
-	@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+	@include mq-600 {
 		font-size: calc( 1.125 * 100% ); /* 1.125 * 16px = 18px base rem unit */
 	}
 
-	@media screen and (min-width: 56.25rem) { /* Tablet Landscape / 56.25rem / 900px */
+	@include mq-900 {
 		font-size: calc( 1.25 * 100% ); /* 1.25 * 16px = 20px base rem unit */
 	}
 
-	@media screen and (min-width: 75rem) { /* Desktop / 75rem / 1200px */
+	@include mq-1200 {
 		font-size: calc( 1.375 * 100% ); /* 1.375 * 16px = 22px base rem unit */
 	}
 
-	@media screen and (min-width: 112.5rem) { /* Big Desktop / 112.5rem / 1800px */
+	@include mq-1800 {
 		font-size: calc( 1.5 * 100% ); /* 1.5 * 16px = 24px base rem unit */
 	}
 }

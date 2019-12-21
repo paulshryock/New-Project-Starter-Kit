@@ -1,0 +1,23 @@
+@mixin mq-600() {
+  @media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+    @content;
+  }
+}
+
+@mixin mq-900() {
+  @media screen and (min-width: 56.25rem) { /* Tablet Landscape / 56.25rem / 900px */
+    @content;
+  }
+}
+
+@mixin mq-1200() {
+  @media screen and (min-width: 75rem) { /* Desktop / 75rem / 1200px */
+    @content;
+  }
+}
+
+@mixin mq-1800() {
+  @media screen and (min-width: 112.5rem) { /* Big Desktop / 112.5rem / 1800px */
+    @content;
+  }
+}

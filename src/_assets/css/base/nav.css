@@ -4,7 +4,7 @@ nav {
 		font-size: 0;
 		margin: 0 -0.5rem;
 
-		@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+		@include mq-600 {
 			display: flex;
 			justify-content: flex-start;
 		}
@@ -35,8 +35,7 @@ nav {
 	}
 
 	button {
-		/* TODO: (paulshryock) Move media queryies to ../settings/media-queries.css */
-		@media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+		@include mq-600 {
 			display: none;
 		}
 	}

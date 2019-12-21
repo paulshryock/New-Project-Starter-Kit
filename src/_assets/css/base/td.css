@@ -2,8 +2,7 @@ td {
   line-height: 1.3;
   padding: 0.5em;
 
-  /* TODO: (paulshryock) Move media queryies to ../settings/media-queries.css */
-  @media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+  @include mq-600 {
     padding: 1em;
   }
 }
