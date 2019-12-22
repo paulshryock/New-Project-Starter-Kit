@@ -22,7 +22,6 @@ navigation.addNavButton = function () {
   const hamburger2 = span.cloneNode()
   const hamburger3 = span.cloneNode()
 
-  // TODO (paulshryock) Replace textContent with innerText?
   span.textContent = 'Menu'
   span.classList.add('screen-reader-text')
   hamburger1.classList.add('hamburger', 'hamburger__1')
@@ -84,7 +83,6 @@ navigation.showNavMenu = function () {
 navigation.setNavButtonText = function (text) {
   const button = document.querySelector('.navigation button span')
 
-  // TODO (paulshryock) Replace textContent with innerText?
   if (button) {
     button.textContent = text
   }
