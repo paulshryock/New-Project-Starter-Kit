@@ -91,6 +91,9 @@ function css () {
     config: {
       extends: ['stylelint-config-standard'],
       rules: {
+        'at-rule-no-unknown': [true, {
+          ignoreAtRules: ['include', 'mixin']
+        }],
         'no-descending-specificity': null,
         'selector-pseudo-class-no-unknown': null
       }
