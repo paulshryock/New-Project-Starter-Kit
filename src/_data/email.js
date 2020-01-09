@@ -1,5 +1,4 @@
 const email = {
-  platform: 'email',
   title: 'Email title',
   description: 'Email description',
   year: new Date().getFullYear(),

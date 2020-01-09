@@ -1,5 +1,4 @@
 const site = {
-  platform: 'site',
   title: 'Site title',
   shortName: 'Short name',
   description: 'Site description',
