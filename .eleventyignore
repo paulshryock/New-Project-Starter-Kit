@@ -1,0 +1,7 @@
+# If we're hosting on Netlify, _headers will block robots,
+# so we should ignore robots.txt
+src/files/robots.html
+
+# If we're not hosting on Netlify, _headers should be ignored,
+# 
+# src/files/headers.html

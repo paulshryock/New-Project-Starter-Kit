@@ -3,6 +3,7 @@ slug: robots.txt
 ---
 # www.robotstxt.org/
 
+{%- if env.node_env != 'production' %}
 # To exclude all robots from the entire server
 # User-agent: *
 # Disallow: /
@@ -47,15 +48,16 @@ slug: robots.txt
 # Disallow: /~joe/bar.html
 
 # ------------------------
+{%- endif %}
 
 {%- if env.node_env == 'production' %}
-  # Exclude all robots from part of the server
-  User-agent: *
-  Disallow: /api/
-  Disallow: /404.html
-  Disallow: /offline.html
+# Exclude all robots from part of the server
+User-agent: *
+Disallow: /api/
+Disallow: /404.html
+Disallow: /offline.html
 {%- else %}
-  # Exclude all robots from the entire server
-  User-agent: *
-  Disallow: /
+# Exclude all robots from the entire server
+User-agent: *
+Disallow: /
 {%- endif %}
