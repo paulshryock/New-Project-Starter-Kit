@@ -22,7 +22,7 @@ addContent.init = () => {
   * Get parameters
   */
 addContent.getParameters = () => {
-  rl.question(`What kind of content would you like to create? (singular, lowercase) `, (type) => {
+  rl.question('What kind of content would you like to create? (singular, lowercase) ', (type) => {
     rl.question(`What is the plural form of ${type}? `, (typePlural) => {
       rl.question(`Should ${typePlural} live in a subdirectory? (true/false) `, (hasSubdirectory) => {
         rl.question(`Do you want to create a new ${type} layout? (true/false) `, (addLayout) => {
