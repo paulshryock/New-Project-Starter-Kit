@@ -20,6 +20,7 @@
 ul[class],
 ol[class] {
   list-style: none;
+  padding: 0;
 }
 
 /* Remove default margin */
@@ -29,9 +30,7 @@ h2,
 h3,
 h4,
 p,
-li,
 figure,
-figcaption,
 blockquote,
 dl,
 dd {
@@ -68,6 +67,12 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+input,
+textarea {
+  letter-spacing: inherit;
+  word-spacing: inherit;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
