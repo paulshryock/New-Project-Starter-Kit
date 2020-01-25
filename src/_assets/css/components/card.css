@@ -3,7 +3,7 @@
   grid-template-columns: repeat( auto-fit, minmax( 15rem, 1fr ) );
   grid-gap: 2rem;
 
-  @media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+  @mixin mq-600 {
 	  grid-gap: 1rem;
 	}
 
@@ -13,13 +13,13 @@
 }
 
 .card {
-	border-color: hsl( 0, 0%, 70% );
+	border-color: $light-gray;
 	border-radius: 1em;
   display: flex;
   flex-direction: column;
 	margin: 2rem 0.5rem;
 
-  @media screen and (min-width: 37.5rem) { /* Tablet Portrait / 37.5rem / 600px */
+  @mixin mq-600 {
 		margin: 1rem 0.5rem;
   }
 
@@ -28,12 +28,12 @@
   }
 
   &:hover {
-  	box-shadow: 0 0 0.125rem 0.125rem hsl( 0, 0%, 30% );
+  	box-shadow: 0 0 0.125rem 0.125rem $dark-gray;
   }
 
   /* Isolate selector */
   &:focus-within {
-  	box-shadow: 0 0 0.125rem 0.125rem hsl( 0, 0%, 30% );
+  	box-shadow: 0 0 0.125rem 0.125rem $dark-gray;
   }
 
   img {
@@ -76,7 +76,7 @@
   }
 
   footer {
-  	font-family: monospace; /* Generic */
+  	font-family: $font-stack-code;
   	font-size: 85%;
   }
 
