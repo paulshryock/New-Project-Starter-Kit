@@ -5,10 +5,7 @@
       {%- if item.slug == page.slug %}
       {% assign isActive = "class='is-active'" %}
       {%- endif %}
-      {%- if item.external == true %}
-      {% assign linkTarget = "target='_blank'" %}
-      {%- endif %}
-      <li {{ isActive }}><a href="/{{ item.slug }}" {{ linkTarget }}>{{ item.title }}</a></li>
+      <li {{ isActive }}><a href="/{{ item.slug }}">{{ item.title }}</a></li>
       {%- endfor %}
     </ul>
   </nav><!-- .navigation -->

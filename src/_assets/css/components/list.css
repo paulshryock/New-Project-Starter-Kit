@@ -1,43 +1,39 @@
-.list_unordered,
-.list_bulleted,
-.list_ordered,
-.list_numbered {
-	padding: 0 0 0 2em;
-}
+.list {
 
-.list_unordered,
-.list_bulleted {
-	list-style: disc;
-}
+  &_unordered,
+  &_bulleted,
+  &_ordered,
+  &_numbered {
+  	padding: 0 0 0 2em;
 
-.list_unordered ul,
-.list_bulleted ul {
-	list-style: square;
-}
+    li {
+      display: list-item;
+    }
+  }
 
-.list_unordered ul ul,
-.list_bulleted ul ul {
-	list-style: circle;
-}
+  &_unordered,
+  &_bulleted {
+  	list-style: disc;
 
-.list_ordered,
-.list_numbered {
-	list-style: decimal;
-}
+    ul {
+    	list-style: square;
 
-.list_ordered ol,
-.list_numbered ol {
-	list-style: lower-alpha;
-}
+      ul {
+      	list-style: circle;
+      }
+    }
+  }
 
-.list_ordered ol ol,
-.list_numbered ol ol {
-	list-style: lower-roman;
-}
+  &_ordered,
+  &_numbered {
+  	list-style: decimal;
 
-.list_unordered li,
-.list_bulleted li,
-.list_ordered li,
-.list_numbered li {
-	display: list-item;
+    ol {
+    	list-style: lower-alpha;
+
+      ol {
+      	list-style: lower-roman;
+      }
+    }
+  }
 }

@@ -5,14 +5,26 @@ a {
   &:link,
   &:visited {
   	color: $medium-blue;
+
+    @media (prefers-color-scheme: dark) {
+      color: $light-blue;
+    }
   }
 
   &:hover,
   &:focus {
   	color: $light-medium-blue;
+
+    @media (prefers-color-scheme: dark) {
+      color: $lighter-blue;
+    }
   }
 
   &:active {
   	color: $light-blue;
+
+    @media (prefers-color-scheme: dark) {
+      color: $lightest-blue;
+    }
   }
 }
