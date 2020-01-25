@@ -9,61 +9,61 @@
 	text-decoration: none;
 	text-transform: capitalize;
 	transition: box-shadow 200ms ease;
-}
 
-.button:link,
-.button:visited {
-	box-shadow: 0 0.125rem 0 0 hsl( 240, 25%, 90% );
-	color: hsl( 0, 0%, 100% );
-}
+	&:link,
+	&:visited {
+		box-shadow: 0 0.125rem 0 0 hsl( 240, 25%, 90% );
+		color: hsl( 0, 0%, 100% );
+	}
 
-.button:hover,
-.button:focus {
-	background: hsl( 220, 100%, 50% );
-	box-shadow: 0 0.125rem 0 0 hsl( 240, 25%, 80% );
-	color: hsl( 0, 0%, 100% );
-}
+	&:hover,
+	&:focus {
+		background: hsl( 220, 100%, 50% );
+		box-shadow: 0 0.125rem 0 0 hsl( 240, 25%, 80% );
+		color: hsl( 0, 0%, 100% );
+	}
 
-.button:active {
-	background: hsl( 220, 100%, 60% );
-	box-shadow: none;
-	color: hsl( 0, 0%, 100% );
-}
+	&:active {
+		background: hsl( 220, 100%, 60% );
+		box-shadow: none;
+		color: hsl( 0, 0%, 100% );
+	}
 
-.button[disabled] {
-	background: hsl( 240, 50%, 80% );
-	box-shadow: none;
-	color: hsl( 0, 0%, 100% );
-	cursor: auto;
-}
+	&[disabled] {
+		background: hsl( 240, 50%, 80% );
+		box-shadow: none;
+		color: hsl( 0, 0%, 100% );
+		cursor: auto;
+	}
 
-.button_ghost {
-	background: transparent;
-	border: 0.125rem solid;
-	color: hsl( 240, 100%, 50% );
-	padding: 0.125em 0.375em;
-}
+	&__ghost {
+		background: transparent;
+		border: 0.125rem solid;
+		color: hsl( 240, 100%, 50% );
+		padding: 0.125em 0.375em;
 
-.button_ghost:link,
-.button_ghost:visited {
-	background: transparent;
-	border: 0.125rem solid;
-	color: hsl( 240, 100%, 50% );
-}
+		&:link,
+		&:visited {
+			background: transparent;
+			border: 0.125rem solid;
+			color: hsl( 240, 100%, 50% );
+		}
 
-.button_ghost:hover,
-.button_ghost:focus {
-	background: transparent;
-	color: hsl( 220, 100%, 50% );
-}
+		&:hover,
+		&:focus {
+			background: transparent;
+			color: hsl( 220, 100%, 50% );
+		}
 
-.button_ghost:active {
-	background: transparent;
-	color: hsl( 220, 100%, 60% );
-}
+		&:active {
+			background: transparent;
+			color: hsl( 220, 100%, 60% );
+		}
 
-.button_ghost[disabled] {
-	background: transparent;
-	color: hsl( 240, 50%, 80% );
-	cursor: auto;
+		&[disabled] {
+			background: transparent;
+			color: hsl( 240, 50%, 80% );
+			cursor: auto;
+		}
+	}
 }
