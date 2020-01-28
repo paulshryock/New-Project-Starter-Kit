@@ -63,10 +63,10 @@ const paths = {
   }
 }
 
-function clean (cb) {
-  del([paths.html.dest])
-
-  return cb()
+function clean () {
+  return Promise.all([
+    del([paths.html.dest])
+  ])
 }
 
 async function html () {
