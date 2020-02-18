@@ -10,6 +10,7 @@ _logs/
 build/
 dist/
 temp/
+public/
 
 # OS files
 .DS_Store

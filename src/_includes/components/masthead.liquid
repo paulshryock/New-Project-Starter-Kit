@@ -1,0 +1,10 @@
+{%- if site.title and site.description %}
+
+{%- if slug == '.' %}{%- assign el = 'h1' %}
+{%- else %}{%- assign el = 'p' %}{%- endif %}
+<header role="banner" class="masthead">
+  <{{ el }} class="masthead__title">{{ site.title }}</{{ el }}>
+  <p class="masthead__description">{{ site.description }}</p>
+</header>
+
+{%- endif %}

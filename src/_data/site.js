@@ -1,7 +1,6 @@
 const site = {
-  title: 'Site title',
-  shortName: 'Short name',
-  description: 'Site description',
+  title: 'Fair Housing Pledge',
+  description: 'Take the pledge to stand up for Fair Housing',
   year: new Date().getFullYear()
 }
 

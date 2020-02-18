@@ -1,10 +1,5 @@
 {
-  "auth": {
-    "username": "",
-    "password": ""
-  },
   "node": {
-    "environment": "development"
-  },
-  "polyfill_js": ""
+    "environment": ""
+  }
 }

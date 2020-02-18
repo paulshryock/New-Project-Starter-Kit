@@ -1,62 +1,64 @@
 ---
 layout: global
 ---
-<article class="post">
-  <header class="post__header">
-    <h2 class="post__title">{{ title }}</h2>
-    {% if description %}
-    <p class="post__meta">{{ description}}</p>
-    {% endif %}
-  </header><!-- .post__header -->
-  <div class="post__content">
-    {{ content }}
-  </div><!-- .post__content -->
-</article><!-- .post -->
 
-{%- if collections.articles %}
-<section class="more-content">
-  {%- for post in collections.pages %}
-  {%- if post.data.slug == 'articles' %}
-  <h3>{{ post.data.title }}</h3>
-  <p class="post__meta">{{ post.data.description }}</p>
-  {%- endif %}
-  {%- endfor %}
-  <ul class="posts">
-    {%- for post in collections.articles %}
-    <li class="post"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-    {%- endfor %}
-  </ul>
-</section>
-{%- endif %}
 
-{%- if collections.projects %}
-<section class="more-content">
-  {%- for post in collections.pages %}
-  {%- if post.data.slug == 'portfolio' %}
-  <h3>{{ post.data.title }}</h3>
-  <p class="post__meta">{{ post.data.description }}</p>
-  {%- endif %}
-  {%- endfor %}
-  <ul class="posts">
-    {%- for post in collections.projects %}
-    <li class="post"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-    {%- endfor %}
-  </ul>
-</section>
-{%- endif %}
+<form class="form" action="" method="post">
+  <fieldset class="form__fieldset">
+    <legend class="form__legend">Form</legend>
 
-{%- if collections.testimonials %}
-<section class="more-content">
-  {%- for post in collections.pages %}
-  {%- if post.data.slug == 'testimonials' %}
-  <h3>{{ post.data.title }}</h3>
-  <p class="post__meta">{{ post.data.description }}</p>
-  {%- endif %}
-  {%- endfor %}
-  <ul class="posts">
-    {%- for post in collections.testimonials %}
-    <li class="post"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-    {%- endfor %}
-  </ul>
-</section>
-{%- endif %}
+    <div class="form__row">
+      <label for="firstName" class="form__label">First Name</label>
+      <input type="text" name="firstName" id="firstName" class="form__input" value="" autocorrect="off" required />
+    </div>
+    <div class="form__row">
+      <label for="lastName" class="form__label">Last Name</label>
+      <input type="text" name="lastName" id="lastName" class="form__input" value="" autocorrect="off" required />
+    </div>
+    <div class="form__row">
+      <label for="email" class="form__label">Email</label>
+      <input type="email" name="email" id="email" autocapitalize="none" autocorrect="off" class="form__input" required />
+    </div>
+
+    Brand
+
+    <div class="form__row">
+      <label class="form__label" for="state">State</label>
+      <div class="form__select">
+        <select name="state" id="state" class="c-select-field__menu">
+          <option>Please select an option</option>
+          <option value="Red">Red</option>
+          <option value="Orange">Orange</option>
+          <option value="Yellow">Yellow</option>
+          <option value="Green">Green</option>
+          <option value="Blue">Blue</option>
+          <option value="Purple">Purple</option>
+        </select>
+        <span class="c-select-field__decor" aria-hidden="true" role="presentation">&dtrif;</span>
+      </div>
+    </div>
+
+    Company Name
+    Event
+
+    <div class="form__row form__checkbox">
+      <input type="checkbox" name="agreeToTerms" id="agreeToTerms" class="form__input_checkbox" required />
+      <label for="agreeToTerms" class="form__label_decor" aria-hidden="true" role="presentation"></label>
+      <label for="agreeToTerms" class="form__label_checkbox">Receive a copy of the receipt in your inbox?</label>
+    </div>
+    <div class="form__row">
+      <button class="c-button" type="submit">Submit</button>    
+    </div>
+  </fieldset>
+</form>
+
+name: {
+  first: { type: String, trim: true, required: true },
+  last: { type: String, trim: true, required: true }
+},
+email: { type: String, trim: true, required: true, unique: true, uniqueCaseInsensitive: true },
+brand: { type: String, trim: true },
+state: { type: String, trim: true },
+company: { type: String, trim: true },
+date: { type: Date, default: Date.now },
+event: { type: String, trim: true }

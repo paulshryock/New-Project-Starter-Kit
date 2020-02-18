@@ -6,20 +6,14 @@
   {% include meta/ie %}
   {% include meta/page %}
   {% include meta/robots %}
-  {% include meta/pwa %}
-  {% include meta/icons %}
-  {% include meta/colors %}
   {% include globals/styles %}
-  {% include globals/cms %}
 </head>
 <body class="site {% if contentType %}{{ contentType }} {{ contentType }}-{{ page.fileSlug }}{% endif %}">
-  {% include components/skip-link %}
-  {% include globals/site-header %}
-  {% include components/navigation %}
-  <main id="content" class="site-main">
+  {% include components/masthead %}
+  <main id="content" class="site-main container">
     {{ content }}
   </main><!-- .site-main -->
-  {% include globals/site-footer %}
+  {% include components/colophon %}
   {% include globals/scripts %}
 </body>
 </html>
