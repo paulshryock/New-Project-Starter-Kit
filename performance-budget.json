@@ -1,0 +1,14 @@
+[
+  {
+    "resourceCounts": [
+      { "resourceType": "third-party", "budget": 10 }
+    ],
+    "resourceSizes": [
+      { "resourceType": "document", "budget": 7 },
+      { "resourceType": "stylesheet", "budget": 7 },
+      { "resourceType": "font", "budget": 5 },
+      { "resourceType": "image", "budget": 61 },
+      { "resourceType": "script", "budget": 16 }
+    ]
+  }
+]

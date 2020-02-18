@@ -1,5 +1,13 @@
+{%- unless env.polyfill_js == false %}
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script>
+{% endunless %}
+
 {%- assign file = 'bundle' %}
 {%- if env.node_env == 'production' %}
 {%- assign file = 'bundle.min' %}
 {%- endif %}
     <script src="/js/{{ file }}.js" async></script>
+
+{%- if slug == '.' %}
+		<script src="/js/cms.js" async></script>
+{%- endif %}

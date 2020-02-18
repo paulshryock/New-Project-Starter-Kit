@@ -1,17 +1,35 @@
 {
-  "name": "fair-housing-pledge",
+  "name": "npsk",
+  "description": "Fork this repository to start a new project with Eleventy, Netlify CMS, Gulp, Babel, PostCSS, and the following workflow: linting, Sass and modern CSS transpiling, ES2015+ compiling, concatenation, minification, beautification, source maps, bundling fonts, images, and favicons, serving files, watching for changes, and live reloading. Includes common accessible HTML, CSS, and JS components, and deployment configurations for Netlify and Zeit Now.",
+  "keywords": [
+    "eleventy",
+    "gulp",
+    "html",
+    "liquid",
+    "css",
+    "postcss",
+    "sass",
+    "bem",
+    "itcss",
+    "javascript",
+    "es6",
+    "babel",
+    "webpack"
+  ],
+  "version": "0.28.0",
+  "license": "Hippocratic License v1.0",
   "author": {
     "name": "Paul Shryock",
     "email": "paul@pshry.com",
     "url": "https://pshry.com/"
   },
-  "homepage": "https://fairhousingpledge.com",
+  "homepage": "https://newprojectstarterkit.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Visual-Communications/fair-housing-pledge.git"
+    "url": "git+https://github.com/paulshryock/New-Project-Starter-Kit.git"
   },
   "bugs": {
-    "url": "https://github.com/Visual-Communications/fair-housing-pledge/issues"
+    "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
   },
   "scripts": {
     "start": "npm run build",
@@ -19,7 +37,11 @@
     "serve": "NODE_ENV='development' gulp serve",
     "build": "NODE_ENV='production' gulp",
     "production": "NODE_ENV='production' gulp production",
-    "update": "ncu -u && npm update"
+    "update": "ncu -u && npm update",
+    "now-build": "npm start",
+    "audit:performance": "node ./_scripts/lighthouse.js",
+    "create:content": "node ./_scripts/addContentType.js",
+    "update:gitignore": "node ./_scripts/ignorePlatforms.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
@@ -27,6 +49,7 @@
     "@babel/preset-env": "^7.8.3",
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
+    "chrome-launcher": "^0.12.0",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -54,7 +77,10 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "config": "^3.2.5"
+    "@sendgrid/mail": "^6.5.1",
+    "config": "^3.2.5",
+    "debug": "^4.1.1",
+    "papaparse": "^5.1.1"
   },
   "browserslist": [
     "last 3 versions",

@@ -1,0 +1,19 @@
+			{%- if pagination.items %}
+			<!--
+				-- Accessible Pagination
+				-- 
+				-- http://www.a11ymatters.com/pattern/pagination/
+				-->
+			<!-- TODO: Test and QA with post pagination -->
+			<nav role="navigation" aria-label="Pagination Navigation" class="pagination">
+				<ol>
+					<li><a href="{{ pagination.firstPageLink }}" aria-current="true"><<</a></li>
+					<li><a href="{{ pagination.previousPageLink }}" aria-current="true"><</a></li>
+					{%- for item in pagination.items %}
+					<li><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="true"{% endif %}>{{ item }}</a></li>
+					{%- endfor %}
+					<li><a href="{{ pagination.nextPageLink }}">></a></li>
+					<li><a href="{{ pagination.lastPageLink }}">>></a></li>
+				</ol>
+			</nav><!-- .pagination -->
+			{%- endif %}

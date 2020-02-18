@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "alias": ["newprojectstarterkit.com"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "env": {
+    "NODE_ENV": "@node_env"
+  },
+  "github": {
+    "silent": true
+  }
+}

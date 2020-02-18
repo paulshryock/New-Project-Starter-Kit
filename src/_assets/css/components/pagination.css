@@ -1,0 +1,27 @@
+.pagination {
+	margin: 4em 0;
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 auto;
+
+		@media screen and (min-width: 20.3125rem) { /* 20.3125rem / 325px */
+			flex-wrap: unset;
+		}
+	}
+
+	li {
+		display: inline-flex;
+	}
+
+	a {
+		border: 0.0625rem solid;
+		margin: 0 0.125rem;
+
+		&[aria-current="true"] {
+			border: none;
+		}
+	}
+}

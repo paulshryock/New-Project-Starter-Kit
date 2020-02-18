@@ -1,0 +1,79 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+  accept_roles: #optional - accepts all users if left out
+    - admin
+    - editor
+publish_mode: editorial_workflow # Allow drafts
+media_folder: "src/_assets/img/uploads" # Media files will be stored in the repo under src/_assets/img/uploads
+public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /img/uploads
+site_url: https://newprojectstarterkit.com
+# display_url: https://newprojectstarterkit.com
+# logo_url: https://newprojectstarterkit.com/img/logo.svg
+# show_preview_links: false
+slug:
+  encoding: "ascii"
+  clean_accents: true
+editor:
+  preview: false
+
+collections:
+  - name: "pages" # Used in routes, e.g., /cms/collections/pages
+    label: "Pages" # Used in the UI
+    label_singular: "Page" # singular label for certain elements in the editor
+    description: "Site pages are a static core part of the website, are not timely in nature (no publish date or author) and are not a single piece of content (i.e., an article, a project, a testimonial, etc.). Common examples of pages are 'Home', 'About' or 'Contact'."
+    folder: "src/pages" # The path to the folder where the items are stored
+    create: true # Allow users to create new items in this collection
+    delete: true # Allow users to delete items in this collection
+    format: "frontmatter"
+    slug: "{{ slug }}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
+  - name: "articles" # Used in routes, e.g., /cms/collections/articles
+    label: "Articles" # Used in the UI
+    label_singular: "Article" # singular label for certain elements in the editor
+    description: "Articles are individual pieces of content about a topic which are timely in nature (with a publish date and an author), can be updated over time, and are not a static core part of the website."
+    folder: "src/articles" # The path to the folder where the items are stored
+    create: true # Allow users to create new items in this collection
+    delete: true # Allow users to delete items in this collection
+    format: "frontmatter"
+    slug: "{{ slug }}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+  - name: "projects" # Used in routes, e.g., /cms/collections/projects
+    label: "Projects" # Used in the UI
+    label_singular: "Project" # singular label for certain elements in the editor
+    description: "Projects are work samples."
+    folder: "src/projects" # The path to the folder where the items are stored
+    create: true # Allow users to create new items in this collection
+    delete: true # Allow users to delete items in this collection
+    format: "frontmatter"
+    slug: "{{ slug }}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+  - name: "testimonials" # Used in routes, e.g., /cms/collections/testimonials
+    label: "Testimonials" # Used in the UI
+    label_singular: "Testimonial" # singular label for certain elements in the editor
+    description: "Testimonials are positive reviews or quotes from clients."
+    folder: "src/testimonials" # The path to the folder where the items are stored
+    create: true # Allow users to create new items in this collection
+    delete: true # Allow users to delete items in this collection
+    format: "frontmatter"
+    slug: "{{ slug }}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}

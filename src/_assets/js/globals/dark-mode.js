@@ -1,1 +1,0 @@
-const hasDarkMode = window.matchMedia('(prefers-color-scheme)').media !== 'not all'

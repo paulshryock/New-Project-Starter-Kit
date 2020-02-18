@@ -1,0 +1,12 @@
+.skip-link {
+	background: $white;
+	border-radius: 0.25em;
+	padding: 0.25rem;
+	position: absolute;
+	top: -3rem;
+
+  &:focus {
+  	left: 0.5rem;
+  	top: 0.5rem;
+  }
+}

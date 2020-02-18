@@ -1,0 +1,63 @@
+---
+slug: robots.txt
+---
+# www.robotstxt.org/
+
+{%- if env.node_env != 'production' %}
+# To exclude all robots from the entire server
+# User-agent: *
+# Disallow: /
+
+# To allow all robots complete access
+# User-agent: *
+# Disallow:
+
+# To exclude all robots from part of the server
+# User-agent: *
+# Disallow: /cgi-bin/
+# Disallow: /tmp/
+# Disallow: /junk/
+
+# To exclude a single robot
+# User-agent: BadBot
+# Disallow: /
+
+# To allow a single robot
+# User-agent: Google
+# Disallow:
+# 
+# User-agent: *
+# Disallow: /
+
+# To exclude all files except one
+# This is currently a bit awkward,
+# as there is no "Allow" field.
+# The easy way is to put all files to be disallowed
+# into a separate directory, say "stuff",
+# and leave the one file in the level above this directory:
+#
+# User-agent: *
+# Disallow: /~joe/stuff/
+#
+# Alternatively you can explicitly disallow
+# all disallowed pages:
+#
+# User-agent: *
+# Disallow: /~joe/junk.html
+# Disallow: /~joe/foo.html
+# Disallow: /~joe/bar.html
+
+# ------------------------
+{%- endif %}
+
+{%- if env.node_env == 'production' %}
+# Exclude all robots from part of the server
+User-agent: *
+Disallow: /api/
+Disallow: /404.html
+Disallow: /offline.html
+{%- else %}
+# Exclude all robots from the entire server
+User-agent: *
+Disallow: /
+{%- endif %}

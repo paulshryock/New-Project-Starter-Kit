@@ -1,0 +1,19 @@
+.breadcrumb {
+	border-top: 0.25rem solid $darkest-gray;
+	font-family: $font-stack-code;
+	font-size: 0.85rem;
+
+	[aria-current="page"] {
+		color: $darkest-gray;
+		font-weight: 700;
+	}
+
+	li + li::before {
+		border-right: 0.125em solid $light-gray;
+		content: '';
+		display: inline-block;
+		height: 0.75em;
+		margin: 0 0.25em;
+		transform: rotate( 15deg );
+	}
+}
