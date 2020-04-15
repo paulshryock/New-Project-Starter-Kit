@@ -1,7 +1,7 @@
 # New Project Starter Kit
 
 [![Netlify Status][deploy-status]][deploys]
-[![JavaScript Style Guide][standard-badge)][standard]
+[![JavaScript Style Guide][standard-badge]][standard]
 
 Fork this repository to start a new project with Eleventy, Netlify CMS, Gulp, Babel, PostCSS, and the following workflow: linting, Sass and modern CSS transpiling, ES2015+ compiling, concatenation, minification, beautification, source maps, bundling fonts, images, and favicons, serving files, watching for changes, and live reloading. Includes common accessible HTML, CSS, and JS components, and continuous deployment configurations for Netlify and Zeit Now.
 
