@@ -42,16 +42,18 @@
     "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
   },
   "scripts": {
-    "start": "npm run build",
-    "develop": "NODE_ENV='development' gulp develop",
-    "serve": "NODE_ENV='development' gulp serve",
-    "build": "NODE_ENV='production' gulp",
-    "production": "NODE_ENV='production' gulp production",
-    "update": "ncu -u && npm update",
-    "now-build": "npm start",
-    "audit:performance": "node ./_scripts/lighthouse.js",
-    "create:content": "node ./_scripts/addContentType.js",
-    "update:gitignore": "node ./_scripts/ignorePlatforms.js"
+    "start": "npm i --only=dev & npm run build",
+    "develop": "dotenv gulp develop",
+    "serve": "npm run serve:server",
+    "serve:client": "dotenv gulp serve",
+    "serve:server": "node -r dotenv/config ./src/server/bin/www",
+    "watch": "npm run watch:server & npm run watch:client",
+    "watch:client": "dotenv gulp watch",
+    "watch:server": "nodemon -r dotenv/config ./src/server/bin/www",
+    "build": "dotenv gulp build",
+    "production": "dotenv gulp production",
+    "clear:cache": "heroku repo:purge_cache -a npsk-express-starter && git commit --allow-empty -m \"Purge cache\" && git push heroku master",
+    "audit": "node ./modules/lighthouse.js"
   },
   "browserslist": [
     "last 3 versions",
