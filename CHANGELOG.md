@@ -18,7 +18,9 @@ and this project adheres to [Semantic Versioning](semver).
 ## TODO
 
 ### Changed
-- Rename database(s)
+- [ ] Link Netlify/Heroku servers to this repo
+- [ ] Archive paulshryock/Express-Starter repo
+- [ ] Rename database(s)
 
 ## 0.28.0 - 2020-04-16 - Add Express server
 
