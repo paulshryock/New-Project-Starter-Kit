@@ -1,18 +1,29 @@
 # Environment variables
 .env
+/*.env
 
 # Dependencies
 node_modules/
+npm-debug.log
 package-lock.json
 
-# Temp files
-_logs/
-build/
-dist/
-temp/
+# Log files
+/_logs/
+
+# Built files
+/public/
+/build/
+/dist/
+
+# Temporary files
+/_scratch/
+/scratch/
+/_temp/
+/temp/
 
 # OS files
 .DS_Store
 
-# Local Netlify folder
+# Local server config folders
 .netlify
+.now

@@ -1,0 +1,15 @@
+.skip-link {
+  /* TODO: Revisit and make this a visible part of the UI */
+  
+	background: $white;
+  border: $border-thin solid currentColor;
+	border-radius: 0.25em;
+  left: 50%;
+  padding: 0.25em 0.75em;
+	position: absolute;
+  transform: translateX(-50%) translateY(-100%);
+
+  &:focus {
+    transform: translateX(-50%) translateY(0%);
+  }
+}

@@ -1,0 +1,27 @@
+/*@media (prefers-color-scheme: dark) {
+  a {
+
+    &:link,
+    &:visited {
+      color: $light-blue;
+    }
+
+    &:hover,
+    &:focus {
+      color: $lighter-blue;
+    }
+
+    &:active {
+      color: $lightest-blue;
+    }
+  }
+
+  body {
+    background: $darkest-gray;
+    color: $white;
+  }
+  
+  img {
+    filter: grayscale(20%);
+  }
+}*/

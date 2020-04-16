@@ -1,0 +1,23 @@
+.masthead {
+
+  &__layout {
+
+    @include mq-900 {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0;
+
+    a:link,
+    a:visited {
+      color: $blue;
+      text-decoration-color: $lighter-blue;
+    }
+  }
+}

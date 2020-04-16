@@ -1,0 +1,63 @@
+button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+  appearance: none;
+  background-color: $darker-gray;
+	border: none;
+  border-radius: 0.25em;
+  color: $white;
+	cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: 700;
+	line-height: 1.4;
+  margin: 0;
+	overflow: visible;
+	padding: 0.5em 0.75em 0.25em;
+  text-decoration: none;
+	text-transform: capitalize;
+  -webkit-appearance: button;
+  transition: all $speed-fast ease;
+
+  &:hover,
+  &:focus {
+    background: $blue;
+    box-shadow: $shadow-button-focus;
+    padding: 0.5em 0.75em 0.25em;
+  }
+
+  &:active {
+    background: $light-medium-blue;
+    padding: 0.5em 0.75em 0.25em;
+  }
+
+  &[disabled] {
+    background-color: $darker-gray;
+    cursor: auto;
+    opacity: 0.5;
+  }
+
+  /* Isolate this selector */
+  &::-moz-focus-inner {
+    border: none;
+    padding: 0.5em 0.75em 0.25em;
+  }
+
+  /* Isolate this selector */
+  &::-moz-focusring {
+    border: none;
+    padding: 0.5em 0.75em 0.25em;
+  }
+
+  img {
+    display: inline-block;
+  }
+}
+
+/* Isolate this selector */
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}

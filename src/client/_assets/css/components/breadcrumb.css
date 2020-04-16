@@ -1,0 +1,23 @@
+.breadcrumb {
+
+	[aria-current="page"] {
+		font-weight: 700;
+	}
+
+	a {
+		display: inline-block;
+	}
+
+	li {
+		margin-top: 0;
+	}
+
+	li + li::before {
+		border-right: 0.125em solid $light-gray;
+		content: '';
+		display: inline-block;
+		height: 0.75em;
+		margin: 0 1em 0 0;
+		transform: rotate( 15deg );
+	}
+}

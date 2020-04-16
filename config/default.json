@@ -1,10 +1,39 @@
 {
-  "auth": {
-    "username": "",
-    "password": ""
-  },
   "node": {
-    "environment": "development"
+    "environment": ""
   },
-  "polyfill_js": ""
+  "app": {
+    "title": "NPSK REST API - development",
+    "url": ""
+  },
+  "jwtPrivateKey": "",
+  "db": {
+    "username": "",
+    "password": "",
+    "host": "",
+    "port": "",
+    "database": ""
+  },
+  "user": {
+    "email": "",
+    "password": "",
+    "id": ""
+  },
+  "article": {
+    "id": ""
+  },
+  "project": {
+    "id": ""
+  },
+  "testimonial": {
+    "id": ""
+  },
+  "paths": {
+    "src": {
+      "client": "src/client"
+    },
+    "build": {
+      "client": "build/client"
+    }
+  }
 }

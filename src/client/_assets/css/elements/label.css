@@ -1,0 +1,17 @@
+label {
+	display: block;
+	font-size: 0.75em;
+  font-weight: 700;
+	text-transform: capitalize;
+
+  + * {
+  	margin-top: 0.25rem;
+  }
+
+  [type="radio"] + &,
+  [type="checkbox"] + & {
+    display: inline-block;
+    font-size: 1em;
+  	margin-left: 0.25em;
+  }
+}

@@ -1,0 +1,33 @@
+.margin {
+	margin: $space;
+
+  &-top {
+    margin-top: $space;
+  }
+
+  &-top-2 {
+    margin-top: calc( 2 * $space);
+  }
+
+  &-bottom {
+    margin-bottom: $space;
+  }
+
+  &-y {
+    margin-top: $space;
+    margin-bottom: $space;
+  }
+
+  &-left {
+    margin-left: $space;
+  }
+
+  &-right {
+    margin-right: $space;
+  }
+
+  &-x {
+    margin-top: $space;
+    margin-right: $space;
+  }
+}

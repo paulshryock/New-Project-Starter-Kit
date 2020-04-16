@@ -1,0 +1,30 @@
+<!--
+  -- Accessible Pagination
+  -- 
+  -- http://www.a11ymatters.com/pattern/pagination/
+  -->
+<nav role="navigation" aria-label="Pagination Navigation" class="pagination">
+  <ol class="pagination__list">
+    <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">&lt;&lt;</a>{% else %}&lt;&lt;{% endif %}</li>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">&lt;</a>{% else %}&lt;{% endif %}</li>
+
+
+{%- for p in pagination.pages %}
+    {% assign newIndex = forloop.index - 1 %}
+    <li>
+      <a
+        href="{{ pagination.hrefs[0] }}"
+        {% if page.url == pagination.hrefs[0] %} aria-current="page"{% endif %}
+      >
+      {{ forloop.index }}
+      </a>
+    </li>
+{%- endfor %}
+
+
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">&gt;</a>{% else %}&gt;{% endif %}</li>
+    <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">&gt;&gt;</a>{% else %}&gt;&gt;{% endif %}</li>
+  </ol>
+</nav>
+
+<!-- TODO: Add screen reader text -->

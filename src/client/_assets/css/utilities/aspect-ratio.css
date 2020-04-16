@@ -1,0 +1,36 @@
+/**
+  * Aspect ratio utility
+  *
+  * [Creating an aspect ratio CSS utility](https://andy-bell.design/wrote/creating-an-aspect-ratio-css-utility/)
+  *
+  * Resources:
+  * - [Designing An Aspect Ratio Unit For CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
+  * - [CSS Box Sizing Module Level 4](https://drafts.csswg.org/css-sizing-4/)
+  */
+
+[class*='ratio-'] {
+  display: block;
+  position: relative;
+
+  > * {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.aspect-ratio {
+
+  &-wide {
+    /*aspect-ratio: 16/9;*/
+    padding-top: 56.25%;
+  }
+
+  &-square {
+    /*aspect-ratio: 1/1;*/
+    padding-top: 100%;
+  }
+}

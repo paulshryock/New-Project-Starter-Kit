@@ -1,0 +1,19 @@
+textarea {
+  background: $white;
+  border: $border-thinner solid $light-medium-gray;
+	border-radius: 0.25em;
+	display: block;
+  font-size: 100%;
+  margin: 0;
+  max-width: 100%;
+  overflow: auto;
+	padding: 0.25rem;
+
+  &.is-valid {
+    border-color: $green;
+  }
+
+  &.is-invalid {
+    border-color: $red;
+  }
+}

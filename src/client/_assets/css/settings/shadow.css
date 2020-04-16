@@ -1,0 +1,20 @@
+$shadow-thick:
+  0 $border-thinner $border-thick 0 $dark-medium-gray,
+  0 $border-thinner $border-thick-medium 0 $gray-alpha;
+
+$shadow:
+  0 $border-thinner $border-medium 0 $dark-medium-gray,
+  0 $border-thinner $border-thin 0 $gray-alpha;
+
+$shadow-button-focus:
+  0 0 0 $border-thinnest $white,
+  0 0 0 2px $blue,
+  $shadow;
+
+$shadow-card:
+  0 0 0 $border-thinnest $gray,
+  $shadow;
+
+$shadow-card-focus:
+  $shadow-card,
+  $shadow-thick;

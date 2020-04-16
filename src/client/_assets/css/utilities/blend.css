@@ -1,0 +1,46 @@
+.blend {
+  /*background-color: red;
+  background-image: 
+    linear-gradient(purple 0%, red 90%), 
+    linear-gradient(to right, purple 0%, yellow 90%), 
+    url('image.jpg') 30px,
+    url('image.jpg') 20px;*/
+
+  /*background-blend-mode: 
+    initial: the default value with no blending.
+    inherit: inherits the blend mode of the parent element.
+    <blend-mode>: a value that will change the background-image depending on its background-color.
+      normal: as shown above, the background-color will not bleed through the background-image.
+      multiply: the background-image and background-color are multiplied and typically this leads to a darker image than before.
+      screen: both image and color is inverted, multiplied and then inverted again.
+      overlay: the background-color is mixed with the background-image to reflect the lightness or darkness of the backdrop.
+      darken: if the background-image is darker than the background-color then the image is replaced, otherwise it is left as it was.
+      lighten: if the background-image is lighter than the background-color then the image is replaced, otherwise it is left as it was.
+      color-dodge: the background-color is divided by the inverse of the background-image. This is very similar to the screen blend mode.
+      color-burn: the background-color is inverted, divided by the background-image and inverted again. This is similar to multiply.
+      hard-light: if the background-image is lighter than the background-color then the result is muliply or if it is lighter then the result is screen.
+      soft-light: the final result is similar to hard-light but softer in that it looks like a diffused spotlight has been placed on the image.
+      difference: the result by subtracting the darker color of the background-image and the background-color from the lightest one. Often the image will have a very high contrast.
+      exclusion: the result is very similar to difference yet with a little lower contrast.
+      hue: the result is the hue of the background-image combined with the luminosity and saturation of the background-color.
+      saturation: keeps the saturation of the background-image whilst mixing the hue and luminosity of the background-color.
+      color: keeps hue and saturation of background-image and the luminosity of the background-color. In this example because the image is gray and the effect preserves gray levels all we get is a big gray blob.
+      luminosity: luminosity of the top color is preserved whilst using the saturation and hue of the background-color.*/
+  /*https://css-tricks.com/almanac/properties/b/background-blend-mode/*/
+
+  /*Each background layer can only have a single blend mode, however if we’re using multiple linear gradients for instance, each of them can have their own blend mode.
+  background-blend-mode: screen, difference, lighten;*/
+
+  background-blend-mode: screen;
+
+  /* TODO: Create utility classes for each mode? */
+
+  .isolate {
+    /*https://css-tricks.com/almanac/properties/i/isolation/*/
+
+    /*isolation:
+      isolate: Does exactly what it says. It protects the element from blending into other elements that are in the backdrop.
+      auto: Resets the isolation and allows the element to blend into its backdrop.*/
+    isolation: isolate;
+  }
+}

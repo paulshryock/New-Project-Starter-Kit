@@ -1,0 +1,58 @@
+$black: hsl( 0, 0%, 0% );
+$white: hsl( 0, 0%, 100% );
+
+$darkest-gray: hsl( 0, 0%, 10% );
+$darker-gray: hsl( 0, 0%, 20% );
+$dark-gray: hsl( 0, 0%, 30% );
+$dark-medium-gray: hsl( 0, 0%, 40% );
+$medium-gray: hsl( 0, 0%, 50% );
+$medium-gray-alpha: hsla( 0, 0%, 50%, 50% );
+$gray: $medium-gray;
+$gray-alpha: $medium-gray-alpha;
+$light-medium-gray: hsl( 0, 0%, 60% );
+$light-gray: hsl( 0, 0%, 70% );
+$light-gray-alpha: hsla( 0, 0%, 70%, 50% );
+$lighter-gray: hsl( 0, 0%, 80% );
+$lightest-gray: hsl( 0, 0%, 90% );
+
+$darkest-blue: hsl( 240, 100%, 10% );
+$darker-blue: hsl( 240, 100%, 20% );
+$dark-blue: hsl( 240, 100%, 30% );
+$dark-medium-blue: hsl( 240, 100%, 40% );
+$medium-blue: hsl( 240, 100%, 50% );
+$medium-blue-alpha: hsla( 240, 100%, 50%, 50% );
+$blue: $medium-blue;
+$blue-alpha: $medium-blue-alpha;
+$light-medium-blue: hsl( 220, 100%, 50% );
+$light-blue: hsl( 220, 100%, 70% );
+$light-blue-desaturated: hsl( 220, 50%, 70% );
+$light-blue-alpha: hsla( 220, 100%, 70%, 50% );
+$lighter-blue: hsl( 220, 100%, 80% );
+$lightest-blue: hsl( 220, 100%, 90% );
+
+$pattern-diagonal-blue-alpha-30: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230000ff' fill-opacity='0.3' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+$pattern-diagonal: $pattern-diagonal-blue-alpha-30;
+
+$green: green;
+$red: red;
+$yellow: yellow;
+
+/**
+ * TODO: Maybe split colors into H, S, and L values for manipulation.
+ *
+
+html {
+  --H: 100;
+  --S: 100%;
+  --L: 50%;
+}
+
+.el {
+  background: hsl(
+    calc(var(--H) + 20),
+    calc(var(--S) - 10%),
+    calc(var(--L) + 30%)
+  )
+}
+
+*/

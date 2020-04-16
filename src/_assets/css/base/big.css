@@ -1,7 +1,0 @@
-big {
-	font-size: 112.5%;
-
-  @include mq-1200 {
-		font-size: 1.25rem;
-  }
-}

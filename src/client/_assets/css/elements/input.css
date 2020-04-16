@@ -1,0 +1,89 @@
+input {
+	border: none;
+	cursor: pointer;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.4;
+  margin: 0;
+	overflow: visible;
+
+  &:placeholder {
+    color: $gray;
+  }
+
+  &:disabled,
+  &:readonly {
+    color: $gray;
+    cursor: not-allowed;
+  }
+
+  &.is-valid {
+    border-color: $green;
+  }
+
+  &.is-invalid {
+    border-color: $red;
+  }
+}
+
+/* Normalise form field line-height in WebKit */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  line-height: normal;
+}
+
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"] {
+  background: $white;
+  border: $border-thinner solid $light-medium-gray;
+  border-radius: 0.25em;
+  padding: 0.25rem;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  padding: 0;
+
+  &.is-valid {
+    box-shadow: 0 0 0 1px $green;
+  }
+
+  &.is-invalid {
+    box-shadow: 0 0 0 1px $red;
+  }
+}
+
+/* TODO: Style color picker input: https://jsfiddle.net/9zhap7rb/3/ */
+
+/* TODO: Style file upload input: http://jsfiddle.net/barney/uxPjN/ */
+
+/* Isolate this selector */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* TODO: Style range input */
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+}
+
+/* Turn off the recent search in WebKit. */
+::-webkit-search-decoration {
+  display: none;
+  -webkit-appearance: none;
+}
