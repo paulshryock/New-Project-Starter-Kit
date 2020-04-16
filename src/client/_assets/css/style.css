@@ -1,0 +1,17 @@
+/**
+  * Settings: Global variables, config switches
+  * Tools: Default mixins and functions
+  * Generic: Ground-zero styles (Normalize.css, resets, box-sizing)
+  * Elements: Unclassed HTML elements (type selectors)
+  * Objects: Cosmetic-free design patterns
+  * Components: Designed components, chunks of UI
+  * Utilities: Helper classes with the ability to override anything
+  */
+
+@import './settings/*.css';
+@import './tools/*.css';
+@import './generic/*.css';
+@import './elements/*.css';
+@import './objects/*.css';
+@import './components/*.css';
+@import './utilities/*.css';

@@ -1,0 +1,7 @@
+::selection {
+  background-color: $lightest-blue;
+}
+
+::-moz-selection {
+  background-color: $lightest-blue;
+}

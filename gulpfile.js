@@ -8,6 +8,7 @@ const htmlmin = require('gulp-htmlmin')
 const gulpStylelint = require('gulp-stylelint')
 const sourcemaps = require('gulp-sourcemaps')
 const postcss = require('gulp-postcss')
+const sass = require('gulp-sass')
 const standard = require('gulp-standard')
 const webpack = require('webpack-stream')
 const compiler = require('webpack')
@@ -19,47 +20,56 @@ const rename = require('gulp-rename')
 const connect = require('gulp-connect')
 
 const isProduction = config.get('node.environment') === 'production'
+const SRC = config.get('paths.src.client')
+const BUILD = config.get('paths.build.client')
 
 const paths = {
-  liquid: {
-    src: './src/**/*.liquid'
-  },
-  markdown: {
-    src: './src/**/*.md'
-  },
   html: {
-    dest: './build',
-    output: './build/**/*.html'
+    src: [
+      `./${SRC}/_data/**/*.*`, // Global data
+      `./${SRC}/_includes/**/*.*`, // Includes
+      `./${SRC}/_layouts/**/*.*`, // Layouts
+      `./${SRC}/**/*.11tydata.js`, // Template data
+      `./${SRC}/**/*.html`,
+      `./${SRC}/**/*.md`,
+      `./${SRC}/**/*.11ty.js`,
+      `./${SRC}/**/*.liquid`,
+      `./${SRC}/**/*.njk`,
+      `./${SRC}/**/*.hbs`,
+      `./${SRC}/**/*.mustache`,
+      `./${SRC}/**/*.ejs`,
+      `./${SRC}/**/*.haml`,
+      `./${SRC}/**/*.pug`,
+      `./${SRC}/**/*.jstl`
+    ],
+    dest: `./${BUILD}`, // Build directory
+    output: `./${BUILD}/**/*.html` // Built HTML files
   },
   css: {
-    all: './src/_assets/css/**/*.css',
-    src: './src/_assets/css/style.css',
-    dest: './build/css',
-    output: './build/css/bundle.css'
+    all: `./${SRC}/_assets/css/**/*.css`,
+    src: `./${SRC}/_assets/css/style.css`,
+    dest: `./${BUILD}/css`,
+    output: `./${BUILD}/css/bundle.css`
   },
   js: {
-    root: './*.js',
-    src: './src/_assets/js/**/*.js',
-    data: './src/_data/**/*.js',
+    src: [
+      './*.js',
+      `./${SRC}/_assets/js/**/*.js`
+    ],
     entry: {
-      all: './src/_assets/js/*.js',
-      index: './src/_assets/js/index.js',
-      cms: './src/_assets/js/cms.js'
+      all: `./${SRC}/_assets/js/*.js`,
+      index: `./${SRC}/_assets/js/index.js`
     },
-    dest: './build/js',
-    output: './build/js/**.js'
+    dest: `./${BUILD}/js`,
+    output: `./${BUILD}/js/**.js`
   },
   fonts: {
-    src: './src/_assets/fonts/**/*',
-    dest: './build/fonts'
+    src: `./${SRC}/_assets/fonts/**/*`,
+    dest: `./${BUILD}/fonts`
   },
   images: {
-    src: './src/_assets/img/**/*',
-    dest: './build/img'
-  },
-  cms: {
-    src: './src/cms/config.yml',
-    dest: './build/cms'
+    src: `./${SRC}/_assets/img/**/*`,
+    dest: `./${BUILD}/img`
   }
 }
 
@@ -80,6 +90,14 @@ async function html () {
 
   const html = gulp.src(paths.html.output)
     .pipe(beautify.html(options)) // Beautify
+    //
+    // TODO: inline critical CSS
+    // https://github.com/addyosmani/critical
+    // https://github.com/addyosmani/critical-path-css-demo/blob/dca7ec42c6b9d7bb2d8425c4055aabc753c1a6ac/gulpfile.js#L100-L111
+    //
+    // TODO: validate HTML
+    // https://www.npmjs.com/package/html-validator
+    //
     .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
 
@@ -92,10 +110,18 @@ function css () {
       extends: ['stylelint-config-standard'],
       rules: {
         'at-rule-no-unknown': [true, {
-          ignoreAtRules: ['include', 'mixin']
+          ignoreAtRules: [
+            'include',
+            'mixin'
+          ]
         }],
         'no-descending-specificity': null,
-        'selector-pseudo-class-no-unknown': null
+        'selector-pseudo-class-no-unknown': [true, {
+          ignorePseudoClasses: [
+            'focusring',
+            'readonly'
+          ]
+        }]
       }
     },
     fix: true,
@@ -106,7 +132,7 @@ function css () {
 
   const plugins = [
     require('postcss-easy-import'), // @import files
-    require('precss'), // Transpile Sass-like syntax
+    require('precss'), // Use Sass-like markup and staged CSS features in CSS
     require('postcss-preset-env'), // Polyfill modern CSS
     require('autoprefixer'), // Add vendor prefixes
     require('pixrem')() // Add fallbacks for rem units
@@ -117,6 +143,8 @@ function css () {
 
   const build = gulp.src(paths.css.src)
     .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError)) // Preprocess Sass
+    // TODO: Test and see if I need to rename .css files to .scss
     .pipe(postcss(plugins))
     .pipe(concat('bundle.css')) // Concatenate and rename
     .pipe(beautify.css({ indent_size: 2 })) // Beautify
@@ -140,8 +168,7 @@ function js () {
     // Webpack configuration
     mode: isProduction ? 'production' : 'development',
     entry: {
-      bundle: paths.js.entry.index,
-      cms: paths.js.entry.cms
+      bundle: paths.js.entry.index
     },
     output: {
       path: path.resolve(__dirname, 'build/js'),
@@ -165,7 +192,7 @@ function js () {
     devtool: 'source-map'
   }
 
-  const lint = gulp.src([paths.js.src, paths.js.root])
+  const lint = gulp.src(paths.js.src)
     .pipe(standard(options))
     .pipe(standard.reporter('default'))
 
@@ -254,13 +281,18 @@ function assets () {
     .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
 
-  const cms = gulp.src(paths.cms.src)
-    .pipe(gulp.dest(paths.cms.dest))
-    .pipe(connect.reload())
-
-  const merged = merge(fonts, images, cms)
+  const merged = merge(fonts, images)
 
   return merged.isEmpty() ? null : merged
+}
+
+function watch (cb) {
+  gulp.watch(paths.html.src, html)
+  gulp.watch([paths.css.all], css)
+  gulp.watch(paths.js.src, js)
+  gulp.watch([paths.fonts.src, paths.images.src], assets)
+
+  cb()
 }
 
 function serve (cb) {
@@ -268,22 +300,6 @@ function serve (cb) {
     root: paths.html.dest,
     livereload: true
   })
-
-  gulp.watch([
-    paths.js.data,
-    paths.liquid.src,
-    paths.markdown.src
-  ], html)
-  gulp.watch([paths.css.all], css)
-  gulp.watch([
-    paths.js.src,
-    paths.js.root
-  ], js)
-  gulp.watch([
-    paths.fonts.src,
-    paths.images.src,
-    paths.cms.src
-  ], assets)
 
   cb()
 }
@@ -304,7 +320,8 @@ const build = gulp.series(
 )
 
 exports.develop = develop
-exports.serve = gulp.series(develop, serve)
+exports.watch = gulp.series(develop, watch)
+exports.serve = gulp.series(develop, watch, serve)
 exports.build = build
 exports.production = gulp.series(build, serve)
 exports.default = build

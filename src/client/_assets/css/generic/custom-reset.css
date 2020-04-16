@@ -1,0 +1,15 @@
+* {
+  color: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+input,
+textarea {
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+@viewport {
+  width: device-width;
+}

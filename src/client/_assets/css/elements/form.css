@@ -1,0 +1,31 @@
+form {
+
+  > div + div {
+  	margin-top: $space;
+  }
+
+  [aria-invalid] {
+    border: 1px solid $red;
+    box-shadow: none;
+  }
+
+  :invalid:focus {
+    border: 1px solid $red;
+  }
+
+  [type="checkbox"]:invalid:focus,
+  [type="radio"]:invalid:focus {
+    box-shadow: 0 0 0 1px $red;
+  }
+
+  /* Isolate this selector */
+  :not(output):-moz-ui-invalid {
+    border: 1px solid $red;
+    box-shadow: none;
+  }
+
+  [type="checkbox"]:not(output):-moz-ui-invalid,
+  [type="radio"]:not(output):-moz-ui-invalid {
+    box-shadow: 0 0 0 1px $red;
+  }
+}

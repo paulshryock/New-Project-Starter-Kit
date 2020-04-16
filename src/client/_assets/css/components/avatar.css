@@ -1,0 +1,14 @@
+.avatar {
+	border-radius: 50%;
+	clip-path: circle( 50% );
+	max-width: 8rem;
+  object-fit: cover;
+
+  &_small {
+    max-width: 4rem;
+  }
+
+  &_large {
+    max-width: 12rem;
+  }
+}

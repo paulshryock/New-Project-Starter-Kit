@@ -1,8 +1,4 @@
-## Description
 
-## Closes issue(s)
-
-## Screenshots
 
 ## Checklist
 - [ ] I have tested this code

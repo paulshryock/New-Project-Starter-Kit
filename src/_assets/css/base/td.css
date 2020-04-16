@@ -1,8 +1,0 @@
-td {
-  line-height: 1.3;
-  padding: 0.5em;
-
-  @include mq-600 {
-    padding: 1em;
-  }
-}

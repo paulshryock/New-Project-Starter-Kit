@@ -1,0 +1,16 @@
+.ko {
+  background: $darkest-gray;
+  color: $white;
+
+  &_darker-blue {
+    background: $darker-blue;
+  }
+
+  &_dark-blue {
+    background: $dark-blue;
+  }
+
+  &_blue {
+    background: $blue;
+  }
+}

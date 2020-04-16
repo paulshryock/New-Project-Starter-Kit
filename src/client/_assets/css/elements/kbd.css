@@ -1,0 +1,8 @@
+kbd {
+	border-radius: 0.25em;
+  box-shadow: 0 $border-thinner $border-medium 0 $light-gray, 0 $border-thinner $border-thin 0 $light-gray-alpha;
+	display: inline-block;
+	font-family: $font-stack-code;
+	font-size: 0.85rem;
+	padding: 0.25em 0.25rem 0;
+}

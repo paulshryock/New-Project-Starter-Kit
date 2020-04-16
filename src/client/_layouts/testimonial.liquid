@@ -1,0 +1,16 @@
+---
+layout: constrain-pad
+---
+<article>
+  <header>
+    <h2>{{ testimonial.name.first }} {{ testimonial.name.last }}</h2>
+    <p>Last updated: <time datetime="{{ testimonial.date }}">{{ testimonial.date | date: "%m/%d/%Y" }}</time></p>
+  </header>
+  {% if testimonial.quote %}
+  <div>
+    <blockquote>
+      {{ content }}
+    </blockquote>
+  </div>
+  {% endif %}
+</article>

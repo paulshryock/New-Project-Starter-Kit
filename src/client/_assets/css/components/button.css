@@ -1,0 +1,203 @@
+.button {
+  appearance: none;
+  background-color: $darker-gray;
+	border: none;
+  border-radius: 0.25em;
+  color: $white;
+	cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: 700;
+	line-height: 1.4;
+  margin: 0;
+	overflow: visible;
+	padding: 0.5em 0.75em 0.25em;
+	text-decoration: none;
+	text-transform: capitalize;
+  -webkit-appearance: button;
+  transition: all $speed-fast ease;
+
+	&:link,
+	&:visited {
+		color: $white;
+	}
+
+	&:hover,
+	&:focus {
+		background: $blue;
+    box-shadow: $shadow-button-focus;
+	  padding: 0.5em 0.75em 0.25em;
+	}
+
+	&:active {
+		background: $light-medium-blue;
+	  padding: 0.5em 0.75em 0.25em;
+	}
+
+	&[disabled] {
+    background-color: $darker-gray;
+    box-shadow: none;
+    cursor: auto;
+    filter: grayscale(100%);
+    opacity: 0.5;
+	}
+
+  /* Isolate this selector */
+  &::-moz-focus-inner {
+    border: none;
+    padding: 0.5em 0.75em 0.25em;
+  }
+
+  /* Isolate this selector */
+  &::-moz-focusring {
+    border: none;
+    padding: 0.5em 0.75em 0.25em;
+  }
+
+  img {
+    display: inline-block;
+  }
+
+  &_ko {
+    background: $white;
+    color: $darker-gray;
+
+    &:link,
+    &:visited {
+      background: $white;
+      color: $darker-gray;
+    }
+
+    &:hover,
+    &:focus {
+      background: $white;
+      color: $blue;
+    }
+
+    &:active {
+      background: $lightest-blue;
+      color: $darker-gray;
+    }
+
+    &[disabled] {
+      background-color: $white;
+    }
+  }
+
+	&_highlight {
+		background: $blue;
+
+		&:link,
+		&:visited {
+			background: $blue;
+		}
+
+		&:hover,
+		&:focus {
+			background: $light-medium-blue;
+		}
+
+		&:active {
+			background: $light-blue;
+		}
+
+		&[disabled] {
+	    background-color: $blue;
+		}
+
+    &.button_ko {
+      background: $light-medium-blue;
+      color: $white;
+
+      &:link,
+      &:visited {
+        background: $light-medium-blue;
+        color: $white;
+      }
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(
+          to bottom,
+          $light-medium-blue,
+          $blue,
+          $light-medium-blue
+        );
+        color: $white;
+      }
+
+      &:active {
+        background: linear-gradient(
+          to bottom,
+          $light-blue,
+          $light-medium-blue,
+          $light-blue
+        );
+        color: $white;
+      }
+
+      &[disabled] {
+        background: $light-medium-blue;
+      }
+    }
+	}
+
+	&_ghost {
+		background: transparent;
+		border: 0.125em solid;
+		color: $darker-gray;
+		padding: 0.389em 0.639em 0.139em;
+
+		&:link,
+		&:visited {
+			background: transparent;
+			border: 0.125em solid;
+			color: $darker-gray;
+		}
+
+		&:hover,
+		&:focus {
+			background: $lightest-blue;
+			color: $blue;
+			padding: 0.389em 0.639em 0.139em;
+		}
+
+		&:active {
+			background: transparent;
+			color: $light-medium-blue;
+			padding: 0.389em 0.639em 0.139em;
+		}
+
+		&[disabled] {
+			background: transparent;
+			color: $darker-gray;
+			cursor: auto;
+	    opacity: 0.5;
+		}
+
+    &.button_ko {
+      color: $white;
+
+      &:link,
+      &:visited {
+        color: $white;
+      }
+
+      &:hover,
+      &:focus {
+        background: $dark-blue;
+        color: $white;
+      }
+
+      &:active {
+        background: $dark-medium-blue;
+        color: $white;
+      }
+
+      &[disabled] {
+        color: $white;
+      }
+    }
+	}
+}

@@ -1,0 +1,46 @@
+.snap {
+  /*https://blog.logrocket.com/how-to-use-css-scroll-snap/*/
+  /*https://www.w3.org/TR/css-scroll-snap-1/*/
+
+  /*---*/
+
+  /*scroll-snap-type is applied to the parent container. It accepts two arguments: the snap direction and the snap behavior.*/
+  /*scroll-snap-type: [ x | y | block | inline | both ] [ mandatory | proximity ];*/
+  /*About the snap behavior arguments: choosing proximity makes the snap only appear at the nearest point to where the user stopped scrolling.*/
+  /*On the other hand, mandatory makes the snap happen at the specific position you choose when the user is scrolling.*/
+  /*Never use mandatory if the content inside one of your child elements is longer than the parent container. If you do, the user won’t be able to see that content.*/
+  scroll-snap-type: block mandatory;
+
+  /*---*/
+
+  /*None of this is going to work unless you specify the container’s overflow and give it a fixed height.*/
+  overflow-y: scroll;
+  height: 80vh;
+
+  /*---*/
+
+  /*scroll-padding (applied to the parent container) is pretty much like the CSS padding property and acts as the offset. You also have scroll-padding-top, scroll-padding-bottom, scroll-padding-left and scroll-padding-right.*/
+  scroll-padding: $space;
+
+  -webkit-overflow-scrolling: touch; /* Support iOS devices */
+
+  &_child {
+    /*The second one, scroll-snap-align, is applied to the container’s children.*/
+    /*This is where you specify the snap point for the x-axis and the y-axis:*/
+    /*scroll-snap-align: [ none | start | end | center ]{1,2};*/
+    scroll-snap-align: start none; /* block axis, inline axis */
+
+    /*---*/
+
+    /*scroll-margin (applied to the container’s children) is also like the CSS margin property and serves as the outset. You also have scroll-margin-top, scroll-margin-bottom, scroll-margin-left and scroll-margin-right.*/
+    scroll-margin: $space;
+
+    /*---*/
+
+    /*The scroll-snap-stop property allows such a possible snap position to “trap” the scrolling operation, forcing the scroll container to stop before the scrolling operation would naturally end.*/
+    /*normal: The scroll container may pass over a snap position defined by this element during the execution of a scrolling operation. */
+    /*always: The scroll container must not pass over a snap position defined by this element during the execution of a scrolling operation; it must instead snap to the first of this element’s snap positions. */
+
+    scroll-snap-stop: always;
+  }
+}

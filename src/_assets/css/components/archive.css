@@ -1,7 +1,0 @@
-.archive-title {
-	font-size: 1.25rem;
-
-  @mixin mq-1200 {
-    font-size: 1.5rem;
-  }
-}

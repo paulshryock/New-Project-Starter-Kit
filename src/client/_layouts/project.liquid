@@ -1,0 +1,14 @@
+---
+layout: constrain-pad
+---
+<article>
+  <header>
+    <h2>{{ project.title }}</h2>
+    <p>Last updated: <time datetime="{{ project.date }}">{{ project.date | date: "%m/%d/%Y" }}</time></p>
+  </header>
+  {% if project.content %}
+  <div>
+    {{ content }}
+  </div>
+  {% endif %}
+</article>

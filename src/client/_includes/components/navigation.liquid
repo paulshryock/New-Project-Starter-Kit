@@ -1,0 +1,12 @@
+  {%- if navigation.items %}
+    <nav role="navigation" class="navigation" data-toggle="true">
+      <ul class="navigation__list">
+        {%- for item in navigation.items %}
+          {%- if item.slug == page.slug %}
+            {% assign isActive = "class='is-active'" %}
+          {%- endif %}
+          <li {{ isActive }}><a href="/{{ item.slug }}">{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  {%- endif %}

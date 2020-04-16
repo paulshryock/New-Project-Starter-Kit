@@ -1,0 +1,14 @@
+---
+layout: constrain-pad
+---
+<article>
+  <header>
+    <h2>{{ article.title }}</h2>
+    <p>By {{ article.author }} | Last updated: <time datetime="{{ article.date }}">{{ article.date | date: "%m/%d/%Y" }}</time> | Status: {{ article.status }}</p>
+  </header>
+  {% if article.content %}
+  <div>
+    {{ content }}
+  </div>
+  {% endif %}
+</article>

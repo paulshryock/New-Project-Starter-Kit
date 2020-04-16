@@ -1,0 +1,67 @@
+---
+layout: base
+---
+<article>
+  {% if hero %}
+  <header>
+    {% include components/hero %}
+  </header>
+  {% endif %}
+  {% if content %}
+  <div class="constrain pad-x pad-top">
+    {{ content }}
+  </div>
+  {% endif %}
+</article>
+
+<div class="constrain pad-x">
+
+{%- if collections.articles.size > 0 %}
+<section class="pad-top-2 border-top margin-top-2">
+  {%- for post in collections.pages %}
+  {%- if post.data.slug == 'articles' %}
+  <h3>{{ post.data.title }}</h3>
+  <p>{{ post.data.description }}</p>
+  {%- endif %}
+  {%- endfor %}
+  <ul>
+    {%- for article in collections.articles %}
+    <li><a href="/articles/{{ article.slug }}">{{ article.title }}</a></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if collections.projects.size > 0 %}
+<section class="pad-top-2 border-top margin-top-2">
+  {%- for post in collections.pages %}
+  {%- if post.data.slug == 'portfolio' %}
+  <h3>{{ post.data.title }}</h3>
+  <p>{{ post.data.description }}</p>
+  {%- endif %}
+  {%- endfor %}
+  <ul>
+    {%- for project in collections.projects %}
+    <li><a href="/portfolio/{{ project.slug }}">{{ project.title }}</a></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if collections.testimonials.size > 0 %}
+<section class="pad-top-2 border-top margin-top-2">
+  {%- for post in collections.pages %}
+  {%- if post.data.slug == 'testimonials' %}
+  <h3>{{ post.data.title }}</h3>
+  <p>{{ post.data.description }}</p>
+  {%- endif %}
+  {%- endfor %}
+  <ul>
+    {%- for testimonial in collections.testimonials %}
+    <li><a href="/testimonials/{{ testimonial.slug }}">{{ testimonial.name.first }} {{ testimonial.name.last }}</a></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+</div>

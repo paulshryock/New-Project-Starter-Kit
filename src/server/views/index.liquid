@@ -1,0 +1,16 @@
+{% layout "global.liquid" %}
+{% block content %}
+<h1>{{ title }}</h1>
+{% if routes %}
+<section>
+  <header>
+    <h2>Routes</h2>
+  </header>
+  <ul>
+    {% for route in routes %}
+    <li><a href="/api/{{ route }}">{{ route }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endblock %}

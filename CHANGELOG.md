@@ -15,14 +15,15 @@ and this project adheres to [Semantic Versioning](semver).
 ### Security
 -->
 
-## 0.28.0 - 2019-XX-XX - RELEASE_NAME
+## TODO
 
 ### Changed
-- Make cms tags fields not required
+- Rename database(s)
 
-### Fixed
-- Fix favicon bundle
-- Fix cms redirect
+## 0.28.0 - 2020-04-16 - Add Express server
+
+### Added
+- Migrate everything over from Express-Starter repo
 
 ## 0.27.0 - 2019-11-02 - Restructure and simplify
 

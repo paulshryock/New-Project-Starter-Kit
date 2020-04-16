@@ -1,10 +1,32 @@
 {
-  "auth": {
-    "username": "NPSK_AUTH_USERNAME",
-    "password": "NPSK_AUTH_PASSWORD"
-  },
   "node": {
     "environment": "NODE_ENV"
   },
-  "polyfill_js": "NPSK_POLYFILL_JS"
+  "app": {
+    "url": "NPSK_APP_URL"
+  },
+  "jwtPrivateKey": "NPSK_JWT_PRIVATE_KEY",
+  "db": {
+    "protocol": "NPSK_DB_PROTOCOL",
+    "username": "NPSK_DB_USERNAME",
+    "password": "NPSK_DB_PASSWORD",
+    "host": "NPSK_DB_HOST",
+    "port": "NPSK_DB_PORT",
+    "database": "NPSK_DB_DATABASE",
+    "string": "MONGODB_URI"
+  },
+  "user": {
+    "email": "NPSK_USER_EMAIL",
+    "password": "NPSK_USER_PASSWORD",
+    "id": "NPSK_USER_ID"
+  },
+  "article": {
+    "id": "NPSK_ARTICLE_ID"
+  },
+  "project": {
+    "id": "NPSK_PROJECT_ID"
+  },
+  "testimonial": {
+    "id": "NPSK_TESTIMONIAL_ID"
+  }
 }

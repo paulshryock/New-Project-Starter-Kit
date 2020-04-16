@@ -1,0 +1,26 @@
+/* TODO: Test and debug this utility */
+
+.full-bleed {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
+
+/* "I use 100vw on a container with no overflow, and then overflow an element inside of the container." */
+
+/* "I also go for width: <x>%;.
+The issue is overflow: auto assumes no scrollbar exists. Unfortunately, it's the default value.
+Instead of caring to overwrite overflow on all containing blocks, I care for a fixed width value or auto calculated by Flexbox." */
+
+/* One simple workaround is keeping the scrollbar always around and be dealt with it
+
+html,
+body {
+  margin:0;
+  padding:0;
+}
+
+html {
+  overflow-y:scroll
+}
+
+*/

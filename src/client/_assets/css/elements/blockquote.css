@@ -1,0 +1,14 @@
+blockquote {
+  margin: 0 1em 1em;
+  position: relative;
+  quotes: "“" "”";
+
+  &:before {
+    color: $lightest-gray;
+    content: open-quote;
+    font-size: 300%;
+    left: -0.375em;
+    position: absolute;
+    top: -0.25em;
+  }
+}

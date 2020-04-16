@@ -1,0 +1,33 @@
+.border {
+	border: $border-thinner solid currentColor;
+
+  &-top {
+    border-top: $border-thinner solid currentColor;
+  }
+
+  &-top-2 {
+    border-top: $border-thin solid currentColor;
+  }
+
+  &-bottom {
+    border-bottom: $border-thinner solid currentColor;
+  }
+
+  &-y {
+    border-top: $border-thinner solid currentColor;
+    border-bottom: $border-thinner solid currentColor;
+  }
+
+  &-left {
+    border-left: $border-thinner solid currentColor;
+  }
+
+  &-right {
+    border-right: $border-thinner solid currentColor;
+  }
+
+  &-x {
+    border-top: $border-thinner solid currentColor;
+    border-right: $border-thinner solid currentColor;
+  }
+}

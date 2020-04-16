@@ -1,0 +1,19 @@
+ul,
+ol {
+	margin: 0 0 0.7em;
+}
+
+dl {
+  line-height: 1.4;
+	margin: 0 0 0.7em;
+	padding: 0 0 0 1em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+	padding: 0 0 0 1em;
+}
