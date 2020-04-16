@@ -17,12 +17,10 @@
     "node",
     "rest",
     "api",
-    "crud",
     "mongodb",
     "mongoose",
     "heroku",
     "jamstack",
-    "static",
     "eleventy",
     "gulp",
     "webpack",
@@ -30,12 +28,9 @@
     "sass",
     "postcss",
     "babel"
-    "open-source"
     "html",
     "css",
     "javascript",
-    "itcss",
-    "bem",
     "starter-kit"
   ],
   "homepage": "https://newprojectstarterkit.com",
