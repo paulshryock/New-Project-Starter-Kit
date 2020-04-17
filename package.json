@@ -42,7 +42,7 @@
     "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
   },
   "scripts": {
-    "start": "npm i --only=dev && npm run build",
+    "start": "npm run build",
     "develop": "dotenv gulp develop",
     "serve": "npm run serve:server",
     "serve:client": "dotenv gulp serve",
