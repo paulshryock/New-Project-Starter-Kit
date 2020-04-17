@@ -27,20 +27,6 @@ const debug = {
 }
 
 const isProduction = app.get('env') === 'production'
-const origin = {
-  origin: isProduction ? config.get('app.url') : '*',
-}
-
-/**
- * Import routes
- */
-const index = require('./routes/index')
-const api = require('./routes/api')
-const articles = require('./routes/articles')
-const projects = require('./routes/projects')
-const testimonials = require('./routes/testimonials')
-const users = require('./routes/users')
-const auth = require('./routes/auth')
 
 /**
  * Error if missing jwtPrivateKey
@@ -52,8 +38,11 @@ if(!config.get('jwtPrivateKey')) {
 /**
  * Setup HTTP headers
  */
-app.use(compression()) // compress all responses
-app.use(helmet({
+const origin = {
+  origin: isProduction ? config.get('app.url') : '*',
+}
+
+const helmetHeaders = {
   contentSecurityPolicy: {
     directives: {
       defaultSrc: [
@@ -94,8 +83,15 @@ app.use(helmet({
   referrerPolicy: {
     policy: 'strict-origin-when-cross-origin'
   }
-})) // Set HTTP headers
+}
 
+app.use(cors(origin)) // Set Access-Control-Allow-Origin header
+app.use(helmet(helmetHeaders)) // Set HTTP headers
+
+/**
+ * Setup gzip compression
+ */
+app.use(compression()) // compress all responses
 
 /**
  * Serve favicon
@@ -144,8 +140,18 @@ app.set('view engine', 'liquid')
 app.use(express.json()) // Return JSON
 app.use(express.urlencoded({ extended: false })) // Allow query strings
 app.use(cookieParser()) // Parse cookies
-// app.use(express.static(path.join(__dirname, '../../build/client'))) // Serve static content
-app.use(cors(origin))
+// app.use(express.static(path.join(__dirname, '../../build/client'))) // Uncomment this to serve static content
+
+/**
+ * Import routes
+ */
+const index = require('./routes/index')
+const api = require('./routes/api')
+const articles = require('./routes/articles')
+const projects = require('./routes/projects')
+const testimonials = require('./routes/testimonials')
+const users = require('./routes/users')
+const auth = require('./routes/auth')
 
 /**
  * Setup routes
