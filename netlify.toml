@@ -32,19 +32,41 @@
   for = "/*"
 
   [headers.values]
-    Access-Control-Allow-Origin = "https://newprojectstarterkit.com"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://*.cloudfront.net https://polyfill.io; style-src 'self' https://*.cloudfront.net; img-src 'self' https://*.cloudfront.net; font-src 'self' https://*.cloudfront.net; upgrade-insecure-requests"
-    Feature-Policy = "geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'self'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Server = ""
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload" # 2 years
-    Vary = "Origin"
-    X-Content-Type-Options = "nosniff"
-    X-DNS-Prefetch-Control = "off"
-    X-Download-Options = "noopen"
-    X-Frame-Options = "DENY"
-    X-Robots-Tag = "noindex, nofollow"
-    X-Xss-Protection = "1; mode=block"
+    Access-Control-Allow-Origin = 'https://newprojectstarterkit.com'
+    Content-Security-Policy = '''
+      default-src 'self';
+      script-src 'self' https://*.cloudfront.net https://polyfill.io;
+      style-src 'self' https://*.cloudfront.net;
+      img-src 'self' https://*.cloudfront.net;
+      font-src 'self' https://*.cloudfront.net;
+      upgrade-insecure-requests;'''
+    Feature-Policy = '''
+      geolocation 'none';
+      midi 'none';
+      notifications 'none';
+      push 'none';
+      sync-xhr 'self';
+      microphone 'none';
+      camera 'none';
+      magnetometer 'none';
+      gyroscope 'none';
+      speaker 'none';
+      vibrate 'none';
+      fullscreen 'none';
+      payment 'none';'''
+    Referrer-Policy = 'strict-origin-when-cross-origin'
+    Server = ''
+    Strict-Transport-Security = '''
+      max-age=63072000;
+      includeSubDomains;
+      preload;''' # 2 years
+    Vary = 'Origin'
+    X-Content-Type-Options = 'nosniff'
+    X-DNS-Prefetch-Control = 'off'
+    X-Download-Options = 'noopen'
+    X-Frame-Options = 'DENY'
+    X-Robots-Tag = 'noindex, nofollow'
+    X-Xss-Protection = '1; mode=block'
 
 [[headers]]
   for = "/404/*"
