@@ -32,13 +32,11 @@
   for = "/*"
 
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; style-src 'self' https://*.cloudfront.net; script-src 'self' https://npsk-express-starter.herokuapp.com https://*.cloudfront.net https://polyfill.io; connect-src 'self' https://api.newprojectstarterkit.com https://npsk-express-starter.herokuapp.com; form-action 'self' https://api.newprojectstarterkit.com https://npsk-express-starter.herokuapp.com"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://*.cloudfront.net https://polyfill.io; style-src 'self' https://*.cloudfront.net; img-src 'self' https://*.cloudfront.net; font-src 'self' https://*.cloudfront.net;"
     Feature-Policy = "geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'self' https://api.newprojectstarterkit.com https://npsk-express-starter.herokuapp.com; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Server = ""
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload" # 2 years
-    X-Content-Security-Policy = "default-src 'self'; style-src 'self' https://*.cloudfront.net; script-src 'self' https://npsk-express-starter.herokuapp.com https://*.cloudfront.net https://polyfill.io; connect-src 'self' https://api.newprojectstarterkit.com https://npsk-express-starter.herokuapp.com; form-action 'self' https://api.newprojectstarterkit.com https://npsk-express-starter.herokuapp.com" # IE fallback
-    X-WebKit-CSP = "default-src 'self'; style-src 'self' https://*.cloudfront.net; script-src 'self' https://npsk-express-starter.herokuapp.com https://*.cloudfront.net https://polyfill.io; connect-src 'self' https://api.newprojectstarterkit.com https://npsk-express-starter.herokuapp.com; form-action 'self' https://api.newprojectstarterkit.com https://npsk-express-starter.herokuapp.com" # Webkit fallback
     X-Content-Type-Options = "nosniff"
     X-DNS-Prefetch-Control = "off"
     X-Download-Options = "noopen"
@@ -53,13 +51,13 @@
     X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
-  for = "/offline/*"
+  for = "/api/*"
 
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
-  for = "/api/*"
+  for = "/offline/*"
 
   [headers.values]
-    Strict-Transport-Security = "max-age=0" # Disable HSTS
+    X-Robots-Tag = "noindex, nofollow"
