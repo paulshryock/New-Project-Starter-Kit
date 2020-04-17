@@ -32,8 +32,8 @@
   for = "/*"
 
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://*.cloudfront.net https://polyfill.io; style-src 'self' https://*.cloudfront.net; img-src 'self' https://*.cloudfront.net; font-src 'self' https://*.cloudfront.net;"
-    Feature-Policy = "geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'self' https://api.newprojectstarterkit.com https://npsk-express-starter.herokuapp.com; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://*.cloudfront.net https://polyfill.io; style-src 'self' https://*.cloudfront.net; img-src 'self' https://*.cloudfront.net; font-src 'self' https://*.cloudfront.net; upgrade-insecure-requests"
+    Feature-Policy = "geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'self'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Server = ""
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload" # 2 years
