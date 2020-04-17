@@ -2,6 +2,9 @@
   "node": {
     "environment": ""
   },
+  "eleventy": {
+    "environment": ""
+  },
   "app": {
     "title": "NPSK REST API - development",
     "url": ""

@@ -19,7 +19,7 @@ const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
 const connect = require('gulp-connect')
 
-const isProduction = config.get('node.environment') === 'production'
+const isProduction = config.get('eleventy.environment') === 'production'
 const SRC = config.get('paths.src.client')
 const BUILD = config.get('paths.build.client')
 
