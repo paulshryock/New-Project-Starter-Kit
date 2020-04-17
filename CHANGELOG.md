@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](semver).
 - [ ] Archive paulshryock/Express-Starter repo
 - [ ] Rename database(s)
 
-## 0.28.0 - 2020-04-16 - Add Express server
+## 0.28.0 - 2020-04-17 - Add Express server
 
 ### Added
 - Migrate everything over from Express-Starter repo
