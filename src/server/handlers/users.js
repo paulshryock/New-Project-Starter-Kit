@@ -2,6 +2,8 @@ const { log } = require('../modules/logger')
 const { User, validate } = require('../models/user')
 const _ = require('lodash')
 const bcrypt = require('bcrypt')
+const app = require('express')()
+const isProduction = app.get('env') === 'production'
 
 module.exports = {
   /**
@@ -63,13 +65,13 @@ module.exports = {
     res
       // Set a cookie
       .cookie('x-auth-token', token, {
-        httpOnly: true,
+        httpOnly: isProduction,
         maxAge: 60 * 60 * 1000, // 1 hour
         // maxAge: 24 * 60 * 60 * 1000, // 1 day
         // maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
         // path: '/',
-        sameSite: true,
-        secure: true
+        sameSite: isProduction,
+        secure: isProduction
       })
       // Set a header
       // .header('x-auth-token', token)

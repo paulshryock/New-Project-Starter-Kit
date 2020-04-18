@@ -1,7 +1,7 @@
 const { log } = require('../modules/logger')
 const { User, validate } = require('../models/user')
-const bcrypt = require('bcrypt')
 const _ = require('lodash')
+const bcrypt = require('bcrypt')
 const app = require('express')()
 const isProduction = app.get('env') === 'production'
 
@@ -55,5 +55,18 @@ module.exports = {
       })
       // Send the response
       .send('Login successful.')
+  },
+
+  /**
+   * Log out a user
+   */
+  logoutUser: async (req, res) => {
+    log.info('User logged out.')
+
+    res
+      // Remove a cookie
+      .clearCookie('x-auth-token')
+      // Send the response
+      .send('Logout successful.')
   }
 }
