@@ -21,6 +21,24 @@ and this project adheres to [Semantic Versioning](semver).
 - [ ] Archive paulshryock/Express-Starter repo
 - [ ] Rename database(s)
 
+## 0.29.0 - 2020-04-19 - Improve authorization
+
+### Added
+- Add token refresh
+- Add logout
+- During authorization, if `origin` or `referrer` header doesn't match current domain, deny access
+- During authorization, if token is expired, deny access
+- Add token creation time and expiration
+
+### Changed
+- Only send HSTS header in production
+- Update token cookie `maxAge` to 1 week
+- When creating user, only set secure cookie in production
+- Update token body properties
+
+### Removed
+- Remove logout middleware
+
 ## 0.28.0 - 2020-04-17 - Add Express server
 
 ### Added
