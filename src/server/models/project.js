@@ -7,13 +7,11 @@ const uniqueValidator = require('mongoose-unique-validator')
  * Define Project model
  */
 const Project = mongoose.model('Project', new mongoose.Schema({
-  title: { type: String, required: true, trim: true, unique: true, uniqueCaseInsensitive: true },
-  // TODO: Add min/max lengths
-  slug: { type: String, lowercase: true, required: true, trim: true, unique: true, uniqueCaseInsensitive: true },
-  // TODO: Add min/max lengths
+  title: { type: String, required: true, trim: true, unique: true, uniqueCaseInsensitive: true, minLength: 1, maxLength: 256 },
+  slug: { type: String, lowercase: true, required: true, trim: true, unique: true, uniqueCaseInsensitive: true, minLength: 1, maxLength: 256 },
   client: { type: String, required: true, trim: true },
   // TODO: Make client a related client?, (allow array?)
-  status: { type: String, required: true, trim: true, lowercase: true },
+  status: { type: String, required: true, trim: true, lowercase: true, minLength: 5, maxLength: 9 },
   date: { type: Date, default: Date.now }
 }))
 
@@ -27,11 +25,15 @@ const validate = {
     const schema = Joi.object({
       title: Joi.string()
         .trim()
-        .required(),
+        .required()
+        .min(1)
+        .max(256),
       slug: Joi.string()
         .trim()
         .lowercase()
-        .required(),
+        .required()
+        .min(1)
+        .max(256),
       client: Joi.string()
         .trim()
         .required(),
@@ -40,6 +42,8 @@ const validate = {
         .trim()
         .lowercase()
         .required()
+        .min(5)
+        .max(9)
         .valid('draft', 'approved', 'scheduled', 'published'),
       date: Joi.date()
     })
@@ -52,16 +56,22 @@ const validate = {
   update: function (project) {
     const schema = Joi.object({
       title: Joi.string()
-        .trim(),
+        .trim()
+        .min(1)
+        .max(256),
       slug: Joi.string()
         .trim()
-        .lowercase(),
+        .lowercase()
+        .min(1)
+        .max(256),
       client: Joi.string()
         .trim(),
       status: Joi.string()
         .alphanum()
         .trim()
         .lowercase()
+        .min(5)
+        .max(9)
         .valid('draft', 'approved', 'scheduled', 'published'),
       date: Joi.date()
     }).or('title', 'slug', 'client', 'status', 'date')

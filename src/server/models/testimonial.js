@@ -6,12 +6,10 @@ const mongoose = require('mongoose')
  */
 const Testimonial = mongoose.model('Testimonial', new mongoose.Schema({
   name: {
-    first: { type: String, trim: true, required: true },
-    last: { type: String, trim: true, required: true }
+    first: { type: String, trim: true, required: true, minLength: 1, maxLength: 128 },
+    last: { type: String, trim: true, required: true, minLength: 1, maxLength: 128 }
   },
-  // TODO: Add min/max lengths
-  slug: { type: String, lowercase: true, required: true, trim: true, unique: true, uniqueCaseInsensitive: true },
-  // TODO: Add min/max lengths
+  slug: { type: String, lowercase: true, required: true, trim: true, unique: true, uniqueCaseInsensitive: true, minLength: 1, maxLength: 256 },
   // TODO: Add company?
   // TODO: Add role?
   quote: { type: String, trim: true, required: true },
@@ -27,14 +25,26 @@ const validate = {
   create: function (testimonial) {
     const schema = Joi.object({
       name: Joi.object({
-        first: Joi.string().trim().required(),
-        last: Joi.string().trim().required()
+        first: Joi.string()
+          .trim()
+          .required()
+          .min(1)
+          .max(128),
+        last: Joi.string()
+          .trim()
+          .required()
+          .min(1)
+          .max(128)
       }),
       slug: Joi.string()
         .trim()
         .lowercase()
+        .required()
+        .min(1)
+        .max(256),
+      quote: Joi.string()
+        .trim()
         .required(),
-      quote: Joi.string().trim().required(),
       date: Joi.date()
     })
 
@@ -46,13 +56,22 @@ const validate = {
   update: function (testimonial) {
     const schema = Joi.object({
       name: Joi.object({
-        first: Joi.string().trim(),
-        last: Joi.string().trim()
+        first: Joi.string()
+          .trim()
+          .min(1)
+          .max(128),
+        last: Joi.string()
+          .trim()
+          .min(1)
+          .max(128)
       }),
       slug: Joi.string()
         .trim()
-        .lowercase(),
-      quote: Joi.string().trim(),
+        .lowercase()
+        .min(1)
+        .max(256),
+      quote: Joi.string()
+        .trim(),
       date: Joi.date()
     }).or('name.first', 'name.last', 'slug', 'quote', 'date')
 

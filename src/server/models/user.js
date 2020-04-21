@@ -12,8 +12,7 @@ const config = require('config')
 const userSchema = new mongoose.Schema({
   email: { type: String, trim: true, required: true, minLength: 5, maxLength: 255, unique: true, uniqueCaseInsensitive: true },
   password: { type: String, required: true , minLength: 12, maxLength: 1024 },
-  role: { type: String, trim: true, required: true }
-  // TODO: Add role min/max lengths
+  role: { type: String, trim: true, required: true, minLength: 3, maxLength: 5 }
 })
 
 userSchema.plugin(uniqueValidator)
@@ -39,7 +38,7 @@ const validate = {
     const schema = Joi.object({
       email: Joi.string().trim().min(5).max(255).required().email(),
       password: Joi.string().min(12).max(255).required(),
-      role: Joi.string().valid('admin', 'user').required()
+      role: Joi.string().valid('admin', 'user').required().min(4).max(5)
     })
 
     return schema.validate(user)
@@ -51,7 +50,7 @@ const validate = {
     const schema = Joi.object({
       email: Joi.string().trim().min(5).max(255).email(),
       password: Joi.string().min(12).max(255),
-      role: Joi.string().valid('admin', 'user')
+      role: Joi.string().valid('admin', 'user').min(4).max(5)
     }).or('email', 'password', 'role')
 
     return schema.validate(user)
