@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](semver).
 - [ ] Archive paulshryock/Express-Starter repo
 - [ ] Rename database(s)
 
-## 0.29.0 - 2020-04-19 - Improve authorization
+## 0.29.0 - 2020-04-19 - Improve authorization, model lengths
 
 ### Added
 - Add token refresh
@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](semver).
 - During authorization, if `origin` or `referrer` header doesn't match current domain, deny access
 - During authorization, if token is expired, deny access
 - Add token creation time and expiration
+- Add min and max lengths to model properties
 
 ### Changed
 - Only send HSTS header in production
