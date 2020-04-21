@@ -20,6 +20,13 @@
   headers = {X-From = "Netlify"}
 
 [[redirects]]
+  from = "/analytics/*"
+  to = "https://npsk-ackee.herokuapp.com/:splat"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
   from = "/*"
   to = "/404?search=:splat"
   status = 404
