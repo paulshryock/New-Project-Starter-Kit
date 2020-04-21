@@ -18,9 +18,33 @@ const userSchema = new mongoose.Schema({
 userSchema.plugin(uniqueValidator)
 
 userSchema.methods.generateAuthToken = function() {
-  const token = jwt.sign({ _id: this._id, role: this.role }, config.get('jwtPrivateKey'))
+  const token = jwt.sign({
+    sub: this._id, // subject
+    role: this.role,
+    exp: Date.now() + 7 * 24 * 60 * 60 * 1000, // expires in 1 week
+    iat: Date.now() // Creation time
+  }, config.get('jwtPrivateKey'))
 
   return token
+}
+
+userSchema.methods.refreshAuthToken = function(token) {
+  // Set the token expiration to one week
+  // and refresh the token every time the user
+  // opens the **web application** and every one hour.
+
+  // If a user doesn't open the **application** for more than a week,
+  // they will have to login again
+  // and this is acceptable **web application** UX.
+
+  const refreshed = jwt.sign({
+    sub: token.sub, // subject
+    role: token.role,
+    exp: Date.now() + 7 * 24 * 60 * 60 * 1000, // expires in 1 week
+    iat: token.iat // Creation time
+  }, config.get('jwtPrivateKey'))
+
+  return refreshed
 }
 
 /**

@@ -76,9 +76,9 @@ const helmetHeaders = {
     action: 'deny'
   },
   hsts: {
-    maxAge: 31536000, // 1 year
-    includeSubDomains: true,
-    preload: true
+    maxAge: isProduction ? 31536000 : 0, // 1 year
+    includeSubDomains: isProduction ? true : null,
+    preload: isProduction ? true : null
   },
   referrerPolicy: {
     policy: 'strict-origin-when-cross-origin'

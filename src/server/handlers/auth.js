@@ -1,7 +1,7 @@
 const { log } = require('../modules/logger')
 const { User, validate } = require('../models/user')
-const bcrypt = require('bcrypt')
 const _ = require('lodash')
+const bcrypt = require('bcrypt')
 const app = require('express')()
 const isProduction = app.get('env') === 'production'
 
@@ -36,24 +36,76 @@ module.exports = {
       return res.status(400).send('Invalid email or password')
     }
 
-    log.info('User logged in.', { user: _.pick(user, ['_id', 'email', 'role']) })
-
     // Generate auth token
     const token = user.generateAuthToken()
+
+    log.info('User logged in.', { user: _.pick(user, ['_id', 'email', 'role']) })
 
     // Return auth token to the client
     res
       // Set a cookie
       .cookie('x-auth-token', token, {
         httpOnly: isProduction,
-        maxAge: 60 * 60 * 1000, // 1 hour
-        // maxAge: 24 * 60 * 60 * 1000, // 1 day
-        // maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
+        maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
         // path: '/',
         sameSite: isProduction,
         secure: isProduction,
       })
       // Send the response
       .send('Login successful.')
+  },
+
+  /**
+   * Refresh a user token
+   */
+  refreshUserToken: async (req, res) => {
+    // Verify user exists
+    let user = await User.findOne({ email: req.body.email })
+    if (!user) {
+      log.info('Failed token refresh attempt: User does not exist.', { user: req.body.email })
+      return res.status(400).send('User does not exist.')
+    }
+
+    // Get current token
+    const token = req.cookies['x-auth-token']
+
+    // If no token, deny access
+    if (!token) {
+      log.error('Access denied. No token provided.', { status: 401 })
+      return res
+        .status(401)
+        .send('Access denied. No token provided.')
+    }
+
+    // Refresh the token
+    const refreshed = user.refreshAuthToken(token)
+
+    log.info('User token refreshed.', { user: _.pick(user, ['_id', 'email', 'role']) })
+
+    // Return refreshed auth token to the client
+    res
+      // Set a cookie
+      .cookie('x-auth-token', refreshed, {
+        httpOnly: isProduction,
+        maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
+        // path: '/',
+        sameSite: isProduction,
+        secure: isProduction,
+      })
+      // Send the response
+      .send('Token refresh successful.')
+  },
+
+  /**
+   * Log out a user
+   */
+  logoutUser: async (req, res) => {
+    log.info('User logged out.')
+
+    res
+      // Remove a cookie
+      .clearCookie('x-auth-token')
+      // Send the response
+      .send('Logout successful.')
   }
 }

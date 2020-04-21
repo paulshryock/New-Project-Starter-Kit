@@ -2,6 +2,8 @@ const { log } = require('../modules/logger')
 const { User, validate } = require('../models/user')
 const _ = require('lodash')
 const bcrypt = require('bcrypt')
+const app = require('express')()
+const isProduction = app.get('env') === 'production'
 
 module.exports = {
   /**
@@ -63,13 +65,13 @@ module.exports = {
     res
       // Set a cookie
       .cookie('x-auth-token', token, {
-        httpOnly: true,
+        httpOnly: isProduction,
         maxAge: 60 * 60 * 1000, // 1 hour
         // maxAge: 24 * 60 * 60 * 1000, // 1 day
         // maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
         // path: '/',
-        sameSite: true,
-        secure: true
+        sameSite: isProduction,
+        secure: isProduction
       })
       // Set a header
       // .header('x-auth-token', token)
@@ -82,7 +84,7 @@ module.exports = {
    */
   getCurrentUser: async (req, res) => {
     // Get current user
-    const user = await User.findById(req.user._id).select('-password')
+    const user = await User.findById(req.user.sub).select('-password')
     
     // Return user to the client
     res.send(user)
@@ -115,7 +117,7 @@ module.exports = {
     }
     if (req.body.role) requestBody.role = req.body.role
 
-    const user = await User.findByIdAndUpdate(req.user._id, requestBody, { new: true })
+    const user = await User.findByIdAndUpdate(req.user.sub, requestBody, { new: true })
 
     // If user does not exist, return 404 error to the client
     if (!user) return res.status(404).send('"id" was not found')
@@ -131,7 +133,7 @@ module.exports = {
    */
   deleteCurrentUser: async (req, res) => {
     // Remove user from database, if it exists
-    const user = await User.findByIdAndRemove(req.user._id)
+    const user = await User.findByIdAndRemove(req.user.sub)
 
     // If user does not exist, return 404 error to the client
     if (!user) return res.status(404).send('"id" was not found')
