@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](semver).
 - [ ] Archive paulshryock/Express-Starter repo
 - [ ] Rename database(s)
 
-## 0.29.0 - 2020-04-19 - Improve authorization, model lengths
+## 0.29.0 - 2020-04-20 - Improve authorization, model lengths
 
 ### Added
 - Add token refresh
