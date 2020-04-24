@@ -2,19 +2,23 @@
   * Adds hash link smooth scrolling
   */
 function addHashLinkSmoothScrolling () {
-  const links = [].slice.call(document.querySelectorAll('a[href^="#"]'))
+  if (document.documentElement.scrollIntoView) {
+    const links = [].slice.call(document.querySelectorAll('a[href^="#"]'));
 
-  links.map(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault()
-      const hash = link.getAttribute('href')
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const hash = link.getAttribute('href');
 
-      if (hash !== '#') {
-        const target = document.querySelector(hash)
-        target.scrollIntoView({ behavior: 'smooth' })
-      }
-    }, false)
-  })
+        if (hash !== '#') {
+          const target = document.querySelector(hash);
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, false);
+    });
+    return true;
+  }
+  return false;
 }
 
 /**

@@ -39,6 +39,9 @@ if (api) {
 
 module.exports = function (eleventyConfig) {
 
+  // TODO: Add Eleventy filter(s) for customized sorting
+  // https://github.com/11ty/eleventy/issues/898#issuecomment-617628635
+
   // Create collections
   collections.map(type => {
     eleventyConfig.addCollection(type.plural, async collection => {

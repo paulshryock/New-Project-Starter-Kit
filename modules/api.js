@@ -41,6 +41,9 @@ module.exports.login = function () {
 }
 
 module.exports.addCollection = async function (collection) {
+  // TODO: Cache collection
+  // https://github.com/11ty/eleventy-cache-assets
+  
   if (collection.location === 'api') {
     return await axios({
       method: 'get',
