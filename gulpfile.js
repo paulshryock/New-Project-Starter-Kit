@@ -254,6 +254,8 @@ function minify () {
     .pipe(gulp.dest(paths.js.dest))
     .pipe(connect.reload())
 
+  // TODO: Minify SVG
+
   const merged = merge(html, css, js)
 
   return merged.isEmpty() ? null : merged
@@ -274,10 +276,12 @@ function postMinify (cb) {
 
 function assets () {
   const fonts = gulp.src(paths.fonts.src)
+    // TODO: Optimize fonts
     .pipe(gulp.dest(paths.fonts.dest))
     .pipe(connect.reload())
 
   const images = gulp.src(paths.images.src)
+    // TODO: Optimize images
     .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
 
