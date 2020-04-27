@@ -1,6 +1,5 @@
 {%- assign file = 'bundle' %}
 {%- if env.eleventy_env == 'production' %}
-{%- assign file = 'bundle.min' %}
+  {%- assign file = 'bundle.min' %}
 {%- endif %}
     <script src="/js/{{ file }}.js" async></script>
-{% endunless %}
