@@ -48,10 +48,6 @@ const helmetHeaders = {
       defaultSrc: [
         "'self'"
         ],
-      scriptSrc: [
-        "'self'",
-        'https://polyfill.io'
-      ],
       upgradeInsecureRequests: true
     }
   },
