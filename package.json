@@ -120,6 +120,7 @@
     "gulp-standard": "^14.0.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
+    "js-yaml": "^3.13.1",
     "merge-stream": "^2.0.0",
     "nodemon": "^2.0.3",
     "pixrem": "^5.0.0",

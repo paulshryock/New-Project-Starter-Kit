@@ -1,8 +1,9 @@
 const config = require('config')
-const debug = require('debug')('npsk:eleventy')
 const SRC = config.get('paths.src.client')
 const BUILD = config.get('paths.build.client')
+const yaml = require("js-yaml")
 const api = require('./modules/api.js')
+const debug = require('debug')('npsk:eleventy')
 
 // Define collections
 const collections = [
@@ -62,6 +63,9 @@ module.exports = function (eleventyConfig) {
       return collection.getAll().filter(post => post.data.contentType === type.single)
     })
   })
+
+  // Add custom data file extension(s)
+  eleventyConfig.addDataExtension('yaml', contents => yaml.safeLoad(contents))
 
   // Deep merge
   eleventyConfig.setDataDeepMerge(true)
