@@ -104,111 +104,98 @@ async function html () {
   return html
 }
 
+function lint () {
+  const css = gulp.src(paths.css.src)
+    .pipe(gulpStylelint({
+      config: {
+        extends: ['stylelint-config-standard'],
+        rules: {
+          'at-rule-no-unknown': [true, {
+            ignoreAtRules: [
+              'include',
+              'mixin'
+            ]
+          }],
+          'no-descending-specificity': null,
+          'selector-pseudo-class-no-unknown': [true, {
+            ignorePseudoClasses: [
+              'focusring',
+              'readonly'
+            ]
+          }]
+        }
+      },
+      fix: true,
+      reporters: [
+        { formatter: 'string', console: true }
+      ]
+    }))
+
+  const js = gulp.src(paths.js.src)
+    .pipe(standard({ // Standard
+      fix: true,
+      envs: ['browser'] // https://eslint.org/docs/user-guide/configuring#specifying-environments
+    }))
+    .pipe(standard.reporter('default'))
+
+  const merged = merge(css, js)
+
+  return merged.isEmpty() ? null : merged
+}
+
 function css () {
-  const settings = {
-    config: {
-      extends: ['stylelint-config-standard'],
-      rules: {
-        'at-rule-no-unknown': [true, {
-          ignoreAtRules: [
-            'include',
-            'mixin'
-          ]
-        }],
-        'no-descending-specificity': null,
-        'selector-pseudo-class-no-unknown': [true, {
-          ignorePseudoClasses: [
-            'focusring',
-            'readonly'
-          ]
-        }]
-      }
-    },
-    fix: true,
-    reporters: [
-      { formatter: 'string', console: true }
-    ]
-  }
-
-  const plugins = [
-    require('postcss-easy-import'), // @import files
-    require('precss'), // Use Sass-like markup and staged CSS features in CSS
-    require('postcss-preset-env'), // Polyfill modern CSS
-    require('autoprefixer'), // Add vendor prefixes
-    require('pixrem')() // Add fallbacks for rem units
-  ]
-
-  const lint = gulp.src(paths.css.all)
-    .pipe(gulpStylelint(settings))
-
-  const build = gulp.src(paths.css.src)
+  return gulp.src(paths.css.src)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError)) // Preprocess Sass
-    // TODO: Test and see if I need to rename .css files to .scss
-    .pipe(postcss(plugins))
+    .pipe(postcss([
+      require('postcss-easy-import'), // @import files
+      require('precss'), // Use Sass-like markup and staged CSS features
+      require('postcss-preset-env'), // Polyfill modern CSS
+      require('autoprefixer'), // Add vendor prefixes
+      require('pixrem')() // Add fallbacks for rem units
+    ]))
     .pipe(concat('bundle.css')) // Concatenate and rename
     .pipe(beautify.css({ indent_size: 2 })) // Beautify
     .pipe(sourcemaps.write('.')) // Maintain Sourcemaps
     .pipe(gulp.dest(paths.css.dest))
     .pipe(connect.reload())
-
-  const merged = merge(lint, build)
-
-  return merged.isEmpty() ? null : merged
 }
 
 function js () {
-  const options = {
-    // Standard configuration
-    fix: true,
-    envs: ['browser'] // https://eslint.org/docs/user-guide/configuring#specifying-environments
-  }
-
-  const config = {
-    // Webpack configuration
-    mode: isProduction ? 'production' : 'development',
-    entry: {
-      bundle: paths.js.entry.index
-    },
-    output: {
-      path: path.resolve(__dirname, 'build/js'),
-      publicPath: '/js/',
-      filename: '[name].js'
-    },
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /(node_modules)/,
-          use: {
-            loader: 'babel-loader', // Babel
-            options: {
-              presets: ['@babel/preset-env']
+  return gulp.src(paths.js.entry.all)
+    .pipe(sourcemaps.init())
+    .pipe(webpack({ // Bundle modules with Webpack
+      mode: isProduction ? 'production' : 'development',
+      entry: {
+        bundle: paths.js.entry.index
+      },
+      output: {
+        path: path.resolve(__dirname, 'build/js'),
+        publicPath: '/js/',
+        filename: '[name].js'
+      },
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /(node_modules)/,
+            use: {
+              loader: 'babel-loader', // Transpile JS with Babel
+              options: {
+                presets: ['@babel/preset-env']
+              }
             }
           }
-        }
-      ]
-    },
-    devtool: 'source-map'
-  }
-
-  const lint = gulp.src(paths.js.src)
-    .pipe(standard(options))
-    .pipe(standard.reporter('default'))
-
-  const build = gulp.src(paths.js.entry.all)
-    .pipe(sourcemaps.init())
-    .pipe(webpack(config, compiler, err => {
+        ]
+      },
+      devtool: 'source-map'
+    }, compiler, err => {
       if (err) { throw new Error(err) }
-    })) // Webpack
+    }))
     .pipe(beautify({ indent_size: 2 })) // Beautify
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.js.dest))
     .pipe(connect.reload())
-
-  const merged = merge(lint, build)
-
-  return merged.isEmpty() ? null : merged
 }
 
 function minify () {
@@ -312,13 +299,13 @@ function serve (cb) {
  * Gulp tasks
  */
 const develop = gulp.series(
-  clean,
-  gulp.parallel(html, css, js),
-  assets
+  gulp.parallel(clean, lint),
+  gulp.parallel(html, css, js, assets)
 )
 
 const build = gulp.series(
-  develop,
+  clean,
+  gulp.parallel(html, css, js, assets),
   minify,
   postMinify
 )

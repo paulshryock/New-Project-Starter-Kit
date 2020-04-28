@@ -1,6 +1,0 @@
-# Block robots via HTTP headers OR robots.txt -- not both
-
-# We're using HTTP headers in `./netlify.toml`,
-# so don't build either of the files below.
-src/files/robots.html
-src/files/headers.html

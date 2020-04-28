@@ -1,4 +1,3 @@
-require('dotenv').config()
 const config = require('config')
 const debug = require('debug')('npsk:eleventy')
 const SRC = config.get('paths.src.client')
