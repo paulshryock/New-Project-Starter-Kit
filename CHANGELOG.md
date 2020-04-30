@@ -18,8 +18,35 @@ and this project adheres to [Semantic Versioning](semver).
 ## TODO
 
 ### Changed
-- [ ] Archive paulshryock/Express-Starter repo
 - [ ] Rename database(s)
+
+## 0.30.0 - 2020-04-30 - RELEASE_TITLE
+
+### Added
+- Add analytics tracking code
+- Add redirect for analytics
+- Add TODO comments
+- Add YAML data extension
+- Add HTML validation
+- Add SVG minification
+- Add page level scripts
+
+### Changed
+- Update configs
+- Update build pipeline
+- Update project description
+- Update browserslist to use defaults
+- Clean up client-side JavaScript code
+
+### Deprecated
+- Remove deprecated elements
+
+### Removed
+- Remove redundant aria roles
+
+### Fixed
+- Fix netlify redirect
+- Fix Eleventy watching layout changes in development
 
 ## 0.29.0 - 2020-04-20 - Improve authorization, model lengths
 
