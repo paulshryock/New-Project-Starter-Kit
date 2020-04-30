@@ -3,6 +3,30 @@
   */
 /*@import './fonts/*.css';*/
 
+/* https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#defining_a_font_family_with_font-face */
+
+/**
+ * 1. Audit and Monitor Font Use
+ * 2. Subset Font Resources
+ *    - Single codepoint (for example, U+416):
+ *      indicates a single character.
+ *    - Interval range (for example, U+400-4ff):
+ *      indicates the start and end codepoints of a range of characters.
+ *    - Wildcard range (for example, U+4??):
+ *      ? characters indicate any hexadecimal digit.
+ *    - OR only download the specific characters used:
+ *      i.e., `&text=Blog`
+ * 3. Deliver optimized font formats to each browser:
+ *    - Embedded Open Type (EOT)
+ *    - True Type Font (TTF)
+ *    - Web Open Font Format (WOFF)
+ *    - Web Open Font Format (WOFF2)
+ * 4. Give Precedence to `local()` in `src` List
+ * 5. Put the Font Request Early: @font-face lazy loads fonts
+ *    - `<link rel="preload" href="" as="font">` (specify format to preload)
+ * 6. Proper Caching is a Must
+ */
+
 /**
   * Declare font stacks
   */
