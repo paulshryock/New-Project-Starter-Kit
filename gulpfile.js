@@ -5,6 +5,7 @@ const del = require('del')
 const Eleventy = require('@11ty/eleventy')
 const ssg = new Eleventy()
 const htmlmin = require('gulp-htmlmin')
+const validator = require('gulp-html')
 const gulpStylelint = require('gulp-stylelint')
 const sourcemaps = require('gulp-sourcemaps')
 const postcss = require('gulp-postcss')
@@ -16,6 +17,7 @@ const path = require('path')
 const concat = require('gulp-concat')
 const beautify = require('gulp-beautify')
 const uglify = require('gulp-uglify')
+const svgmin = require('gulp-svgmin')
 const rename = require('gulp-rename')
 const connect = require('gulp-connect')
 
@@ -26,21 +28,10 @@ const BUILD = config.get('paths.build.client')
 const paths = {
   html: {
     src: [
-      `./${SRC}/_data/**/*.*`, // Global data
+      `./${SRC}/_data/**/*.*`, // Data
       `./${SRC}/_includes/**/*.*`, // Includes
       `./${SRC}/_layouts/**/*.*`, // Layouts
-      `./${SRC}/**/*.11tydata.js`, // Template data
-      `./${SRC}/**/*.html`,
-      `./${SRC}/**/*.md`,
-      `./${SRC}/**/*.11ty.js`,
-      `./${SRC}/**/*.liquid`,
-      `./${SRC}/**/*.njk`,
-      `./${SRC}/**/*.hbs`,
-      `./${SRC}/**/*.mustache`,
-      `./${SRC}/**/*.ejs`,
-      `./${SRC}/**/*.haml`,
-      `./${SRC}/**/*.pug`,
-      `./${SRC}/**/*.jstl`
+      `./${SRC}/_content/**/*.*` // Content
     ],
     dest: `./${BUILD}`, // Build directory
     output: `./${BUILD}/**/*.html` // Built HTML files
@@ -70,6 +61,10 @@ const paths = {
   images: {
     src: `./${SRC}/_assets/img/**/*`,
     dest: `./${BUILD}/img`
+  },
+  svg: {
+    dest: `./${BUILD}/img`,
+    output: `./${BUILD}/img/**/*.svg`
   }
 }
 
@@ -83,20 +78,35 @@ async function html () {
   await ssg.init()
   await ssg.write()
 
-  const options = {
-    indent_size: 2,
-    max_preserve_newlines: 1
-  }
-
   const html = gulp.src(paths.html.output)
-    .pipe(beautify.html(options)) // Beautify
+    .pipe(beautify.html({
+      indent_size: 2,
+      max_preserve_newlines: 1
+    })) // Beautify
     //
     // TODO: inline critical CSS
     // https://github.com/addyosmani/critical
     // https://github.com/addyosmani/critical-path-css-demo/blob/dca7ec42c6b9d7bb2d8425c4055aabc753c1a6ac/gulpfile.js#L100-L111
     //
-    // TODO: validate HTML
-    // https://www.npmjs.com/package/html-validator
+    .pipe(gulp.dest(paths.html.dest))
+    .pipe(connect.reload())
+
+  return html
+}
+
+async function watchHtml () {
+  await ssg.init()
+  await ssg.watch()
+
+  const html = gulp.src(paths.html.output)
+    .pipe(beautify.html({
+      indent_size: 2,
+      max_preserve_newlines: 1
+    })) // Beautify
+    //
+    // TODO: inline critical CSS
+    // https://github.com/addyosmani/critical
+    // https://github.com/addyosmani/critical-path-css-demo/blob/dca7ec42c6b9d7bb2d8425c4055aabc753c1a6ac/gulpfile.js#L100-L111
     //
     .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
@@ -139,7 +149,6 @@ function lint () {
     .pipe(standard.reporter('default'))
 
   const merged = merge(css, js)
-
   return merged.isEmpty() ? null : merged
 }
 
@@ -198,54 +207,57 @@ function js () {
     .pipe(connect.reload())
 }
 
-function minify () {
-  const options = {
-    collapseBooleanAttributes: true,
-    collapseWhitespace: true,
-    decodeEntities: true,
-    html5: true,
-    minifyCSS: true,
-    minifyJS: true,
-    processConditionalComments: true,
-    removeAttributeQuotes: true,
-    removeComments: true,
-    removeEmptyAttributes: true,
-    removeOptionalTags: true,
-    removeRedundantAttributes: true,
-    removeScriptTypeAttributes: true,
-    removeStyleLinkTypeAttributes: true,
-    sortAttributes: true,
-    sortClassName: true,
-    trimCustomFragments: true,
-    useShortDoctype: true
-  }
-
-  const html = gulp.src(paths.html.output)
-    .pipe(htmlmin(options)) // Minify
+function minifyHtml () {
+  return gulp.src(paths.html.output)
+    .pipe(htmlmin({ // Minify
+      collapseBooleanAttributes: true,
+      collapseWhitespace: true,
+      decodeEntities: true,
+      html5: true,
+      minifyCSS: true,
+      minifyJS: true,
+      processConditionalComments: true,
+      removeAttributeQuotes: true,
+      removeComments: true,
+      removeEmptyAttributes: true,
+      removeOptionalTags: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      sortAttributes: true,
+      sortClassName: true,
+      trimCustomFragments: true,
+      useShortDoctype: true
+    }))
     .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
+}
 
-  const css = gulp.src(paths.css.output)
+function minifyCss () {
+  return gulp.src(paths.css.output)
     .pipe(sourcemaps.init())
     .pipe(postcss([require('cssnano')])) // Minify
     .pipe(rename({ suffix: '.min' })) // Rename
     .pipe(sourcemaps.write('.')) // Maintain Sourcemaps
     .pipe(gulp.dest(paths.css.dest))
     .pipe(connect.reload())
+}
 
-  const js = gulp.src(paths.js.output)
+function minifyJs () {
+  return gulp.src(paths.js.output)
     .pipe(sourcemaps.init())
     .pipe(uglify()) // Minify
     .pipe(rename({ suffix: '.min' })) // Rename
     .pipe(sourcemaps.write('.')) // Maintain Sourcemaps
     .pipe(gulp.dest(paths.js.dest))
     .pipe(connect.reload())
+}
 
-  // TODO: Minify SVG
-
-  const merged = merge(html, css, js)
-
-  return merged.isEmpty() ? null : merged
+function minifySvg () {
+  return gulp.src(paths.svg.output)
+    .pipe(svgmin()) // Optimize and minify
+    .pipe(gulp.dest(paths.svg.dest))
+    .pipe(connect.reload())
 }
 
 function postMinify (cb) {
@@ -273,17 +285,33 @@ function assets () {
     .pipe(connect.reload())
 
   const merged = merge(fonts, images)
-
   return merged.isEmpty() ? null : merged
 }
 
+function validate () {
+  return gulp.src(paths.html.output)
+    .pipe(validator({
+      'errors-only': true
+    })) // Validate HTML
+    .pipe(gulp.dest(paths.html.dest))
+}
+
 function watch (cb) {
-  gulp.watch(paths.html.src, html)
+  gulp.watch(paths.html.src, watchHtml)
   gulp.watch([paths.css.all], css)
   gulp.watch(paths.js.src, js)
   gulp.watch([paths.fonts.src, paths.images.src], assets)
 
-  cb()
+  return cb()
+}
+
+function watchMinify (cb) {
+  gulp.watch([paths.html.output], minifyHtml)
+  gulp.watch([paths.css.output], gulp.series(minifyCss, postMinify))
+  gulp.watch([paths.js.output], gulp.series(minifyJs, postMinify))
+  gulp.watch([paths.svg.output], minifySvg)
+
+  return cb()
 }
 
 function serve (cb) {
@@ -292,27 +320,47 @@ function serve (cb) {
     livereload: true
   })
 
-  cb()
+  return cb()
 }
 
 /**
  * Gulp tasks
  */
-const develop = gulp.series(
+exports.develop = gulp.series(
   gulp.parallel(clean, lint),
-  gulp.parallel(html, css, js, assets)
+  gulp.parallel(html, css, js, assets),
+  validate
 )
 
-const build = gulp.series(
+exports.serve = gulp.series(
+  gulp.parallel(clean, lint),
+  gulp.parallel(html, css, js, assets),
+  validate,
+  watch,
+  serve
+)
+
+exports.watch = gulp.series(
+  gulp.parallel(clean, lint),
+  gulp.parallel(html, css, js, assets),
+  validate,
+  watch
+)
+
+exports.build = gulp.series(
   clean,
   gulp.parallel(html, css, js, assets),
-  minify,
-  postMinify
+  gulp.parallel(minifyCss, minifyJs, minifySvg),
+  gulp.parallel(minifyHtml, postMinify)
 )
 
-exports.develop = develop
-exports.watch = gulp.series(develop, watch)
-exports.serve = gulp.series(develop, watch, serve)
-exports.build = build
-exports.production = gulp.series(build, serve)
-exports.default = build
+exports.production = gulp.series(
+  clean,
+  gulp.parallel(html, css, js, assets),
+  gulp.parallel(minifyCss, minifyJs, minifySvg),
+  gulp.parallel(minifyHtml, postMinify),
+  gulp.parallel(watch, watchMinify),
+  serve
+)
+
+exports.default = exports.build

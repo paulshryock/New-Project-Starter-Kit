@@ -1,7 +1,7 @@
 {% include components/skip-link, skip: skip-link.content %}
 {%- if slug == '.' %}{%- assign el = 'h1' %}
 {%- else %}{%- assign el = 'p' %}{%- endif %}
-<header id="masthead" role="banner" class="masthead pad">
+<header id="masthead" class="masthead pad">
   <div class="constrain masthead__layout">
     <{{ el }} class="masthead__title"><a href="/">{{ site.title }}</a></{{ el }}>
     {% include components/navigation %}

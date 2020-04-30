@@ -39,9 +39,9 @@ date: 2019-01-01T00:00:00-5
 		<p>
 			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
 		</p>
-		<table class="t1" summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
+		<table class="t1">
 			<caption>
-				Most Downloaded Movies on BitTorrent, 2011
+				Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses
 			</caption>
 			<thead>
 				<tr>
@@ -51,11 +51,6 @@ date: 2019-01-01T00:00:00-5
 					<th>Grosses</th>
 				</tr>
 			</thead>
-			<tfoot>
-				<tr>
-					<th colspan="4">torrentfreak.com</th>
-				</tr>
-			</tfoot>
 			<tbody>
 				<tr>
 					<th>1</th>
@@ -118,6 +113,11 @@ date: 2019-01-01T00:00:00-5
 					<td>$1,328,111,219</td>
 				</tr>
 			</tbody>
+			<tfoot>
+				<tr>
+					<th colspan="4">torrentfreak.com</th>
+				</tr>
+			</tfoot>
 		</table>
 		<table>
 			<tr>
@@ -360,9 +360,7 @@ and another</pre>
 		<p>
 			I am <a href="?abc123">the a tag</a> example<br>
 			I am <abbr title="test">the abbr tag</abbr> example<br>
-			I am <acronym>the acronym tag</acronym> example<br>
 			I am <b>the b tag</b> example<br>
-			I am <big>the big tag</big> example<br>
 			I am <cite>the cite tag</cite> example<br>
 			I am <code>the code tag</code> example<br>
 			I am <del>the del tag</del> example<br>
@@ -379,7 +377,6 @@ and another</pre>
 			I am <strong>the strong tag</strong> example<br>
 			I am <sub>the sub tag</sub> example<br>
 			I am <sup>the sup tag</sup> example<br>
-			I am <tt>the tt tag</tt> example<br>
 			I am <var>the var tag</var> example<br>
 			I am the <span class="small">small class</span> example<br>
 			I am the <span class="large">large class</span> example<br>
@@ -448,16 +445,6 @@ and another</pre>
 					</td>
 				</tr>
 			</thead>
-			<tfoot>
-				<tr>
-					<th>
-						Table foot th
-					</th>
-					<td>
-						Table foot td
-					</td>
-				</tr>
-			</tfoot>
 			<tbody>
 				<tr>
 					<th>
@@ -476,6 +463,16 @@ and another</pre>
 					</td>
 				</tr>
 			</tbody>
+			<tfoot>
+				<tr>
+					<th>
+						Table foot th
+					</th>
+					<td>
+						Table foot td
+					</td>
+				</tr>
+			</tfoot>
 		</table>
 		<form action="#">
 			<fieldset>
