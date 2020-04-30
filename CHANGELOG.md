@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](semver).
 ### Changed
 - [ ] Rename database(s)
 
-## 0.30.0 - 2020-04-30 - RELEASE_TITLE
+## 0.30.0 - 2020-04-30 - Analytics, Better Build Pipeline
 
 ### Added
 - Add analytics tracking code
