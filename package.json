@@ -105,7 +105,6 @@
     "babel-loader": "^8.1.0",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
-    "doiuse": "^4.2.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-beautify": "^3.0.0",

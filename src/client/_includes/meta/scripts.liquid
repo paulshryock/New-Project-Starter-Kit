@@ -2,4 +2,10 @@
 {%- if env.eleventy_env == 'production' %}
   {%- assign file = 'bundle.min' %}
 {%- endif %}
-    <script src="/js/{{ file }}.js" async></script>
+<script src="/js/{{ file }}.js" async></script>
+
+{%- if scripts %}
+  {%- for script in scripts %}
+    <script src="/js/{{ script }}.js" async></script>
+  {%- endfor %}
+{%- endif %}

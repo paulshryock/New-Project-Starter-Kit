@@ -3,22 +3,24 @@
   */
 function addHashLinkSmoothScrolling () {
   if (document.documentElement.scrollIntoView) {
-    const links = [].slice.call(document.querySelectorAll('a[href^="#"]'));
+    const links = [].slice.call(document.querySelectorAll('a[href^="#"]'))
 
-    links.forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const hash = link.getAttribute('href');
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault()
+        const hash = link.getAttribute('href')
 
         if (hash !== '#') {
-          const target = document.querySelector(hash);
-          target.scrollIntoView({ behavior: 'smooth' });
+          const target = document.querySelector(hash)
+          if (!target) continue
+            
+          target.scrollIntoView({ behavior: 'smooth' })
         }
-      }, false);
-    });
-    return true;
+      })
+    })
+    return true
   }
-  return false;
+  return false
 }
 
 /**
