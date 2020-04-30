@@ -1,36 +1,33 @@
-// IIFE
-(function () {
-
 /**
   * Requires minimum click time to trigger card link click
   */
 function requireCardClickTime () {
   const cards = document.querySelectorAll('.card')
+  if (!cards) return false
 
-  Array.prototype.forEach.call(cards, card => {
+  cards.map(card => {
     let down
     let up
 
     card.onmousedown = () => {
-      down = +new Date()
+      return down = +new Date()
     }
 
     card.onmouseup = () => {
       up = +new Date()
       if ((up - down) < 200) {
-        const link = card.querySelector('h2 a')
-
-        link.click()
+        const link = card.querySelector('h2 a') // TODO: Use class selector
+        return link.click()
       }
     }
 
     card.style.cursor = 'pointer'
   })
+
+  return true
 }
 
 /**
   * Require minimum click time to trigger card link click
   */
 requireCardClickTime()
-
-})()
