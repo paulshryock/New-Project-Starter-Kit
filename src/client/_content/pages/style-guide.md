@@ -76,8 +76,6 @@ The [a element](#) and [external a element](https://example.com) examples
 
 The <abbr>abbr element</abbr> and an <abbr title="Abbreviation">abbr</abbr> element with title examples
 
-The <acronym title="A Cowboy Ran One New York Marathon">ACRONYM</acronym> element example
-
 The **b element** example
 
 The <cite>cite element</cite> example
