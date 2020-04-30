@@ -26,21 +26,10 @@ const BUILD = config.get('paths.build.client')
 const paths = {
   html: {
     src: [
-      `./${SRC}/_data/**/*.*`, // Global data
+      `./${SRC}/_data/**/*.*`, // Data
       `./${SRC}/_includes/**/*.*`, // Includes
       `./${SRC}/_layouts/**/*.*`, // Layouts
-      `./${SRC}/**/*.11tydata.js`, // Template data
-      `./${SRC}/**/*.html`,
-      `./${SRC}/**/*.md`,
-      `./${SRC}/**/*.11ty.js`,
-      `./${SRC}/**/*.liquid`,
-      `./${SRC}/**/*.njk`,
-      `./${SRC}/**/*.hbs`,
-      `./${SRC}/**/*.mustache`,
-      `./${SRC}/**/*.ejs`,
-      `./${SRC}/**/*.haml`,
-      `./${SRC}/**/*.pug`,
-      `./${SRC}/**/*.jstl`
+      `./${SRC}/_content/**/*.*` // Content
     ],
     dest: `./${BUILD}`, // Build directory
     output: `./${BUILD}/**/*.html` // Built HTML files
@@ -81,7 +70,7 @@ function clean () {
 
 async function html () {
   await ssg.init()
-  await ssg.write()
+  isProduction ? await ssg.write() : await ssg.watch()
 
   const options = {
     indent_size: 2,
