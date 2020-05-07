@@ -4,6 +4,11 @@
   line-height: inherit;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 input,
 textarea {
   letter-spacing: inherit;
