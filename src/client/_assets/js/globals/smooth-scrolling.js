@@ -12,9 +12,10 @@ function addHashLinkSmoothScrolling () {
 
         if (hash !== '#') {
           const target = document.querySelector(hash)
-          if (!target) continue
+          if (!target) return false
             
           target.scrollIntoView({ behavior: 'smooth' })
+          return true
         }
       })
     })
