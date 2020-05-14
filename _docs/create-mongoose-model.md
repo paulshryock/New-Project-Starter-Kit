@@ -1,6 +1,6 @@
 # Create a Mongoose model
 
-```js
+```javascript
 const Article = mongoose.model('Article', new mongoose.Schema({
   title: { type: String, required: true, trim: true },
   author: String,
@@ -16,7 +16,7 @@ const Article = mongoose.model('Article', new mongoose.Schema({
 
 ## Create related models
 
-```js
+```javascript
 const Author = mongoose.model('Author', mongoose.Schema({
   name    : String,
   stories : [{ type: Schema.Types.ObjectId, ref: 'Story' }]
@@ -30,7 +30,7 @@ const Story  = mongoose.model('Story', mongoose.Schema({
 
 ### Give document a relation
 
-```js
+```javascript
 const bob = new Author({ name: 'Bob Smith' })
 
 bob.save(function (err) {
@@ -59,12 +59,11 @@ Story
 })
 ```
 
-## Schema types (fields)
+## Schema types \(fields\)
 
-> A schema can have an arbitrary number of fields — each one represents a field in the documents stored in MongoDB. An example schema showing many of the common field types and how they are declared is shown below.
-> from [developer.mozilla.org][mozilla-express-mongoose]
+> A schema can have an arbitrary number of fields — each one represents a field in the documents stored in MongoDB. An example schema showing many of the common field types and how they are declared is shown below. from \[developer.mozilla.org\]\[mozilla-express-mongoose\]
 
-```js
+```javascript
 var schema = new Schema(
 {
   name: String,
@@ -80,42 +79,42 @@ var schema = new Schema(
 })
 ```
 
-- **`ObjectId`**: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID (`_id`) for the specified object. We can use the `populate()` method to pull in the associated information when needed.
-- **`Mixed`**: An arbitrary schema type.
-- **`[]`**: An array of items. You can perform JavaScript array operations on these models (push, pop, unshift, etc.). The examples above show an array of objects without a specified type and an array of `String` objects, but you can have an array of any type of object.
+* **`ObjectId`**: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID \(`_id`\) for the specified object. We can use the `populate()` method to pull in the associated information when needed.
+* **`Mixed`**: An arbitrary schema type.
+* **`[]`**: An array of items. You can perform JavaScript array operations on these models \(push, pop, unshift, etc.\). The examples above show an array of objects without a specified type and an array of `String` objects, but you can have an array of any type of object.
 
 ## Mongoose SchemaType options
 
-- `lowercase`: Boolean
-- `uppercase`: Boolean
-- `trim`: Boolean
-- getter and setter Functions which return what you want:
-  - `get: v => v + 1`
-  - `set: v => v + 1`
+* `lowercase`: Boolean
+* `uppercase`: Boolean
+* `trim`: Boolean
+* getter and setter Functions which return what you want:
+  * `get: v => v + 1`
+  * `set: v => v + 1`
 
 ## Mongoose Built-in validators:
 
-- `required`: Boolean or Function that returns Boolean
+* `required`: Boolean or Function that returns Boolean
 
 ### String validators
 
-- `minlength`: Number
-- `maxlength`: Number
-- `match`: Regex
-- `enum`: Array of valid Strings
+* `minlength`: Number
+* `maxlength`: Number
+* `match`: Regex
+* `enum`: Array of valid Strings
 
 ### Number and Date Validators
 
-- `min`: Number
-- `max`: Number
+* `min`: Number
+* `max`: Number
 
 ### Custom sync validator:
 
-- `validate: { validator: function(v) { return v } }`
+* `validate: { validator: function(v) { return v } }`
 
 #### Example
 
-```js
+```javascript
 {
   type: Array,
   validate: {
@@ -131,7 +130,7 @@ var schema = new Schema(
 
 #### Example
 
-```js
+```javascript
 {
   type: Array,
   validate: {
@@ -142,4 +141,5 @@ var schema = new Schema(
 }
 ```
 
-[mozilla-express-mongoose]: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
+\[mozilla-express-mongoose\]: [https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express\_Nodejs/mongoose](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
+

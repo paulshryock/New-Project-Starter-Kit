@@ -1,6 +1,6 @@
 # Connect MongoDB Database
 
-```js
+```javascript
 const MongoClient = require('mongodb').MongoClient
 
 const uri = "mongodb+srv://<username>:<password>@cluster0-ipclx.mongodb.net/test?retryWrites=true&w=majority"
@@ -13,3 +13,4 @@ client.connect(err => {
   client.close()
 })
 ```
+

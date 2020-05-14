@@ -1,8 +1,8 @@
-<!-- From https://www.taniarascia.com/full-stack-cookies-localstorage-react-express/#using-http-cookies-in-express -->
+# using-cookies-in-express
 
 ## Set a cookie
 
-```js
+```javascript
 // Set a cookie
 response.cookie('nameOfCookie', 'cookieValue', {
   maxAge: 60 * 60 * 1000, // 1 hour
@@ -14,14 +14,14 @@ response.cookie('nameOfCookie', 'cookieValue', {
 
 ## Get a cookie
 
-```js
+```javascript
 // Get a cookie
 response.cookies.nameOfCookie
 ```
 
 ## Clear a cookie
 
-```js
+```javascript
 // Clear a cookie
 response.clearCookie('nameOfCookie')
 ```
@@ -30,7 +30,7 @@ response.clearCookie('nameOfCookie')
 
 Express runs on middlewares. In the case that you want to update a cookie in one middleware and use it in the next, you can store it as an Express local. This might come in handy if you have to refresh a JWT access token in a preAuth route, use that authentication in the handler, and send cookies in the response at the end.
 
-```js
+```javascript
 // Create a local
 const refreshMiddleware = (request, response, next) => {
   const accessToken = getNewAccessToken(refreshToken)
@@ -46,3 +46,4 @@ const handler = (request, response) => {
 
 router.post('/app/user', refreshMiddleware, handler)
 ```
+

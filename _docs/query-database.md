@@ -2,24 +2,24 @@
 
 ## Get all collection items
 
-The find() method gets all matching records, but often you just want to get one match.
+The find\(\) method gets all matching records, but often you just want to get one match.
 
-```js
+```javascript
 const collection = await Model.find()
 ```
 
 ## Get a single collection item
 
-- `findById()`: Finds the document with the specified id.
-- `findOne()`: Finds a single document that matches the specified criteria.
-- `findByIdAndUpdate()`: Finds a single document by id and updates it.
-- `findByIdAndRemove()`: Finds a single document by id and removes it.
-- `findOneAndUpdate()`: Finds a single document by criteria and updates it.
-- `findOneAndRemove()`: Finds a single document by criteria and either removes it.
+* `findById()`: Finds the document with the specified id.
+* `findOne()`: Finds a single document that matches the specified criteria.
+* `findByIdAndUpdate()`: Finds a single document by id and updates it.
+* `findByIdAndRemove()`: Finds a single document by id and removes it.
+* `findOneAndUpdate()`: Finds a single document by criteria and updates it.
+* `findOneAndRemove()`: Finds a single document by criteria and either removes it.
 
 ## Refine query
 
-```js
+```javascript
 const refinedCollection = await Model
 
   .find({ author: 'Paul Shryock', title: 'Another article' }) // Filter
@@ -37,16 +37,16 @@ const refinedCollection = await Model
 
 ### Comparison operators
 
-- `$eq`: equal to
-- `$ne`: not equal to
-- `$gt`: greater than
-- `$gte`: greater than or equal to
-- `$lt`: less than
-- `$lte`: less than or equal to
-- `$in`: equal to one of multiple options
-- `$nin`: not in
+* `$eq`: equal to
+* `$ne`: not equal to
+* `$gt`: greater than
+* `$gte`: greater than or equal to
+* `$lt`: less than
+* `$lte`: less than or equal to
+* `$in`: equal to one of multiple options
+* `$nin`: not in
 
-```js
+```javascript
 const comparisonCollection = await Model
   .find({ price: { $gt: 10 } }) // price greater than 10
   .find({ price: { $in: [10, 15, 20] } }) // price equal to 10, 15, or 20
@@ -54,10 +54,10 @@ const comparisonCollection = await Model
 
 ### Logical operators
 
-- `and`: Every condition is true
-- `or`: Either condition is true
+* `and`: Every condition is true
+* `or`: Either condition is true
 
-```js
+```javascript
 const logicalCollection = await Model
   .and([ { author: 'Mosh' }, { isPublished: true } ])
   .or([ { author: 'Mosh' }, { isPublished: true } ])
@@ -67,7 +67,7 @@ const logicalCollection = await Model
 
 Use any regular expression as a property value
 
-```js
+```javascript
 const regexCollection = await Model
   .find({ title: /^Lorem/i }) // Filter title starts with Lorem
   .find({ title: /Ipsum$/i }) // Filter title ends with Ipsum
@@ -75,7 +75,7 @@ const regexCollection = await Model
 
 ### Pagination
 
-```js
+```javascript
 const pageNumber = 2
 const pageSize = 10
 
@@ -86,7 +86,8 @@ const paginatedCollection = await Model
 
 ### Count items
 
-```js
+```javascript
 const total = await Model
   .countDocuments() // Return total Number of matching collection items
 ```
+

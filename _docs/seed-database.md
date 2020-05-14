@@ -1,8 +1,6 @@
-## Seed database with Mongoose
+# Seed database with Mongoose
 
-<!-- From: https://github.com/justsml/guides/tree/master/mongodb/mongoose-seeds#example-dbseedsjs -->
-
-```js
+```javascript
 const {mongoose, db} = require('./connection');
 const ObjectId = mongoose.ObjectId;
 const Category = mongoose.model('Category');
@@ -27,3 +25,4 @@ Promise.all([
   ])
 })
 ```
+
