@@ -23,12 +23,21 @@ This is an open source project which uses the [The Hippocratic License][license]
 
 ### Get Started
 
-Fork or clone this repo, install dev dependencies, and start:
+Fork or clone this repo, install dependencies, add environment variables, and start:
 
 ```bash
+# Clone the repo
 git clone https://github.com/paulshryock/New-Project-Starter-Kit.git
 cd New-Project-Starter-Kit
-npm i
+
+# Install dependencies
+npm install
+
+# Add environment variables:
+# See ./config/custom-environment-variables.json
+# and ./_docs/environment-variables.md
+touch ./.env
+
 npm start
 ```
 
