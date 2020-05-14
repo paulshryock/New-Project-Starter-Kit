@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](semver).
 ### Changed
 - [ ] Rename database(s)
 
-## 0.31.0 - 2020-05-14 - RELEASE_TITLE
+## 0.31.0 - 2020-05-14 - Fix scrolling, Better navigation markup
 
 ### Added
 - Set Eleventy watch throttle wait time
