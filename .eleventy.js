@@ -70,6 +70,9 @@ module.exports = function (eleventyConfig) {
   // Deep merge
   eleventyConfig.setDataDeepMerge(true)
 
+  // Support for cooldown period between builds during watch/serve
+  eleventyConfig.setWatchThrottleWaitTime(4 * 1000) // 4 seconds
+
   return {
     dir: {
       data: '_data',
