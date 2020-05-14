@@ -9,6 +9,11 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  /* Set default aspect ratio based on `width` and `height` attributes */
+  aspect-ratio: attr(width) / attr(height);
+}
+
 input,
 textarea {
   letter-spacing: inherit;
