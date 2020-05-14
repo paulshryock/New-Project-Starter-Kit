@@ -20,6 +20,25 @@ and this project adheres to [Semantic Versioning](semver).
 ### Changed
 - [ ] Rename database(s)
 
+## 0.31.0 - 2020-05-14 - RELEASE_TITLE
+
+### Added
+- Set Eleventy watch throttle wait time
+- Add CSS TODO comments
+- Set default `<img>` `aspect-ratio` based on `width` and `height` attributes
+
+### Changed
+- Update Readme URLs and example Node version number
+- Rename `.screen-reader-text` CSS class to `.visually-hidden`
+- Improve navigation markup with better a11y
+
+### Fixed
+- Prevent horizontal scrolling
+- Fix smooth scrolling
+
+### Security
+- Update dependencies (minor and bugfix version bumps)
+
 ## 0.30.0 - 2020-04-30 - Analytics, Better Build Pipeline
 
 ### Added
