@@ -20,6 +20,12 @@ and this project adheres to [Semantic Versioning](semver).
 ### Changed
 - [ ] Rename database(s)
 
+## 0.31.0 - 2020-05-14 - Better Docs
+
+### Changed
+- Update Readme Get Started instructions
+- Update Docs
+
 ## 0.31.0 - 2020-05-14 - Fix scrolling, Better navigation markup
 
 ### Added
