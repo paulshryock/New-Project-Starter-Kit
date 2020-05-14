@@ -1,3 +1,8 @@
+/**
+ * TODO: Revisit
+ * https://moderncss.dev/css-button-styling-guide/
+ */
+
 .button {
   appearance: none;
   background-color: $darker-gray;

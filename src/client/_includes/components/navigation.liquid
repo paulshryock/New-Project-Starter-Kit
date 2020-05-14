@@ -2,10 +2,10 @@
     <nav class="navigation" data-toggle="true">
       <ul class="navigation__list">
         {%- for item in navigation.items %}
-          {%- if item.slug == page.slug %}
-            {% assign isActive = "class='is-active'" %}
+          {%- if item.slug == page.fileSlug %}
+            {% assign isActive = 'aria-current="page"' %}
           {%- endif %}
-          <li {{ isActive }}><a href="/{{ item.slug }}">{{ item.title }}</a></li>
+          <li><a href="/{{ item.slug }}" {{ isActive }}>{{ item.title }}</a></li>
         {%- endfor %}
       </ul>
     </nav>
