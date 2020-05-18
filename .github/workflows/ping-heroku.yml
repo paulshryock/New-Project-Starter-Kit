@@ -8,6 +8,7 @@ jobs:
   build:
     steps:
     - name: Ping Heroku
+      runs-on: ubuntu-latest
       run: curl -s -X POST "${URL}"
       env:
         URL: ${{ secrets.API_URL }}
