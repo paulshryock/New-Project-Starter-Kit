@@ -10,14 +10,16 @@ function requireCardClickTime () {
     let up
 
     card.onmousedown = () => {
-      return down = +new Date()
+      down = +new Date()
+      return true
     }
 
     card.onmouseup = () => {
       up = +new Date()
       if ((up - down) < 200) {
         const link = card.querySelector('h2 a') // TODO: Use class selector
-        return link.click()
+        link.click()
+        return true
       }
     }
 

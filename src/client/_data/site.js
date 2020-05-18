@@ -1,6 +1,6 @@
 const site = {
-  title: 'Site title',
-  description: 'Site description',
+  title: 'New Project Starter Kit',
+  description: 'JAMstack website built with Eleventy, Gulp, PostCSS, and Webpack. Node/Express REST API with CRUD capabilities, connected to MongoDB with Mongoose.',
   lang: 'en-US',
   year: new Date().getFullYear(),
   timestamp: new Date()
