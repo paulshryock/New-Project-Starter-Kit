@@ -1,0 +1,16 @@
+name: Ping Heroku
+
+on:
+  schedule:
+  # Run every 30 minutes between 6 AM - Midnight EDT / 5AM - 11PM EST
+  - cron: '0,30 0-3,10-23 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Ping Heroku
+      run: curl -s -X POST "${URL}"
+      env:
+        URL: ${{ secrets.API_URL }}
