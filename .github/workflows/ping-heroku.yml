@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Ping Heroku
-      run: curl -s -X POST "${URL}"
+      run: curl -s "${URL}"
       env:
         URL: ${{ secrets.API_URL }}
