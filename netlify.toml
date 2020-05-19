@@ -27,6 +27,13 @@
   headers = {X-From = "Netlify"}
 
 [[redirects]]
+  from = "/github/*"
+  to = "https://github.com/paulshryock/New-Project-Starter-Kit"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
   from = "https://newprojectstarterkit.netlify.app/*"
   to = "https://newprojectstarterkit.com/:splat"
   force = true
