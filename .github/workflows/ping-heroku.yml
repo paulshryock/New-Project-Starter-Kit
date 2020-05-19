@@ -2,8 +2,8 @@ name: Ping Heroku
 
 on:
   schedule:
-  # Run every 30 minutes between 6 AM - Midnight EDT / 5AM - 11PM EST
-  - cron: '0,30 0-3,10-23 * * *'
+  # Run every 20 minutes between 6 AM - Midnight EDT / 5AM - 11PM EST
+  - cron: '0,20,40 0-3,10-23 * * *'
 
 jobs:
   build:
@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Ping Heroku
-      run: curl -s "${URL}"
+      run: curl -s "${API}"
       env:
-        URL: ${{ secrets.API_URL }}
+        API: ${{ secrets.API_URL }}
