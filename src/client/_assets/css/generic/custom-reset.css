@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+p img {
+  display: unset;
+}
+
 img {
   /* Set default aspect ratio based on `width` and `height` attributes */
   aspect-ratio: attr(width) / attr(height);

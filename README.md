@@ -8,7 +8,7 @@ This starter kit consists of an Express REST API with CRUD capabilities, powered
 
 Sass is linted, transpiled into CSS, post-processed with PostCSS, beautified in development, and minified in production, with source maps. JavaScript is linted, transpiled with Babel, bundled with Webpack, concatenated, and minified in production, with source maps.
 
-This is an open source project which uses the [The Hippocratic License][license].
+This is an open source project which uses [The Hippocratic License][license].
 
 [NewProjectStarterKit.com][npsk]
 
@@ -55,7 +55,7 @@ If you'd like to contribute, please read the [Code of Conduct][code-of-conduct] 
 [netlify-deploys]: https://app.netlify.com/sites/newprojectstarterkit/deploys
 [standard-badge]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard]: https://standardjs.com
-[jwt-compatible-badge]: http://jwt.io/img/badge-compatible.svg
+[jwt-compatible-badge]: https://jwt.io/img/badge-compatible.svg
 [jwt]: https://jwt.io/
 [npsk]: https://newprojectstarterkit.com/
 [license]: https://firstdonoharm.dev/

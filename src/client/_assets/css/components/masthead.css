@@ -1,4 +1,5 @@
 .masthead {
+  border-top: 0.25rem solid $lighter-blue;
 
   &__layout {
 
@@ -13,6 +14,10 @@
     font-weight: 700;
     line-height: 1.5;
     margin-bottom: 0;
+
+    @include mq-900 {
+      flex: 1 0 auto;
+    }
 
     a:link,
     a:visited {

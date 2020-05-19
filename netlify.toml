@@ -27,14 +27,21 @@
   headers = {X-From = "Netlify"}
 
 [[redirects]]
-  from = "/*"
-  to = "/404?search=:splat"
-  status = 404
+  from = "/github/*"
+  to = "https://github.com/paulshryock/New-Project-Starter-Kit"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
 
 [[redirects]]
   from = "https://newprojectstarterkit.netlify.app/*"
   to = "https://newprojectstarterkit.com/:splat"
   force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/404?search=:splat"
+  status = 404
 
 # ---------------
 # Headers
@@ -82,6 +89,12 @@
 
 [[headers]]
   for = "/404/*"
+
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/analytics/*"
 
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"

@@ -20,6 +20,32 @@ and this project adheres to [Semantic Versioning](semver).
 ### Changed
 - [ ] Rename database(s)
 
+## 0.32.0 - 2020-05-19 - Fix navigation wrapping
+
+### Added
+- Add a GitHub Action to ping Heroku every 20 minutes
+- Add header to block robots on /analytics/*
+- Add site title and description data
+- Add server redirect for /github
+- Add some TODO comments
+
+### Changed
+- Update GitHub issue templates
+- Reorder server redirects
+- Update navigation URLs
+- Unconstrain masthead layout width
+- Style masthead top border
+- Update website maximum width
+- Reset image display property inside paragraphs
+- Update home page content
+
+### Fixed
+- Fix card components functions' return values
+- Fix active navigation item logic and markup
+- Fix navigation CSS nesting
+- Prevent masthead title from wrapping when more navigation items are present
+- Fix Readme description typo
+
 ## 0.31.0 - 2020-05-14 - Better Docs
 
 ### Changed

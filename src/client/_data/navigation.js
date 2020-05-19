@@ -1,28 +1,28 @@
 const navigation = {
   items: [
     {
-      title: 'Home',
-      slug: '.'
+      text: 'Home',
+      href: '/'
     },
     {
-      title: 'Articles',
-      slug: 'articles'
+      text: 'Articles',
+      href: '/articles/'
     },
     {
-      title: 'Portfolio',
-      slug: 'portfolio'
+      text: 'Portfolio',
+      href: '/portfolio/'
     },
     {
-      title: 'Testimonials',
-      slug: 'testimonials'
+      text: 'Testimonials',
+      href: '/testimonials/'
     },
     {
-      title: 'About',
-      slug: 'about'
+      text: 'About',
+      href: '/about/'
     },
     {
-      title: 'Contact',
-      slug: 'contact'
+      text: 'GitHub',
+      href: 'https://github.com/paulshryock/New-Project-Starter-Kit'
     }
   ],
   toggleMobile: false
