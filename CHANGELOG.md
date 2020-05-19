@@ -20,6 +20,28 @@ and this project adheres to [Semantic Versioning](semver).
 ### Changed
 - [ ] Rename database(s)
 
+## 0.32.0 - 2020-05-19 - RELEASE_TITLE
+
+### Added
+- [x] Add a GitHub Action to ping Heroku every 20 minutes
+- [x] Add header to block robots on /analytics/*
+- [x] Add site title and description data
+- [x] Add server redirect for /github
+
+### Changed
+- [x] Update GitHub issue templates
+- [x] Reorder server redirects
+- [x] Update navigation URLs
+
+### Deprecated
+### Removed
+
+### Fixed
+- [x] Fix card components functions' return values
+- [x] Fix active navigation item logic and markup
+
+### Security
+
 ## 0.31.0 - 2020-05-14 - Better Docs
 
 ### Changed
