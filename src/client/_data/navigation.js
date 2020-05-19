@@ -6,19 +6,19 @@ const navigation = {
     },
     {
       text: 'Articles',
-      href: '/articles'
+      href: '/articles/'
     },
     {
       text: 'Portfolio',
-      href: '/portfolio'
+      href: '/portfolio/'
     },
     {
       text: 'Testimonials',
-      href: '/testimonials'
+      href: '/testimonials/'
     },
     {
       text: 'About',
-      href: '/about'
+      href: '/about/'
     },
     {
       text: 'GitHub',
