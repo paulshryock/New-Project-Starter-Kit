@@ -1,30 +1,31 @@
 ---
 name: Bug
-about: Something isn't working
+about: Something isn't working, or I have a problem
 title: ''
 labels: bug
-assignees: 'paulshryock'
+assignees: ''
 ---
 
-## Description
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-## Actual Behavior
+**To Reproduce**
+Steps to reproduce the behavior:
 
-## Expected Behavior
+1. Go to '...'
+2. Click on '...'
+3. Scroll down to '...'
+4. See error
 
-## Steps to Reproduce the Problem
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-1.
-1.
-1.
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
 
-## Environment
+**Environment:**
 
-- Device: 
-- Operating System: 
-- Browser: 
-- Version: 
+- OS and Version: [e.g. Windows/Mac/Linux]
 
-## Screenshots
-
-## Additional Context
+**Additional context**
+Add any other context about the problem here.

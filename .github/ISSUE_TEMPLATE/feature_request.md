@@ -1,15 +1,19 @@
 ---
 name: Feature request
-about: Add new functionality to the project
+about: I would like to request some new feature or functionality
 title: ''
 labels: feature-request
-assignees: 'paulshryock'
+assignees: ''
 ---
 
-## Location
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-## Motivation
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-## Requirements
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
-## Design Comps
+**Additional context**
+Add any other context or screenshots about the feature request here.
