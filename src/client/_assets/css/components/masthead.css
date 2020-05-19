@@ -1,4 +1,5 @@
 .masthead {
+  border-top: 0.25rem solid $lighter-blue;
 
   &__layout {
 

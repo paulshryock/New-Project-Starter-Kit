@@ -8,7 +8,7 @@ This starter kit consists of an Express REST API with CRUD capabilities, powered
 
 Sass is linted, transpiled into CSS, post-processed with PostCSS, beautified in development, and minified in production, with source maps. JavaScript is linted, transpiled with Babel, bundled with Webpack, concatenated, and minified in production, with source maps.
 
-This is an open source project which uses the [The Hippocratic License][license].
+This is an open source project which uses [The Hippocratic License][license].
 
 [NewProjectStarterKit.com][npsk]
 
