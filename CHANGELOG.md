@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](semver).
 - [x] Fix active navigation item logic and markup
 - [x] Fix navigation CSS nesting
 - [x] Prevent masthead title from wrapping when more navigation items are present
+- [x] Fix Readme description typo
 
 ### Security
 

@@ -55,7 +55,7 @@ If you'd like to contribute, please read the [Code of Conduct][code-of-conduct] 
 [netlify-deploys]: https://app.netlify.com/sites/newprojectstarterkit/deploys
 [standard-badge]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard]: https://standardjs.com
-[jwt-compatible-badge]: http://jwt.io/img/badge-compatible.svg
+[jwt-compatible-badge]: https://jwt.io/img/badge-compatible.svg
 [jwt]: https://jwt.io/
 [npsk]: https://newprojectstarterkit.com/
 [license]: https://firstdonoharm.dev/
