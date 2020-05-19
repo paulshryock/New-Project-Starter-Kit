@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](semver).
 - [x] Update GitHub issue templates
 - [x] Reorder server redirects
 - [x] Update navigation URLs
+- [x] Unconstrain masthead layout width
 
 ### Deprecated
 ### Removed
@@ -39,6 +40,8 @@ and this project adheres to [Semantic Versioning](semver).
 ### Fixed
 - [x] Fix card components functions' return values
 - [x] Fix active navigation item logic and markup
+- [x] Fix navigation CSS nesting
+- [x] Prevent masthead title from wrapping when more navigation items are present
 
 ### Security
 
