@@ -5,6 +5,14 @@
 
 .navigation {
 
+	[aria-current]:link,
+	[aria-current]:visited {
+
+		@include mq-600 {
+			color: $blue;
+		}
+	}
+
 	/* Toggle navigation on mobile */
 	&[data-toggle="true"] {
 
