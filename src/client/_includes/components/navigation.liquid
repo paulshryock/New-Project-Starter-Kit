@@ -2,10 +2,7 @@
     <nav class="navigation" data-toggle="true">
       <ul class="navigation__list">
         {%- for item in navigation.items %}
-          {%- if item.slug == page.fileSlug %}
-            {% assign isActive = 'aria-current="page"' %}
-          {%- endif %}
-          <li><a href="/{{ item.slug }}" {{ isActive }}>{{ item.title }}</a></li>
+          <li><a href="{{ item.href }}"{%- if item.href == page.url %} aria-current="page"{%- endif %}>{{ item.text }}</a></li>
         {%- endfor %}
       </ul>
     </nav>
