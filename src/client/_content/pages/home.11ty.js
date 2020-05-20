@@ -1,4 +1,27 @@
-[![Netlify Status][netlify-deploy-badge]][netlify-deploys] [![JavaScript Style Guide][standard-badge]][standard]
+const site = require('../../_data/site.js')
+
+class Home {
+  // or `async data() {`
+  // or `get data() {`
+  data () {
+    return {
+      title: 'Home',
+      seoTitle: 'New Project Starter Kit | JAMstack Site & Express API',
+      description: 'This is the description.',
+      slug: '.',
+      date: new Date('2020-01-01T00:00:00-5'),
+      layout: 'home',
+      hero: {
+        content: `<h2>JAMstack Site &amp; Express API</h2>
+    <p>Get a head start on new projects</p>
+    <a class="button button_ko" href="/github">Get Started</a>`
+      },
+      templateEngineOverride: "11ty.js,md"
+    }
+  }
+
+  render (data) {
+    return `[![Netlify Status][netlify-deploy-badge]][netlify-deploys] [![JavaScript Style Guide][standard-badge]][standard]
 
 [![JWT Compatible][jwt-compatible-badge]][jwt]
 
@@ -14,4 +37,8 @@ This is an open source project which uses [The Hippocratic License][license].
 [standard]: https://standardjs.com
 [jwt-compatible-badge]: https://jwt.io/img/badge-compatible.svg
 [jwt]: https://jwt.io/
-[license]: https://firstdonoharm.dev/
+[license]: https://firstdonoharm.dev/`
+  }
+}
+
+module.exports = Home

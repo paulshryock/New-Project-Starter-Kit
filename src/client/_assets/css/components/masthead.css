@@ -1,5 +1,6 @@
 .masthead {
   border-top: 0.25rem solid $lighter-blue;
+  border-image: linear-gradient(to right, $blue, $lighter-blue) 1;
 
   &__layout {
 
