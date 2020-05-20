@@ -1,4 +1,4 @@
-class Projects {
+class Post {
   data () {
     return {
       contentType: 'project',
@@ -15,8 +15,8 @@ class Projects {
 
   render (data) {
     // TODO: Fix this
-    return 'data.project.content'
+    return data.project.content ? data.project.content : 'no content'
   }
 }
 
-module.exports = Projects
+module.exports = Post

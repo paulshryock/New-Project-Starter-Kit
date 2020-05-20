@@ -1,4 +1,4 @@
-class Articles {
+class Post {
   data () {
     return {
       contentType: 'article',
@@ -18,4 +18,4 @@ class Articles {
   }
 }
 
-module.exports = Articles
+module.exports = Post

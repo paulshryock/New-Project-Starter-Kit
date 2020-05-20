@@ -1,4 +1,4 @@
-class Testimonials {
+class Post {
   data () {
     return {
       contentType: 'testimonial',
@@ -18,4 +18,4 @@ class Testimonials {
   }
 }
 
-module.exports = Testimonials
+module.exports = Post
