@@ -9,6 +9,7 @@ const uniqueValidator = require('mongoose-unique-validator')
 const Project = mongoose.model('Project', new mongoose.Schema({
   title: { type: String, required: true, trim: true, unique: true, uniqueCaseInsensitive: true, minLength: 1, maxLength: 256 },
   slug: { type: String, lowercase: true, required: true, trim: true, unique: true, uniqueCaseInsensitive: true, minLength: 1, maxLength: 256 },
+  content: { type: String, required: true, trim: true },
   client: { type: String, required: true, trim: true },
   // TODO: Make client a related client?, (allow array?)
   status: { type: String, required: true, trim: true, lowercase: true, minLength: 5, maxLength: 9 },
@@ -34,6 +35,9 @@ const validate = {
         .required()
         .min(1)
         .max(256),
+      content: Joi.string()
+        .required()
+        .trim(),
       client: Joi.string()
         .trim()
         .required(),
@@ -64,6 +68,8 @@ const validate = {
         .lowercase()
         .min(1)
         .max(256),
+      content: Joi.string()
+        .trim(),
       client: Joi.string()
         .trim(),
       status: Joi.string()
@@ -74,7 +80,7 @@ const validate = {
         .max(9)
         .valid('draft', 'approved', 'scheduled', 'published'),
       date: Joi.date()
-    }).or('title', 'slug', 'client', 'status', 'date')
+    }).or('title', 'slug', 'content', 'client', 'status', 'date')
 
     return schema.validate(project)
   }

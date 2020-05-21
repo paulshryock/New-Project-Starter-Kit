@@ -31,7 +31,7 @@ const collections = [
 
 // Get API token
 if (api) {
-  // IIFE
+  // Async IIFE in order to use await
   (async function () {
     await api.login()
   })()

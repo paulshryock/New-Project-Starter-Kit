@@ -1,6 +1,9 @@
 .skip-link {
   /* TODO: Revisit and make this a visible part of the UI */
-  
+  /*display: block;*/
+  /*padding: 1em;*/
+  /*text-align: center;*/
+
 	background: $white;
   border: $border-thin solid currentColor;
 	border-radius: 0.25em;
