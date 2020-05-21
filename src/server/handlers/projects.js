@@ -32,7 +32,7 @@ module.exports = {
     if (error) return res.status(400).send(error.details[0].message)
 
     // Create project
-    let project = new Project(_.pick(req.body, ['title', 'slug', 'client', 'status', 'date']))
+    let project = new Project(_.pick(req.body, ['title', 'slug', 'content', 'client', 'status', 'date']))
 
     // Add project to the database
     project = await project.save()
@@ -73,6 +73,7 @@ module.exports = {
     const requestBody = {}
     if (req.body.title) requestBody.title = req.body.title
     if (req.body.slug) requestBody.slug = req.body.slug
+    if (req.body.content) requestBody.content = req.body.content
     if (req.body.client) requestBody.client = req.body.client
     if (req.body.status) requestBody.status = req.body.status
     if (req.body.date) requestBody.date = req.body.date
