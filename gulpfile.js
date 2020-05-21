@@ -297,7 +297,7 @@ function validate () {
 }
 
 function watch (cb) {
-  gulp.watch(paths.html.src, watchHtml)
+  gulp.watch(paths.html.src, gulp.series(watchHtml, validate))
   gulp.watch([paths.css.all], css)
   gulp.watch(paths.js.src, js)
   gulp.watch([paths.fonts.src, paths.images.src], assets)

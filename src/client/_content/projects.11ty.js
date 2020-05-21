@@ -14,8 +14,7 @@ class Post {
   }
 
   render (data) {
-    // TODO: Fix this
-    return data.project.content ? data.project.content : 'no content'
+    return data.project.content
   }
 }
 
