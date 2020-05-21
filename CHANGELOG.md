@@ -28,6 +28,8 @@ and this project adheres to [Semantic Versioning](semver).
 - Add site title and description data
 - Add server redirect for /github
 - Add some TODO comments
+- Add `content` field to `Project` model
+- Validate built HTML during development watching
 
 ### Changed
 - Update GitHub issue templates
@@ -38,6 +40,10 @@ and this project adheres to [Semantic Versioning](semver).
 - Update website maximum width
 - Reset image display property inside paragraphs
 - Update home page content
+- Convert content files to `*.11ty.js` files
+
+### Removed
+- Remove some extra pages
 
 ### Fixed
 - Fix card components functions' return values
