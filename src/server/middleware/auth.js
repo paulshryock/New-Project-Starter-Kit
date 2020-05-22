@@ -11,8 +11,8 @@ module.exports = function (req, res, next) {
 
   // If origin or referrer doesn't match, deny access
   if (
-    (origin && origin !== url) ||
-    (referrer && referrer !== url)
+    (origin && !origin.includes(url)) ||
+    (referrer && !referrer.includes(url))
   ) {
     log.error('Access denied. Seems like a CSRF attack.', { status: 400 })
     return res

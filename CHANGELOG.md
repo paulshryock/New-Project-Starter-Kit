@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](semver).
 ### Changed
 - [ ] Rename database(s)
 
-## 0.32.0 - 2020-05-19 - Fix navigation wrapping
+## 0.32.0 - 2020-05-22 - RELEASE_TITLE
 
 ### Added
 - Add a GitHub Action to ping Heroku every 20 minutes
@@ -41,6 +41,7 @@ and this project adheres to [Semantic Versioning](semver).
 - Reset image display property inside paragraphs
 - Update home page content
 - Convert content files to `*.11ty.js` files
+- Improve `origin` and `referrer` headers comparison during auth
 
 ### Removed
 - Remove some extra pages

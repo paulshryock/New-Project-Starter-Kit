@@ -94,13 +94,13 @@
     X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
-  for = "/analytics/*"
+  for = "/api/*"
 
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
-  for = "/api/*"
+  for = "/analytics/*"
 
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
