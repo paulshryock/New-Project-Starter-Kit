@@ -8,6 +8,9 @@
   "app": {
     "url": "NPSK_APP_URL"
   },
+  "site": {
+    "url": "NPSK_SITE_URL"
+  },
   "jwtPrivateKey": "NPSK_JWT_PRIVATE_KEY",
   "db": {
     "protocol": "NPSK_DB_PROTOCOL",

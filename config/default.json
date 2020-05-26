@@ -9,6 +9,9 @@
     "title": "NPSK REST API - development",
     "url": ""
   },
+  "site": {
+    "url": ""
+  },
   "jwtPrivateKey": "",
   "db": {
     "username": "",
