@@ -1,6 +1,6 @@
 # New Project Starter Kit
 
-[![Netlify Status][netlify-deploy-badge]][netlify-deploys] [![JavaScript Style Guide][standard-badge]][standard]
+[![Netlify Status][netlify-deploy-badge]][netlify-deploys] [![JavaScript Style Guide][standard-badge]][standard] [![Cypress.io][cypress-badge]][cypress]
 
 [![JWT Compatible][jwt-compatible-badge]][jwt]
 
@@ -55,6 +55,8 @@ If you'd like to contribute, please read the [Code of Conduct][code-of-conduct] 
 [netlify-deploys]: https://app.netlify.com/sites/newprojectstarterkit/deploys
 [standard-badge]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard]: https://standardjs.com
+[cypress-badge]: https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg
+[cypress]: https://www.cypress.io/
 [jwt-compatible-badge]: https://jwt.io/img/badge-compatible.svg
 [jwt]: https://jwt.io/
 [npsk]: https://newprojectstarterkit.com/

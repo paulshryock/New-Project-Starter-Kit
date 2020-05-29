@@ -43,24 +43,17 @@ module.exports = function (eleventyConfig) {
   // https://github.com/11ty/eleventy/issues/898#issuecomment-617628635
 
   // Create collections
-  collections.map(type => {
-    eleventyConfig.addCollection(type.plural, async collection => {
+  collections.map(c => {
+    eleventyConfig.addCollection(c.plural, async collection => {
       // Add API collections
-      if (api && type.location === 'api') {
-        const response = await api.addCollection(type)
-        // If collection exists, return it, else return an empty array
-        if (response) {
-          const pluralize = response.length > 1 ? type.plural : type.single
-          debug(type.plural + ' collection was added with ' + response.length + ' ' + pluralize + '!')
-          debug(type.plural + ' collection: ' + collection)
-          return response
-        }
-        debug(type.plural + ' collection was not added!')
-        return []
+      if (api && c.location === 'api') {
+        const response = await api.addCollection(c)
+        return response ? response : []
       }
       // Add local collections
-      debug(type.plural + ' collection was added!')
-      return collection.getAll().filter(post => post.data.contentType === type.single)
+      return collection
+        .getAll()
+        .filter(post => post.data.contentType === c.single)
     })
   })
 
