@@ -107,7 +107,6 @@
     "babel-loader": "^8.1.0",
     "chrome-launcher": "^0.13.2",
     "cssnano": "^4.1.10",
-    "cypress": "^4.6.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
