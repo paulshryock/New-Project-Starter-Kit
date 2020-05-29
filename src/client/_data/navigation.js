@@ -24,8 +24,7 @@ const navigation = {
       text: 'GitHub',
       href: 'https://github.com/paulshryock/New-Project-Starter-Kit'
     }
-  ],
-  toggleMobile: false
+  ]
 }
 
 module.exports = navigation

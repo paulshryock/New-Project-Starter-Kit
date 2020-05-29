@@ -22,8 +22,8 @@ const favicon = require('serve-favicon')
 const httpLogger = require('morgan')
 const { log } = require('./modules/logger')
 const debug = {
-  startup: require('debug')('npsk:startup'),
-  database: require('debug')('npsk:database')
+  startup: require('debug')('api:startup'),
+  database: require('debug')('api:database')
 }
 
 const isProduction = app.get('env') === 'production'

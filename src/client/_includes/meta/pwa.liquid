@@ -1,6 +1,8 @@
+{% if site.pwa %}
 <!-- PWA -->
   <link rel="manifest" href="/manifest.json">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="{{ site.title }}">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+{% endif %}

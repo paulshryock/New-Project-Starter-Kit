@@ -5,11 +5,11 @@
   "eleventy": {
     "environment": ""
   },
-  "app": {
-    "title": "NPSK REST API - development",
+  "site": {
     "url": ""
   },
-  "site": {
+  "app": {
+    "title": "NPSK REST API - development",
     "url": ""
   },
   "jwtPrivateKey": "",

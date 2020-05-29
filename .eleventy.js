@@ -3,7 +3,7 @@ const SRC = config.get('paths.src.client')
 const BUILD = config.get('paths.build.client')
 const yaml = require("js-yaml")
 const api = require('./modules/api.js')
-const debug = require('debug')('npsk:eleventy')
+const debug = require('debug')('api:eleventy')
 
 // Define collections
 const collections = [

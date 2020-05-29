@@ -5,11 +5,11 @@
   "eleventy": {
     "environment": "ELEVENTY_ENV"
   },
-  "app": {
-    "url": "NPSK_APP_URL"
-  },
   "site": {
     "url": "NPSK_SITE_URL"
+  },
+  "app": {
+    "url": "NPSK_APP_URL"
   },
   "jwtPrivateKey": "NPSK_JWT_PRIVATE_KEY",
   "db": {

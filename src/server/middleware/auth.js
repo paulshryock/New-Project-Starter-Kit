@@ -1,7 +1,7 @@
 const { log } = require('../modules/logger')
 const jwt = require('jsonwebtoken')
 const config = require('config')
-const debug = require('debug')('npsk:auth')
+const debug = require('debug')('api:auth')
 
 module.exports = function (req, res, next) {
   // Check headers
