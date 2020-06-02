@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](semver).
 - Update home page content
 - Convert content files to `*.11ty.js` files
 - Improve `origin` and `referrer` headers comparison during auth
+- Remove passwords from `getUsers` response
 
 ### Removed
 - Remove some extra pages
