@@ -1,7 +1,7 @@
-.netlify
-_docs
-_logs
-modules
+/.netlify
+/_docs
+/_logs
+/modules
 /src/client
 .eleventy.js
 .eleventyignore
