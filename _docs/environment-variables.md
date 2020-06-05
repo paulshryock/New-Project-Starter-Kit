@@ -22,9 +22,16 @@ Set this to `development` in a local development environment, and `production` i
 
 * `BUILD_ENV`
 
+## URLs
+
+Set the site and API URL's. On the production API server (such as Heroku), `API_URL` can match `SITE_URL` as long as the Netlify redirects are correctly configured. The GitHub Secret needs `/api` appended to `API_URL` in order to correctly ping Heroku and prevent Dyno sleeping.
+
+* `SITE_URL`
+* `API_URL`
+
 ## JSON Web Token
 
-Set this key in order to generate secure JWT for API authentication. Use a secure string, and keep it secure and private. Set this for local development, and on the production API server (such as Heroku).
+Set this private key in order to generate secure a JWT for API authentication. Use a secure string, and keep it secure and private. Set this for local development, and on the production API server (such as Heroku).
 
 * `JWT_PRIVATE_KEY`
 
@@ -42,6 +49,6 @@ Set this locally and on the production API server (such as Heroku). This allows 
 
 While building the client website, Eleventy will need these credentials to ping the server-side API, login, and grab data.
 
-* `API_URL`:
+* `API_URL`
 * `USER_EMAIL`
 * `USER_PASSWORD`
