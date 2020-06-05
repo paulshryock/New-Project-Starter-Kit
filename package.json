@@ -42,7 +42,7 @@
     "url": "https://github.com/paulshryock/New-Project-Starter-Kit/issues"
   },
   "scripts": {
-    "start": "npm run build",
+    "start": "npm run serve:server",
     "develop": "dotenv gulp develop",
     "debug": "DEBUG=api:* npm run develop",
     "serve": "npm run serve:server",
@@ -51,7 +51,7 @@
     "watch": "npm run watch:server & npm run watch:client",
     "watch:client": "dotenv gulp watch",
     "watch:server": "nodemon -r dotenv/config ./src/server/bin/www",
-    "build": "dotenv gulp build",
+    "build:client": "dotenv gulp build",
     "production": "dotenv gulp production",
     "clear:cache": "heroku repo:purge_cache -a new-project-starter-kit && git commit --allow-empty -m \"Purge cache\" && git push heroku master",
     "audit": "dotenv node ./modules/lighthouse.js"
