@@ -15,12 +15,7 @@ and this project adheres to [Semantic Versioning](semver).
 ### Security
 -->
 
-## TODO
-
-### Changed
-- [ ] Rename database(s)
-
-## 0.32.0 - 2020-05-22 - RELEASE_TITLE
+## 0.32.0 - 2020-06-05 - Many changes
 
 ### Added
 - Add a GitHub Action to ping Heroku every 20 minutes
@@ -50,8 +45,6 @@ and this project adheres to [Semantic Versioning](semver).
 - Simplify Eleventy collection creation
 - Update Eleventy site data
 - Update scripts include syntax
-
-### Deprecated
 
 ### Removed
 - Remove some extra pages
