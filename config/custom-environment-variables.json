@@ -2,8 +2,8 @@
   "node": {
     "environment": "NODE_ENV"
   },
-  "eleventy": {
-    "environment": "ELEVENTY_ENV"
+  "build": {
+    "environment": "BUILD_ENV"
   },
   "site": {
     "url": "SITE_URL"
