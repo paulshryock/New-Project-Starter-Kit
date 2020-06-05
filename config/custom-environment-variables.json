@@ -16,7 +16,7 @@
     "string": "MONGODB_URI"
   },
   "user": {
-    "email": "NPSK_USER_EMAIL",
-    "password": "NPSK_USER_PASSWORD"
+    "email": "USER_EMAIL",
+    "password": "USER_PASSWORD"
   }
 }

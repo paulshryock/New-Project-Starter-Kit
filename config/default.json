@@ -1,24 +1,24 @@
 {
   "node": {
-    "environment": "NODE_ENV"
+    "environment": ""
   },
   "eleventy": {
-    "environment": "ELEVENTY_ENV"
+    "environment": ""
   },
   "site": {
-    "url": "SITE_URL"
+    "url": ""
   },
   "api": {
     "title": "NPSK REST API - development",
-    "url": "API_URL"
+    "url": ""
   },
-  "jwtPrivateKey": "JWT_PRIVATE_KEY",
+  "jwtPrivateKey": "",
   "db": {
-    "string": "MONGODB_URI"
+    "string": ""
   },
   "user": {
-    "email": "NPSK_USER_EMAIL",
-    "password": "NPSK_USER_PASSWORD"
+    "email": "",
+    "password": ""
   },
   "paths": {
     "src": {
