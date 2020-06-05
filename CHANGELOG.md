@@ -44,16 +44,19 @@ and this project adheres to [Semantic Versioning](semver).
 - Update home page content
 - Convert content files to `*.11ty.js` files
 - Improve `origin` and `referrer` headers comparison during auth
-- Remove passwords from `getUsers` response
 - Update Heorku API redirect
 - Update environment variables
 - Rename debug namespace
 - Simplify Eleventy collection creation
+- Update Eleventy site data
+- Update scripts include syntax
 
 ### Deprecated
 
 ### Removed
 - Remove some extra pages
+- Remoev robots.txt file
+- Remove passwords from `getUsers` response
 
 ### Fixed
 - Fix card components functions' return values
@@ -61,8 +64,10 @@ and this project adheres to [Semantic Versioning](semver).
 - Fix navigation CSS nesting
 - Prevent masthead title from wrapping when more navigation items are present
 - Fix Readme description typo
+- Fix unique Project validation
 
 ### Security
+- Update dependencies
 
 ## 0.31.0 - 2020-05-14 - Better Docs
 
