@@ -54,7 +54,8 @@
     "build:client": "dotenv gulp build",
     "production": "dotenv gulp production",
     "clear:cache": "heroku repo:purge_cache -a npsk-production && git commit --allow-empty -m \"Purge cache\" && git push heroku master",
-    "audit": "dotenv node ./modules/lighthouse.js"
+    "audit": "dotenv node ./modules/lighthouse.js",
+    "env": "sync-dotenv"
   },
   "browserslist": [
     "defaults"
@@ -71,6 +72,18 @@
     "watch": [
       "./src/server/*"
     ]
+  },
+  "sync-dotenv": {
+    "preserve": [
+      "BUILD_ENV",
+      "API_URL",
+      "SITE_URL"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run env"
+    }
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
@@ -123,6 +136,7 @@
     "gulp-stylelint": "^13.0.0",
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.2",
+    "husky": "^4.2.5",
     "js-yaml": "^3.14.0",
     "lighthouse": "^6.0.0",
     "merge-stream": "^2.0.0",

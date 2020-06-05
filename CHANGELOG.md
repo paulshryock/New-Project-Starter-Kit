@@ -27,6 +27,8 @@ and this project adheres to [Semantic Versioning](semver).
 - Validate built HTML during development watching
 - Let git ignore Cloudflare Worker files
 - Add slugignore to reduce Heroku compiled slug
+- Add husky
+- Add `.env.example`
 
 ### Changed
 - Update GitHub issue templates
@@ -45,6 +47,7 @@ and this project adheres to [Semantic Versioning](semver).
 - Simplify Eleventy collection creation
 - Update Eleventy site data
 - Update scripts include syntax
+- Update docs
 
 ### Removed
 - Remove some extra pages
