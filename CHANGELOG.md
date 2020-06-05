@@ -58,6 +58,7 @@ and this project adheres to [Semantic Versioning](semver).
 - Prevent masthead title from wrapping when more navigation items are present
 - Fix Readme description typo
 - Fix unique Project validation
+- Fix Eleventy collection API url
 
 ### Security
 - Update dependencies
