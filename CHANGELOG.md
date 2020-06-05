@@ -45,7 +45,7 @@ and this project adheres to [Semantic Versioning](semver).
 - Convert content files to `*.11ty.js` files
 - Improve `origin` and `referrer` headers comparison during auth
 - Remove passwords from `getUsers` response
-- Update API redirect
+- Update Heorku API redirect
 - Update environment variables
 - Rename debug namespace
 - Simplify Eleventy collection creation

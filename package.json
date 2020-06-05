@@ -54,8 +54,7 @@
     "build": "dotenv gulp build",
     "production": "dotenv gulp production",
     "clear:cache": "heroku repo:purge_cache -a new-project-starter-kit && git commit --allow-empty -m \"Purge cache\" && git push heroku master",
-    "audit": "dotenv node ./modules/lighthouse.js",
-    "test": "node_modules/.bin/cypress open"
+    "audit": "dotenv node ./modules/lighthouse.js"
   },
   "browserslist": [
     "defaults"
