@@ -53,7 +53,7 @@
     "watch:server": "nodemon -r dotenv/config ./src/server/bin/www",
     "build:client": "dotenv gulp build",
     "production": "dotenv gulp production",
-    "clear:cache": "heroku repo:purge_cache -a new-project-starter-kit && git commit --allow-empty -m \"Purge cache\" && git push heroku master",
+    "clear:cache": "heroku repo:purge_cache -a npsk-production && git commit --allow-empty -m \"Purge cache\" && git push heroku master",
     "audit": "dotenv node ./modules/lighthouse.js"
   },
   "browserslist": [

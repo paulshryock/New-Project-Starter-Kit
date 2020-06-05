@@ -2,7 +2,7 @@
   "node": {
     "environment": ""
   },
-  "eleventy": {
+  "build": {
     "environment": ""
   },
   "site": {

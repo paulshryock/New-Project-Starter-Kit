@@ -21,7 +21,7 @@ const svgmin = require('gulp-svgmin')
 const rename = require('gulp-rename')
 const connect = require('gulp-connect')
 
-const isProduction = config.get('eleventy.environment') === 'production'
+const isProduction = config.get('build.environment') === 'production'
 const SRC = config.get('paths.src.client')
 const BUILD = config.get('paths.build.client')
 
