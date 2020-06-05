@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](semver).
 - Add some TODO comments
 - Add `content` field to `Project` model
 - Validate built HTML during development watching
+- Add slugignore to reduce Heroku compiled slug
 
 ### Changed
 - Update GitHub issue templates
@@ -43,6 +44,8 @@ and this project adheres to [Semantic Versioning](semver).
 - Convert content files to `*.11ty.js` files
 - Improve `origin` and `referrer` headers comparison during auth
 - Remove passwords from `getUsers` response
+- Update API redirect
+- Update environment variables
 
 ### Removed
 - Remove some extra pages

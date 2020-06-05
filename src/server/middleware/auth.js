@@ -7,7 +7,7 @@ module.exports = function (req, res, next) {
   // Check headers
   const origin = req.header('origin')
   const referrer = req.header('referrer')
-  const url = config.get('app.url')
+  const url = config.get('site.url')
 
   // If origin or referrer doesn't match, deny access
   if (
