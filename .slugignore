@@ -1,13 +1,14 @@
+.netlify
 _docs
-cypress
+_logs
 modules
 /src/client
 .eleventy.js
+.eleventyignore
 book.json
 CHANGELOG.md
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
-cypress.json
 gulpfile.js
 LICENSE
 netlify.toml
