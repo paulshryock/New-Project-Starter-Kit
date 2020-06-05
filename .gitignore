@@ -27,3 +27,13 @@ package-lock.json
 # Local server config folders
 .netlify
 .now
+
+# Cloudflare Worker files
+/target
+**/*.rs.bk
+Cargo.lock
+bin/
+pkg/
+wasm-pack.log
+worker/
+.cargo-ok

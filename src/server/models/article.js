@@ -16,7 +16,7 @@ const Article = mongoose.model('Article', new mongoose.Schema({
   status: { type: String, required: true, trim: true, maxLength: 24, lowercase: true },
   tags: [{ type: String, trim: true, lowercase: true }],
   date: { type: Date, default: Date.now }
-}))
+}).plugin(uniqueValidator))
 
 const validate = {
   /**

@@ -5,34 +5,20 @@
   "eleventy": {
     "environment": ""
   },
-  "app": {
-    "title": "NPSK REST API - development",
+  "site": {
     "url": ""
   },
-  "site": {
+  "api": {
+    "title": "NPSK REST API - development",
     "url": ""
   },
   "jwtPrivateKey": "",
   "db": {
-    "username": "",
-    "password": "",
-    "host": "",
-    "port": "",
-    "database": ""
+    "string": ""
   },
   "user": {
     "email": "",
-    "password": "",
-    "id": ""
-  },
-  "article": {
-    "id": ""
-  },
-  "project": {
-    "id": ""
-  },
-  "testimonial": {
-    "id": ""
+    "password": ""
   },
   "paths": {
     "src": {

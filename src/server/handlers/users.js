@@ -22,8 +22,11 @@ module.exports = {
     const sortBy = req.query.sortBy
     if (sortBy) users.sort((a, b) => (a[sortBy] > b[sortBy]) ? 1 : -1)
 
+    // Remove passwords from response
+    const usersSafe = users.map(user => _.pick(user, ['_id', 'email', 'role']))
+
     // Return users to the client
-    res.send(users)
+    res.send(usersSafe)
   },
 
   /**

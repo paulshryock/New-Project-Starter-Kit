@@ -1,5 +1,6 @@
   {% unless seoTitle %}
   {% capture seoTitle %}
+    <!-- TODO: Fix these content type collections -->
     {% unless slug == '.' %}{% if contentType == 'article' %}{{ article.title }}{% elsif contentType == 'project' %}{{ project.title }}{% elsif contentType == 'testimonial' %}{{ testimonial.name.first }} {{ testimonial.name.last }}{% else %}{{ title }}{% endif %} | {% endunless %}{{ site.title }}
   {% endcapture %}
   {% endunless %}

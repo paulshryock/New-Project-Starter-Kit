@@ -14,7 +14,7 @@ const Project = mongoose.model('Project', new mongoose.Schema({
   // TODO: Make client a related client?, (allow array?)
   status: { type: String, required: true, trim: true, lowercase: true, minLength: 5, maxLength: 9 },
   date: { type: Date, default: Date.now }
-}))
+}).plugin(uniqueValidator))
 
 // TODO: Finish validation based on model
 

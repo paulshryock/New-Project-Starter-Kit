@@ -1,0 +1,16 @@
+.netlify
+_docs
+_logs
+modules
+/src/client
+.eleventy.js
+.eleventyignore
+book.json
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+gulpfile.js
+LICENSE
+netlify.toml
+performance-budget.json
+README.md

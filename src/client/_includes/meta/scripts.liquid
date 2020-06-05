@@ -6,6 +6,6 @@
 
 {%- if scripts %}
   {%- for script in scripts %}
-    <script src="/js/{{ script }}.js" async></script>
+    <script src="{{ script.src }}"{% for parameter in script.parameters %} {{ parameter }}{% endfor %}></script>
   {%- endfor %}
 {%- endif %}

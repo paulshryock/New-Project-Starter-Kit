@@ -5,34 +5,18 @@
   "eleventy": {
     "environment": "ELEVENTY_ENV"
   },
-  "app": {
-    "url": "NPSK_APP_URL"
-  },
   "site": {
-    "url": "NPSK_SITE_URL"
+    "url": "SITE_URL"
   },
-  "jwtPrivateKey": "NPSK_JWT_PRIVATE_KEY",
+  "api": {
+    "url": "API_URL"
+  },
+  "jwtPrivateKey": "JWT_PRIVATE_KEY",
   "db": {
-    "protocol": "NPSK_DB_PROTOCOL",
-    "username": "NPSK_DB_USERNAME",
-    "password": "NPSK_DB_PASSWORD",
-    "host": "NPSK_DB_HOST",
-    "port": "NPSK_DB_PORT",
-    "database": "NPSK_DB_DATABASE",
     "string": "MONGODB_URI"
   },
   "user": {
-    "email": "NPSK_USER_EMAIL",
-    "password": "NPSK_USER_PASSWORD",
-    "id": "NPSK_USER_ID"
-  },
-  "article": {
-    "id": "NPSK_ARTICLE_ID"
-  },
-  "project": {
-    "id": "NPSK_PROJECT_ID"
-  },
-  "testimonial": {
-    "id": "NPSK_TESTIMONIAL_ID"
+    "email": "USER_EMAIL",
+    "password": "USER_PASSWORD"
   }
 }

@@ -15,12 +15,7 @@ and this project adheres to [Semantic Versioning](semver).
 ### Security
 -->
 
-## TODO
-
-### Changed
-- [ ] Rename database(s)
-
-## 0.32.0 - 2020-05-22 - RELEASE_TITLE
+## 0.32.0 - 2020-06-05 - Many changes
 
 ### Added
 - Add a GitHub Action to ping Heroku every 20 minutes
@@ -30,6 +25,8 @@ and this project adheres to [Semantic Versioning](semver).
 - Add some TODO comments
 - Add `content` field to `Project` model
 - Validate built HTML during development watching
+- Let git ignore Cloudflare Worker files
+- Add slugignore to reduce Heroku compiled slug
 
 ### Changed
 - Update GitHub issue templates
@@ -42,9 +39,17 @@ and this project adheres to [Semantic Versioning](semver).
 - Update home page content
 - Convert content files to `*.11ty.js` files
 - Improve `origin` and `referrer` headers comparison during auth
+- Update Heorku API redirect
+- Update environment variables
+- Rename debug namespace
+- Simplify Eleventy collection creation
+- Update Eleventy site data
+- Update scripts include syntax
 
 ### Removed
 - Remove some extra pages
+- Remoev robots.txt file
+- Remove passwords from `getUsers` response
 
 ### Fixed
 - Fix card components functions' return values
@@ -52,6 +57,10 @@ and this project adheres to [Semantic Versioning](semver).
 - Fix navigation CSS nesting
 - Prevent masthead title from wrapping when more navigation items are present
 - Fix Readme description typo
+- Fix unique Project validation
+
+### Security
+- Update dependencies
 
 ## 0.31.0 - 2020-05-14 - Better Docs
 
