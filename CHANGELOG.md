@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](semver).
 - Add some TODO comments
 - Add `content` field to `Project` model
 - Validate built HTML during development watching
+- Let git ignore Cloudflare Worker files
 - Add slugignore to reduce Heroku compiled slug
 
 ### Changed
@@ -46,6 +47,10 @@ and this project adheres to [Semantic Versioning](semver).
 - Remove passwords from `getUsers` response
 - Update API redirect
 - Update environment variables
+- Rename debug namespace
+- Simplify Eleventy collection creation
+
+### Deprecated
 
 ### Removed
 - Remove some extra pages
@@ -56,6 +61,8 @@ and this project adheres to [Semantic Versioning](semver).
 - Fix navigation CSS nesting
 - Prevent masthead title from wrapping when more navigation items are present
 - Fix Readme description typo
+
+### Security
 
 ## 0.31.0 - 2020-05-14 - Better Docs
 
