@@ -3,6 +3,18 @@ const lighthouse = require('lighthouse')
 const config = require('config')
 const url = config.get('site.url')
 
+// TODO: Move this module into `./gulpfile.js`,
+// and use `gulp-connect` server, something like this:
+/*
+gulp.task('lighthouse', function() {
+  connect.server({
+    port: 8888
+  })
+  launchChromeAndRunLighthouse(url, opts, configuration)
+  connect.serverClose()
+})
+*/
+
 function launchChromeAndRunLighthouse(url, opts, config = null) {
   return chromeLauncher.launch({chromeFlags: opts.chromeFlags})
     .then(chrome => {
