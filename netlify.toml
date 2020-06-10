@@ -54,10 +54,6 @@
     Access-Control-Allow-Origin = 'https://newprojectstarterkit.com'
     Content-Security-Policy = '''
       default-src 'self';
-      script-src 'self' https://*.cloudfront.net https://polyfill.io;
-      style-src 'self' https://*.cloudfront.net;
-      img-src 'self' https://*.cloudfront.net;
-      font-src 'self' https://*.cloudfront.net;
       upgrade-insecure-requests;'''
     Feature-Policy = '''
       geolocation 'none';
