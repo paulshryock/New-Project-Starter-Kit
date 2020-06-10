@@ -317,7 +317,9 @@ function watchMinify (cb) {
 function serve (cb) {
   connect.server({
     root: paths.html.dest,
-    livereload: true
+    livereload: true,
+    name: config.get('dev.name'),
+    port: config.get('dev.port')
   })
 
   return cb()

@@ -5,6 +5,10 @@
   "build": {
     "environment": ""
   },
+  "dev": {
+    "name": "New Project Starter Kit",
+    "port": "8081"
+  },
   "site": {
     "url": ""
   },
