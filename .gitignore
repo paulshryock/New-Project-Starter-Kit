@@ -1,7 +1,7 @@
 # Environment variables
 .env
-!.env.example
 .env.*
+!.env.example
 /*.env
 
 # Dependencies

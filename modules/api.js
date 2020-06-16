@@ -1,6 +1,6 @@
 require('dotenv').config()
 const config = require('config')
-const debug = require('debug')('npsk:api')
+const debug = require('debug')('eleventy:api')
 const axios = require('axios')
 const url = config.get('api.url')
 
