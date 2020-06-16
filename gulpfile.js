@@ -281,6 +281,7 @@ function assets () {
 
   const images = gulp.src(paths.images.src)
     // TODO: Optimize images
+    // Something like https://ausi.github.io/respimagelint/ ?
     .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
 
