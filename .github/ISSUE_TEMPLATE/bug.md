@@ -1,6 +1,6 @@
 ---
 name: Bug
-about: Something isn't working, or I have a problem
+about: Something isn't working, there's a typo, or I have a problem
 title: ''
 labels: bug
 assignees: ''
