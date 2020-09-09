@@ -86,7 +86,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint & npm run validate & npm run env"
+      "pre-commit": "npm run lint && npm run validate && npm run env"
     }
   },
   "dependencies": {
