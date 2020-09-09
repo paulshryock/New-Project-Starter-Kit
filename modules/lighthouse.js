@@ -15,6 +15,11 @@ gulp.task('lighthouse', function() {
 })
 */
 
+// TODO: Do something useful with output...
+// Probably grep some lines and test if they meet some criteria,
+// Then exit non zero if something is over budget.
+// Then add 'npm run audit' to a husky pre-commit hook
+
 function launchChromeAndRunLighthouse(url, opts, config = null) {
   return chromeLauncher.launch({chromeFlags: opts.chromeFlags})
     .then(chrome => {
