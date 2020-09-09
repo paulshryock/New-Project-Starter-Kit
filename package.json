@@ -43,6 +43,8 @@
   },
   "scripts": {
     "start": "npm run serve:server",
+    "lint": "dotenv gulp lint",
+    "validate": "dotenv gulp validate",
     "develop": "dotenv gulp develop",
     "debug": "DEBUG=api:* npm run develop",
     "serve": "npm run serve:server",
@@ -51,6 +53,7 @@
     "watch": "npm run watch:server & npm run watch:client",
     "watch:client": "dotenv gulp watch",
     "watch:server": "nodemon -r dotenv/config ./src/server/bin/www",
+    "build": "npm run build:client",
     "build:client": "dotenv gulp build",
     "production": "dotenv gulp production",
     "clear:cache": "heroku repo:purge_cache -a npsk-production && git commit --allow-empty -m \"Purge cache\" && git push heroku master",
@@ -83,7 +86,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run env"
+      "pre-commit": "npm run lint & npm run validate & npm run env"
     }
   },
   "dependencies": {

@@ -329,41 +329,45 @@ function serve (cb) {
 /**
  * Gulp tasks
  */
-exports.develop = gulp.series(
-  gulp.parallel(clean, lint),
-  gulp.parallel(html, css, js, assets),
-  validate
-)
-
-exports.serve = gulp.series(
-  gulp.parallel(clean, lint),
-  gulp.parallel(html, css, js, assets),
-  validate,
-  watch,
-  serve
-)
-
-exports.watch = gulp.series(
-  gulp.parallel(clean, lint),
-  gulp.parallel(html, css, js, assets),
-  validate,
-  watch
-)
-
-exports.build = gulp.series(
-  clean,
-  gulp.parallel(html, css, js, assets),
-  gulp.parallel(minifyCss, minifyJs, minifySvg),
-  gulp.parallel(minifyHtml, postMinify)
-)
-
-exports.production = gulp.series(
-  clean,
-  gulp.parallel(html, css, js, assets),
-  gulp.parallel(minifyCss, minifyJs, minifySvg),
-  gulp.parallel(minifyHtml, postMinify),
-  gulp.parallel(watch, watchMinify),
-  serve
-)
-
-exports.default = exports.build
+module.exports = {
+  lint: gulp.series(lint),
+  validate: gulp.series(validate),
+  develop: gulp.series(
+    gulp.parallel(clean, lint),
+    gulp.parallel(html, css, js, assets),
+    validate
+  ),
+  serve: gulp.series(
+    gulp.parallel(clean, lint),
+    gulp.parallel(html, css, js, assets),
+    validate,
+    watch,
+    serve
+  ),
+  watch: gulp.series(
+    gulp.parallel(clean, lint),
+    gulp.parallel(html, css, js, assets),
+    validate,
+    watch
+  ),
+  build: gulp.series(
+    clean,
+    gulp.parallel(html, css, js, assets),
+    gulp.parallel(minifyCss, minifyJs, minifySvg),
+    gulp.parallel(minifyHtml, postMinify)
+  ),
+  production: gulp.series(
+    clean,
+    gulp.parallel(html, css, js, assets),
+    gulp.parallel(minifyCss, minifyJs, minifySvg),
+    gulp.parallel(minifyHtml, postMinify),
+    gulp.parallel(watch, watchMinify),
+    serve
+  ),
+  default: gulp.series(
+    clean,
+    gulp.parallel(html, css, js, assets),
+    gulp.parallel(minifyCss, minifyJs, minifySvg),
+    gulp.parallel(minifyHtml, postMinify)
+  ),
+}
