@@ -5,7 +5,7 @@ const axios = require('axios')
 
 class Api {
 
-  async login () {
+  async getToken () {
     axios({
       method: 'post',
       url: url + '/api/auth',
@@ -26,23 +26,21 @@ class Api {
       })
   }
 
-  async addCollection (collection) {
+  async getCollection (collection) {
     // TODO: Cache collection
     // https://github.com/11ty/eleventy-cache-assets
     
-    if (collection.location === 'api') {
-      return await axios({
-        method: 'get',
-        url: url + '/api/' + collection.plural
+    return await axios({
+      method: 'get',
+      url: url + '/api/' + collection.plural
+    })
+      .then(response => {
+        return response.data
       })
-        .then(response => {
-          return response.data
-        })
-        .catch(error => {
-          debug(collection.plural + ' collection not found!')
-          this.handleError(error)
-        })
-    }
+      .catch(error => {
+        debug(collection.plural + ' collection not found!')
+        this.handleError(error)
+      })
   }
 
   handleError (error) {

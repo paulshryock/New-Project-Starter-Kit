@@ -1,42 +1,21 @@
 const config = require('config')
-const SRC = config.get('paths.src.client')
-const BUILD = config.get('paths.build.client')
-const url = config.get('api.url')
 const debug = require('debug')('build:eleventy')
 const Api = require('./modules/api.js')
+const { getToken, getCollection } = new Api()
 const yaml = require("js-yaml")
 const axios = require('axios')
 
 // Define collections
 const collections = [
-  {
-    plural: 'articles',
-    single: 'article',
-    location: 'api'
-  },
-  {
-    plural: 'projects',
-    single: 'project',
-    location: 'api'
-  },
-  {
-    plural: 'testimonials',
-    single: 'testimonial',
-    location: 'api'
-  },
-  {
-    plural: 'pages',
-    single: 'page',
-    location: 'local'
-  }
+  { plural: 'articles', single: 'article', source: 'api' },
+  { plural: 'projects', single: 'project', source: 'api' },
+  { plural: 'testimonials', single: 'testimonial', source: 'api' },
+  { plural: 'pages', single: 'page', source: 'local' }
 ]
 
-// Get API token
-const api = new Api()
-
-if (api) {
+{
   (async function () {
-    await api.login()
+    await getToken()
   })()
 }
 
@@ -48,15 +27,17 @@ module.exports = function (eleventyConfig) {
   // Create collections
   collections.map(c => {
     eleventyConfig.addCollection(c.plural, async collection => {
-      // Add API collections
-      if (api && c.location === 'api') {
-        const response = await api.addCollection(c)
-        return response ? response : []
+      switch (c.source) {
+        case 'api':
+          const response = await getCollection(c)
+          return response ? response : []
+          break;
+        default:
+          return collection
+            .getAll()
+            .filter(post => post.data.contentType === c.single)
+          break;
       }
-      // Add local collections
-      return collection
-        .getAll()
-        .filter(post => post.data.contentType === c.single)
     })
   })
 
@@ -73,9 +54,9 @@ module.exports = function (eleventyConfig) {
     dir: {
       data: '_data',
       includes: '_includes',
-      input: SRC,
+      input: config.get('paths.src.client'),
       layouts: '_layouts',
-      output: BUILD
+      output: config.get('paths.build.client')
     }
   }
 }
