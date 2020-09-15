@@ -1,9 +1,11 @@
 const config = require('config')
 const SRC = config.get('paths.src.client')
 const BUILD = config.get('paths.build.client')
+const url = config.get('api.url')
+const debug = require('debug')('build:eleventy')
+const Api = require('./modules/api.js')
 const yaml = require("js-yaml")
-const api = require('./modules/api.js')
-const debug = require('debug')('api:eleventy')
+const axios = require('axios')
 
 // Define collections
 const collections = [
@@ -30,8 +32,9 @@ const collections = [
 ]
 
 // Get API token
+const api = new Api()
+
 if (api) {
-  // Async IIFE in order to use await
   (async function () {
     await api.login()
   })()

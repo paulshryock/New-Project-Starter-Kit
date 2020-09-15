@@ -1,60 +1,61 @@
-require('dotenv').config()
 const config = require('config')
-const debug = require('debug')('eleventy:api')
-const axios = require('axios')
 const url = config.get('api.url')
+const debug = require('debug')('build:eleventy')
+const axios = require('axios')
 
-function handleError(error) {
-  if (error.response) {
-    // The request was made and the server responded with a status code
-    // that falls out of the range of 2xx
-    debug('Server response error: ', error.response.data)
-  } else if (error.request) {
-    // The request was made but no response was received
-    // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-    // http.ClientRequest in node.js
-    debug('No server response received: ', error.request)
-  } else {
-    // Something happened in setting up the request that triggered an Error
-    debug('Client request error: ', error.message)
-  }
-  if (error.config) debug(error.config)
-}
+class Api {
 
-module.exports.login = function () {
-  axios({
-    method: 'post',
-    url: url + '/api/auth',
-    data: {
-      email: config.get('user.email'),
-      password: config.get('user.password')
-    }
-  })
-    .then(response => {
-      debug('Token was received!')
-      return response.headers['set-cookie'][0].replace('x-auth-token=', '').replace(/; .*/, '')
-    })
-    .catch(error => {
-      debug('Token was not received!')
-      handleError(error)
-    })
-}
-
-module.exports.addCollection = async function (collection) {
-  // TODO: Cache collection
-  // https://github.com/11ty/eleventy-cache-assets
-  
-  if (collection.location === 'api') {
-    return await axios({
-      method: 'get',
-      url: url + '/api/' + collection.plural
+  async login () {
+    axios({
+      method: 'post',
+      url: url + '/api/auth',
+      data: {
+        email: config.get('user.email'),
+        password: config.get('user.password')
+      }
     })
       .then(response => {
-        return response.data
+        debug('Token was received!')
+        return response.headers['set-cookie'][0]
+          .replace('x-auth-token=', '')
+          .replace(/; .*/, '')
       })
       .catch(error => {
-        debug(collection.plural + ' collection not found!')
-        handleError(error)
+        debug('Token was not received!')
+        this.handleError(error)
       })
   }
+
+  async addCollection (collection) {
+    // TODO: Cache collection
+    // https://github.com/11ty/eleventy-cache-assets
+    
+    if (collection.location === 'api') {
+      return await axios({
+        method: 'get',
+        url: url + '/api/' + collection.plural
+      })
+        .then(response => {
+          return response.data
+        })
+        .catch(error => {
+          debug(collection.plural + ' collection not found!')
+          this.handleError(error)
+        })
+    }
+  }
+
+  handleError (error) {
+    if (error.response) {
+      debug('Server response error: ', error.response.data)
+    } else if (error.request) {
+      debug('No server response received: ', error.request)
+    } else {
+      debug('Client request error: ', error.message)
+    }
+    if (error.config) debug(error.config)
+  }
+
 }
+
+module.exports = Api

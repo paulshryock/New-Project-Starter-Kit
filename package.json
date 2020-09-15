@@ -46,7 +46,7 @@
     "lint": "dotenv gulp lint",
     "validate": "dotenv gulp validate",
     "develop": "dotenv gulp develop",
-    "debug": "DEBUG=api:* npm run develop",
+    "debug": "DEBUG=eleventy:* npm run develop",
     "serve": "npm run serve:server",
     "serve:client": "dotenv gulp serve",
     "serve:server": "node -r dotenv/config ./src/server/bin/www",
