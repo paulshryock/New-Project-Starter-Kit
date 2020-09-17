@@ -1,0 +1,8 @@
+html {
+
+  &:not([lang]),
+  &[lang=""],
+  &[lang=" "] {
+    border: 1em solid red;
+  }
+}
