@@ -24,8 +24,9 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Environment:**
-
-- OS and Version: [e.g. Windows/Mac/Linux]
+- Device:
+- Operating System:
+- Browser:
 
 **Additional context**
 Add any other context about the problem here.
