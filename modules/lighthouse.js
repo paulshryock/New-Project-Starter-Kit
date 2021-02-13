@@ -3,6 +3,23 @@ const lighthouse = require('lighthouse')
 const config = require('config')
 const url = config.get('site.url')
 
+// TODO: Move this module into `./gulpfile.js`,
+// and use `gulp-connect` server, something like this:
+/*
+gulp.task('lighthouse', function() {
+  connect.server({
+    port: 8888
+  })
+  launchChromeAndRunLighthouse(url, opts, configuration)
+  connect.serverClose()
+})
+*/
+
+// TODO: Do something useful with output...
+// Probably grep some lines and test if they meet some criteria,
+// Then exit non zero if something is over budget.
+// Then add 'npm run audit' to a husky pre-commit hook
+
 function launchChromeAndRunLighthouse(url, opts, config = null) {
   return chromeLauncher.launch({chromeFlags: opts.chromeFlags})
     .then(chrome => {

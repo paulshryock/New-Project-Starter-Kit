@@ -281,6 +281,7 @@ function assets () {
 
   const images = gulp.src(paths.images.src)
     // TODO: Optimize images
+    // Something like https://ausi.github.io/respimagelint/ ?
     .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
 
@@ -317,7 +318,9 @@ function watchMinify (cb) {
 function serve (cb) {
   connect.server({
     root: paths.html.dest,
-    livereload: true
+    livereload: true,
+    name: config.get('dev.name'),
+    port: config.get('dev.port')
   })
 
   return cb()
@@ -326,41 +329,45 @@ function serve (cb) {
 /**
  * Gulp tasks
  */
-exports.develop = gulp.series(
-  gulp.parallel(clean, lint),
-  gulp.parallel(html, css, js, assets),
-  validate
-)
-
-exports.serve = gulp.series(
-  gulp.parallel(clean, lint),
-  gulp.parallel(html, css, js, assets),
-  validate,
-  watch,
-  serve
-)
-
-exports.watch = gulp.series(
-  gulp.parallel(clean, lint),
-  gulp.parallel(html, css, js, assets),
-  validate,
-  watch
-)
-
-exports.build = gulp.series(
-  clean,
-  gulp.parallel(html, css, js, assets),
-  gulp.parallel(minifyCss, minifyJs, minifySvg),
-  gulp.parallel(minifyHtml, postMinify)
-)
-
-exports.production = gulp.series(
-  clean,
-  gulp.parallel(html, css, js, assets),
-  gulp.parallel(minifyCss, minifyJs, minifySvg),
-  gulp.parallel(minifyHtml, postMinify),
-  gulp.parallel(watch, watchMinify),
-  serve
-)
-
-exports.default = exports.build
+module.exports = {
+  lint: gulp.series(lint),
+  validate: gulp.series(validate),
+  develop: gulp.series(
+    gulp.parallel(clean, lint),
+    gulp.parallel(html, css, js, assets),
+    validate
+  ),
+  serve: gulp.series(
+    gulp.parallel(clean, lint),
+    gulp.parallel(html, css, js, assets),
+    validate,
+    watch,
+    serve
+  ),
+  watch: gulp.series(
+    gulp.parallel(clean, lint),
+    gulp.parallel(html, css, js, assets),
+    validate,
+    watch
+  ),
+  build: gulp.series(
+    clean,
+    gulp.parallel(html, css, js, assets),
+    gulp.parallel(minifyCss, minifyJs, minifySvg),
+    gulp.parallel(minifyHtml, postMinify)
+  ),
+  production: gulp.series(
+    clean,
+    gulp.parallel(html, css, js, assets),
+    gulp.parallel(minifyCss, minifyJs, minifySvg),
+    gulp.parallel(minifyHtml, postMinify),
+    gulp.parallel(watch, watchMinify),
+    serve
+  ),
+  default: gulp.series(
+    clean,
+    gulp.parallel(html, css, js, assets),
+    gulp.parallel(minifyCss, minifyJs, minifySvg),
+    gulp.parallel(minifyHtml, postMinify)
+  ),
+}
