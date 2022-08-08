@@ -1,8 +1,6 @@
 # New Project Starter Kit
 
-[![Netlify Status][netlify-deploy-badge]][netlify-deploys] [![JavaScript Style Guide][standard-badge]][standard]
-
-[![JWT Compatible][jwt-compatible-badge]][jwt]
+> This repository is deprecated and archived.
 
 This starter kit consists of an Express REST API with CRUD capabilities, powered by a Node server, connected to a MongoDB database with Mongoose, and configured for Heroku deployment. This powers a client-side JAMstack static website built with Eleventy, Gulp, PostCSS, and Webpack, and configured for deployment to a CDN via Netlify. The full stack has CI/CD setup - deploy both server and client by merging a pull request into the master branch on GitHub.
 
